@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9'
+================================================================
+* Date:           Wed Jan  3 23:38:57 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.193 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max   | min |  max  |   Type  |
+    +---------+---------+-----------+----------+-----+-------+---------+
+    |        2|    16131|  20.000 ns|  0.161 ms|    2|  16131|       no|
+    +---------+---------+-----------+----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |                                     |  Latency (cycles) | Iteration|  Initiation Interval  |    Trip   |          |
+        |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  |   Count   | Pipelined|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+        |- VITIS_LOOP_497_8_VITIS_LOOP_498_9  |        0|    16129|         2|          1|          1|  0 ~ 16129|       yes|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+-----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      73|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|      81|    -|
+|Register         |        -|    -|      41|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|      41|     154|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln497_fu_192_p2       |         +|   0|  0|  15|          15|           1|
+    |add_ln499_fu_232_p2       |         +|   0|  0|   8|           8|           5|
+    |add_ln501_fu_278_p2       |         +|   0|  0|   8|           8|           1|
+    |i_33_fu_201_p2            |         +|   0|  0|   7|           7|           1|
+    |j_9_fu_243_p2             |         +|   0|  0|   7|           7|           1|
+    |icmp_ln497_fu_186_p2      |      icmp|   0|  0|   6|          15|          15|
+    |icmp_ln498_fu_180_p2      |      icmp|   0|  0|   4|           8|           8|
+    |icmp_ln499_fu_264_p2      |      icmp|   0|  0|   2|           4|           4|
+    |select_ln508_1_fu_215_p3  |    select|   0|  0|   7|           1|           7|
+    |select_ln508_fu_207_p3    |    select|   0|  0|   7|           1|           7|
+    |ap_enable_pp0             |       xor|   0|  0|   2|           1|           2|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0|  73|          75|          52|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                             |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                 |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_load                 |   9|          2|    7|         14|
+    |ap_sig_allocacmp_indvar_flatten13_load  |   9|          2|   15|         30|
+    |ap_sig_allocacmp_j_8                    |   9|          2|    7|         14|
+    |i_fu_64                                 |   9|          2|    7|         14|
+    |inc1313173_fu_72                        |   9|          2|    8|         16|
+    |indvar_flatten13_fu_68                  |   9|          2|   15|         30|
+    |j_fu_60                                 |   9|          2|    7|         14|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |  81|         18|   68|        136|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |hasItst_fu_76            |   1|   0|    1|          0|
+    |i_fu_64                  |   7|   0|    7|          0|
+    |inc1313173_fu_72         |   8|   0|    8|          0|
+    |indvar_flatten13_fu_68   |  15|   0|   15|          0|
+    |j_fu_60                  |   7|   0|    7|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  41|   0|   41|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |                                      Source Object                                      |    C Type    |
++--------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------------------+--------------+
+|ap_clk                                |   in|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9|  return value|
+|conv115123_in                         |   in|    8|     ap_none|                                                                            conv115123_in|        scalar|
+|mul_ln497                             |   in|   15|     ap_none|                                                                                mul_ln497|        scalar|
+|potentialPlacement_AllPreds_address0  |  out|    8|   ap_memory|                                                              potentialPlacement_AllPreds|         array|
+|potentialPlacement_AllPreds_ce0       |  out|    1|   ap_memory|                                                              potentialPlacement_AllPreds|         array|
+|potentialPlacement_AllPreds_q0        |   in|    4|   ap_memory|                                                              potentialPlacement_AllPreds|         array|
+|potentialPlacement_AllPreds_address1  |  out|    8|   ap_memory|                                                              potentialPlacement_AllPreds|         array|
+|potentialPlacement_AllPreds_ce1       |  out|    1|   ap_memory|                                                              potentialPlacement_AllPreds|         array|
+|potentialPlacement_AllPreds_q1        |   in|    4|   ap_memory|                                                              potentialPlacement_AllPreds|         array|
+|intersection_address0                 |  out|    4|   ap_memory|                                                                             intersection|         array|
+|intersection_ce0                      |  out|    1|   ap_memory|                                                                             intersection|         array|
+|intersection_we0                      |  out|    1|   ap_memory|                                                                             intersection|         array|
+|intersection_d0                       |  out|    4|   ap_memory|                                                                             intersection|         array|
+|hasItst_out                           |  out|    1|      ap_vld|                                                                              hasItst_out|       pointer|
+|hasItst_out_ap_vld                    |  out|    1|      ap_vld|                                                                              hasItst_out|       pointer|
+|inc1313173_out                        |  out|    8|      ap_vld|                                                                           inc1313173_out|       pointer|
+|inc1313173_out_ap_vld                 |  out|    1|      ap_vld|                                                                           inc1313173_out|       pointer|
++--------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------------------+--------------+
+

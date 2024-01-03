@@ -1,0 +1,172 @@
+
+
+================================================================
+== Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1'
+================================================================
+* Date:           Wed Jan  3 23:38:49 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.367 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        5|      204|  50.000 ns|  2.040 us|    5|  204|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_188_1  |        3|      201|         2|          2|          1|  1 ~ 100|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 5 2 
+4 --> 
+5 --> 4 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.29>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%bypassSrcOptIdx = alloca i32 1"   --->   Operation 6 'alloca' 'bypassSrcOptIdx' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%bypassSrcOpt_load_read = read i8 @_ssdm_op_Read.ap_auto.i8, i8 %bypassSrcOpt_load"   --->   Operation 7 'read' 'bypassSrcOpt_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.29ns)   --->   "%store_ln0 = store i7 0, i7 %bypassSrcOptIdx"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.75>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%bypassSrcOptIdx_1 = load i7 %bypassSrcOptIdx" [DynMap/DynMap_4HLS.cpp:188]   --->   Operation 10 'load' 'bypassSrcOptIdx_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 11 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.06ns)   --->   "%icmp_ln188 = icmp_ult  i7 %bypassSrcOptIdx_1, i7 100" [DynMap/DynMap_4HLS.cpp:188]   --->   Operation 12 'icmp' 'icmp_ln188' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 100, i64 50"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (1.31ns)   --->   "%bypassSrcOptIdx_2 = add i7 %bypassSrcOptIdx_1, i7 1" [DynMap/DynMap_4HLS.cpp:188]   --->   Operation 14 'add' 'bypassSrcOptIdx_2' <Predicate = true> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln188 = br i1 %icmp_ln188, void %..loopexit40_crit_edge.exitStub, void %.split18" [DynMap/DynMap_4HLS.cpp:188]   --->   Operation 15 'br' 'br_ln188' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%trunc_ln189_cast = zext i7 %bypassSrcOptIdx_1" [DynMap/DynMap_4HLS.cpp:188]   --->   Operation 16 'zext' 'trunc_ln189_cast' <Predicate = (icmp_ln188)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%placement_dynamic_dict_Opt2PC_keys_addr = getelementptr i8 %placement_dynamic_dict_Opt2PC_keys, i64 0, i64 %trunc_ln189_cast" [DynMap/DynMap_4HLS.cpp:189]   --->   Operation 17 'getelementptr' 'placement_dynamic_dict_Opt2PC_keys_addr' <Predicate = (icmp_ln188)> <Delay = 0.00>
+ST_2 : Operation 18 [2/2] (1.75ns)   --->   "%placement_dynamic_dict_Opt2PC_keys_load = load i7 %placement_dynamic_dict_Opt2PC_keys_addr" [DynMap/DynMap_4HLS.cpp:189]   --->   Operation 18 'load' 'placement_dynamic_dict_Opt2PC_keys_load' <Predicate = (icmp_ln188)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+
+State 3 <SV = 2> <Delay = 4.36>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln187 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [DynMap/DynMap_4HLS.cpp:187]   --->   Operation 19 'specloopname' 'specloopname_ln187' <Predicate = (icmp_ln188)> <Delay = 0.00>
+ST_3 : Operation 20 [1/2] (1.75ns)   --->   "%placement_dynamic_dict_Opt2PC_keys_load = load i7 %placement_dynamic_dict_Opt2PC_keys_addr" [DynMap/DynMap_4HLS.cpp:189]   --->   Operation 20 'load' 'placement_dynamic_dict_Opt2PC_keys_load' <Predicate = (icmp_ln188)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_3 : Operation 21 [1/1] (1.31ns)   --->   "%icmp_ln189 = icmp_eq  i8 %placement_dynamic_dict_Opt2PC_keys_load, i8 %bypassSrcOpt_load_read" [DynMap/DynMap_4HLS.cpp:189]   --->   Operation 21 'icmp' 'icmp_ln189' <Predicate = (icmp_ln188)> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln189 = br i1 %icmp_ln189, void, void %.split18..loopexit40_crit_edge.exitStub" [DynMap/DynMap_4HLS.cpp:189]   --->   Operation 22 'br' 'br_ln189' <Predicate = (icmp_ln188)> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (1.29ns)   --->   "%store_ln188 = store i7 %bypassSrcOptIdx_2, i7 %bypassSrcOptIdx" [DynMap/DynMap_4HLS.cpp:188]   --->   Operation 23 'store' 'store_ln188' <Predicate = (icmp_ln188 & !icmp_ln189)> <Delay = 1.29>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 24 'br' 'br_ln0' <Predicate = (icmp_ln188 & !icmp_ln189)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%write_ln188 = write void @_ssdm_op_Write.ap_auto.i7P0A, i7 %bypassSrcOptIdx_out, i7 %bypassSrcOptIdx_1" [DynMap/DynMap_4HLS.cpp:188]   --->   Operation 25 'write' 'write_ln188' <Predicate = (icmp_ln188)> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln0 = br void %UnifiedReturnBlock"   --->   Operation 26 'br' 'br_ln0' <Predicate = (icmp_ln188)> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 27 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i7P0A, i7 %bypassSrcOptIdx_out, i7 100"   --->   Operation 28 'write' 'write_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln0 = br void %UnifiedReturnBlock"   --->   Operation 29 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.3ns
+The critical path consists of the following:
+	'alloca' operation ('bypassSrcOptIdx') [4]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'bypassSrcOptIdx' [6]  (1.3 ns)
+
+ <State 2>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('bypassSrcOptIdx', DynMap/DynMap_4HLS.cpp:188) on local variable 'bypassSrcOptIdx' [9]  (0 ns)
+	'getelementptr' operation ('placement_dynamic_dict_Opt2PC_keys_addr', DynMap/DynMap_4HLS.cpp:189) [18]  (0 ns)
+	'load' operation ('placement_dynamic_dict_Opt2PC_keys_load', DynMap/DynMap_4HLS.cpp:189) on array 'placement_dynamic_dict_Opt2PC_keys' [19]  (1.75 ns)
+
+ <State 3>: 4.37ns
+The critical path consists of the following:
+	'load' operation ('placement_dynamic_dict_Opt2PC_keys_load', DynMap/DynMap_4HLS.cpp:189) on array 'placement_dynamic_dict_Opt2PC_keys' [19]  (1.75 ns)
+	'icmp' operation ('icmp_ln189', DynMap/DynMap_4HLS.cpp:189) [20]  (1.31 ns)
+	blocking operation 1.3 ns on control path)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

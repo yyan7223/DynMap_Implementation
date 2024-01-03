@@ -1,0 +1,195 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'Dependency_Update_BypassMode_SrcTgt'" level="0">
+<item name = "Date">Wed Jan  3 23:39:01 2024
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">DynMap</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z035-ffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 5.383 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">9, 495, 90.000 ns, 4.950 us, 9, 495, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1_fu_168">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1, 5, 204, 50.000 ns, 2.040 us, 5, 204, no</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2_fu_176">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2, 5, 44, 50.000 ns, 0.440 us, 5, 44, no</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3_fu_185">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3, 5, 24, 50.000 ns, 0.240 us, 5, 24, no</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4_fu_193">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4, 5, 44, 50.000 ns, 0.440 us, 5, 44, no</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5_fu_201">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5, 5, 24, 50.000 ns, 0.240 us, 5, 24, no</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6_fu_210">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6, 5, 24, 50.000 ns, 0.240 us, 5, 24, no</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7_fu_219">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7, 5, 44, 50.000 ns, 0.440 us, 5, 44, no</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8_fu_227">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8, 5, 24, 50.000 ns, 0.240 us, 5, 24, no</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9_fu_235">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9, 5, 44, 50.000 ns, 0.440 us, 5, 44, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 84, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 263, 661, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 260, -</column>
+<column name="Register">-, -, 208, -, -</column>
+<specialColumn name="Available">1000, 900, 343800, 171900, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7_fu_219">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7, 0, 0, 29, 76, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8_fu_227">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8, 0, 0, 26, 74, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9_fu_235">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9, 0, 0, 29, 76, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1_fu_168">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1, 0, 0, 27, 61, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2_fu_176">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2, 0, 0, 37, 76, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3_fu_185">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3, 0, 0, 26, 74, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4_fu_193">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4, 0, 0, 29, 76, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5_fu_201">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5, 0, 0, 26, 74, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6_fu_210">Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6, 0, 0, 34, 74, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln103_fu_466_p2">+, 0, 0, 11, 11, 11</column>
+<column name="add_ln109_fu_491_p2">+, 0, 0, 10, 10, 10</column>
+<column name="add_ln117_fu_532_p2">+, 0, 0, 11, 11, 11</column>
+<column name="add_ln62_fu_297_p2">+, 0, 0, 11, 11, 11</column>
+<column name="add_ln70_fu_330_p2">+, 0, 0, 10, 10, 10</column>
+<column name="add_ln76_fu_355_p2">+, 0, 0, 11, 11, 11</column>
+<column name="add_ln84_fu_396_p2">+, 0, 0, 10, 10, 10</column>
+<column name="add_ln95_fu_433_p2">+, 0, 0, 10, 10, 10</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">102, 21, 1, 21</column>
+<column name="dependency_predecessor_values_address0">37, 9, 10, 90</column>
+<column name="dependency_predecessor_values_ce0">25, 6, 1, 6</column>
+<column name="dependency_predecessor_values_d0">17, 4, 8, 32</column>
+<column name="dependency_successor_values_address0">37, 9, 11, 99</column>
+<column name="dependency_successor_values_ce0">25, 6, 1, 6</column>
+<column name="dependency_successor_values_d0">17, 4, 8, 32</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln103_1_loc_fu_66">11, 0, 11, 0</column>
+<column name="add_ln103_reg_678">9, 0, 11, 2</column>
+<column name="add_ln109_1_loc_fu_62">10, 0, 10, 0</column>
+<column name="add_ln109_reg_687">9, 0, 10, 1</column>
+<column name="add_ln117_1_loc_fu_58">11, 0, 11, 0</column>
+<column name="add_ln117_reg_696">9, 0, 11, 2</column>
+<column name="add_ln62_1_loc_fu_86">11, 0, 11, 0</column>
+<column name="add_ln62_reg_629">9, 0, 11, 2</column>
+<column name="add_ln70_1_loc_fu_82">10, 0, 10, 0</column>
+<column name="add_ln70_reg_638">9, 0, 10, 1</column>
+<column name="add_ln76_1_loc_fu_78">11, 0, 11, 0</column>
+<column name="add_ln76_reg_647">9, 0, 11, 2</column>
+<column name="add_ln84_1_loc_fu_74">10, 0, 10, 0</column>
+<column name="add_ln84_reg_656">9, 0, 10, 1</column>
+<column name="add_ln95_1_loc_fu_70">10, 0, 10, 0</column>
+<column name="add_ln95_reg_669">9, 0, 10, 1</column>
+<column name="ap_CS_fsm">20, 0, 20, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7_fu_219_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8_fu_227_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9_fu_235_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1_fu_168_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2_fu_176_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3_fu_185_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4_fu_193_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5_fu_201_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6_fu_210_ap_start_reg">1, 0, 1, 0</column>
+<column name="phi_ln54_loc_fu_90">7, 0, 7, 0</column>
+<column name="sext_ln71_reg_617">8, 0, 8, 0</column>
+<column name="targetBlock10_reg_692">1, 0, 1, 0</column>
+<column name="targetBlock11_reg_701">1, 0, 1, 0</column>
+<column name="targetBlock5_reg_643">1, 0, 1, 0</column>
+<column name="targetBlock6_reg_652">1, 0, 1, 0</column>
+<column name="targetBlock7_reg_661">1, 0, 1, 0</column>
+<column name="targetBlock8_reg_674">1, 0, 1, 0</column>
+<column name="targetBlock9_reg_683">1, 0, 1, 0</column>
+<column name="targetBlock_reg_634">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Dependency_Update_BypassMode_SrcTgt, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Dependency_Update_BypassMode_SrcTgt, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Dependency_Update_BypassMode_SrcTgt, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Dependency_Update_BypassMode_SrcTgt, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Dependency_Update_BypassMode_SrcTgt, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Dependency_Update_BypassMode_SrcTgt, return value</column>
+<column name="bypassOpt">in, 8, ap_none, bypassOpt, pointer</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_q0">in, 8, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="dependency_forward">in, 1, ap_none, dependency_forward, pointer</column>
+<column name="bypassSrcOpt_keyIdx">in, 7, ap_none, bypassSrcOpt_keyIdx, pointer</column>
+<column name="bypassTgtOpt">in, 7, ap_none, bypassTgtOpt, pointer</column>
+<column name="bypassSrcOpt">in, 8, ap_none, bypassSrcOpt, pointer</column>
+<column name="bypassTgtOpt_keyIdx">in, 7, ap_none, bypassTgtOpt_keyIdx, pointer</column>
+<column name="dependency_successor_values_address0">out, 11, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_successor_values_ce0">out, 1, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_successor_values_we0">out, 1, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_successor_values_d0">out, 8, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_successor_values_q0">in, 8, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_predecessor_values_address0">out, 10, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_predecessor_values_ce0">out, 1, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_predecessor_values_we0">out, 1, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_predecessor_values_d0">out, 8, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_predecessor_values_q0">in, 8, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_backward">in, 1, ap_none, dependency_backward, pointer</column>
+</table>
+</item>
+</section>
+</profile>

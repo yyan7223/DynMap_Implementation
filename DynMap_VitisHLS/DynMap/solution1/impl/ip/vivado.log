@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Jan  3 23:47:41 2024
+# Process ID: 9200
+# Current directory: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/impl/ip/vivado.log
+# Journal file: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/impl/ip\vivado.jou
+# Running On: LAPTOP-0C06RSO7, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 34071 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'runOne_ddiv_64ns_64ns_64_31_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOne_ddiv_64ns_64ns_64_31_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOne_ddiv_64ns_64ns_64_31_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'runOne_sitodp_32ns_64_5_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOne_sitodp_32ns_64_5_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOne_sitodp_32ns_64_5_no_dsp_1_ip'...
+ERROR: '2401032347' is an invalid argument. Please specify an integer value.
+    while executing
+"rdi::set_property core_revision 2401032347 {component component_1}"
+    invoked from within
+"set_property core_revision $Revision $core"
+    (file "run_ippack.tcl" line 900)
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  3 23:47:49 2024...

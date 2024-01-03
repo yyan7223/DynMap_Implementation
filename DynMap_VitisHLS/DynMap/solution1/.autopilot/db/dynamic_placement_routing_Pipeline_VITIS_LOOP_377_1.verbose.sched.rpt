@@ -1,0 +1,173 @@
+
+
+================================================================
+== Vitis HLS Report for 'dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1'
+================================================================
+* Date:           Wed Jan  3 23:38:48 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.018 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        5|       36|  50.000 ns|  0.360 us|    5|   36|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_377_1  |        3|       33|         2|          2|          1|  1 ~ 16|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 5 2 
+4 --> 
+5 --> 4 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.29>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%tileID = alloca i32 1"   --->   Operation 6 'alloca' 'tileID' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%curTileStatic_read = read i4 @_ssdm_op_Read.ap_auto.i4, i4 %curTileStatic"   --->   Operation 7 'read' 'curTileStatic_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.29ns)   --->   "%store_ln0 = store i5 0, i5 %tileID"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.75>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%tileID_1 = load i5 %tileID" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 10 'load' 'tileID_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%empty = trunc i5 %tileID_1" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 11 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 12 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i5.i32, i5 %tileID_1, i32 4" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 13 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%empty_82 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 16, i64 8"   --->   Operation 14 'speclooptripcount' 'empty_82' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (1.02ns)   --->   "%tileID_2 = add i5 %tileID_1, i5 1" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 15 'add' 'tileID_2' <Predicate = true> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln377 = br i1 %tmp, void %.split16, void %..loopexit11.i_crit_edge.exitStub" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 16 'br' 'br_ln377' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%trunc_ln377_cast4 = zext i5 %tileID_1" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 17 'zext' 'trunc_ln377_cast4' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%placement_static_Tile2Level_keys_addr = getelementptr i4 %placement_static_Tile2Level_keys, i64 0, i64 %trunc_ln377_cast4" [DynMap/DynMap_4HLS.cpp:378]   --->   Operation 18 'getelementptr' 'placement_static_Tile2Level_keys_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 19 [2/2] (1.75ns)   --->   "%placement_static_Tile2Level_keys_load = load i4 %placement_static_Tile2Level_keys_addr" [DynMap/DynMap_4HLS.cpp:378]   --->   Operation 19 'load' 'placement_static_Tile2Level_keys_load' <Predicate = (!tmp)> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 16> <ROM>
+
+State 3 <SV = 2> <Delay = 4.01>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln376 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41" [DynMap/DynMap_4HLS.cpp:376]   --->   Operation 20 'specloopname' 'specloopname_ln376' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 21 [1/2] (1.75ns)   --->   "%placement_static_Tile2Level_keys_load = load i4 %placement_static_Tile2Level_keys_addr" [DynMap/DynMap_4HLS.cpp:378]   --->   Operation 21 'load' 'placement_static_Tile2Level_keys_load' <Predicate = (!tmp)> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 16> <ROM>
+ST_3 : Operation 22 [1/1] (0.96ns)   --->   "%icmp_ln378 = icmp_eq  i4 %placement_static_Tile2Level_keys_load, i4 %curTileStatic_read" [DynMap/DynMap_4HLS.cpp:378]   --->   Operation 22 'icmp' 'icmp_ln378' <Predicate = (!tmp)> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln378 = br i1 %icmp_ln378, void, void %.split16..loopexit11.i_crit_edge.exitStub" [DynMap/DynMap_4HLS.cpp:378]   --->   Operation 23 'br' 'br_ln378' <Predicate = (!tmp)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.29ns)   --->   "%store_ln377 = store i5 %tileID_2, i5 %tileID" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 24 'store' 'store_ln377' <Predicate = (!tmp & !icmp_ln378)> <Delay = 1.29>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 25 'br' 'br_ln0' <Predicate = (!tmp & !icmp_ln378)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%write_ln377 = write void @_ssdm_op_Write.ap_auto.i4P0A, i4 %tileID_out, i4 %empty" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 26 'write' 'write_ln377' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln0 = br void %UnifiedReturnBlock"   --->   Operation 27 'br' 'br_ln0' <Predicate = (!tmp)> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 0.00>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%write_ln377 = write void @_ssdm_op_Write.ap_auto.i4P0A, i4 %tileID_out, i4 %empty" [DynMap/DynMap_4HLS.cpp:377]   --->   Operation 29 'write' 'write_ln377' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln0 = br void %UnifiedReturnBlock"   --->   Operation 30 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.3ns
+The critical path consists of the following:
+	'alloca' operation ('tileID') [4]  (0 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'tileID' [6]  (1.3 ns)
+
+ <State 2>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('tileID', DynMap/DynMap_4HLS.cpp:377) on local variable 'tileID' [9]  (0 ns)
+	'getelementptr' operation ('placement_static_Tile2Level_keys_addr', DynMap/DynMap_4HLS.cpp:378) [19]  (0 ns)
+	'load' operation ('placement_static_Tile2Level_keys_load', DynMap/DynMap_4HLS.cpp:378) on array 'placement_static_Tile2Level_keys' [20]  (1.75 ns)
+
+ <State 3>: 4.02ns
+The critical path consists of the following:
+	'load' operation ('placement_static_Tile2Level_keys_load', DynMap/DynMap_4HLS.cpp:378) on array 'placement_static_Tile2Level_keys' [20]  (1.75 ns)
+	'icmp' operation ('icmp_ln378', DynMap/DynMap_4HLS.cpp:378) [21]  (0.965 ns)
+	blocking operation 1.3 ns on control path)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

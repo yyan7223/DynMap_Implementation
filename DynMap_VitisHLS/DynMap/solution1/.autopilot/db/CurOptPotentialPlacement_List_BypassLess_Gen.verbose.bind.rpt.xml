@@ -1,0 +1,59 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'CurOptPotentialPlacement_List_BypassLess_Gen'" level="0">
+<item name = "Date">Wed Jan  3 23:38:47 2024
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">DynMap</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z035-ffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.789 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5_fu_522">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5, 3, 129, 30.000 ns, 1.290 us, 3, 129, no</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_fu_530">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9_fu_540">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9, 2, 16131, 20.000 ns, 0.161 ms, 2, 16131, no</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10_fu_551">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10, 3, 129, 30.000 ns, 1.290 us, 3, 129, no</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14, 6, 14, 60.000 ns, 0.140 us, 6, 14, no</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16_fu_575">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_518_12_fu_584">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_518_12, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_480_7_fu_592">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_480_7, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_429_1">?, ?, ?, -, -, 1 ~ 127, no</column>
+<column name=" + VITIS_LOOP_437_2_VITIS_LOOP_438_3">?, ?, ?, -, -, 9, no</column>
+<column name="- VITIS_LOOP_477_6">?, ?, ?, -, -, 4 ~ 12, no</column>
+<column name="- VITIS_LOOP_515_11">?, ?, ?, -, -, 4 ~ 12, no</column>
+<column name="- VITIS_LOOP_536_13">?, ?, 10 ~ 18, -, -, ?, no</column>
+<column name="- VITIS_LOOP_574_15">?, ?, ?, -, -, 4 ~ 12, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

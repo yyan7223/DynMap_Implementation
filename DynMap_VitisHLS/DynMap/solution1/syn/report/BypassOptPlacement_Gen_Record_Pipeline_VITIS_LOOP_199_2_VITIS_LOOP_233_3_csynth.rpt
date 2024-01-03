@@ -1,0 +1,220 @@
+
+
+================================================================
+== Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3'
+================================================================
+* Date:           Wed Jan  3 23:38:59 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.791 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                     |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |              Loop Name              |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_199_2_VITIS_LOOP_233_3  |        ?|        ?|         4|          4|          1|     ?|       yes|
+        +-------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      88|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        1|    -|       6|       3|    -|
+|Multiplexer      |        -|    -|       -|     143|    -|
+|Register         |        -|    -|      65|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        1|    0|      71|     234|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |              Memory             |                                      Module                                      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |bpsStride_0_U                    |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_bpsSlbW  |        0|  1|   1|    0|     3|    1|     1|            3|
+    |bpsStride_1_U                    |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_bpsSmb6  |        0|  1|   1|    0|     3|    1|     1|            3|
+    |xy2Tile_U                        |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_xy2Tncg  |        0|  4|   1|    0|    16|    4|     1|           64|
+    |allocated_tiles_shapes_values_U  |CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_allocaeOg  |        1|  0|   0|    0|   320|    4|     1|         1280|
+    +---------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                            |                                                                                  |        1|  6|   3|    0|   342|   10|     4|         1350|
+    +---------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |add_ln199_1_fu_467_p2     |         +|   0|  0|   6|           6|           1|
+    |add_ln199_fu_348_p2       |         +|   0|  0|   3|           2|           1|
+    |empty_226_fu_428_p2       |         +|   0|  0|   3|           2|           2|
+    |empty_fu_394_p2           |         +|   0|  0|   3|           2|           2|
+    |i_50_fu_563_p2            |         +|   0|  0|   6|           4|           1|
+    |p_mid112_fu_495_p2        |         +|   0|  0|   3|           2|           2|
+    |p_mid1_fu_481_p2          |         +|   0|  0|   3|           2|           2|
+    |x_2_fu_368_p2             |         -|   0|  0|   3|           2|           2|
+    |x_2_mid1_fu_476_p2        |         -|   0|  0|   3|           2|           2|
+    |y_2_fu_402_p2             |         -|   0|  0|   3|           2|           2|
+    |y_2_mid1_fu_490_p2        |         -|   0|  0|   3|           2|           2|
+    |icmp_ln199_fu_318_p2      |      icmp|   0|  0|   3|           6|           6|
+    |icmp_ln233_fu_323_p2      |      icmp|   0|  0|   2|           4|           4|
+    |icmp_ln234_fu_558_p2      |      icmp|   0|  0|   2|           4|           4|
+    |empty_227_fu_433_p3       |    select|   0|  0|   2|           1|           2|
+    |empty_228_fu_446_p3       |    select|   0|  0|   2|           1|           2|
+    |empty_229_fu_513_p3       |    select|   0|  0|   2|           1|           2|
+    |p_mid114_fu_500_p3        |    select|   0|  0|   2|           1|           2|
+    |select_ln197_1_fu_407_p3  |    select|   0|  0|   2|           1|           2|
+    |select_ln197_fu_373_p3    |    select|   0|  0|   2|           1|           2|
+    |select_ln199_1_fu_534_p3  |    select|   0|  0|   4|           1|           4|
+    |select_ln199_2_fu_359_p3  |    select|   0|  0|   2|           1|           2|
+    |select_ln199_3_fu_546_p3  |    select|   0|  0|   2|           1|           2|
+    |select_ln199_4_fu_552_p3  |    select|   0|  0|   2|           1|           2|
+    |select_ln199_fu_328_p3    |    select|   0|  0|   4|           1|           4|
+    |select_ln205_1_fu_520_p3  |    select|   0|  0|   2|           1|           2|
+    |select_ln205_fu_453_p3    |    select|   0|  0|   2|           1|           2|
+    |select_ln218_fu_507_p3    |    select|   0|  0|   2|           1|           2|
+    |xDiff_1_fu_380_p3         |    select|   0|  0|   2|           1|           2|
+    |xDiff_2_fu_387_p3         |    select|   0|  0|   2|           1|           1|
+    |yDiff_1_fu_414_p3         |    select|   0|  0|   2|           1|           2|
+    |yDiff_2_fu_421_p3         |    select|   0|  0|   2|           1|           1|
+    |y_fu_440_p3               |    select|   0|  0|   2|           1|           2|
+    +--------------------------+----------+----+---+----+------------+------------+
+    |Total                     |          |   0|  0|  88|          61|          73|
+    +--------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  33|          8|    1|          8|
+    |ap_phi_mux_UnifiedRetVal_phi_fu_271_p4  |   9|          2|    1|          2|
+    |ap_return                               |   9|          2|    1|          2|
+    |bpsStride_0_address0                    |  13|          3|    2|          6|
+    |bpsStride_1_address0                    |  13|          3|    2|          6|
+    |i_48_fu_90                              |   9|          2|    4|          8|
+    |i_50_out                                |  13|          3|    4|         12|
+    |i_fu_102                                |   9|          2|    2|          4|
+    |indvar_flatten_fu_106                   |   9|          2|    6|         12|
+    |xDiff_2_phi_out                         |  13|          3|    2|          6|
+    |yDiff_2_phi_out                         |  13|          3|    2|          6|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   | 143|         33|   27|         72|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+---+----+-----+-----------+
+    |                    Name                    | FF| LUT| Bits| Const Bits|
+    +--------------------------------------------+---+----+-----+-----------+
+    |UnifiedRetVal_reg_267                       |  1|   0|    1|          0|
+    |add_ln199_1_reg_779                         |  6|   0|    6|          0|
+    |allocated_tiles_shapes_values_load_reg_762  |  4|   0|    4|          0|
+    |ap_CS_fsm                                   |  7|   0|    7|          0|
+    |ap_return_preg                              |  1|   0|    1|          0|
+    |i_48_fu_90                                  |  4|   0|    4|          0|
+    |i_48_load_1_reg_712                         |  4|   0|    4|          0|
+    |i_49_reg_687                                |  2|   0|    2|          0|
+    |i_fu_102                                    |  2|   0|    2|          0|
+    |icmp_ln199_reg_708                          |  1|   0|    1|          0|
+    |icmp_ln233_reg_717                          |  1|   0|    1|          0|
+    |indvar_flatten_fu_106                       |  6|   0|    6|          0|
+    |indvar_flatten_load_reg_693                 |  6|   0|    6|          0|
+    |select_ln199_2_reg_757                      |  2|   0|    2|          0|
+    |select_ln199_reg_725                        |  4|   0|    4|          0|
+    |xDiff_2_phi_fu_94                           |  2|   0|    2|          0|
+    |xDiff_2_phi_load_1_reg_789                  |  2|   0|    2|          0|
+    |xDiff_2_reg_767                             |  2|   0|    2|          0|
+    |xDiff_reg_735                               |  1|   0|    1|          0|
+    |yDiff_2_phi_fu_98                           |  2|   0|    2|          0|
+    |yDiff_2_phi_load_1_reg_794                  |  2|   0|    2|          0|
+    |yDiff_2_reg_773                             |  2|   0|    2|          0|
+    |yDiff_reg_741                               |  1|   0|    1|          0|
+    +--------------------------------------------+---+----+-----+-----------+
+    |Total                                       | 65|   0|   65|          0|
+    +--------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |                               Source Object                              |    C Type    |
++----------------------------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+|ap_clk                            |   in|    1|  ap_ctrl_hs|  BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3|  return value|
+|ap_rst                            |   in|    1|  ap_ctrl_hs|  BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3|  return value|
+|ap_start                          |   in|    1|  ap_ctrl_hs|  BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3|  return value|
+|ap_done                           |  out|    1|  ap_ctrl_hs|  BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3|  return value|
+|ap_idle                           |  out|    1|  ap_ctrl_hs|  BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3|  return value|
+|ap_ready                          |  out|    1|  ap_ctrl_hs|  BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3|  return value|
+|ap_return                         |  out|    1|  ap_ctrl_hs|  BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3|  return value|
+|Tile2XY_0_load                    |   in|    2|     ap_none|                                                            Tile2XY_0_load|        scalar|
+|cmp28                             |   in|    1|     ap_none|                                                                     cmp28|        scalar|
+|and_ln205                         |   in|    1|     ap_none|                                                                 and_ln205|        scalar|
+|Tile2XY_1_load                    |   in|    2|     ap_none|                                                            Tile2XY_1_load|        scalar|
+|cmp77                             |   in|    1|     ap_none|                                                                     cmp77|        scalar|
+|and_ln218                         |   in|    1|     ap_none|                                                                 and_ln218|        scalar|
+|sub_ln192                         |   in|    6|     ap_none|                                                                 sub_ln192|        scalar|
+|CGRA_NumTiles_shapes_values_load  |   in|    4|     ap_none|                                          CGRA_NumTiles_shapes_values_load|        scalar|
+|shape_idx_load                    |   in|    5|     ap_none|                                                            shape_idx_load|        scalar|
+|yDiff_2_phi_out                   |  out|    2|      ap_vld|                                                           yDiff_2_phi_out|       pointer|
+|yDiff_2_phi_out_ap_vld            |  out|    1|      ap_vld|                                                           yDiff_2_phi_out|       pointer|
+|xDiff_2_phi_out                   |  out|    2|      ap_vld|                                                           xDiff_2_phi_out|       pointer|
+|xDiff_2_phi_out_ap_vld            |  out|    1|      ap_vld|                                                           xDiff_2_phi_out|       pointer|
+|i_50_out                          |  out|    4|      ap_vld|                                                                  i_50_out|       pointer|
+|i_50_out_ap_vld                   |  out|    1|      ap_vld|                                                                  i_50_out|       pointer|
+|xDiff_2_out                       |  out|    2|      ap_vld|                                                               xDiff_2_out|       pointer|
+|xDiff_2_out_ap_vld                |  out|    1|      ap_vld|                                                               xDiff_2_out|       pointer|
+|yDiff_2_out                       |  out|    2|      ap_vld|                                                               yDiff_2_out|       pointer|
+|yDiff_2_out_ap_vld                |  out|    1|      ap_vld|                                                               yDiff_2_out|       pointer|
++----------------------------------+-----+-----+------------+--------------------------------------------------------------------------+--------------+
+

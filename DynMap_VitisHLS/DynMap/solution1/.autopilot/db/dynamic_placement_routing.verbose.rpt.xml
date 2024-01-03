@@ -1,0 +1,404 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dynamic_placement_routing'" level="0">
+<item name = "Date">Wed Jan  3 23:39:03 2024
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">DynMap</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z035-ffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.971 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2_fu_403">dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2, 5, 24, 50.000 ns, 0.240 us, 5, 24, no</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_611_4_fu_411">dynamic_placement_routing_Pipeline_VITIS_LOOP_611_4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5_fu_422">dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5, 5, 24, 50.000 ns, 0.240 us, 5, 24, no</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6_fu_430">dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439">CurOptPotentialPlacement_List_BypassLess_Gen, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1_fu_473">dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1, 5, 36, 50.000 ns, 0.360 us, 5, 36, no</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2_fu_482">dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493">dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3, 2, 12, 20.000 ns, 0.120 us, 2, 12, no</column>
+<column name="grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507">RoutingAvailability_CheckPredecessor_and_Placement, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5_fu_597">dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5, 2, 12, 20.000 ns, 0.120 us, 2, 12, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_596_1">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_608_3">?, ?, ?, -, -, 0 ~ 10, no</column>
+<column name=" + VITIS_LOOP_408_4">?, ?, 3 ~ 15, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 145, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">6, 1, 2856, 6170, 0</column>
+<column name="Memory">3, -, 32, 11, 0</column>
+<column name="Multiplexer">-, -, -, 939, -</column>
+<column name="Register">-, -, 285, -, -</column>
+<specialColumn name="Available">1000, 900, 343800, 171900, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, ~0, ~0, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439">CurOptPotentialPlacement_List_BypassLess_Gen, 2, 0, 539, 1557, 0</column>
+<column name="grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507">RoutingAvailability_CheckPredecessor_and_Placement, 3, 1, 2169, 4046, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1_fu_473">dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1, 0, 0, 24, 44, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2_fu_482">dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2, 0, 0, 14, 68, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493">dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3, 0, 0, 7, 65, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5_fu_597">dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5, 0, 0, 23, 74, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2_fu_403">dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2, 0, 0, 18, 69, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_611_4_fu_411">dynamic_placement_routing_Pipeline_VITIS_LOOP_611_4, 1, 0, 24, 57, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5_fu_422">dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5, 0, 0, 18, 69, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6_fu_430">dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6, 0, 0, 20, 80, 0</column>
+<column name="mul_3ns_8ns_10_1_1_U300">mul_3ns_8ns_10_1_1, 0, 0, 0, 41, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="xy2Tile_U">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_xy2Tncg, 0, 4, 1, 0, 16, 4, 1, 64</column>
+<column name="Tile2XY_0_U">BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_1R, 0, 4, 1, 0, 16, 2, 1, 32</column>
+<column name="Tile2XY_1_U">BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_1R, 0, 4, 1, 0, 16, 2, 1, 32</column>
+<column name="allocated_tiles_shapes_values_U">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_allocaeOg, 1, 0, 0, 0, 320, 4, 1, 1280</column>
+<column name="allocated_tiles_Maxlevels_dynamic_shapes_values_U">dynamic_placement_routing_allocated_tiles_Maxlevels_dynamic_shapes_values_ROMqcK, 0, 2, 1, 0, 20, 2, 1, 40</column>
+<column name="allocated_tiles_levelsValidLen_shapes_values_U">dynamic_placement_routing_allocated_tiles_levelsValidLen_shapes_values_ROM_AUrcU, 0, 4, 5, 0, 80, 4, 1, 320</column>
+<column name="allocated_tiles_levels_dynamic_shapes_values_U">dynamic_placement_routing_allocated_tiles_levels_dynamic_shapes_values_ROM_AUsc4, 1, 0, 0, 0, 1280, 4, 1, 5120</column>
+<column name="placement_static_Opt2Tile_kernels_values1_U">dynamic_placement_routing_placement_static_Opt2Tile_kernels_values1_ROM_AUTO_1R, 1, 0, 0, 0, 600, 4, 1, 2400</column>
+<column name="placement_static_Tile2Level_values_U">dynamic_placement_routing_placement_static_Tile2Level_values_ROM_AUTO_1R, 0, 2, 1, 0, 16, 2, 1, 32</column>
+<column name="predOpt_idx_List_U">dynamic_placement_routing_predOpt_idx_List_RAM_AUTO_1R1W, 0, 12, 1, 0, 10, 6, 1, 60</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln374_fu_720_p2">+, 0, 0, 10, 10, 10</column>
+<column name="add_ln415_fu_997_p2">+, 0, 0, 8, 8, 8</column>
+<column name="add_ln596_fu_1014_p2">+, 0, 0, 8, 8, 1</column>
+<column name="add_ln602_fu_704_p2">+, 0, 0, 10, 10, 10</column>
+<column name="add_ln609_fu_753_p2">+, 0, 0, 10, 10, 10</column>
+<column name="add_ln619_fu_814_p2">+, 0, 0, 10, 10, 10</column>
+<column name="add_ln636_fu_852_p2">+, 0, 0, 10, 10, 10</column>
+<column name="add_ln643_fu_827_p2">+, 0, 0, 8, 8, 1</column>
+<column name="dynamic_level_3_fu_946_p2">+, 0, 0, 8, 8, 1</column>
+<column name="empty_83_fu_974_p2">+, 0, 0, 9, 9, 9</column>
+<column name="i_fu_743_p2">+, 0, 0, 6, 4, 1</column>
+<column name="placedOpts_Counter_2_fu_668_p2">+, 0, 0, 8, 8, 1</column>
+<column name="ap_block_state13_on_subcall_done">and, 0, 0, 1, 1, 1</column>
+<column name="ap_block_state23_on_subcall_done">and, 0, 0, 1, 1, 1</column>
+<column name="ap_block_state28_on_subcall_done">and, 0, 0, 1, 1, 1</column>
+<column name="grp_fu_612_p2">icmp, 0, 0, 2, 4, 1</column>
+<column name="icmp_ln383_fu_894_p2">icmp, 0, 0, 1, 2, 2</column>
+<column name="icmp_ln410_fu_952_p2">icmp, 0, 0, 4, 8, 8</column>
+<column name="icmp_ln413_fu_965_p2">icmp, 0, 0, 4, 8, 8</column>
+<column name="icmp_ln596_fu_662_p2">icmp, 0, 0, 4, 8, 8</column>
+<column name="icmp_ln608_fu_738_p2">icmp, 0, 0, 2, 4, 4</column>
+<column name="icmp_ln624_fu_843_p2">icmp, 0, 0, 2, 4, 1</column>
+<column name="icmp_ln644_fu_865_p2">icmp, 0, 0, 4, 8, 8</column>
+<column name="icmp_ln653_fu_773_p2">icmp, 0, 0, 4, 8, 8</column>
+<column name="dynamic_level_4_fu_957_p3">select, 0, 0, 8, 1, 1</column>
+<column name="initial_dynamic_level_fu_900_p3">select, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="IDX_pd_bypass_o">9, 2, 8, 16</column>
+<column name="IDX_pd_modulo_o">9, 2, 7, 14</column>
+<column name="IDX_pd_o">17, 4, 8, 32</column>
+<column name="IDX_pd_o_ap_vld">13, 3, 1, 3</column>
+<column name="Tile2XY_0_address0">13, 3, 4, 12</column>
+<column name="Tile2XY_0_address1">13, 3, 4, 12</column>
+<column name="Tile2XY_0_ce0">13, 3, 1, 3</column>
+<column name="Tile2XY_0_ce1">13, 3, 1, 3</column>
+<column name="Tile2XY_1_address0">13, 3, 4, 12</column>
+<column name="Tile2XY_1_address1">13, 3, 4, 12</column>
+<column name="Tile2XY_1_ce0">13, 3, 1, 3</column>
+<column name="Tile2XY_1_ce1">13, 3, 1, 3</column>
+<column name="allocated_tiles_levelsValidLen_shapes_values_address0">13, 3, 7, 21</column>
+<column name="allocated_tiles_levels_dynamic_shapes_values_address0">17, 4, 11, 44</column>
+<column name="allocated_tiles_levels_dynamic_shapes_values_ce0">17, 4, 1, 4</column>
+<column name="allocated_tiles_shapes_values_address0">13, 3, 9, 27</column>
+<column name="allocated_tiles_shapes_values_ce0">9, 2, 1, 2</column>
+<column name="ap_NS_fsm">145, 31, 1, 31</column>
+<column name="ap_return">9, 2, 1, 2</column>
+<column name="bypassOptIdx_o">9, 2, 8, 16</column>
+<column name="bypassOpt_o">9, 2, 8, 16</column>
+<column name="bypassOpt_wrAddr_o">9, 2, 8, 16</column>
+<column name="bypassSrcOpt_o">9, 2, 8, 16</column>
+<column name="bypassSrcTile_o">9, 2, 5, 10</column>
+<column name="bypassTgtOpt_o">9, 2, 7, 14</column>
+<column name="bypassTgtTile_o">9, 2, 4, 8</column>
+<column name="curOptPotentialPlacement_address0">25, 6, 4, 24</column>
+<column name="curOptPotentialPlacement_ce0">25, 6, 1, 6</column>
+<column name="curOptPotentialPlacement_d0">21, 5, 5, 25</column>
+<column name="curOptPotentialPlacement_we0">21, 5, 1, 5</column>
+<column name="curOptPotentialPlacement_wrAddr">21, 5, 8, 40</column>
+<column name="dependency_backward_o">9, 2, 1, 2</column>
+<column name="dependency_forward_o">9, 2, 1, 2</column>
+<column name="dependency_predecessor_values_address0">29, 7, 10, 70</column>
+<column name="dependency_predecessor_values_ce0">25, 6, 1, 6</column>
+<column name="dependency_predecessor_values_d0">13, 3, 8, 24</column>
+<column name="dependency_predecessor_values_we0">13, 3, 1, 3</column>
+<column name="dynamic_level_2_reg_381">9, 2, 8, 16</column>
+<column name="i_2_reg_370">9, 2, 4, 8</column>
+<column name="idx_pd_r_o">9, 2, 4, 8</column>
+<column name="placedOpts_Counter_fu_182">9, 2, 8, 16</column>
+<column name="placement_done_values_address0">13, 3, 7, 21</column>
+<column name="placement_done_values_ce0">13, 3, 1, 3</column>
+<column name="placement_done_values_we0">9, 2, 1, 2</column>
+<column name="placement_dynamic_dict_Opt2PC_values_address0">13, 3, 7, 21</column>
+<column name="placement_dynamic_dict_Opt2PC_values_ce0">13, 3, 1, 3</column>
+<column name="placement_dynamic_dict_Opt2PC_values_we0">9, 2, 1, 2</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_address0">13, 3, 7, 21</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_ce0">13, 3, 1, 3</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_ce1">9, 2, 1, 2</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_we0">9, 2, 1, 2</column>
+<column name="placement_static_kernels_values_address0">17, 4, 10, 40</column>
+<column name="placement_static_kernels_values_ce0">13, 3, 1, 3</column>
+<column name="predOpt_idx_List_address0">13, 3, 4, 12</column>
+<column name="predOpt_idx_List_ce0">13, 3, 1, 3</column>
+<column name="predOpt_idx_List_ce1">9, 2, 1, 2</column>
+<column name="predTile1_o">9, 2, 4, 8</column>
+<column name="predecessors_address0">13, 3, 4, 12</column>
+<column name="predecessors_ce0">13, 3, 1, 3</column>
+<column name="predecessors_wrAddr">9, 2, 8, 16</column>
+<column name="storemerge_fu_186">9, 2, 8, 16</column>
+<column name="xy2Tile_address0">13, 3, 4, 12</column>
+<column name="xy2Tile_ce0">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="DFG_NodesCount_kernels_values_load_reg_1087">6, 0, 6, 0</column>
+<column name="add_ln415_reg_1304">8, 0, 8, 0</column>
+<column name="add_ln602_reg_1100">9, 0, 10, 1</column>
+<column name="add_ln619_reg_1165">9, 0, 10, 1</column>
+<column name="add_ln636_reg_1192">10, 0, 10, 0</column>
+<column name="allocated_tiles_levelsValidLen_shapes_values_load_reg_1259">4, 0, 4, 0</column>
+<column name="ap_CS_fsm">30, 0, 30, 0</column>
+<column name="ap_return_preg">1, 0, 1, 0</column>
+<column name="curOptPotentialPlacement_wrAddr">8, 0, 8, 0</column>
+<column name="curOptPotentialPlacement_wrAddr_load_reg_1299">8, 0, 8, 0</column>
+<column name="curOpt_idx">8, 0, 8, 0</column>
+<column name="curTileStatic_reg_1200">4, 0, 4, 0</column>
+<column name="dynamic_level_2_reg_381">8, 0, 8, 0</column>
+<column name="dynamic_level_4_reg_1272">8, 0, 8, 0</column>
+<column name="empty_83_reg_1280">9, 0, 9, 0</column>
+<column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1_fu_473_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2_fu_482_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5_fu_597_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2_fu_403_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_611_4_fu_411_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5_fu_422_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6_fu_430_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_2_reg_370">4, 0, 4, 0</column>
+<column name="i_loc_fu_202">4, 0, 4, 0</column>
+<column name="i_reg_1132">4, 0, 4, 0</column>
+<column name="icmp_ln388_reg_1265">1, 0, 1, 0</column>
+<column name="icmp_ln415_reg_1295">1, 0, 1, 0</column>
+<column name="icmp_ln624_reg_1184">1, 0, 1, 0</column>
+<column name="icmp_ln653_reg_1142">1, 0, 1, 0</column>
+<column name="inc311623_loc_fu_198">6, 0, 6, 0</column>
+<column name="initial_dynamic_level_reg_1226">2, 0, 2, 0</column>
+<column name="j_3_loc_fu_194">4, 0, 4, 0</column>
+<column name="max_dynamic_level_reg_1221">2, 0, 2, 0</column>
+<column name="mul_ln374_reg_1081">10, 0, 10, 0</column>
+<column name="placedOpts_Counter_2_reg_1095">8, 0, 8, 0</column>
+<column name="placedOpts_Counter_fu_182">8, 0, 8, 0</column>
+<column name="placement_done_values_load_reg_1172">1, 0, 1, 0</column>
+<column name="placement_static_Opt2Tile_kernels_values1_addr_reg_1106">10, 0, 10, 0</column>
+<column name="placement_static_kernels_values_load_reg_1119">6, 0, 6, 0</column>
+<column name="pred_reg_1146">8, 0, 8, 0</column>
+<column name="predecessors_wrAddr">8, 0, 8, 0</column>
+<column name="predsNum">8, 0, 8, 0</column>
+<column name="retval_0_reg_390">1, 0, 1, 0</column>
+<column name="storemerge_fu_186">8, 0, 8, 0</column>
+<column name="targetBlock9_reg_1188">1, 0, 1, 0</column>
+<column name="tileID_loc_fu_190">4, 0, 4, 0</column>
+<column name="zext_ln374_reg_1238">4, 0, 5, 1</column>
+<column name="zext_ln382_1_reg_1248">2, 0, 8, 6</column>
+<column name="zext_ln382_2_reg_1243">5, 0, 9, 4</column>
+<column name="zext_ln407_reg_1253">2, 0, 8, 6</column>
+<column name="zext_ln416_reg_1290">9, 0, 60, 51</column>
+<column name="zext_ln608_reg_1124">6, 0, 8, 2</column>
+<column name="zext_ln615_reg_1155">6, 0, 64, 58</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, dynamic_placement_routing, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, dynamic_placement_routing, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, dynamic_placement_routing, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, dynamic_placement_routing, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, dynamic_placement_routing, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, dynamic_placement_routing, return value</column>
+<column name="ap_return">out, 1, ap_ctrl_hs, dynamic_placement_routing, return value</column>
+<column name="kernel_idx">in, 3, ap_none, kernel_idx, pointer</column>
+<column name="DFG_NodesCount_kernels_values_address0">out, 3, ap_memory, DFG_NodesCount_kernels_values, array</column>
+<column name="DFG_NodesCount_kernels_values_ce0">out, 1, ap_memory, DFG_NodesCount_kernels_values, array</column>
+<column name="DFG_NodesCount_kernels_values_q0">in, 6, ap_memory, DFG_NodesCount_kernels_values, array</column>
+<column name="IDX_pd_i">in, 8, ap_ovld, IDX_pd, pointer</column>
+<column name="IDX_pd_o">out, 8, ap_ovld, IDX_pd, pointer</column>
+<column name="IDX_pd_o_ap_vld">out, 1, ap_ovld, IDX_pd, pointer</column>
+<column name="dependency_predecessor_values_address0">out, 10, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_predecessor_values_ce0">out, 1, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_predecessor_values_we0">out, 1, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_predecessor_values_d0">out, 8, ap_memory, dependency_predecessor_values, array</column>
+<column name="dependency_predecessor_values_q0">in, 8, ap_memory, dependency_predecessor_values, array</column>
+<column name="placement_static_kernels_values_address0">out, 10, ap_memory, placement_static_kernels_values, array</column>
+<column name="placement_static_kernels_values_ce0">out, 1, ap_memory, placement_static_kernels_values, array</column>
+<column name="placement_static_kernels_values_q0">in, 6, ap_memory, placement_static_kernels_values, array</column>
+<column name="placement_done_values_address0">out, 7, ap_memory, placement_done_values, array</column>
+<column name="placement_done_values_ce0">out, 1, ap_memory, placement_done_values, array</column>
+<column name="placement_done_values_we0">out, 1, ap_memory, placement_done_values, array</column>
+<column name="placement_done_values_d0">out, 1, ap_memory, placement_done_values, array</column>
+<column name="placement_done_values_q0">in, 1, ap_memory, placement_done_values, array</column>
+<column name="predecessors_address0">out, 4, ap_memory, predecessors, array</column>
+<column name="predecessors_ce0">out, 1, ap_memory, predecessors, array</column>
+<column name="predecessors_we0">out, 1, ap_memory, predecessors, array</column>
+<column name="predecessors_d0">out, 8, ap_memory, predecessors, array</column>
+<column name="predecessors_q0">in, 8, ap_memory, predecessors, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_we0">out, 1, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_d0">out, 8, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_q0">in, 8, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="threshold">in, 8, ap_none, threshold, pointer</column>
+<column name="shape_idx">in, 5, ap_none, shape_idx, pointer</column>
+<column name="curOptPotentialPlacement_address0">out, 4, ap_memory, curOptPotentialPlacement, array</column>
+<column name="curOptPotentialPlacement_ce0">out, 1, ap_memory, curOptPotentialPlacement, array</column>
+<column name="curOptPotentialPlacement_we0">out, 1, ap_memory, curOptPotentialPlacement, array</column>
+<column name="curOptPotentialPlacement_d0">out, 5, ap_memory, curOptPotentialPlacement, array</column>
+<column name="curOptPotentialPlacement_q0">in, 5, ap_memory, curOptPotentialPlacement, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_we0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_d0">out, 5, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_q0">in, 5, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_address1">out, 7, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_ce1">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_q1">in, 5, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="DynamicPlacement_II">in, 8, ap_none, DynamicPlacement_II, pointer</column>
+<column name="IDX_pd_modulo_i">in, 7, ap_ovld, IDX_pd_modulo, pointer</column>
+<column name="IDX_pd_modulo_o">out, 7, ap_ovld, IDX_pd_modulo, pointer</column>
+<column name="IDX_pd_modulo_o_ap_vld">out, 1, ap_ovld, IDX_pd_modulo, pointer</column>
+<column name="placement_dynamic_occupy_address0">out, 11, ap_memory, placement_dynamic_occupy, array</column>
+<column name="placement_dynamic_occupy_ce0">out, 1, ap_memory, placement_dynamic_occupy, array</column>
+<column name="placement_dynamic_occupy_we0">out, 1, ap_memory, placement_dynamic_occupy, array</column>
+<column name="placement_dynamic_occupy_d0">out, 1, ap_memory, placement_dynamic_occupy, array</column>
+<column name="placement_dynamic_occupy_q0">in, 1, ap_memory, placement_dynamic_occupy, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_we0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_d0">out, 8, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_q0">in, 8, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="predTile1_i">in, 4, ap_ovld, predTile1, pointer</column>
+<column name="predTile1_o">out, 4, ap_ovld, predTile1, pointer</column>
+<column name="predTile1_o_ap_vld">out, 1, ap_ovld, predTile1, pointer</column>
+<column name="bypassSrcOpt_i">in, 8, ap_ovld, bypassSrcOpt, pointer</column>
+<column name="bypassSrcOpt_o">out, 8, ap_ovld, bypassSrcOpt, pointer</column>
+<column name="bypassSrcOpt_o_ap_vld">out, 1, ap_ovld, bypassSrcOpt, pointer</column>
+<column name="bypassTgtOpt_i">in, 7, ap_ovld, bypassTgtOpt, pointer</column>
+<column name="bypassTgtOpt_o">out, 7, ap_ovld, bypassTgtOpt, pointer</column>
+<column name="bypassTgtOpt_o_ap_vld">out, 1, ap_ovld, bypassTgtOpt, pointer</column>
+<column name="bypassSrcTile_i">in, 5, ap_ovld, bypassSrcTile, pointer</column>
+<column name="bypassSrcTile_o">out, 5, ap_ovld, bypassSrcTile, pointer</column>
+<column name="bypassSrcTile_o_ap_vld">out, 1, ap_ovld, bypassSrcTile, pointer</column>
+<column name="bypassTgtTile_i">in, 4, ap_ovld, bypassTgtTile, pointer</column>
+<column name="bypassTgtTile_o">out, 4, ap_ovld, bypassTgtTile, pointer</column>
+<column name="bypassTgtTile_o_ap_vld">out, 1, ap_ovld, bypassTgtTile, pointer</column>
+<column name="dependency_forward_i">in, 1, ap_ovld, dependency_forward, pointer</column>
+<column name="dependency_forward_o">out, 1, ap_ovld, dependency_forward, pointer</column>
+<column name="dependency_forward_o_ap_vld">out, 1, ap_ovld, dependency_forward, pointer</column>
+<column name="dependency_backward_i">in, 1, ap_ovld, dependency_backward, pointer</column>
+<column name="dependency_backward_o">out, 1, ap_ovld, dependency_backward, pointer</column>
+<column name="dependency_backward_o_ap_vld">out, 1, ap_ovld, dependency_backward, pointer</column>
+<column name="bypassOptIdx_i">in, 8, ap_ovld, bypassOptIdx, pointer</column>
+<column name="bypassOptIdx_o">out, 8, ap_ovld, bypassOptIdx, pointer</column>
+<column name="bypassOptIdx_o_ap_vld">out, 1, ap_ovld, bypassOptIdx, pointer</column>
+<column name="bypassOpt_i">in, 8, ap_ovld, bypassOpt, pointer</column>
+<column name="bypassOpt_o">out, 8, ap_ovld, bypassOpt, pointer</column>
+<column name="bypassOpt_o_ap_vld">out, 1, ap_ovld, bypassOpt, pointer</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_we0">out, 1, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_d0">out, 8, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_q0">in, 8, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="IDX_pd_bypass_i">in, 8, ap_ovld, IDX_pd_bypass, pointer</column>
+<column name="IDX_pd_bypass_o">out, 8, ap_ovld, IDX_pd_bypass, pointer</column>
+<column name="IDX_pd_bypass_o_ap_vld">out, 1, ap_ovld, IDX_pd_bypass, pointer</column>
+<column name="idx_pd_r_i">in, 4, ap_ovld, idx_pd_r, pointer</column>
+<column name="idx_pd_r_o">out, 4, ap_ovld, idx_pd_r, pointer</column>
+<column name="idx_pd_r_o_ap_vld">out, 1, ap_ovld, idx_pd_r, pointer</column>
+<column name="placement_dynamic_bypass_occupy_address0">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_ce0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_we0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_d0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_q0">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address1">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_ce1">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_q1">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_address0">out, 14, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_ce0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_we0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_d0">out, 8, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_q0">in, 8, ap_memory, placement_dynamic_bypass, array</column>
+<column name="bypassOpt_wrAddr_i">in, 8, ap_ovld, bypassOpt_wrAddr, pointer</column>
+<column name="bypassOpt_wrAddr_o">out, 8, ap_ovld, bypassOpt_wrAddr, pointer</column>
+<column name="bypassOpt_wrAddr_o_ap_vld">out, 1, ap_ovld, bypassOpt_wrAddr, pointer</column>
+<column name="dependency_successor_values_address0">out, 11, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_successor_values_ce0">out, 1, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_successor_values_we0">out, 1, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_successor_values_d0">out, 8, ap_memory, dependency_successor_values, array</column>
+<column name="dependency_successor_values_q0">in, 8, ap_memory, dependency_successor_values, array</column>
+</table>
+</item>
+</section>
+</profile>

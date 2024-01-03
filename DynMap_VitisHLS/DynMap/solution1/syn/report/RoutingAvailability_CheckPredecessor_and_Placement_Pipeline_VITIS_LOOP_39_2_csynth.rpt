@@ -1,0 +1,150 @@
+
+
+================================================================
+== Vitis HLS Report for 'RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2'
+================================================================
+* Date:           Wed Jan  3 23:38:59 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.367 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        5|      204|  50.000 ns|  2.040 us|    5|  204|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_39_2  |        3|      201|         2|          2|          1|  1 ~ 100|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      14|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|      78|    -|
+|Register         |        -|    -|      35|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|      35|      92|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln39_fu_120_p2   |         +|   0|  0|   7|           7|           1|
+    |icmp_ln39_fu_114_p2  |      icmp|   0|  0|   3|           7|           6|
+    |icmp_ln40_fu_126_p2  |      icmp|   0|  0|   4|           8|           8|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  14|          22|          15|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                              |  25|          6|    1|          6|
+    |ap_phi_mux_UnifiedRetVal_phi_fu_89_p4  |   9|          2|    1|          2|
+    |ap_return                              |   9|          2|    1|          2|
+    |phi_ln39_fu_46                         |   9|          2|    7|         14|
+    |phi_ln39_out                           |  13|          3|    7|         21|
+    |trunc_ln39_2_cast_out                  |  13|          3|    7|         21|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  78|         18|   24|         66|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |UnifiedRetVal_reg_85     |  1|   0|    1|          0|
+    |add_ln39_reg_157         |  7|   0|    7|          0|
+    |ap_CS_fsm                |  5|   0|    5|          0|
+    |ap_return_preg           |  1|   0|    1|          0|
+    |icmp_ln39_reg_153        |  1|   0|    1|          0|
+    |phi_ln39_fu_46           |  7|   0|    7|          0|
+    |phi_ln39_load_reg_147    |  7|   0|    7|          0|
+    |zext_ln286_cast_reg_142  |  6|   0|    8|          2|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    | 35|   0|   37|          2|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+|                   RTL Ports                   | Dir | Bits|  Protocol  |                                Source Object                                |    C Type    |
++-----------------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+|ap_clk                                         |   in|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_rst                                         |   in|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_start                                       |   in|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_done                                        |  out|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_idle                                        |  out|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_ready                                       |  out|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2|  return value|
+|ap_return                                      |  out|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2|  return value|
+|zext_ln286                                     |   in|    6|     ap_none|                                                                   zext_ln286|        scalar|
+|phi_ln39_out                                   |  out|    7|      ap_vld|                                                                 phi_ln39_out|       pointer|
+|phi_ln39_out_ap_vld                            |  out|    1|      ap_vld|                                                                 phi_ln39_out|       pointer|
+|trunc_ln39_2_cast_out                          |  out|    7|      ap_vld|                                                        trunc_ln39_2_cast_out|       pointer|
+|trunc_ln39_2_cast_out_ap_vld                   |  out|    1|      ap_vld|                                                        trunc_ln39_2_cast_out|       pointer|
+|placement_dynamic_dict_Opt2Tile_keys_address0  |  out|    7|   ap_memory|                                         placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_ce0       |  out|    1|   ap_memory|                                         placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_q0        |   in|    8|   ap_memory|                                         placement_dynamic_dict_Opt2Tile_keys|         array|
++-----------------------------------------------+-----+-----+------------+-----------------------------------------------------------------------------+--------------+
+

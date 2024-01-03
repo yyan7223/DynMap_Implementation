@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Jan  3 23:47:41 2024
+# Process ID: 9200
+# Current directory: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/impl/ip
+# Command line: vivado.exe -notrace -mode batch -source run_ippack.tcl
+# Log file: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/impl/ip/vivado.log
+# Journal file: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/impl/ip\vivado.jou
+# Running On: LAPTOP-0C06RSO7, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 34071 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

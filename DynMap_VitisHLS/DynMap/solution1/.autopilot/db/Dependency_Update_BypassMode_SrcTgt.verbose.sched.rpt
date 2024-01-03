@@ -1,0 +1,392 @@
+
+
+================================================================
+== Vitis HLS Report for 'Dependency_Update_BypassMode_SrcTgt'
+================================================================
+* Date:           Wed Jan  3 23:38:51 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.383 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        9|      495|  90.000 ns|  4.950 us|    9|  495|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 20
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 11 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 20 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%add_ln117_1_loc = alloca i64 1"   --->   Operation 21 'alloca' 'add_ln117_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%add_ln109_1_loc = alloca i64 1"   --->   Operation 22 'alloca' 'add_ln109_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%add_ln103_1_loc = alloca i64 1"   --->   Operation 23 'alloca' 'add_ln103_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%add_ln95_1_loc = alloca i64 1"   --->   Operation 24 'alloca' 'add_ln95_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%add_ln84_1_loc = alloca i64 1"   --->   Operation 25 'alloca' 'add_ln84_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%add_ln76_1_loc = alloca i64 1"   --->   Operation 26 'alloca' 'add_ln76_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%add_ln70_1_loc = alloca i64 1"   --->   Operation 27 'alloca' 'add_ln70_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%add_ln62_1_loc = alloca i64 1"   --->   Operation 28 'alloca' 'add_ln62_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%phi_ln54_loc = alloca i64 1"   --->   Operation 29 'alloca' 'phi_ln54_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%bypassOpt_load = load i8 %bypassOpt"   --->   Operation 30 'load' 'bypassOpt_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [2/2] (0.00ns)   --->   "%call_ln0 = call void @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1, i8 %bypassOpt_load, i7 %phi_ln54_loc, i8 %placement_dynamic_dict_Opt2Tile_keys"   --->   Operation 31 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 32 [1/2] (0.00ns)   --->   "%call_ln0 = call void @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1, i8 %bypassOpt_load, i7 %phi_ln54_loc, i8 %placement_dynamic_dict_Opt2Tile_keys"   --->   Operation 32 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.48>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%phi_ln54_loc_load = load i7 %phi_ln54_loc"   --->   Operation 33 'load' 'phi_ln54_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%dependency_forward_load = load i1 %dependency_forward" [DynMap/DynMap_4HLS.cpp:58]   --->   Operation 34 'load' 'dependency_forward_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%bypassSrcOpt_keyIdx_load = load i7 %bypassSrcOpt_keyIdx" [DynMap/DynMap_4HLS.cpp:58]   --->   Operation 35 'load' 'bypassSrcOpt_keyIdx_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%bypassTgtOpt_load = load i7 %bypassTgtOpt" [DynMap/DynMap_4HLS.cpp:58]   --->   Operation 36 'load' 'bypassTgtOpt_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%sext_ln71 = sext i7 %bypassTgtOpt_load" [DynMap/DynMap_4HLS.cpp:71]   --->   Operation 37 'sext' 'sext_ln71' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%bypassSrcOpt_load = load i8 %bypassSrcOpt" [DynMap/DynMap_4HLS.cpp:71]   --->   Operation 38 'load' 'bypassSrcOpt_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%bypassTgtOpt_keyIdx_load = load i7 %bypassTgtOpt_keyIdx" [DynMap/DynMap_4HLS.cpp:58]   --->   Operation 39 'load' 'bypassTgtOpt_keyIdx_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln58 = br i1 %dependency_forward_load, void %.loopexit24._crit_edge, void %codeRepl32" [DynMap/DynMap_4HLS.cpp:58]   --->   Operation 40 'br' 'br_ln58' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i7.i4, i7 %bypassSrcOpt_keyIdx_load, i4 0" [DynMap/DynMap_4HLS.cpp:62]   --->   Operation 41 'bitconcatenate' 'tmp' <Predicate = (dependency_forward_load)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %bypassSrcOpt_keyIdx_load, i2 0" [DynMap/DynMap_4HLS.cpp:62]   --->   Operation 42 'bitconcatenate' 'tmp_s' <Predicate = (dependency_forward_load)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln62 = zext i9 %tmp_s" [DynMap/DynMap_4HLS.cpp:62]   --->   Operation 43 'zext' 'zext_ln62' <Predicate = (dependency_forward_load)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (1.48ns)   --->   "%add_ln62 = add i11 %tmp, i11 %zext_ln62" [DynMap/DynMap_4HLS.cpp:62]   --->   Operation 44 'add' 'add_ln62' <Predicate = (dependency_forward_load)> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [2/2] (0.00ns)   --->   "%targetBlock = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2, i11 %add_ln62, i7 %bypassTgtOpt_load, i11 %add_ln62_1_loc, i8 %dependency_successor_values" [DynMap/DynMap_4HLS.cpp:62]   --->   Operation 45 'call' 'targetBlock' <Predicate = (dependency_forward_load)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.29>
+ST_4 : Operation 46 [1/2] (1.29ns)   --->   "%targetBlock = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2, i11 %add_ln62, i7 %bypassTgtOpt_load, i11 %add_ln62_1_loc, i8 %dependency_successor_values" [DynMap/DynMap_4HLS.cpp:62]   --->   Operation 46 'call' 'targetBlock' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 2.77>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%add_ln62_1_loc_load = load i11 %add_ln62_1_loc"   --->   Operation 47 'load' 'add_ln62_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%add_ln62_1_reload_cast = zext i11 %add_ln62_1_loc_load"   --->   Operation 48 'zext' 'add_ln62_1_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %targetBlock, void, void %.loopexit23" [DynMap/DynMap_4HLS.cpp:62]   --->   Operation 49 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%dependency_successor_values_addr = getelementptr i8 %dependency_successor_values, i64 0, i64 %add_ln62_1_reload_cast" [DynMap/DynMap_4HLS.cpp:62]   --->   Operation 50 'getelementptr' 'dependency_successor_values_addr' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (2.77ns)   --->   "%store_ln63 = store i8 %bypassOpt_load, i11 %dependency_successor_values_addr" [DynMap/DynMap_4HLS.cpp:63]   --->   Operation 51 'store' 'store_ln63' <Predicate = (!targetBlock)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2000> <RAM>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln64 = br void %.loopexit23" [DynMap/DynMap_4HLS.cpp:64]   --->   Operation 52 'br' 'br_ln64' <Predicate = (!targetBlock)> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_10 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i7.i3, i7 %phi_ln54_loc_load, i3 0" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 53 'bitconcatenate' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_11 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %phi_ln54_loc_load, i1 0" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 54 'bitconcatenate' 'tmp_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln70 = zext i8 %tmp_11" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 55 'zext' 'zext_ln70' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (1.41ns)   --->   "%add_ln70 = add i10 %tmp_10, i10 %zext_ln70" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 56 'add' 'add_ln70' <Predicate = true> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 57 [2/2] (0.00ns)   --->   "%targetBlock5 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3, i10 %add_ln70, i10 %add_ln70_1_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 57 'call' 'targetBlock5' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 1.29>
+ST_6 : Operation 58 [1/2] (1.29ns)   --->   "%targetBlock5 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3, i10 %add_ln70, i10 %add_ln70_1_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 58 'call' 'targetBlock5' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 2.77>
+ST_7 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_12 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i7.i4, i7 %phi_ln54_loc_load, i4 0" [DynMap/DynMap_4HLS.cpp:76]   --->   Operation 59 'bitconcatenate' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_13 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %phi_ln54_loc_load, i2 0" [DynMap/DynMap_4HLS.cpp:76]   --->   Operation 60 'bitconcatenate' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln76 = zext i9 %tmp_13" [DynMap/DynMap_4HLS.cpp:76]   --->   Operation 61 'zext' 'zext_ln76' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (1.48ns)   --->   "%add_ln76 = add i11 %tmp_12, i11 %zext_ln76" [DynMap/DynMap_4HLS.cpp:76]   --->   Operation 62 'add' 'add_ln76' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%add_ln70_1_loc_load = load i10 %add_ln70_1_loc"   --->   Operation 63 'load' 'add_ln70_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%add_ln70_1_reload_cast = zext i10 %add_ln70_1_loc_load"   --->   Operation 64 'zext' 'add_ln70_1_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln70 = br i1 %targetBlock5, void, void %.loopexit22" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 65 'br' 'br_ln70' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%dependency_predecessor_values_addr = getelementptr i8 %dependency_predecessor_values, i64 0, i64 %add_ln70_1_reload_cast" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 66 'getelementptr' 'dependency_predecessor_values_addr' <Predicate = (!targetBlock5)> <Delay = 0.00>
+ST_7 : Operation 67 [1/1] (2.77ns)   --->   "%store_ln71 = store i8 %bypassSrcOpt_load, i10 %dependency_predecessor_values_addr" [DynMap/DynMap_4HLS.cpp:71]   --->   Operation 67 'store' 'store_ln71' <Predicate = (!targetBlock5)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln72 = br void %.loopexit22" [DynMap/DynMap_4HLS.cpp:72]   --->   Operation 68 'br' 'br_ln72' <Predicate = (!targetBlock5)> <Delay = 0.00>
+ST_7 : Operation 69 [2/2] (0.00ns)   --->   "%targetBlock6 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4, i11 %add_ln76, i11 %add_ln76_1_loc, i8 %dependency_successor_values" [DynMap/DynMap_4HLS.cpp:76]   --->   Operation 69 'call' 'targetBlock6' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 1.29>
+ST_8 : Operation 70 [1/2] (1.29ns)   --->   "%targetBlock6 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4, i11 %add_ln76, i11 %add_ln76_1_loc, i8 %dependency_successor_values" [DynMap/DynMap_4HLS.cpp:76]   --->   Operation 70 'call' 'targetBlock6' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 2.77>
+ST_9 : Operation 71 [1/1] (0.00ns)   --->   "%add_ln76_1_loc_load = load i11 %add_ln76_1_loc"   --->   Operation 71 'load' 'add_ln76_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 72 [1/1] (0.00ns)   --->   "%add_ln76_1_reload_cast = zext i11 %add_ln76_1_loc_load"   --->   Operation 72 'zext' 'add_ln76_1_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln76 = br i1 %targetBlock6, void, void %.loopexit21" [DynMap/DynMap_4HLS.cpp:76]   --->   Operation 73 'br' 'br_ln76' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 74 [1/1] (0.00ns)   --->   "%dependency_successor_values_addr_1 = getelementptr i8 %dependency_successor_values, i64 0, i64 %add_ln76_1_reload_cast" [DynMap/DynMap_4HLS.cpp:76]   --->   Operation 74 'getelementptr' 'dependency_successor_values_addr_1' <Predicate = (!targetBlock6)> <Delay = 0.00>
+ST_9 : Operation 75 [1/1] (2.77ns)   --->   "%store_ln77 = store i8 %sext_ln71, i11 %dependency_successor_values_addr_1" [DynMap/DynMap_4HLS.cpp:77]   --->   Operation 75 'store' 'store_ln77' <Predicate = (!targetBlock6)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2000> <RAM>
+ST_9 : Operation 76 [1/1] (0.00ns)   --->   "%br_ln78 = br void %.loopexit21" [DynMap/DynMap_4HLS.cpp:78]   --->   Operation 76 'br' 'br_ln78' <Predicate = (!targetBlock6)> <Delay = 0.00>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_14 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i7.i3, i7 %bypassTgtOpt_keyIdx_load, i3 0" [DynMap/DynMap_4HLS.cpp:84]   --->   Operation 77 'bitconcatenate' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_15 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %bypassTgtOpt_keyIdx_load, i1 0" [DynMap/DynMap_4HLS.cpp:84]   --->   Operation 78 'bitconcatenate' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln84 = zext i8 %tmp_15" [DynMap/DynMap_4HLS.cpp:84]   --->   Operation 79 'zext' 'zext_ln84' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 80 [1/1] (1.41ns)   --->   "%add_ln84 = add i10 %tmp_14, i10 %zext_ln84" [DynMap/DynMap_4HLS.cpp:84]   --->   Operation 80 'add' 'add_ln84' <Predicate = true> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 81 [2/2] (0.00ns)   --->   "%targetBlock7 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5, i10 %add_ln84, i8 %bypassSrcOpt_load, i10 %add_ln84_1_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:84]   --->   Operation 81 'call' 'targetBlock7' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 1.29>
+ST_10 : Operation 82 [1/2] (1.29ns)   --->   "%targetBlock7 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5, i10 %add_ln84, i8 %bypassSrcOpt_load, i10 %add_ln84_1_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:84]   --->   Operation 82 'call' 'targetBlock7' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 2.77>
+ST_11 : Operation 83 [1/1] (0.00ns)   --->   "%add_ln84_1_loc_load = load i10 %add_ln84_1_loc"   --->   Operation 83 'load' 'add_ln84_1_loc_load' <Predicate = (dependency_forward_load)> <Delay = 0.00>
+ST_11 : Operation 84 [1/1] (0.00ns)   --->   "%add_ln84_1_reload_cast = zext i10 %add_ln84_1_loc_load"   --->   Operation 84 'zext' 'add_ln84_1_reload_cast' <Predicate = (dependency_forward_load)> <Delay = 0.00>
+ST_11 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln84 = br i1 %targetBlock7, void, void %.loopexit20" [DynMap/DynMap_4HLS.cpp:84]   --->   Operation 85 'br' 'br_ln84' <Predicate = (dependency_forward_load)> <Delay = 0.00>
+ST_11 : Operation 86 [1/1] (0.00ns)   --->   "%dependency_predecessor_values_addr_2 = getelementptr i8 %dependency_predecessor_values, i64 0, i64 %add_ln84_1_reload_cast" [DynMap/DynMap_4HLS.cpp:84]   --->   Operation 86 'getelementptr' 'dependency_predecessor_values_addr_2' <Predicate = (dependency_forward_load & !targetBlock7)> <Delay = 0.00>
+ST_11 : Operation 87 [1/1] (2.77ns)   --->   "%store_ln85 = store i8 %bypassOpt_load, i10 %dependency_predecessor_values_addr_2" [DynMap/DynMap_4HLS.cpp:85]   --->   Operation 87 'store' 'store_ln85' <Predicate = (dependency_forward_load & !targetBlock7)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
+ST_11 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln86 = br void %.loopexit20" [DynMap/DynMap_4HLS.cpp:86]   --->   Operation 88 'br' 'br_ln86' <Predicate = (dependency_forward_load & !targetBlock7)> <Delay = 0.00>
+ST_11 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln89 = br void %.loopexit24._crit_edge" [DynMap/DynMap_4HLS.cpp:89]   --->   Operation 89 'br' 'br_ln89' <Predicate = (dependency_forward_load)> <Delay = 0.00>
+ST_11 : Operation 90 [1/1] (0.00ns)   --->   "%dependency_backward_load = load i1 %dependency_backward" [DynMap/DynMap_4HLS.cpp:91]   --->   Operation 90 'load' 'dependency_backward_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 91 [1/1] (0.00ns)   --->   "%br_ln91 = br i1 %dependency_backward_load, void %._crit_edge, void %codeRepl40" [DynMap/DynMap_4HLS.cpp:91]   --->   Operation 91 'br' 'br_ln91' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 1.41>
+ST_12 : Operation 92 [1/1] (0.00ns)   --->   "%tmp_16 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i7.i3, i7 %bypassSrcOpt_keyIdx_load, i3 0" [DynMap/DynMap_4HLS.cpp:95]   --->   Operation 92 'bitconcatenate' 'tmp_16' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_17 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %bypassSrcOpt_keyIdx_load, i1 0" [DynMap/DynMap_4HLS.cpp:95]   --->   Operation 93 'bitconcatenate' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 94 [1/1] (0.00ns)   --->   "%zext_ln95 = zext i8 %tmp_17" [DynMap/DynMap_4HLS.cpp:95]   --->   Operation 94 'zext' 'zext_ln95' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 95 [1/1] (1.41ns)   --->   "%add_ln95 = add i10 %tmp_16, i10 %zext_ln95" [DynMap/DynMap_4HLS.cpp:95]   --->   Operation 95 'add' 'add_ln95' <Predicate = true> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 96 [2/2] (0.00ns)   --->   "%targetBlock8 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6, i10 %add_ln95, i7 %bypassTgtOpt_load, i10 %add_ln95_1_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:95]   --->   Operation 96 'call' 'targetBlock8' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 1.29>
+ST_13 : Operation 97 [1/2] (1.29ns)   --->   "%targetBlock8 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6, i10 %add_ln95, i7 %bypassTgtOpt_load, i10 %add_ln95_1_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:95]   --->   Operation 97 'call' 'targetBlock8' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 2.77>
+ST_14 : Operation 98 [1/1] (0.00ns)   --->   "%add_ln95_1_loc_load = load i10 %add_ln95_1_loc"   --->   Operation 98 'load' 'add_ln95_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 99 [1/1] (0.00ns)   --->   "%add_ln95_1_reload_cast = zext i10 %add_ln95_1_loc_load"   --->   Operation 99 'zext' 'add_ln95_1_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 100 [1/1] (0.00ns)   --->   "%br_ln95 = br i1 %targetBlock8, void, void %.loopexit19" [DynMap/DynMap_4HLS.cpp:95]   --->   Operation 100 'br' 'br_ln95' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 101 [1/1] (0.00ns)   --->   "%dependency_predecessor_values_addr_3 = getelementptr i8 %dependency_predecessor_values, i64 0, i64 %add_ln95_1_reload_cast" [DynMap/DynMap_4HLS.cpp:95]   --->   Operation 101 'getelementptr' 'dependency_predecessor_values_addr_3' <Predicate = (!targetBlock8)> <Delay = 0.00>
+ST_14 : Operation 102 [1/1] (2.77ns)   --->   "%store_ln96 = store i8 %bypassOpt_load, i10 %dependency_predecessor_values_addr_3" [DynMap/DynMap_4HLS.cpp:96]   --->   Operation 102 'store' 'store_ln96' <Predicate = (!targetBlock8)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
+ST_14 : Operation 103 [1/1] (0.00ns)   --->   "%br_ln97 = br void %.loopexit19" [DynMap/DynMap_4HLS.cpp:97]   --->   Operation 103 'br' 'br_ln97' <Predicate = (!targetBlock8)> <Delay = 0.00>
+ST_14 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_20 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i7.i4, i7 %phi_ln54_loc_load, i4 0" [DynMap/DynMap_4HLS.cpp:103]   --->   Operation 104 'bitconcatenate' 'tmp_20' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_21 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %phi_ln54_loc_load, i2 0" [DynMap/DynMap_4HLS.cpp:103]   --->   Operation 105 'bitconcatenate' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 106 [1/1] (0.00ns)   --->   "%zext_ln103 = zext i9 %tmp_21" [DynMap/DynMap_4HLS.cpp:103]   --->   Operation 106 'zext' 'zext_ln103' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 107 [1/1] (1.48ns)   --->   "%add_ln103 = add i11 %tmp_20, i11 %zext_ln103" [DynMap/DynMap_4HLS.cpp:103]   --->   Operation 107 'add' 'add_ln103' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 108 [2/2] (0.00ns)   --->   "%targetBlock9 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7, i11 %add_ln103, i11 %add_ln103_1_loc, i8 %dependency_successor_values" [DynMap/DynMap_4HLS.cpp:103]   --->   Operation 108 'call' 'targetBlock9' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 1.29>
+ST_15 : Operation 109 [1/2] (1.29ns)   --->   "%targetBlock9 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7, i11 %add_ln103, i11 %add_ln103_1_loc, i8 %dependency_successor_values" [DynMap/DynMap_4HLS.cpp:103]   --->   Operation 109 'call' 'targetBlock9' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 2.77>
+ST_16 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_18 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i7.i3, i7 %phi_ln54_loc_load, i3 0" [DynMap/DynMap_4HLS.cpp:109]   --->   Operation 110 'bitconcatenate' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 111 [1/1] (0.00ns)   --->   "%tmp_19 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i7.i1, i7 %phi_ln54_loc_load, i1 0" [DynMap/DynMap_4HLS.cpp:109]   --->   Operation 111 'bitconcatenate' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 112 [1/1] (0.00ns)   --->   "%zext_ln109 = zext i8 %tmp_19" [DynMap/DynMap_4HLS.cpp:109]   --->   Operation 112 'zext' 'zext_ln109' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 113 [1/1] (1.41ns)   --->   "%add_ln109 = add i10 %tmp_18, i10 %zext_ln109" [DynMap/DynMap_4HLS.cpp:109]   --->   Operation 113 'add' 'add_ln109' <Predicate = true> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 114 [1/1] (0.00ns)   --->   "%add_ln103_1_loc_load = load i11 %add_ln103_1_loc"   --->   Operation 114 'load' 'add_ln103_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 115 [1/1] (0.00ns)   --->   "%add_ln103_1_reload_cast = zext i11 %add_ln103_1_loc_load"   --->   Operation 115 'zext' 'add_ln103_1_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 116 [1/1] (0.00ns)   --->   "%br_ln103 = br i1 %targetBlock9, void, void %.loopexit18" [DynMap/DynMap_4HLS.cpp:103]   --->   Operation 116 'br' 'br_ln103' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 117 [1/1] (0.00ns)   --->   "%dependency_successor_values_addr_2 = getelementptr i8 %dependency_successor_values, i64 0, i64 %add_ln103_1_reload_cast" [DynMap/DynMap_4HLS.cpp:103]   --->   Operation 117 'getelementptr' 'dependency_successor_values_addr_2' <Predicate = (!targetBlock9)> <Delay = 0.00>
+ST_16 : Operation 118 [1/1] (2.77ns)   --->   "%store_ln104 = store i8 %bypassSrcOpt_load, i11 %dependency_successor_values_addr_2" [DynMap/DynMap_4HLS.cpp:104]   --->   Operation 118 'store' 'store_ln104' <Predicate = (!targetBlock9)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2000> <RAM>
+ST_16 : Operation 119 [1/1] (0.00ns)   --->   "%br_ln105 = br void %.loopexit18" [DynMap/DynMap_4HLS.cpp:105]   --->   Operation 119 'br' 'br_ln105' <Predicate = (!targetBlock9)> <Delay = 0.00>
+ST_16 : Operation 120 [2/2] (0.00ns)   --->   "%targetBlock10 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8, i10 %add_ln109, i10 %add_ln109_1_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:109]   --->   Operation 120 'call' 'targetBlock10' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 1.29>
+ST_17 : Operation 121 [1/2] (1.29ns)   --->   "%targetBlock10 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8, i10 %add_ln109, i10 %add_ln109_1_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:109]   --->   Operation 121 'call' 'targetBlock10' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 2.77>
+ST_18 : Operation 122 [1/1] (0.00ns)   --->   "%add_ln109_1_loc_load = load i10 %add_ln109_1_loc"   --->   Operation 122 'load' 'add_ln109_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 123 [1/1] (0.00ns)   --->   "%add_ln109_1_reload_cast = zext i10 %add_ln109_1_loc_load"   --->   Operation 123 'zext' 'add_ln109_1_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 124 [1/1] (0.00ns)   --->   "%br_ln109 = br i1 %targetBlock10, void, void %.loopexit17" [DynMap/DynMap_4HLS.cpp:109]   --->   Operation 124 'br' 'br_ln109' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 125 [1/1] (0.00ns)   --->   "%dependency_predecessor_values_addr_4 = getelementptr i8 %dependency_predecessor_values, i64 0, i64 %add_ln109_1_reload_cast" [DynMap/DynMap_4HLS.cpp:109]   --->   Operation 125 'getelementptr' 'dependency_predecessor_values_addr_4' <Predicate = (!targetBlock10)> <Delay = 0.00>
+ST_18 : Operation 126 [1/1] (2.77ns)   --->   "%store_ln110 = store i8 %sext_ln71, i10 %dependency_predecessor_values_addr_4" [DynMap/DynMap_4HLS.cpp:110]   --->   Operation 126 'store' 'store_ln110' <Predicate = (!targetBlock10)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
+ST_18 : Operation 127 [1/1] (0.00ns)   --->   "%br_ln111 = br void %.loopexit17" [DynMap/DynMap_4HLS.cpp:111]   --->   Operation 127 'br' 'br_ln111' <Predicate = (!targetBlock10)> <Delay = 0.00>
+ST_18 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_22 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i7.i4, i7 %bypassTgtOpt_keyIdx_load, i4 0" [DynMap/DynMap_4HLS.cpp:117]   --->   Operation 128 'bitconcatenate' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_23 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %bypassTgtOpt_keyIdx_load, i2 0" [DynMap/DynMap_4HLS.cpp:117]   --->   Operation 129 'bitconcatenate' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 130 [1/1] (0.00ns)   --->   "%zext_ln117 = zext i9 %tmp_23" [DynMap/DynMap_4HLS.cpp:117]   --->   Operation 130 'zext' 'zext_ln117' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 131 [1/1] (1.48ns)   --->   "%add_ln117 = add i11 %tmp_22, i11 %zext_ln117" [DynMap/DynMap_4HLS.cpp:117]   --->   Operation 131 'add' 'add_ln117' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 132 [2/2] (0.00ns)   --->   "%targetBlock11 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9, i11 %add_ln117, i8 %bypassSrcOpt_load, i11 %add_ln117_1_loc, i8 %dependency_successor_values" [DynMap/DynMap_4HLS.cpp:117]   --->   Operation 132 'call' 'targetBlock11' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 1.29>
+ST_19 : Operation 133 [1/2] (1.29ns)   --->   "%targetBlock11 = call i1 @Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9, i11 %add_ln117, i8 %bypassSrcOpt_load, i11 %add_ln117_1_loc, i8 %dependency_successor_values" [DynMap/DynMap_4HLS.cpp:117]   --->   Operation 133 'call' 'targetBlock11' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 2.77>
+ST_20 : Operation 134 [1/1] (0.00ns)   --->   "%add_ln117_1_loc_load = load i11 %add_ln117_1_loc"   --->   Operation 134 'load' 'add_ln117_1_loc_load' <Predicate = (dependency_backward_load)> <Delay = 0.00>
+ST_20 : Operation 135 [1/1] (0.00ns)   --->   "%add_ln117_1_reload_cast = zext i11 %add_ln117_1_loc_load"   --->   Operation 135 'zext' 'add_ln117_1_reload_cast' <Predicate = (dependency_backward_load)> <Delay = 0.00>
+ST_20 : Operation 136 [1/1] (0.00ns)   --->   "%br_ln117 = br i1 %targetBlock11, void, void %.loopexit" [DynMap/DynMap_4HLS.cpp:117]   --->   Operation 136 'br' 'br_ln117' <Predicate = (dependency_backward_load)> <Delay = 0.00>
+ST_20 : Operation 137 [1/1] (0.00ns)   --->   "%dependency_successor_values_addr_3 = getelementptr i8 %dependency_successor_values, i64 0, i64 %add_ln117_1_reload_cast" [DynMap/DynMap_4HLS.cpp:117]   --->   Operation 137 'getelementptr' 'dependency_successor_values_addr_3' <Predicate = (dependency_backward_load & !targetBlock11)> <Delay = 0.00>
+ST_20 : Operation 138 [1/1] (2.77ns)   --->   "%store_ln118 = store i8 %bypassOpt_load, i11 %dependency_successor_values_addr_3" [DynMap/DynMap_4HLS.cpp:118]   --->   Operation 138 'store' 'store_ln118' <Predicate = (dependency_backward_load & !targetBlock11)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 2000> <RAM>
+ST_20 : Operation 139 [1/1] (0.00ns)   --->   "%br_ln119 = br void %.loopexit" [DynMap/DynMap_4HLS.cpp:119]   --->   Operation 139 'br' 'br_ln119' <Predicate = (dependency_backward_load & !targetBlock11)> <Delay = 0.00>
+ST_20 : Operation 140 [1/1] (0.00ns)   --->   "%br_ln122 = br void %._crit_edge" [DynMap/DynMap_4HLS.cpp:122]   --->   Operation 140 'br' 'br_ln122' <Predicate = (dependency_backward_load)> <Delay = 0.00>
+ST_20 : Operation 141 [1/1] (0.00ns)   --->   "%ret_ln123 = ret" [DynMap/DynMap_4HLS.cpp:123]   --->   Operation 141 'ret' 'ret_ln123' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.48ns
+The critical path consists of the following:
+	'load' operation ('bypassSrcOpt_keyIdx_load', DynMap/DynMap_4HLS.cpp:58) on static variable 'bypassSrcOpt_keyIdx' [24]  (0 ns)
+	'add' operation ('add_ln62', DynMap/DynMap_4HLS.cpp:62) [34]  (1.48 ns)
+
+ <State 4>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('targetBlock', DynMap/DynMap_4HLS.cpp:62) to 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2' [35]  (1.3 ns)
+
+ <State 5>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('add_ln62_1_loc_load') on local variable 'add_ln62_1_loc' [36]  (0 ns)
+	'getelementptr' operation ('dependency_successor_values_addr', DynMap/DynMap_4HLS.cpp:62) [40]  (0 ns)
+	'store' operation ('store_ln63', DynMap/DynMap_4HLS.cpp:63) of variable 'bypassOpt_load' on array 'dependency_successor_values' [41]  (2.77 ns)
+
+ <State 6>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('targetBlock5', DynMap/DynMap_4HLS.cpp:70) to 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3' [52]  (1.3 ns)
+
+ <State 7>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('add_ln70_1_loc_load') on local variable 'add_ln70_1_loc' [53]  (0 ns)
+	'getelementptr' operation ('dependency_predecessor_values_addr', DynMap/DynMap_4HLS.cpp:70) [57]  (0 ns)
+	'store' operation ('store_ln71', DynMap/DynMap_4HLS.cpp:71) of variable 'bypassSrcOpt_load', DynMap/DynMap_4HLS.cpp:71 on array 'dependency_predecessor_values' [58]  (2.77 ns)
+
+ <State 8>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('targetBlock6', DynMap/DynMap_4HLS.cpp:76) to 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4' [61]  (1.3 ns)
+
+ <State 9>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('add_ln76_1_loc_load') on local variable 'add_ln76_1_loc' [62]  (0 ns)
+	'getelementptr' operation ('dependency_successor_values_addr_1', DynMap/DynMap_4HLS.cpp:76) [66]  (0 ns)
+	'store' operation ('store_ln77', DynMap/DynMap_4HLS.cpp:77) of variable 'sext_ln71', DynMap/DynMap_4HLS.cpp:71 on array 'dependency_successor_values' [67]  (2.77 ns)
+
+ <State 10>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('targetBlock7', DynMap/DynMap_4HLS.cpp:84) to 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5' [74]  (1.3 ns)
+
+ <State 11>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('add_ln84_1_loc_load') on local variable 'add_ln84_1_loc' [75]  (0 ns)
+	'getelementptr' operation ('dependency_predecessor_values_addr_2', DynMap/DynMap_4HLS.cpp:84) [79]  (0 ns)
+	'store' operation ('store_ln85', DynMap/DynMap_4HLS.cpp:85) of variable 'bypassOpt_load' on array 'dependency_predecessor_values' [80]  (2.77 ns)
+
+ <State 12>: 1.42ns
+The critical path consists of the following:
+	'add' operation ('add_ln95', DynMap/DynMap_4HLS.cpp:95) [91]  (1.42 ns)
+
+ <State 13>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('targetBlock8', DynMap/DynMap_4HLS.cpp:95) to 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6' [92]  (1.3 ns)
+
+ <State 14>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('add_ln95_1_loc_load') on local variable 'add_ln95_1_loc' [93]  (0 ns)
+	'getelementptr' operation ('dependency_predecessor_values_addr_3', DynMap/DynMap_4HLS.cpp:95) [97]  (0 ns)
+	'store' operation ('store_ln96', DynMap/DynMap_4HLS.cpp:96) of variable 'bypassOpt_load' on array 'dependency_predecessor_values' [98]  (2.77 ns)
+
+ <State 15>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('targetBlock9', DynMap/DynMap_4HLS.cpp:103) to 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7' [109]  (1.3 ns)
+
+ <State 16>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('add_ln103_1_loc_load') on local variable 'add_ln103_1_loc' [110]  (0 ns)
+	'getelementptr' operation ('dependency_successor_values_addr_2', DynMap/DynMap_4HLS.cpp:103) [114]  (0 ns)
+	'store' operation ('store_ln104', DynMap/DynMap_4HLS.cpp:104) of variable 'bypassSrcOpt_load', DynMap/DynMap_4HLS.cpp:71 on array 'dependency_successor_values' [115]  (2.77 ns)
+
+ <State 17>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('targetBlock10', DynMap/DynMap_4HLS.cpp:109) to 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8' [118]  (1.3 ns)
+
+ <State 18>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('add_ln109_1_loc_load') on local variable 'add_ln109_1_loc' [119]  (0 ns)
+	'getelementptr' operation ('dependency_predecessor_values_addr_4', DynMap/DynMap_4HLS.cpp:109) [123]  (0 ns)
+	'store' operation ('store_ln110', DynMap/DynMap_4HLS.cpp:110) of variable 'sext_ln71', DynMap/DynMap_4HLS.cpp:71 on array 'dependency_predecessor_values' [124]  (2.77 ns)
+
+ <State 19>: 1.3ns
+The critical path consists of the following:
+	'call' operation ('targetBlock11', DynMap/DynMap_4HLS.cpp:117) to 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9' [131]  (1.3 ns)
+
+ <State 20>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('add_ln117_1_loc_load') on local variable 'add_ln117_1_loc' [132]  (0 ns)
+	'getelementptr' operation ('dependency_successor_values_addr_3', DynMap/DynMap_4HLS.cpp:117) [136]  (0 ns)
+	'store' operation ('store_ln118', DynMap/DynMap_4HLS.cpp:118) of variable 'bypassOpt_load' on array 'dependency_successor_values' [137]  (2.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,153 @@
+
+
+================================================================
+== Vitis HLS Report for 'Reset_Pipeline_VITIS_LOOP_719_18'
+================================================================
+* Date:           Wed Jan  3 23:38:56 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.526 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       19|       44|  0.190 us|  0.440 us|   19|   44|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_719_18  |       17|       42|         2|          1|          1|  17 ~ 42|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      21|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        1|    -|       0|       0|    -|
+|Multiplexer      |        -|    -|       -|      36|    -|
+|Register         |        -|    -|      15|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        1|    0|      15|      57|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------------------------------+------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |               Memory              |                                    Module                                    | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------------------------+------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |placement_static_kernels_values_U  |Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R  |        1|  0|   0|    0|   600|    6|     1|         3600|
+    +-----------------------------------+------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                              |                                                                              |        1|  0|   0|    0|   600|    6|     1|         3600|
+    +-----------------------------------+------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln720_fu_119_p2   |         +|   0|  0|  10|          10|          10|
+    |i_15_fu_109_p2        |         +|   0|  0|   6|           6|           1|
+    |icmp_ln719_fu_103_p2  |      icmp|   0|  0|   3|           6|           6|
+    |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  21|          23|          19|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_14    |   9|          2|    6|         12|
+    |i_fu_40                  |   9|          2|    6|         12|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   14|         28|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |i_14_reg_153             |  6|   0|    6|          0|
+    |i_fu_40                  |  6|   0|    6|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    | 15|   0|   15|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|                   RTL Ports                   | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++-----------------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                                         |   in|    1|  ap_ctrl_hs|      Reset_Pipeline_VITIS_LOOP_719_18|  return value|
+|ap_rst                                         |   in|    1|  ap_ctrl_hs|      Reset_Pipeline_VITIS_LOOP_719_18|  return value|
+|ap_start                                       |   in|    1|  ap_ctrl_hs|      Reset_Pipeline_VITIS_LOOP_719_18|  return value|
+|ap_done                                        |  out|    1|  ap_ctrl_hs|      Reset_Pipeline_VITIS_LOOP_719_18|  return value|
+|ap_idle                                        |  out|    1|  ap_ctrl_hs|      Reset_Pipeline_VITIS_LOOP_719_18|  return value|
+|ap_ready                                       |  out|    1|  ap_ctrl_hs|      Reset_Pipeline_VITIS_LOOP_719_18|  return value|
+|DFG_NodesCount_kernels_values_load             |   in|    6|     ap_none|    DFG_NodesCount_kernels_values_load|        scalar|
+|mul_ln727                                      |   in|   10|     ap_none|                             mul_ln727|        scalar|
+|placement_dynamic_dict_Opt2PC_keys_address0    |  out|    7|   ap_memory|    placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2PC_keys_ce0         |  out|    1|   ap_memory|    placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2PC_keys_we0         |  out|    1|   ap_memory|    placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2PC_keys_d0          |  out|    8|   ap_memory|    placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_address0  |  out|    7|   ap_memory|  placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_ce0       |  out|    1|   ap_memory|  placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_we0       |  out|    1|   ap_memory|  placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_d0        |  out|    8|   ap_memory|  placement_dynamic_dict_Opt2Tile_keys|         array|
++-----------------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+

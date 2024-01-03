@@ -1,0 +1,305 @@
+
+
+================================================================
+== Vitis HLS Report for 'BypassOptPlacement_Gen_Record'
+================================================================
+* Date:           Wed Jan  3 23:39:00 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.748 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |                                                                                     |                                                                          |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+        |                                       Instance                                      |                                  Module                                  |   min   |   max   |    min    |    max   | min | max |   Type  |
+        +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1_fu_365                   |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1                   |        5|      204|  50.000 ns|  2.040 us|    5|  204|       no|
+        |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373  |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3  |        ?|        ?|          ?|         ?|    ?|    ?|       no|
+        |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402                   |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4                   |        ?|        ?|          ?|         ?|    ?|    ?|       no|
+        |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420                   |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5                   |        ?|        ?|          ?|         ?|    ?|    ?|       no|
+        +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|     130|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        1|    -|     589|     787|    -|
+|Memory           |        1|    -|      12|       4|    -|
+|Multiplexer      |        -|    -|       -|     264|    -|
+|Register         |        -|    -|     169|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        2|    0|     770|    1185|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |       ~0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |                                       Instance                                      |                                  Module                                  | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1_fu_365                   |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1                   |        0|   0|   27|   61|    0|
+    |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373  |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3  |        1|   0|   71|  234|    0|
+    |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402                   |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4                   |        0|   0|  288|  304|    0|
+    |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420                   |BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5                   |        0|   0|  203|  188|    0|
+    +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                                                |                                                                          |        1|   0|  589|  787|    0|
+    +-------------------------------------------------------------------------------------+--------------------------------------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +---------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |              Memory             |                                      Module                                      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Tile2XY_0_U                      |BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_1R                               |        0|  4|   1|    0|    16|    2|     1|           32|
+    |Tile2XY_1_U                      |BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_1R                               |        0|  4|   1|    0|    16|    2|     1|           32|
+    |CGRA_NumTiles_shapes_values_U    |CurOptPotentialPlacement_List_BypassLess_Gen_CGRA_NumTiles_shapes_values_ROM_g8j  |        0|  4|   2|    0|    20|    4|     1|           80|
+    |allocated_tiles_shapes_values_U  |CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_allocaeOg  |        1|  0|   0|    0|   320|    4|     1|         1280|
+    +---------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                            |                                                                                  |        1| 12|   4|    0|   372|   12|     4|         1424|
+    +---------------------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln186_fu_552_p2               |         +|   0|  0|   8|           8|           1|
+    |add_ln192_fu_564_p2               |         +|   0|  0|   8|           8|           1|
+    |add_ln268_fu_882_p2               |         +|   0|  0|   8|           8|           1|
+    |sel_tmp25_cast_op_fu_796_p2       |         +|   0|  0|   6|           4|           2|
+    |sel_tmp42_op_fu_817_p2            |         +|   0|  0|   6|           4|           3|
+    |upperLimit_fu_580_p2              |         +|   0|  0|   8|           8|           8|
+    |sub_ln192_fu_527_p2               |         -|   0|  0|   6|           6|           6|
+    |and_ln149_1_fu_675_p2             |       and|   0|  0|   1|           1|           1|
+    |and_ln149_2_fu_681_p2             |       and|   0|  0|   2|           2|           2|
+    |and_ln149_3_fu_695_p2             |       and|   0|  0|   1|           1|           1|
+    |and_ln149_4_fu_707_p2             |       and|   0|  0|   1|           1|           1|
+    |and_ln149_fu_657_p2               |       and|   0|  0|   1|           1|           1|
+    |and_ln153_fu_669_p2               |       and|   0|  0|   1|           1|           1|
+    |and_ln205_fu_495_p2               |       and|   0|  0|   1|           1|           1|
+    |and_ln218_fu_508_p2               |       and|   0|  0|   1|           1|           1|
+    |cmp28_fu_463_p2                   |      icmp|   0|  0|   1|           2|           2|
+    |cmp77_fu_470_p2                   |      icmp|   0|  0|   1|           2|           2|
+    |icmp_ln153_1_fu_701_p2            |      icmp|   0|  0|   1|           2|           1|
+    |icmp_ln153_fu_645_p2              |      icmp|   0|  0|   1|           2|           1|
+    |icmp_ln169_fu_639_p2              |      icmp|   0|  0|   1|           2|           1|
+    |icmp_ln205_fu_483_p2              |      icmp|   0|  0|   1|           2|           2|
+    |icmp_ln218_fu_477_p2              |      icmp|   0|  0|   1|           2|           2|
+    |ap_block_state3_on_subcall_done   |        or|   0|  0|   1|           1|           1|
+    |empty_fu_713_p2                   |        or|   0|  0|   1|           1|           1|
+    |dirInIdx_fu_719_p3                |    select|   0|  0|   3|           1|           3|
+    |sel_tmp29_op_cast_cast_fu_802_p3  |    select|   0|  0|   3|           1|           1|
+    |sel_tmp44_op_fu_823_p3            |    select|   0|  0|   4|           1|           3|
+    |sel_tmp48_op_fu_830_p3            |    select|   0|  0|   5|           1|           5|
+    |select_ln149_1_fu_757_p3          |    select|   0|  0|   3|           1|           3|
+    |select_ln149_2_fu_764_p3          |    select|   0|  0|   3|           1|           3|
+    |select_ln149_3_fu_771_p3          |    select|   0|  0|   3|           1|           3|
+    |select_ln149_4_fu_782_p3          |    select|   0|  0|   4|           1|           4|
+    |select_ln149_5_fu_789_p3          |    select|   0|  0|   4|           1|           4|
+    |select_ln149_fu_750_p3            |    select|   0|  0|   2|           1|           2|
+    |select_ln155_fu_733_p3            |    select|   0|  0|   4|           1|           2|
+    |select_ln169_fu_726_p3            |    select|   0|  0|   5|           1|           5|
+    |select_ln244_fu_740_p3            |    select|   0|  0|   3|           1|           3|
+    |sub173_fu_809_p3                  |    select|   0|  0|   4|           1|           4|
+    |sub182_fu_837_p3                  |    select|   0|  0|   4|           1|           4|
+    |sel_tmp1_fu_489_p2                |       xor|   0|  0|   2|           1|           2|
+    |sel_tmp9_fu_502_p2                |       xor|   0|  0|   2|           1|           2|
+    |xor_ln148_fu_663_p2               |       xor|   0|  0|   2|           1|           2|
+    |xor_ln149_fu_651_p2               |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 130|          90|         101|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                     | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |IDX_pd_bypass_o                                |  13|          3|    8|         24|
+    |IDX_pd_bypass_o_ap_vld                         |  13|          3|    1|          3|
+    |allocated_tiles_shapes_values_address0         |  13|          3|    9|         27|
+    |ap_NS_fsm                                      |  49|         12|    1|         12|
+    |ap_phi_mux_retval_0_phi_fu_357_p4              |   9|          2|    1|          2|
+    |ap_return                                      |   9|          2|    1|          2|
+    |ap_sig_allocacmp_idx_pd_load                   |   9|          2|    4|          8|
+    |bypassOptIdx_o                                 |   9|          2|    8|         16|
+    |bypassOpt_wrAddr_o                             |   9|          2|    8|         16|
+    |idx_pd_o                                       |   9|          2|    4|          8|
+    |placement_dynamic_bypass_address0              |  13|          3|   14|         42|
+    |placement_dynamic_bypass_ce0                   |  13|          3|    1|          3|
+    |placement_dynamic_bypass_occupy_address0       |  17|          4|   15|         60|
+    |placement_dynamic_bypass_occupy_ce0            |  13|          3|    1|          3|
+    |placement_dynamic_bypass_occupy_ce1            |   9|          2|    1|          2|
+    |placement_dynamic_dict_Opt2PC_keys_address0    |  13|          3|    7|         21|
+    |placement_dynamic_dict_Opt2PC_keys_ce0         |  13|          3|    1|          3|
+    |placement_dynamic_dict_Opt2PC_values_address0  |  13|          3|    7|         21|
+    |xDiff_28_reg_344                               |   9|          2|    2|          4|
+    |yDiff_210_reg_335                              |   9|          2|    2|          4|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                          | 264|         61|   96|        281|
+    +-----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                               Name                                               | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |CGRA_NumTiles_shapes_values_load_reg_1016                                                         |   4|   0|    4|          0|
+    |Tile2XY_0_load_reg_996                                                                            |   2|   0|    2|          0|
+    |Tile2XY_1_load_reg_1006                                                                           |   2|   0|    2|          0|
+    |add_ln192_reg_1052                                                                                |   8|   0|    8|          0|
+    |add_ln252_loc_fu_118                                                                              |  15|   0|   15|          0|
+    |and_ln149_1_reg_1105                                                                              |   1|   0|    1|          0|
+    |and_ln149_4_reg_1117                                                                              |   1|   0|    1|          0|
+    |and_ln149_reg_1099                                                                                |   1|   0|    1|          0|
+    |and_ln205_reg_1021                                                                                |   1|   0|    1|          0|
+    |and_ln218_reg_1026                                                                                |   1|   0|    1|          0|
+    |ap_CS_fsm                                                                                         |  11|   0|   11|          0|
+    |ap_return_preg                                                                                    |   1|   0|    1|          0|
+    |bypassOptIdx_load_reg_1045                                                                        |   8|   0|    8|          0|
+    |bypassSrcOptIdx_loc_fu_146                                                                        |   7|   0|    7|          0|
+    |cmp28_reg_1001                                                                                    |   1|   0|    1|          0|
+    |cmp77_reg_1011                                                                                    |   1|   0|    1|          0|
+    |empty_reg_1123                                                                                    |   1|   0|    1|          0|
+    |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1_fu_365_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373_ap_start_reg  |   1|   0|    1|          0|
+    |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_ap_start_reg                   |   1|   0|    1|          0|
+    |i_50_loc_fu_134                                                                                   |   4|   0|    4|          0|
+    |icmp_ln169_reg_1089                                                                               |   1|   0|    1|          0|
+    |p_loc_fu_122                                                                                      |   8|   0|    8|          0|
+    |retval_0_reg_353                                                                                  |   1|   0|    1|          0|
+    |sub173_reg_1129                                                                                   |   4|   0|    4|          0|
+    |sub182_reg_1134                                                                                   |   4|   0|    4|          0|
+    |sub_ln192_reg_1031                                                                                |   6|   0|    6|          0|
+    |targetBlock15_reg_1139                                                                            |   1|   0|    1|          0|
+    |targetBlock_reg_1036                                                                              |   1|   0|    1|          0|
+    |tileId_reg_1082                                                                                   |   4|   0|    4|          0|
+    |tmp_37_reg_1111                                                                                   |   1|   0|    1|          0|
+    |tmp_71_loc_fu_114                                                                                 |  15|   0|   15|          0|
+    |tmp_71_reload_cast_reg_1146                                                                       |  15|   0|   64|         49|
+    |tmp_73_loc_fu_110                                                                                 |  14|   0|   14|          0|
+    |upperLimit_reg_1060                                                                               |   8|   0|    8|          0|
+    |xDiff_28_reg_344                                                                                  |   2|   0|    2|          0|
+    |xDiff_2_loc_fu_130                                                                                |   2|   0|    2|          0|
+    |xDiff_2_phi_loc_fu_138                                                                            |   2|   0|    2|          0|
+    |yDiff_210_reg_335                                                                                 |   2|   0|    2|          0|
+    |yDiff_2_loc_fu_126                                                                                |   2|   0|    2|          0|
+    |yDiff_2_phi_loc_fu_142                                                                            |   2|   0|    2|          0|
+    +--------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                             | 169|   0|  218|         49|
+    +--------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------------------------+-----+-----+------------+----------------------------------------+--------------+
+|                    RTL Ports                    | Dir | Bits|  Protocol  |              Source Object             |    C Type    |
++-------------------------------------------------+-----+-----+------------+----------------------------------------+--------------+
+|ap_clk                                           |   in|    1|  ap_ctrl_hs|           BypassOptPlacement_Gen_Record|  return value|
+|ap_rst                                           |   in|    1|  ap_ctrl_hs|           BypassOptPlacement_Gen_Record|  return value|
+|ap_start                                         |   in|    1|  ap_ctrl_hs|           BypassOptPlacement_Gen_Record|  return value|
+|ap_done                                          |  out|    1|  ap_ctrl_hs|           BypassOptPlacement_Gen_Record|  return value|
+|ap_idle                                          |  out|    1|  ap_ctrl_hs|           BypassOptPlacement_Gen_Record|  return value|
+|ap_ready                                         |  out|    1|  ap_ctrl_hs|           BypassOptPlacement_Gen_Record|  return value|
+|ap_return                                        |  out|    1|  ap_ctrl_hs|           BypassOptPlacement_Gen_Record|  return value|
+|bypassOptIdx_i                                   |   in|    8|     ap_ovld|                            bypassOptIdx|       pointer|
+|bypassOptIdx_o                                   |  out|    8|     ap_ovld|                            bypassOptIdx|       pointer|
+|bypassOptIdx_o_ap_vld                            |  out|    1|     ap_ovld|                            bypassOptIdx|       pointer|
+|bypassOpt                                        |  out|    8|      ap_vld|                               bypassOpt|       pointer|
+|bypassOpt_ap_vld                                 |  out|    1|      ap_vld|                               bypassOpt|       pointer|
+|bypassSrcOpt                                     |   in|    8|     ap_none|                            bypassSrcOpt|       pointer|
+|placement_dynamic_dict_Opt2PC_keys_address0      |  out|    7|   ap_memory|      placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2PC_keys_ce0           |  out|    1|   ap_memory|      placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2PC_keys_we0           |  out|    1|   ap_memory|      placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2PC_keys_d0            |  out|    8|   ap_memory|      placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2PC_keys_q0            |   in|    8|   ap_memory|      placement_dynamic_dict_Opt2PC_keys|         array|
+|placement_dynamic_dict_Opt2PC_values_address0    |  out|    7|   ap_memory|    placement_dynamic_dict_Opt2PC_values|         array|
+|placement_dynamic_dict_Opt2PC_values_ce0         |  out|    1|   ap_memory|    placement_dynamic_dict_Opt2PC_values|         array|
+|placement_dynamic_dict_Opt2PC_values_we0         |  out|    1|   ap_memory|    placement_dynamic_dict_Opt2PC_values|         array|
+|placement_dynamic_dict_Opt2PC_values_d0          |  out|    8|   ap_memory|    placement_dynamic_dict_Opt2PC_values|         array|
+|placement_dynamic_dict_Opt2PC_values_q0          |   in|    8|   ap_memory|    placement_dynamic_dict_Opt2PC_values|         array|
+|IDX_pd_bypass_i                                  |   in|    8|     ap_ovld|                           IDX_pd_bypass|       pointer|
+|IDX_pd_bypass_o                                  |  out|    8|     ap_ovld|                           IDX_pd_bypass|       pointer|
+|IDX_pd_bypass_o_ap_vld                           |  out|    1|     ap_ovld|                           IDX_pd_bypass|       pointer|
+|DynamicPlacement_II                              |   in|    8|     ap_none|                     DynamicPlacement_II|       pointer|
+|bypassSrcTile                                    |   in|    5|     ap_none|                           bypassSrcTile|       pointer|
+|bypassTgtTile                                    |   in|    4|     ap_none|                           bypassTgtTile|       pointer|
+|shape_idx                                        |   in|    5|     ap_none|                               shape_idx|       pointer|
+|idx_pd_i                                         |   in|    4|     ap_ovld|                                  idx_pd|       pointer|
+|idx_pd_o                                         |  out|    4|     ap_ovld|                                  idx_pd|       pointer|
+|idx_pd_o_ap_vld                                  |  out|    1|     ap_ovld|                                  idx_pd|       pointer|
+|placement_dynamic_bypass_occupy_address0         |  out|   15|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_ce0              |  out|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_we0              |  out|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_d0               |  out|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_q0               |   in|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_address1         |  out|   15|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_ce1              |  out|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_q1               |   in|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_address0                |  out|   14|   ap_memory|                placement_dynamic_bypass|         array|
+|placement_dynamic_bypass_ce0                     |  out|    1|   ap_memory|                placement_dynamic_bypass|         array|
+|placement_dynamic_bypass_we0                     |  out|    1|   ap_memory|                placement_dynamic_bypass|         array|
+|placement_dynamic_bypass_d0                      |  out|    8|   ap_memory|                placement_dynamic_bypass|         array|
+|placement_dynamic_bypass_q0                      |   in|    8|   ap_memory|                placement_dynamic_bypass|         array|
+|bypassOpt_wrAddr_i                               |   in|    8|     ap_ovld|                        bypassOpt_wrAddr|       pointer|
+|bypassOpt_wrAddr_o                               |  out|    8|     ap_ovld|                        bypassOpt_wrAddr|       pointer|
+|bypassOpt_wrAddr_o_ap_vld                        |  out|    1|     ap_ovld|                        bypassOpt_wrAddr|       pointer|
+|placement_dynamic_dict_Opt2Tile_keys_address0    |  out|    7|   ap_memory|    placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_ce0         |  out|    1|   ap_memory|    placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_we0         |  out|    1|   ap_memory|    placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_d0          |  out|    8|   ap_memory|    placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_values_address0  |  out|    7|   ap_memory|  placement_dynamic_dict_Opt2Tile_values|         array|
+|placement_dynamic_dict_Opt2Tile_values_ce0       |  out|    1|   ap_memory|  placement_dynamic_dict_Opt2Tile_values|         array|
+|placement_dynamic_dict_Opt2Tile_values_we0       |  out|    1|   ap_memory|  placement_dynamic_dict_Opt2Tile_values|         array|
+|placement_dynamic_dict_Opt2Tile_values_d0        |  out|    5|   ap_memory|  placement_dynamic_dict_Opt2Tile_values|         array|
+|placement_done_values_address0                   |  out|    7|   ap_memory|                   placement_done_values|         array|
+|placement_done_values_ce0                        |  out|    1|   ap_memory|                   placement_done_values|         array|
+|placement_done_values_we0                        |  out|    1|   ap_memory|                   placement_done_values|         array|
+|placement_done_values_d0                         |  out|    1|   ap_memory|                   placement_done_values|         array|
++-------------------------------------------------+-----+-----+------------+----------------------------------------+--------------+
+

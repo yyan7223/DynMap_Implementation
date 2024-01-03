@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Jan  3 23:46:14 2024
+# Process ID: 11932
+# Current directory: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/runOne/xsim_script.tcl}
+# Log file: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/sim/verilog/xsim.log
+# Journal file: D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/sim/verilog\xsim.jou
+# Running On: LAPTOP-0C06RSO7, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 34071 MB
+#-----------------------------------------------------------
+source xsim.dir/runOne/xsim_script.tcl
+# xsim {runOne} -autoloadwcfg -tclbatch {runOne.tcl}
+Time resolution is 1 ps
+source runOne.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "3217615000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 3217675 ns : File "D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/sim/verilog/runOne.autotb.v" Line 263
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 1176.867 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 39704 KB (Peak: 39704 KB), Simulation CPU Usage: 12843 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jan  3 23:46:51 2024...

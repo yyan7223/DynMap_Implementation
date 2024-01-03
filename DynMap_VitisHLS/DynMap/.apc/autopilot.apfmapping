@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="DynMap_4HLS.cpp" path="D:\Project\ISCA2024_DynMap\DynMap_VitisHLS\DynMap\DynMap_4HLS.cpp"/>
+    <originFiles name="DynMap_4HLS.hpp" path="D:\Project\ISCA2024_DynMap\DynMap_VitisHLS\DynMap\DynMap_4HLS.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="main.cpp" path="D:\Project\ISCA2024_DynMap\DynMap_VitisHLS\DynMap\main.cpp"/>
+    <originFiles name="result.golden.dat" path="D:\Project\ISCA2024_DynMap\DynMap_VitisHLS\DynMap\result.golden.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,558 @@
+
+
+================================================================
+== Vitis HLS Report for 'dynamic_placement_routing'
+================================================================
+* Date:           Wed Jan  3 23:38:53 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.971 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_596_1   |        ?|        ?|         ?|          -|          -|       ?|        no|
+        | + VITIS_LOOP_608_3  |        ?|        ?|         ?|          -|          -|  0 ~ 10|        no|
+        | + VITIS_LOOP_408_4  |        ?|        ?|    3 ~ 15|          -|          -|       ?|        no|
+        +---------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 30
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 30 
+4 --> 5 
+5 --> 6 
+6 --> 7 16 18 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 15 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 6 
+15 --> 14 
+16 --> 17 
+17 --> 26 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 29 
+27 --> 28 
+28 --> 26 
+29 --> 30 2 
+30 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.29>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%placedOpts_Counter = alloca i32 1"   --->   Operation 31 'alloca' 'placedOpts_Counter' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%storemerge = alloca i32 1"   --->   Operation 32 'alloca' 'storemerge' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%tileID_loc = alloca i64 1"   --->   Operation 33 'alloca' 'tileID_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%j_3_loc = alloca i64 1"   --->   Operation 34 'alloca' 'j_3_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%inc311623_loc = alloca i64 1"   --->   Operation 35 'alloca' 'inc311623_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%i_loc = alloca i64 1"   --->   Operation 36 'alloca' 'i_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (1.29ns)   --->   "%store_ln596 = store i8 0, i8 %storemerge" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 37 'store' 'store_ln596' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 38 [1/1] (1.29ns)   --->   "%store_ln596 = store i8 0, i8 %placedOpts_Counter" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 38 'store' 'store_ln596' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln596 = br void" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 39 'br' 'br_ln596' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.75>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%kernel_idx_load = load i3 %kernel_idx" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 40 'load' 'kernel_idx_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln596 = zext i3 %kernel_idx_load" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 41 'zext' 'zext_ln596' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%DFG_NodesCount_kernels_values_addr = getelementptr i6 %DFG_NodesCount_kernels_values, i64 0, i64 %zext_ln596" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 42 'getelementptr' 'DFG_NodesCount_kernels_values_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [2/2] (1.75ns)   --->   "%DFG_NodesCount_kernels_values_load = load i3 %DFG_NodesCount_kernels_values_addr" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 43 'load' 'DFG_NodesCount_kernels_values_load' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 6> <Depth = 6> <ROM>
+
+State 3 <SV = 2> <Delay = 4.36>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%placedOpts_Counter_1 = load i8 %placedOpts_Counter" [DynMap/DynMap_4HLS.cpp:659]   --->   Operation 44 'load' 'placedOpts_Counter_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%storemerge_load = load i8 %storemerge" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 45 'load' 'storemerge_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%store_ln596 = store i8 %storemerge_load, i8 %curOpt_idx" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 46 'store' 'store_ln596' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln374_1 = zext i3 %kernel_idx_load" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 47 'zext' 'zext_ln374_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (3.61ns)   --->   "%mul_ln374 = mul i10 %zext_ln374_1, i10 100" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 48 'mul' 'mul_ln374' <Predicate = true> <Delay = 3.61> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 3.61> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/2] (1.75ns)   --->   "%DFG_NodesCount_kernels_values_load = load i3 %DFG_NodesCount_kernels_values_addr" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 49 'load' 'DFG_NodesCount_kernels_values_load' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 6> <Depth = 6> <ROM>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%zext_ln596_1 = zext i6 %DFG_NodesCount_kernels_values_load" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 50 'zext' 'zext_ln596_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (1.31ns)   --->   "%icmp_ln596 = icmp_slt  i8 %storemerge_load, i8 %zext_ln596_1" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 51 'icmp' 'icmp_ln596' <Predicate = true> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (1.30ns)   --->   "%placedOpts_Counter_2 = add i8 %placedOpts_Counter_1, i8 1" [DynMap/DynMap_4HLS.cpp:659]   --->   Operation 52 'add' 'placedOpts_Counter_2' <Predicate = true> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (1.29ns)   --->   "%br_ln596 = br i1 %icmp_ln596, void %._crit_edge, void %codeRepl" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 53 'br' 'br_ln596' <Predicate = true> <Delay = 1.29>
+ST_3 : Operation 54 [1/1] (1.29ns)   --->   "%store_ln597 = store i8 255, i8 %IDX_pd" [DynMap/DynMap_4HLS.cpp:597]   --->   Operation 54 'store' 'store_ln597' <Predicate = (icmp_ln596)> <Delay = 1.29>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln602 = trunc i8 %storemerge_load" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 55 'trunc' 'trunc_ln602' <Predicate = (icmp_ln596)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_11_cast = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i7.i3, i7 %trunc_ln602, i3 0" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 56 'bitconcatenate' 'tmp_11_cast' <Predicate = (icmp_ln596)> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %storemerge_load, i1 0" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 57 'bitconcatenate' 'tmp_s' <Predicate = (icmp_ln596)> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.00ns)   --->   "%sext_ln602_1 = sext i9 %tmp_s" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 58 'sext' 'sext_ln602_1' <Predicate = (icmp_ln596)> <Delay = 0.00>
+ST_3 : Operation 59 [1/1] (1.41ns)   --->   "%add_ln602 = add i10 %tmp_11_cast, i10 %sext_ln602_1" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 59 'add' 'add_ln602' <Predicate = (icmp_ln596)> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [2/2] (0.00ns)   --->   "%call_ln602 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2, i10 %add_ln602, i4 %i_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 60 'call' 'call_ln602' <Predicate = (icmp_ln596)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 61 [1/1] (1.29ns)   --->   "%store_ln607 = store i8 0, i8 %predecessors_wrAddr" [DynMap/DynMap_4HLS.cpp:607]   --->   Operation 61 'store' 'store_ln607' <Predicate = (icmp_ln596)> <Delay = 1.29>
+
+State 4 <SV = 3> <Delay = 4.18>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%sext_ln602 = sext i8 %storemerge_load" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 62 'sext' 'sext_ln602' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (1.41ns)   --->   "%add_ln374 = add i10 %mul_ln374, i10 %sext_ln602" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 63 'add' 'add_ln374' <Predicate = true> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln374_2 = zext i10 %add_ln374" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 64 'zext' 'zext_ln374_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%placement_static_Opt2Tile_kernels_values1_addr = getelementptr i4 %placement_static_Opt2Tile_kernels_values1, i64 0, i64 %zext_ln374_2" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 65 'getelementptr' 'placement_static_Opt2Tile_kernels_values1_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%placement_static_kernels_values_addr = getelementptr i6 %placement_static_kernels_values, i64 0, i64 %zext_ln374_2" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 66 'getelementptr' 'placement_static_kernels_values_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/2] (0.00ns)   --->   "%call_ln602 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2, i10 %add_ln602, i4 %i_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:602]   --->   Operation 67 'call' 'call_ln602' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 68 [2/2] (2.77ns)   --->   "%placement_static_kernels_values_load = load i10 %placement_static_kernels_values_addr" [DynMap/DynMap_4HLS.cpp:636]   --->   Operation 68 'load' 'placement_static_kernels_values_load' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 6> <Depth = 600> <ROM>
+
+State 5 <SV = 4> <Delay = 2.77>
+ST_5 : Operation 69 [1/1] (0.00ns)   --->   "%specloopname_ln597 = specloopname void @_ssdm_op_SpecLoopName, void @empty_47" [DynMap/DynMap_4HLS.cpp:597]   --->   Operation 69 'specloopname' 'specloopname_ln597' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 70 [1/1] (0.00ns)   --->   "%i_loc_load = load i4 %i_loc"   --->   Operation 70 'load' 'i_loc_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 71 [1/2] (2.77ns)   --->   "%placement_static_kernels_values_load = load i10 %placement_static_kernels_values_addr" [DynMap/DynMap_4HLS.cpp:636]   --->   Operation 71 'load' 'placement_static_kernels_values_load' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 6> <Depth = 600> <ROM>
+ST_5 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln608 = zext i6 %placement_static_kernels_values_load" [DynMap/DynMap_4HLS.cpp:608]   --->   Operation 72 'zext' 'zext_ln608' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 73 [1/1] (1.29ns)   --->   "%br_ln608 = br void" [DynMap/DynMap_4HLS.cpp:608]   --->   Operation 73 'br' 'br_ln608' <Predicate = true> <Delay = 1.29>
+
+State 6 <SV = 5> <Delay = 4.18>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%i_2 = phi i4 0, void %codeRepl, i4 %i, void"   --->   Operation 74 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.96ns)   --->   "%icmp_ln608 = icmp_eq  i4 %i_2, i4 %i_loc_load" [DynMap/DynMap_4HLS.cpp:608]   --->   Operation 75 'icmp' 'icmp_ln608' <Predicate = true> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 0, i64 10, i64 0"   --->   Operation 76 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 77 [1/1] (0.99ns)   --->   "%i = add i4 %i_2, i4 1" [DynMap/DynMap_4HLS.cpp:608]   --->   Operation 77 'add' 'i' <Predicate = true> <Delay = 0.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln608 = br i1 %icmp_ln608, void %.split13, void %._crit_edge.loopexit" [DynMap/DynMap_4HLS.cpp:608]   --->   Operation 78 'br' 'br_ln608' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln609 = zext i4 %i_2" [DynMap/DynMap_4HLS.cpp:609]   --->   Operation 79 'zext' 'zext_ln609' <Predicate = (!icmp_ln608)> <Delay = 0.00>
+ST_6 : Operation 80 [1/1] (1.41ns)   --->   "%add_ln609 = add i10 %add_ln602, i10 %zext_ln609" [DynMap/DynMap_4HLS.cpp:609]   --->   Operation 80 'add' 'add_ln609' <Predicate = (!icmp_ln608)> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 81 [1/1] (0.00ns)   --->   "%zext_ln609_1 = zext i10 %add_ln609" [DynMap/DynMap_4HLS.cpp:609]   --->   Operation 81 'zext' 'zext_ln609_1' <Predicate = (!icmp_ln608)> <Delay = 0.00>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%dependency_predecessor_values_addr = getelementptr i8 %dependency_predecessor_values, i64 0, i64 %zext_ln609_1" [DynMap/DynMap_4HLS.cpp:609]   --->   Operation 82 'getelementptr' 'dependency_predecessor_values_addr' <Predicate = (!icmp_ln608)> <Delay = 0.00>
+ST_6 : Operation 83 [2/2] (2.77ns)   --->   "%pred = load i10 %dependency_predecessor_values_addr" [DynMap/DynMap_4HLS.cpp:609]   --->   Operation 83 'load' 'pred' <Predicate = (!icmp_ln608)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%predecessors_wrAddr_load = load i8 %predecessors_wrAddr" [DynMap/DynMap_4HLS.cpp:650]   --->   Operation 84 'load' 'predecessors_wrAddr_load' <Predicate = (icmp_ln608)> <Delay = 0.00>
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%store_ln650 = store i8 %predecessors_wrAddr_load, i8 %predsNum" [DynMap/DynMap_4HLS.cpp:650]   --->   Operation 85 'store' 'store_ln650' <Predicate = (icmp_ln608)> <Delay = 0.00>
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%threshold_load = load i8 %threshold" [DynMap/DynMap_4HLS.cpp:653]   --->   Operation 86 'load' 'threshold_load' <Predicate = (icmp_ln608)> <Delay = 0.00>
+ST_6 : Operation 87 [1/1] (1.31ns)   --->   "%icmp_ln653 = icmp_slt  i8 %placedOpts_Counter_1, i8 %threshold_load" [DynMap/DynMap_4HLS.cpp:653]   --->   Operation 87 'icmp' 'icmp_ln653' <Predicate = (icmp_ln608)> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln653 = br i1 %icmp_ln653, void, void %codeRepl10" [DynMap/DynMap_4HLS.cpp:653]   --->   Operation 88 'br' 'br_ln653' <Predicate = (icmp_ln608)> <Delay = 0.00>
+ST_6 : Operation 89 [2/2] (2.77ns)   --->   "%curTileStatic = load i10 %placement_static_Opt2Tile_kernels_values1_addr" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 89 'load' 'curTileStatic' <Predicate = (icmp_ln608 & icmp_ln653)> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 600> <ROM>
+ST_6 : Operation 90 [1/1] (1.32ns)   --->   "%store_ln386 = store i8 0, i8 %curOptPotentialPlacement_wrAddr" [DynMap/DynMap_4HLS.cpp:386]   --->   Operation 90 'store' 'store_ln386' <Predicate = (icmp_ln608 & icmp_ln653)> <Delay = 1.32>
+
+State 7 <SV = 6> <Delay = 2.77>
+ST_7 : Operation 91 [1/2] (2.77ns)   --->   "%pred = load i10 %dependency_predecessor_values_addr" [DynMap/DynMap_4HLS.cpp:609]   --->   Operation 91 'load' 'pred' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
+ST_7 : Operation 92 [2/2] (0.00ns)   --->   "%call_ln596 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_611_4, i6 %DFG_NodesCount_kernels_values_load, i10 %mul_ln374, i8 %pred, i6 %inc311623_loc, i6 %placement_static_kernels_values" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 92 'call' 'call_ln596' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 93 [1/2] (0.00ns)   --->   "%call_ln596 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_611_4, i6 %DFG_NodesCount_kernels_values_load, i10 %mul_ln374, i8 %pred, i6 %inc311623_loc, i6 %placement_static_kernels_values" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 93 'call' 'call_ln596' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 1.75>
+ST_9 : Operation 94 [1/1] (0.00ns)   --->   "%inc311623_loc_load = load i6 %inc311623_loc"   --->   Operation 94 'load' 'inc311623_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 95 [1/1] (0.00ns)   --->   "%zext_ln615 = zext i6 %inc311623_loc_load" [DynMap/DynMap_4HLS.cpp:615]   --->   Operation 95 'zext' 'zext_ln615' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%placement_done_values_addr = getelementptr i1 %placement_done_values, i64 0, i64 %zext_ln615" [DynMap/DynMap_4HLS.cpp:615]   --->   Operation 96 'getelementptr' 'placement_done_values_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 97 [2/2] (1.75ns)   --->   "%placement_done_values_load = load i7 %placement_done_values_addr" [DynMap/DynMap_4HLS.cpp:615]   --->   Operation 97 'load' 'placement_done_values_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 100> <RAM>
+
+State 10 <SV = 9> <Delay = 3.51>
+ST_10 : Operation 98 [1/1] (0.00ns)   --->   "%specloopname_ln608 = specloopname void @_ssdm_op_SpecLoopName, void @empty_40" [DynMap/DynMap_4HLS.cpp:608]   --->   Operation 98 'specloopname' 'specloopname_ln608' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i6.i3, i6 %inc311623_loc_load, i3 0" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 99 'bitconcatenate' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln619 = zext i9 %tmp_1" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 100 'zext' 'zext_ln619' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i6.i1, i6 %inc311623_loc_load, i1 0" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 101 'bitconcatenate' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln619_2 = zext i7 %tmp_2" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 102 'zext' 'zext_ln619_2' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 103 [1/1] (1.36ns)   --->   "%add_ln619 = add i10 %zext_ln619, i10 %zext_ln619_2" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 103 'add' 'add_ln619' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 104 [1/2] (1.75ns)   --->   "%placement_done_values_load = load i7 %placement_done_values_addr" [DynMap/DynMap_4HLS.cpp:615]   --->   Operation 104 'load' 'placement_done_values_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 100> <RAM>
+ST_10 : Operation 105 [1/1] (0.00ns)   --->   "%br_ln615 = br i1 %placement_done_values_load, void %.preheader.preheader, void" [DynMap/DynMap_4HLS.cpp:615]   --->   Operation 105 'br' 'br_ln615' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 106 [2/2] (0.00ns)   --->   "%call_ln619 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5, i10 %add_ln619, i4 %j_3_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 106 'call' 'call_ln619' <Predicate = (!placement_done_values_load)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 107 [1/1] (0.00ns)   --->   "%predecessors_wrAddr_load_1 = load i8 %predecessors_wrAddr" [DynMap/DynMap_4HLS.cpp:641]   --->   Operation 107 'load' 'predecessors_wrAddr_load_1' <Predicate = (placement_done_values_load)> <Delay = 0.00>
+ST_10 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln641 = zext i8 %predecessors_wrAddr_load_1" [DynMap/DynMap_4HLS.cpp:641]   --->   Operation 108 'zext' 'zext_ln641' <Predicate = (placement_done_values_load)> <Delay = 0.00>
+ST_10 : Operation 109 [1/1] (0.00ns)   --->   "%predOpt_idx_List_addr = getelementptr i6 %predOpt_idx_List, i64 0, i64 %zext_ln641" [DynMap/DynMap_4HLS.cpp:641]   --->   Operation 109 'getelementptr' 'predOpt_idx_List_addr' <Predicate = (placement_done_values_load)> <Delay = 0.00>
+ST_10 : Operation 110 [1/1] (1.75ns)   --->   "%store_ln641 = store i6 %inc311623_loc_load, i4 %predOpt_idx_List_addr" [DynMap/DynMap_4HLS.cpp:641]   --->   Operation 110 'store' 'store_ln641' <Predicate = (placement_done_values_load)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_10 : Operation 111 [1/1] (0.00ns)   --->   "%predecessors_addr = getelementptr i8 %predecessors, i64 0, i64 %zext_ln641" [DynMap/DynMap_4HLS.cpp:642]   --->   Operation 111 'getelementptr' 'predecessors_addr' <Predicate = (placement_done_values_load)> <Delay = 0.00>
+ST_10 : Operation 112 [1/1] (1.75ns)   --->   "%store_ln642 = store i8 %pred, i4 %predecessors_addr" [DynMap/DynMap_4HLS.cpp:642]   --->   Operation 112 'store' 'store_ln642' <Predicate = (placement_done_values_load)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 10> <RAM>
+ST_10 : Operation 113 [1/1] (1.30ns)   --->   "%add_ln643 = add i8 %predecessors_wrAddr_load_1, i8 1" [DynMap/DynMap_4HLS.cpp:643]   --->   Operation 113 'add' 'add_ln643' <Predicate = (placement_done_values_load)> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 114 [1/1] (1.29ns)   --->   "%store_ln643 = store i8 %add_ln643, i8 %predecessors_wrAddr" [DynMap/DynMap_4HLS.cpp:643]   --->   Operation 114 'store' 'store_ln643' <Predicate = (placement_done_values_load)> <Delay = 1.29>
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%placement_dynamic_dict_Opt2PC_values_addr = getelementptr i8 %placement_dynamic_dict_Opt2PC_values, i64 0, i64 %zext_ln615" [DynMap/DynMap_4HLS.cpp:644]   --->   Operation 115 'getelementptr' 'placement_dynamic_dict_Opt2PC_values_addr' <Predicate = (placement_done_values_load)> <Delay = 0.00>
+ST_10 : Operation 116 [2/2] (1.75ns)   --->   "%placement_dynamic_dict_Opt2PC_values_load = load i7 %placement_dynamic_dict_Opt2PC_values_addr" [DynMap/DynMap_4HLS.cpp:644]   --->   Operation 116 'load' 'placement_dynamic_dict_Opt2PC_values_load' <Predicate = (placement_done_values_load)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 117 [1/2] (0.00ns)   --->   "%call_ln619 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5, i10 %add_ln619, i4 %j_3_loc, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 117 'call' 'call_ln619' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 5.15>
+ST_12 : Operation 118 [1/1] (0.00ns)   --->   "%j_3_loc_load = load i4 %j_3_loc"   --->   Operation 118 'load' 'j_3_loc_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 119 [1/1] (0.96ns)   --->   "%icmp_ln624 = icmp_eq  i4 %j_3_loc_load, i4 0" [DynMap/DynMap_4HLS.cpp:624]   --->   Operation 119 'icmp' 'icmp_ln624' <Predicate = true> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 120 [1/1] (0.00ns)   --->   "%br_ln624 = br i1 %icmp_ln624, void %.lr.ph28.preheader, void %.critedge" [DynMap/DynMap_4HLS.cpp:624]   --->   Operation 120 'br' 'br_ln624' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 121 [2/2] (4.18ns)   --->   "%targetBlock9 = call i1 @dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6, i4 %j_3_loc_load, i10 %add_ln619, i6 %placement_static_kernels_values_load, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 121 'call' 'targetBlock9' <Predicate = (!icmp_ln624)> <Delay = 4.18> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 5.38>
+ST_13 : Operation 122 [1/2] (5.38ns)   --->   "%targetBlock9 = call i1 @dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6, i4 %j_3_loc_load, i10 %add_ln619, i6 %placement_static_kernels_values_load, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 122 'call' 'targetBlock9' <Predicate = (!icmp_ln624)> <Delay = 5.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 123 [1/1] (0.00ns)   --->   "%br_ln619 = br i1 %targetBlock9, void %.loopexit, void %.critedge" [DynMap/DynMap_4HLS.cpp:619]   --->   Operation 123 'br' 'br_ln619' <Predicate = (!icmp_ln624)> <Delay = 0.00>
+ST_13 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln636 = zext i4 %j_3_loc_load" [DynMap/DynMap_4HLS.cpp:636]   --->   Operation 124 'zext' 'zext_ln636' <Predicate = (targetBlock9) | (icmp_ln624)> <Delay = 0.00>
+ST_13 : Operation 125 [1/1] (1.41ns)   --->   "%add_ln636 = add i10 %add_ln619, i10 %zext_ln636" [DynMap/DynMap_4HLS.cpp:636]   --->   Operation 125 'add' 'add_ln636' <Predicate = (targetBlock9) | (icmp_ln624)> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.77>
+ST_14 : Operation 126 [1/1] (0.00ns)   --->   "%zext_ln636_1 = zext i10 %add_ln636" [DynMap/DynMap_4HLS.cpp:636]   --->   Operation 126 'zext' 'zext_ln636_1' <Predicate = (!placement_done_values_load & targetBlock9) | (!placement_done_values_load & icmp_ln624)> <Delay = 0.00>
+ST_14 : Operation 127 [1/1] (0.00ns)   --->   "%dependency_predecessor_values_addr_1 = getelementptr i8 %dependency_predecessor_values, i64 0, i64 %zext_ln636_1" [DynMap/DynMap_4HLS.cpp:636]   --->   Operation 127 'getelementptr' 'dependency_predecessor_values_addr_1' <Predicate = (!placement_done_values_load & targetBlock9) | (!placement_done_values_load & icmp_ln624)> <Delay = 0.00>
+ST_14 : Operation 128 [1/1] (2.77ns)   --->   "%store_ln636 = store i8 %zext_ln608, i10 %dependency_predecessor_values_addr_1" [DynMap/DynMap_4HLS.cpp:636]   --->   Operation 128 'store' 'store_ln636' <Predicate = (!placement_done_values_load & targetBlock9) | (!placement_done_values_load & icmp_ln624)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
+ST_14 : Operation 129 [1/1] (0.00ns)   --->   "%br_ln638 = br void %.loopexit" [DynMap/DynMap_4HLS.cpp:638]   --->   Operation 129 'br' 'br_ln638' <Predicate = (!placement_done_values_load & targetBlock9) | (!placement_done_values_load & icmp_ln624)> <Delay = 0.00>
+ST_14 : Operation 130 [1/1] (0.00ns)   --->   "%br_ln639 = br void" [DynMap/DynMap_4HLS.cpp:639]   --->   Operation 130 'br' 'br_ln639' <Predicate = (!placement_done_values_load)> <Delay = 0.00>
+ST_14 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 131 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 15 <SV = 10> <Delay = 4.36>
+ST_15 : Operation 132 [1/2] (1.75ns)   --->   "%placement_dynamic_dict_Opt2PC_values_load = load i7 %placement_dynamic_dict_Opt2PC_values_addr" [DynMap/DynMap_4HLS.cpp:644]   --->   Operation 132 'load' 'placement_dynamic_dict_Opt2PC_values_load' <Predicate = true> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 100> <RAM>
+ST_15 : Operation 133 [1/1] (0.00ns)   --->   "%IDX_pd_load = load i8 %IDX_pd" [DynMap/DynMap_4HLS.cpp:644]   --->   Operation 133 'load' 'IDX_pd_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 134 [1/1] (1.31ns)   --->   "%icmp_ln644 = icmp_sgt  i8 %placement_dynamic_dict_Opt2PC_values_load, i8 %IDX_pd_load" [DynMap/DynMap_4HLS.cpp:644]   --->   Operation 134 'icmp' 'icmp_ln644' <Predicate = true> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 135 [1/1] (0.00ns)   --->   "%br_ln644 = br i1 %icmp_ln644, void %._crit_edge18, void" [DynMap/DynMap_4HLS.cpp:644]   --->   Operation 135 'br' 'br_ln644' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 136 [1/1] (1.29ns)   --->   "%store_ln645 = store i8 %placement_dynamic_dict_Opt2PC_values_load, i8 %IDX_pd" [DynMap/DynMap_4HLS.cpp:645]   --->   Operation 136 'store' 'store_ln645' <Predicate = (icmp_ln644)> <Delay = 1.29>
+ST_15 : Operation 137 [1/1] (0.00ns)   --->   "%br_ln646 = br void %._crit_edge18" [DynMap/DynMap_4HLS.cpp:646]   --->   Operation 137 'br' 'br_ln646' <Predicate = (icmp_ln644)> <Delay = 0.00>
+ST_15 : Operation 138 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 138 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 6> <Delay = 0.00>
+ST_16 : Operation 139 [2/2] (0.00ns)   --->   "%call_ln654 = call void @CurOptPotentialPlacement_List_BypassLess_Gen, i8 %predsNum, i5 %shape_idx, i4 %CGRA_NumTiles_shapes_values, i8 %curOptPotentialPlacement_wrAddr, i8 %potentialPlacement_wrAddr_List_0, i8 %potentialPlacement_wrAddr_List_1, i6 %predOpt_idx_List, i5 %placement_dynamic_dict_Opt2Tile_values, i2 %Tile2XY_0, i2 %Tile2XY_1, i8 %CurOptPotentialPlacement_List_BypassLess_Gen_XChanges, i4 %xy2Tile, i4 %allocated_tiles_shapes_values, i8 %CurOptPotentialPlacement_List_BypassLess_Gen_YChanges, i5 %curOptPotentialPlacement" [DynMap/DynMap_4HLS.cpp:654]   --->   Operation 139 'call' 'call_ln654' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 7> <Delay = 0.00>
+ST_17 : Operation 140 [1/2] (0.00ns)   --->   "%call_ln654 = call void @CurOptPotentialPlacement_List_BypassLess_Gen, i8 %predsNum, i5 %shape_idx, i4 %CGRA_NumTiles_shapes_values, i8 %curOptPotentialPlacement_wrAddr, i8 %potentialPlacement_wrAddr_List_0, i8 %potentialPlacement_wrAddr_List_1, i6 %predOpt_idx_List, i5 %placement_dynamic_dict_Opt2Tile_values, i2 %Tile2XY_0, i2 %Tile2XY_1, i8 %CurOptPotentialPlacement_List_BypassLess_Gen_XChanges, i4 %xy2Tile, i4 %allocated_tiles_shapes_values, i8 %CurOptPotentialPlacement_List_BypassLess_Gen_YChanges, i5 %curOptPotentialPlacement" [DynMap/DynMap_4HLS.cpp:654]   --->   Operation 140 'call' 'call_ln654' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 141 [1/1] (0.00ns)   --->   "%br_ln0 = br void %_Z43CurOptPotentialPlacement_List_LevelInfo_Genv.exit"   --->   Operation 141 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 6> <Delay = 2.77>
+ST_18 : Operation 142 [1/2] (2.77ns)   --->   "%curTileStatic = load i10 %placement_static_Opt2Tile_kernels_values1_addr" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 142 'load' 'curTileStatic' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 600> <ROM>
+ST_18 : Operation 143 [2/2] (0.00ns)   --->   "%call_ln374 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1, i4 %curTileStatic, i4 %tileID_loc, i4 %placement_static_Tile2Level_keys" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 143 'call' 'call_ln374' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 7> <Delay = 0.00>
+ST_19 : Operation 144 [1/2] (0.00ns)   --->   "%call_ln374 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1, i4 %curTileStatic, i4 %tileID_loc, i4 %placement_static_Tile2Level_keys" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 144 'call' 'call_ln374' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 8> <Delay = 1.75>
+ST_20 : Operation 145 [1/1] (0.00ns)   --->   "%tileID_loc_load = load i4 %tileID_loc"   --->   Operation 145 'load' 'tileID_loc_load' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 146 [1/1] (0.00ns)   --->   "%zext_ln380 = zext i4 %tileID_loc_load" [DynMap/DynMap_4HLS.cpp:380]   --->   Operation 146 'zext' 'zext_ln380' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 147 [1/1] (0.00ns)   --->   "%placement_static_Tile2Level_values_addr = getelementptr i2 %placement_static_Tile2Level_values, i64 0, i64 %zext_ln380" [DynMap/DynMap_4HLS.cpp:380]   --->   Operation 147 'getelementptr' 'placement_static_Tile2Level_values_addr' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 148 [2/2] (1.75ns)   --->   "%static_level = load i4 %placement_static_Tile2Level_values_addr" [DynMap/DynMap_4HLS.cpp:380]   --->   Operation 148 'load' 'static_level' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 16> <ROM>
+ST_20 : Operation 149 [1/1] (0.00ns)   --->   "%shape_idx_load = load i5 %shape_idx" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 149 'load' 'shape_idx_load' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 150 [1/1] (0.00ns)   --->   "%zext_ln382 = zext i5 %shape_idx_load" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 150 'zext' 'zext_ln382' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 151 [1/1] (0.00ns)   --->   "%allocated_tiles_Maxlevels_dynamic_shapes_values_addr = getelementptr i2 %allocated_tiles_Maxlevels_dynamic_shapes_values, i64 0, i64 %zext_ln382" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 151 'getelementptr' 'allocated_tiles_Maxlevels_dynamic_shapes_values_addr' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 152 [2/2] (1.75ns)   --->   "%max_dynamic_level = load i5 %allocated_tiles_Maxlevels_dynamic_shapes_values_addr" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 152 'load' 'max_dynamic_level' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 20> <ROM>
+
+State 21 <SV = 9> <Delay = 4.83>
+ST_21 : Operation 153 [1/2] (1.75ns)   --->   "%static_level = load i4 %placement_static_Tile2Level_values_addr" [DynMap/DynMap_4HLS.cpp:380]   --->   Operation 153 'load' 'static_level' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 16> <ROM>
+ST_21 : Operation 154 [1/2] (1.75ns)   --->   "%max_dynamic_level = load i5 %allocated_tiles_Maxlevels_dynamic_shapes_values_addr" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 154 'load' 'max_dynamic_level' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 20> <ROM>
+ST_21 : Operation 155 [1/1] (0.50ns)   --->   "%icmp_ln383 = icmp_ugt  i2 %static_level, i2 %max_dynamic_level" [DynMap/DynMap_4HLS.cpp:383]   --->   Operation 155 'icmp' 'icmp_ln383' <Predicate = true> <Delay = 0.50> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 156 [1/1] (0.81ns)   --->   "%initial_dynamic_level = select i1 %icmp_ln383, i2 %max_dynamic_level, i2 %static_level" [DynMap/DynMap_4HLS.cpp:383]   --->   Operation 156 'select' 'initial_dynamic_level' <Predicate = true> <Delay = 0.81> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 157 [1/1] (0.00ns)   --->   "%tmp_4 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %shape_idx_load, i2 %initial_dynamic_level" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 157 'bitconcatenate' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 158 [1/1] (0.00ns)   --->   "%tmp_16_cast = zext i7 %tmp_4" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 158 'zext' 'tmp_16_cast' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 159 [1/1] (0.00ns)   --->   "%allocated_tiles_levelsValidLen_shapes_values_addr = getelementptr i4 %allocated_tiles_levelsValidLen_shapes_values, i64 0, i64 %tmp_16_cast" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 159 'getelementptr' 'allocated_tiles_levelsValidLen_shapes_values_addr' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 160 [2/2] (1.75ns)   --->   "%allocated_tiles_levelsValidLen_shapes_values_load = load i7 %allocated_tiles_levelsValidLen_shapes_values_addr" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 160 'load' 'allocated_tiles_levelsValidLen_shapes_values_load' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 80> <ROM>
+
+State 22 <SV = 10> <Delay = 5.49>
+ST_22 : Operation 161 [1/1] (0.00ns)   --->   "%zext_ln374 = zext i4 %curTileStatic" [DynMap/DynMap_4HLS.cpp:374]   --->   Operation 161 'zext' 'zext_ln374' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 162 [1/1] (0.00ns)   --->   "%tmp_3 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %shape_idx_load, i2 0" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 162 'bitconcatenate' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 163 [1/1] (0.00ns)   --->   "%zext_ln382_2 = zext i7 %tmp_3" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 163 'zext' 'zext_ln382_2' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 164 [1/1] (0.00ns)   --->   "%zext_ln382_1 = zext i2 %max_dynamic_level" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 164 'zext' 'zext_ln382_1' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 165 [1/1] (0.00ns)   --->   "%zext_ln407 = zext i2 %initial_dynamic_level" [DynMap/DynMap_4HLS.cpp:407]   --->   Operation 165 'zext' 'zext_ln407' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 166 [1/2] (1.75ns)   --->   "%allocated_tiles_levelsValidLen_shapes_values_load = load i7 %allocated_tiles_levelsValidLen_shapes_values_addr" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 166 'load' 'allocated_tiles_levelsValidLen_shapes_values_load' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 80> <ROM>
+ST_22 : Operation 167 [1/1] (0.96ns)   --->   "%icmp_ln388 = icmp_eq  i4 %allocated_tiles_levelsValidLen_shapes_values_load, i4 0" [DynMap/DynMap_4HLS.cpp:388]   --->   Operation 167 'icmp' 'icmp_ln388' <Predicate = true> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 168 [1/1] (0.00ns)   --->   "%br_ln388 = br i1 %icmp_ln388, void %.lr.ph24.i.preheader, void %.loopexit.i" [DynMap/DynMap_4HLS.cpp:388]   --->   Operation 168 'br' 'br_ln388' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 169 [2/2] (2.77ns)   --->   "%targetBlock = call i1 @dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2, i4 %allocated_tiles_levelsValidLen_shapes_values_load, i5 %shape_idx_load, i2 %initial_dynamic_level, i4 %curTileStatic, i4 %allocated_tiles_levels_dynamic_shapes_values" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 169 'call' 'targetBlock' <Predicate = (!icmp_ln388)> <Delay = 2.77> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 11> <Delay = 6.78>
+ST_23 : Operation 170 [1/2] (5.03ns)   --->   "%targetBlock = call i1 @dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2, i4 %allocated_tiles_levelsValidLen_shapes_values_load, i5 %shape_idx_load, i2 %initial_dynamic_level, i4 %curTileStatic, i4 %allocated_tiles_levels_dynamic_shapes_values" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 170 'call' 'targetBlock' <Predicate = (!icmp_ln388)> <Delay = 5.03> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 171 [1/1] (0.00ns)   --->   "%br_ln382 = br i1 %targetBlock, void, void %.loopexit.i" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 171 'br' 'br_ln382' <Predicate = (!icmp_ln388)> <Delay = 0.00>
+ST_23 : Operation 172 [1/1] (1.75ns)   --->   "%store_ln391 = store i5 %zext_ln374, i5 0" [DynMap/DynMap_4HLS.cpp:391]   --->   Operation 172 'store' 'store_ln391' <Predicate = (!icmp_ln388 & !targetBlock)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 16> <RAM>
+ST_23 : Operation 173 [1/1] (1.32ns)   --->   "%store_ln392 = store i8 1, i8 %curOptPotentialPlacement_wrAddr" [DynMap/DynMap_4HLS.cpp:392]   --->   Operation 173 'store' 'store_ln392' <Predicate = (!icmp_ln388 & !targetBlock)> <Delay = 1.32>
+ST_23 : Operation 174 [1/1] (0.00ns)   --->   "%br_ln393 = br void %.lr.ph19.i" [DynMap/DynMap_4HLS.cpp:393]   --->   Operation 174 'br' 'br_ln393' <Predicate = (!icmp_ln388 & !targetBlock)> <Delay = 0.00>
+ST_23 : Operation 175 [1/1] (0.00ns)   --->   "%br_ln395 = br void %.lr.ph19.i" [DynMap/DynMap_4HLS.cpp:395]   --->   Operation 175 'br' 'br_ln395' <Predicate = (targetBlock) | (icmp_ln388)> <Delay = 0.00>
+
+State 24 <SV = 12> <Delay = 2.77>
+ST_24 : Operation 176 [2/2] (2.77ns)   --->   "%call_ln382 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3, i4 %allocated_tiles_levelsValidLen_shapes_values_load, i5 %shape_idx_load, i2 %initial_dynamic_level, i4 %curTileStatic, i4 %allocated_tiles_levels_dynamic_shapes_values, i8 %curOptPotentialPlacement_wrAddr, i5 %curOptPotentialPlacement" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 176 'call' 'call_ln382' <Predicate = true> <Delay = 2.77> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 13> <Delay = 1.29>
+ST_25 : Operation 177 [1/2] (0.00ns)   --->   "%call_ln382 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3, i4 %allocated_tiles_levelsValidLen_shapes_values_load, i5 %shape_idx_load, i2 %initial_dynamic_level, i4 %curTileStatic, i4 %allocated_tiles_levels_dynamic_shapes_values, i8 %curOptPotentialPlacement_wrAddr, i5 %curOptPotentialPlacement" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 177 'call' 'call_ln382' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 178 [1/1] (1.29ns)   --->   "%br_ln409 = br void %._crit_edge20.i.loopexit" [DynMap/DynMap_4HLS.cpp:409]   --->   Operation 178 'br' 'br_ln409' <Predicate = true> <Delay = 1.29>
+
+State 26 <SV = 14> <Delay = 6.12>
+ST_26 : Operation 179 [1/1] (0.00ns)   --->   "%dynamic_level_2 = phi i8 %dynamic_level_4, void %._crit_edge.i, i8 %zext_ln407, void %.lr.ph19.i"   --->   Operation 179 'phi' 'dynamic_level_2' <Predicate = (icmp_ln653)> <Delay = 0.00>
+ST_26 : Operation 180 [1/1] (1.30ns)   --->   "%dynamic_level_3 = add i8 %dynamic_level_2, i8 1" [DynMap/DynMap_4HLS.cpp:409]   --->   Operation 180 'add' 'dynamic_level_3' <Predicate = (icmp_ln653)> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 181 [1/1] (1.31ns)   --->   "%icmp_ln410 = icmp_sgt  i8 %dynamic_level_3, i8 %zext_ln382_1" [DynMap/DynMap_4HLS.cpp:410]   --->   Operation 181 'icmp' 'icmp_ln410' <Predicate = (icmp_ln653)> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 182 [1/1] (0.44ns)   --->   "%dynamic_level_4 = select i1 %icmp_ln410, i8 0, i8 %dynamic_level_3" [DynMap/DynMap_4HLS.cpp:410]   --->   Operation 182 'select' 'dynamic_level_4' <Predicate = (icmp_ln653)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_26 : Operation 183 [1/1] (1.31ns)   --->   "%icmp_ln413 = icmp_eq  i8 %dynamic_level_4, i8 %zext_ln407" [DynMap/DynMap_4HLS.cpp:413]   --->   Operation 183 'icmp' 'icmp_ln413' <Predicate = (icmp_ln653)> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 184 [1/1] (0.00ns)   --->   "%br_ln413 = br i1 %icmp_ln413, void, void %_Z43CurOptPotentialPlacement_List_LevelInfo_Genv.exit.loopexit" [DynMap/DynMap_4HLS.cpp:413]   --->   Operation 184 'br' 'br_ln413' <Predicate = (icmp_ln653)> <Delay = 0.00>
+ST_26 : Operation 185 [1/1] (0.00ns)   --->   "%dynamic_level_4_cast = zext i8 %dynamic_level_4" [DynMap/DynMap_4HLS.cpp:410]   --->   Operation 185 'zext' 'dynamic_level_4_cast' <Predicate = (icmp_ln653 & !icmp_ln413)> <Delay = 0.00>
+ST_26 : Operation 186 [1/1] (1.30ns)   --->   "%empty_83 = add i9 %zext_ln382_2, i9 %dynamic_level_4_cast" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 186 'add' 'empty_83' <Predicate = (icmp_ln653 & !icmp_ln413)> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 187 [1/1] (0.00ns)   --->   "%p_cast = zext i9 %empty_83" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 187 'zext' 'p_cast' <Predicate = (icmp_ln653 & !icmp_ln413)> <Delay = 0.00>
+ST_26 : Operation 188 [1/1] (0.00ns)   --->   "%allocated_tiles_levelsValidLen_shapes_values_addr_1 = getelementptr i4 %allocated_tiles_levelsValidLen_shapes_values, i64 0, i64 %p_cast" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 188 'getelementptr' 'allocated_tiles_levelsValidLen_shapes_values_addr_1' <Predicate = (icmp_ln653 & !icmp_ln413)> <Delay = 0.00>
+ST_26 : Operation 189 [2/2] (1.75ns)   --->   "%allocated_tiles_levelsValidLen_shapes_values_load_1 = load i7 %allocated_tiles_levelsValidLen_shapes_values_addr_1" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 189 'load' 'allocated_tiles_levelsValidLen_shapes_values_load_1' <Predicate = (icmp_ln653 & !icmp_ln413)> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 80> <ROM>
+ST_26 : Operation 190 [1/1] (0.00ns)   --->   "%br_ln0 = br void %_Z43CurOptPotentialPlacement_List_LevelInfo_Genv.exit"   --->   Operation 190 'br' 'br_ln0' <Predicate = (icmp_ln653 & icmp_ln413)> <Delay = 0.00>
+ST_26 : Operation 191 [2/2] (0.00ns)   --->   "%tmp = call i1 @RoutingAvailability_CheckPredecessor_and_Placement, i8 %IDX_pd, i8 %DynamicPlacement_II, i7 %IDX_pd_modulo, i8 %predecessors_wrAddr, i8 %curOpt_idx, i1 %placement_dynamic_occupy, i5 %placement_dynamic_dict_Opt2Tile_values, i8 %placement_dynamic_dict_Opt2PC_values, i1 %placement_done_values, i8 %curOptPotentialPlacement_wrAddr, i8 %predsNum, i5 %curOptPotentialPlacement, i2 %Tile2XY_0, i2 %Tile2XY_1, i8 %predecessors, i8 %placement_dynamic_dict_Opt2Tile_keys, i4 %predTile1, i3 %kernel_idx, i6 %placement_static_kernels_values, i8 %bypassSrcOpt, i7 %bypassTgtOpt, i7 %bypassSrcOpt_keyIdx, i5 %bypassSrcTile, i7 %bypassTgtOpt_keyIdx, i4 %bypassTgtTile, i1 %dependency_forward, i1 %dependency_backward, i8 %bypassOptIdx, i8 %bypassOpt, i8 %placement_dynamic_dict_Opt2PC_keys, i8 %IDX_pd_bypass, i5 %shape_idx, i4 %CGRA_NumTiles_shapes_values, i1 %bpsStride_0, i1 %bpsStride_1, i4 %xy2Tile, i4 %allocated_tiles_shapes_values, i4 %idx_pd_r, i1 %placement_dynamic_bypass_occupy, i8 %placement_dynamic_bypass, i8 %bypassOpt_wrAddr, i8 %dependency_successor_values, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:657]   --->   Operation 191 'call' 'tmp' <Predicate = (icmp_ln413) | (!icmp_ln653)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 15> <Delay = 6.97>
+ST_27 : Operation 192 [1/1] (0.00ns)   --->   "%specloopname_ln415 = specloopname void @_ssdm_op_SpecLoopName, void @empty_45" [DynMap/DynMap_4HLS.cpp:415]   --->   Operation 192 'specloopname' 'specloopname_ln415' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 193 [1/1] (0.00ns)   --->   "%zext_ln416 = zext i9 %empty_83" [DynMap/DynMap_4HLS.cpp:416]   --->   Operation 193 'zext' 'zext_ln416' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 194 [1/2] (1.75ns)   --->   "%allocated_tiles_levelsValidLen_shapes_values_load_1 = load i7 %allocated_tiles_levelsValidLen_shapes_values_addr_1" [DynMap/DynMap_4HLS.cpp:382]   --->   Operation 194 'load' 'allocated_tiles_levelsValidLen_shapes_values_load_1' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 4> <Depth = 80> <ROM>
+ST_27 : Operation 195 [1/1] (0.00ns)   --->   "%zext_ln415 = zext i4 %allocated_tiles_levelsValidLen_shapes_values_load_1" [DynMap/DynMap_4HLS.cpp:415]   --->   Operation 195 'zext' 'zext_ln415' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 196 [1/1] (0.96ns)   --->   "%icmp_ln415 = icmp_eq  i4 %allocated_tiles_levelsValidLen_shapes_values_load_1, i4 0" [DynMap/DynMap_4HLS.cpp:415]   --->   Operation 196 'icmp' 'icmp_ln415' <Predicate = true> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 197 [1/1] (0.00ns)   --->   "%br_ln415 = br i1 %icmp_ln415, void %.lr.ph.i, void %._crit_edge.i" [DynMap/DynMap_4HLS.cpp:415]   --->   Operation 197 'br' 'br_ln415' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 198 [1/1] (0.00ns)   --->   "%curOptPotentialPlacement_wrAddr_load = load i8 %curOptPotentialPlacement_wrAddr" [DynMap/DynMap_4HLS.cpp:418]   --->   Operation 198 'load' 'curOptPotentialPlacement_wrAddr_load' <Predicate = (!icmp_ln415)> <Delay = 0.00>
+ST_27 : Operation 199 [1/1] (1.30ns)   --->   "%add_ln415 = add i8 %curOptPotentialPlacement_wrAddr_load, i8 %zext_ln415" [DynMap/DynMap_4HLS.cpp:415]   --->   Operation 199 'add' 'add_ln415' <Predicate = (!icmp_ln415)> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 200 [2/2] (3.91ns)   --->   "%call_ln418 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5, i8 %curOptPotentialPlacement_wrAddr_load, i8 %add_ln415, i60 %zext_ln416, i4 %allocated_tiles_levels_dynamic_shapes_values, i5 %curOptPotentialPlacement" [DynMap/DynMap_4HLS.cpp:418]   --->   Operation 200 'call' 'call_ln418' <Predicate = (!icmp_ln415)> <Delay = 3.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_27 : Operation 201 [1/1] (1.32ns)   --->   "%store_ln418 = store i8 %add_ln415, i8 %curOptPotentialPlacement_wrAddr" [DynMap/DynMap_4HLS.cpp:418]   --->   Operation 201 'store' 'store_ln418' <Predicate = (!icmp_ln415)> <Delay = 1.32>
+
+State 28 <SV = 16> <Delay = 0.00>
+ST_28 : Operation 202 [1/2] (0.00ns)   --->   "%call_ln418 = call void @dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5, i8 %curOptPotentialPlacement_wrAddr_load, i8 %add_ln415, i60 %zext_ln416, i4 %allocated_tiles_levels_dynamic_shapes_values, i5 %curOptPotentialPlacement" [DynMap/DynMap_4HLS.cpp:418]   --->   Operation 202 'call' 'call_ln418' <Predicate = (!icmp_ln415)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 203 [1/1] (0.00ns)   --->   "%br_ln408 = br void %._crit_edge.i" [DynMap/DynMap_4HLS.cpp:408]   --->   Operation 203 'br' 'br_ln408' <Predicate = (!icmp_ln415)> <Delay = 0.00>
+ST_28 : Operation 204 [1/1] (0.00ns)   --->   "%br_ln408 = br void %._crit_edge20.i.loopexit" [DynMap/DynMap_4HLS.cpp:408]   --->   Operation 204 'br' 'br_ln408' <Predicate = true> <Delay = 0.00>
+
+State 29 <SV = 15> <Delay = 2.60>
+ST_29 : Operation 205 [1/2] (0.00ns)   --->   "%tmp = call i1 @RoutingAvailability_CheckPredecessor_and_Placement, i8 %IDX_pd, i8 %DynamicPlacement_II, i7 %IDX_pd_modulo, i8 %predecessors_wrAddr, i8 %curOpt_idx, i1 %placement_dynamic_occupy, i5 %placement_dynamic_dict_Opt2Tile_values, i8 %placement_dynamic_dict_Opt2PC_values, i1 %placement_done_values, i8 %curOptPotentialPlacement_wrAddr, i8 %predsNum, i5 %curOptPotentialPlacement, i2 %Tile2XY_0, i2 %Tile2XY_1, i8 %predecessors, i8 %placement_dynamic_dict_Opt2Tile_keys, i4 %predTile1, i3 %kernel_idx, i6 %placement_static_kernels_values, i8 %bypassSrcOpt, i7 %bypassTgtOpt, i7 %bypassSrcOpt_keyIdx, i5 %bypassSrcTile, i7 %bypassTgtOpt_keyIdx, i4 %bypassTgtTile, i1 %dependency_forward, i1 %dependency_backward, i8 %bypassOptIdx, i8 %bypassOpt, i8 %placement_dynamic_dict_Opt2PC_keys, i8 %IDX_pd_bypass, i5 %shape_idx, i4 %CGRA_NumTiles_shapes_values, i1 %bpsStride_0, i1 %bpsStride_1, i4 %xy2Tile, i4 %allocated_tiles_shapes_values, i4 %idx_pd_r, i1 %placement_dynamic_bypass_occupy, i8 %placement_dynamic_bypass, i8 %bypassOpt_wrAddr, i8 %dependency_successor_values, i8 %dependency_predecessor_values" [DynMap/DynMap_4HLS.cpp:657]   --->   Operation 205 'call' 'tmp' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_29 : Operation 206 [1/1] (1.29ns)   --->   "%br_ln657 = br i1 %tmp, void %._crit_edge, void" [DynMap/DynMap_4HLS.cpp:657]   --->   Operation 206 'br' 'br_ln657' <Predicate = true> <Delay = 1.29>
+ST_29 : Operation 207 [1/1] (0.00ns)   --->   "%curOpt_idx_load = load i8 %curOpt_idx" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 207 'load' 'curOpt_idx_load' <Predicate = (tmp)> <Delay = 0.00>
+ST_29 : Operation 208 [1/1] (1.30ns)   --->   "%add_ln596 = add i8 %curOpt_idx_load, i8 1" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 208 'add' 'add_ln596' <Predicate = (tmp)> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 209 [1/1] (1.29ns)   --->   "%store_ln596 = store i8 %add_ln596, i8 %storemerge" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 209 'store' 'store_ln596' <Predicate = (tmp)> <Delay = 1.29>
+ST_29 : Operation 210 [1/1] (1.29ns)   --->   "%store_ln596 = store i8 %placedOpts_Counter_2, i8 %placedOpts_Counter" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 210 'store' 'store_ln596' <Predicate = (tmp)> <Delay = 1.29>
+ST_29 : Operation 211 [1/1] (0.00ns)   --->   "%br_ln596 = br void" [DynMap/DynMap_4HLS.cpp:596]   --->   Operation 211 'br' 'br_ln596' <Predicate = (tmp)> <Delay = 0.00>
+
+State 30 <SV = 16> <Delay = 0.00>
+ST_30 : Operation 212 [1/1] (0.00ns)   --->   "%retval_0 = phi i1 1, void, i1 0, void %_Z43CurOptPotentialPlacement_List_LevelInfo_Genv.exit"   --->   Operation 212 'phi' 'retval_0' <Predicate = true> <Delay = 0.00>
+ST_30 : Operation 213 [1/1] (0.00ns)   --->   "%ret_ln665 = ret i1 %retval_0" [DynMap/DynMap_4HLS.cpp:665]   --->   Operation 213 'ret' 'ret_ln665' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.3ns
+The critical path consists of the following:
+	'alloca' operation ('storemerge') [58]  (0 ns)
+	'store' operation ('store_ln596', DynMap/DynMap_4HLS.cpp:596) of constant 0 on local variable 'storemerge' [63]  (1.3 ns)
+
+ <State 2>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('kernel_idx_load', DynMap/DynMap_4HLS.cpp:596) on static variable 'kernel_idx' [70]  (0 ns)
+	'getelementptr' operation ('DFG_NodesCount_kernels_values_addr', DynMap/DynMap_4HLS.cpp:596) [74]  (0 ns)
+	'load' operation ('DFG_NodesCount_kernels_values_load', DynMap/DynMap_4HLS.cpp:596) on array 'DFG_NodesCount_kernels_values' [75]  (1.75 ns)
+
+ <State 3>: 4.37ns
+The critical path consists of the following:
+	'load' operation ('DFG_NodesCount_kernels_values_load', DynMap/DynMap_4HLS.cpp:596) on array 'DFG_NodesCount_kernels_values' [75]  (1.75 ns)
+	'icmp' operation ('icmp_ln596', DynMap/DynMap_4HLS.cpp:596) [77]  (1.31 ns)
+	multiplexor before 'phi' operation ('retval_0') [245]  (1.3 ns)
+
+ <State 4>: 4.19ns
+The critical path consists of the following:
+	'add' operation ('add_ln374', DynMap/DynMap_4HLS.cpp:374) [89]  (1.42 ns)
+	'getelementptr' operation ('placement_static_kernels_values_addr', DynMap/DynMap_4HLS.cpp:374) [92]  (0 ns)
+	'load' operation ('placement_static_kernels_values_load', DynMap/DynMap_4HLS.cpp:636) on array 'placement_static_kernels_values' [96]  (2.77 ns)
+
+ <State 5>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('placement_static_kernels_values_load', DynMap/DynMap_4HLS.cpp:636) on array 'placement_static_kernels_values' [96]  (2.77 ns)
+
+ <State 6>: 4.19ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', DynMap/DynMap_4HLS.cpp:608) [100]  (0 ns)
+	'add' operation ('add_ln609', DynMap/DynMap_4HLS.cpp:609) [108]  (1.42 ns)
+	'getelementptr' operation ('dependency_predecessor_values_addr', DynMap/DynMap_4HLS.cpp:609) [110]  (0 ns)
+	'load' operation ('pred', DynMap/DynMap_4HLS.cpp:609) on array 'dependency_predecessor_values' [111]  (2.77 ns)
+
+ <State 7>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('pred', DynMap/DynMap_4HLS.cpp:609) on array 'dependency_predecessor_values' [111]  (2.77 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('inc311623_loc_load') on local variable 'inc311623_loc' [113]  (0 ns)
+	'getelementptr' operation ('placement_done_values_addr', DynMap/DynMap_4HLS.cpp:615) [120]  (0 ns)
+	'load' operation ('placement_done_values_load', DynMap/DynMap_4HLS.cpp:615) on array 'placement_done_values' [121]  (1.75 ns)
+
+ <State 10>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('predecessors_wrAddr_load_1', DynMap/DynMap_4HLS.cpp:641) on static variable 'predecessors_wrAddr' [141]  (0 ns)
+	'add' operation ('add_ln643', DynMap/DynMap_4HLS.cpp:643) [147]  (1.31 ns)
+	'store' operation ('store_ln643', DynMap/DynMap_4HLS.cpp:643) of variable 'add_ln643', DynMap/DynMap_4HLS.cpp:643 on static variable 'predecessors_wrAddr' [148]  (1.3 ns)
+	blocking operation 0.906 ns on control path)
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 5.15ns
+The critical path consists of the following:
+	'load' operation ('j_3_loc_load') on local variable 'j_3_loc' [125]  (0 ns)
+	'call' operation ('targetBlock9', DynMap/DynMap_4HLS.cpp:619) to 'dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6' [129]  (4.19 ns)
+	blocking operation 0.965 ns on control path)
+
+ <State 13>: 5.38ns
+The critical path consists of the following:
+	'call' operation ('targetBlock9', DynMap/DynMap_4HLS.cpp:619) to 'dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6' [129]  (5.38 ns)
+
+ <State 14>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('dependency_predecessor_values_addr_1', DynMap/DynMap_4HLS.cpp:636) [135]  (0 ns)
+	'store' operation ('store_ln636', DynMap/DynMap_4HLS.cpp:636) of variable 'zext_ln608', DynMap/DynMap_4HLS.cpp:608 on array 'dependency_predecessor_values' [136]  (2.77 ns)
+
+ <State 15>: 4.37ns
+The critical path consists of the following:
+	'load' operation ('placement_dynamic_dict_Opt2PC_values_load', DynMap/DynMap_4HLS.cpp:644) on array 'placement_dynamic_dict_Opt2PC_values' [150]  (1.75 ns)
+	'icmp' operation ('icmp_ln644', DynMap/DynMap_4HLS.cpp:644) [152]  (1.31 ns)
+	blocking operation 1.3 ns on control path)
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+ <State 18>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('curTileStatic', DynMap/DynMap_4HLS.cpp:374) on array 'placement_static_Opt2Tile_kernels_values1' [171]  (2.77 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+ <State 20>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('tileID_loc_load') on local variable 'tileID_loc' [174]  (0 ns)
+	'getelementptr' operation ('placement_static_Tile2Level_values_addr', DynMap/DynMap_4HLS.cpp:380) [176]  (0 ns)
+	'load' operation ('static_level', DynMap/DynMap_4HLS.cpp:380) on array 'placement_static_Tile2Level_values' [177]  (1.75 ns)
+
+ <State 21>: 4.83ns
+The critical path consists of the following:
+	'load' operation ('static_level', DynMap/DynMap_4HLS.cpp:380) on array 'placement_static_Tile2Level_values' [177]  (1.75 ns)
+	'icmp' operation ('icmp_ln383', DynMap/DynMap_4HLS.cpp:383) [185]  (0.508 ns)
+	'select' operation ('initial_dynamic_level', DynMap/DynMap_4HLS.cpp:383) [186]  (0.813 ns)
+	'getelementptr' operation ('allocated_tiles_levelsValidLen_shapes_values_addr', DynMap/DynMap_4HLS.cpp:382) [191]  (0 ns)
+	'load' operation ('allocated_tiles_levelsValidLen_shapes_values_load', DynMap/DynMap_4HLS.cpp:382) on array 'allocated_tiles_levelsValidLen_shapes_values' [192]  (1.75 ns)
+
+ <State 22>: 5.49ns
+The critical path consists of the following:
+	'load' operation ('allocated_tiles_levelsValidLen_shapes_values_load', DynMap/DynMap_4HLS.cpp:382) on array 'allocated_tiles_levelsValidLen_shapes_values' [192]  (1.75 ns)
+	'call' operation ('targetBlock', DynMap/DynMap_4HLS.cpp:382) to 'dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2' [196]  (2.77 ns)
+	blocking operation 0.965 ns on control path)
+
+ <State 23>: 6.79ns
+The critical path consists of the following:
+	'call' operation ('targetBlock', DynMap/DynMap_4HLS.cpp:382) to 'dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2' [196]  (5.03 ns)
+	blocking operation 1.75 ns on control path)
+
+ <State 24>: 2.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln382', DynMap/DynMap_4HLS.cpp:382) to 'dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3' [205]  (2.77 ns)
+
+ <State 25>: 1.3ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('dynamic_level') with incoming values : ('zext_ln407', DynMap/DynMap_4HLS.cpp:407) ('dynamic_level', DynMap/DynMap_4HLS.cpp:410) [208]  (1.3 ns)
+
+ <State 26>: 6.13ns
+The critical path consists of the following:
+	'phi' operation ('dynamic_level') with incoming values : ('zext_ln407', DynMap/DynMap_4HLS.cpp:407) ('dynamic_level', DynMap/DynMap_4HLS.cpp:410) [208]  (0 ns)
+	'add' operation ('dynamic_level', DynMap/DynMap_4HLS.cpp:409) [209]  (1.31 ns)
+	'icmp' operation ('icmp_ln410', DynMap/DynMap_4HLS.cpp:410) [210]  (1.31 ns)
+	'select' operation ('dynamic_level', DynMap/DynMap_4HLS.cpp:410) [211]  (0.448 ns)
+	'add' operation ('empty_83', DynMap/DynMap_4HLS.cpp:382) [217]  (1.31 ns)
+	'getelementptr' operation ('allocated_tiles_levelsValidLen_shapes_values_addr_1', DynMap/DynMap_4HLS.cpp:382) [219]  (0 ns)
+	'load' operation ('allocated_tiles_levelsValidLen_shapes_values_load_1', DynMap/DynMap_4HLS.cpp:382) on array 'allocated_tiles_levelsValidLen_shapes_values' [221]  (1.75 ns)
+
+ <State 27>: 6.97ns
+The critical path consists of the following:
+	'load' operation ('allocated_tiles_levelsValidLen_shapes_values_load_1', DynMap/DynMap_4HLS.cpp:382) on array 'allocated_tiles_levelsValidLen_shapes_values' [221]  (1.75 ns)
+	'add' operation ('add_ln415', DynMap/DynMap_4HLS.cpp:415) [227]  (1.31 ns)
+	'call' operation ('call_ln418', DynMap/DynMap_4HLS.cpp:418) to 'dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5' [228]  (3.91 ns)
+
+ <State 28>: 0ns
+The critical path consists of the following:
+
+ <State 29>: 2.6ns
+The critical path consists of the following:
+	'load' operation ('curOpt_idx_load', DynMap/DynMap_4HLS.cpp:596) on static variable 'curOpt_idx' [239]  (0 ns)
+	'add' operation ('add_ln596', DynMap/DynMap_4HLS.cpp:596) [240]  (1.31 ns)
+	'store' operation ('store_ln596', DynMap/DynMap_4HLS.cpp:596) of variable 'add_ln596', DynMap/DynMap_4HLS.cpp:596 on local variable 'storemerge' [241]  (1.3 ns)
+
+ <State 30>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

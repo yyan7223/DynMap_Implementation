@@ -1,0 +1,278 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'BypassOptPlacement_Gen_Record'" level="0">
+<item name = "Date">Wed Jan  3 23:39:00 2024
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">DynMap</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z035-ffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.748 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1_fu_365">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1, 5, 204, 50.000 ns, 2.040 us, 5, 204, no</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 130, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">1, -, 589, 787, -</column>
+<column name="Memory">1, -, 12, 4, -</column>
+<column name="Multiplexer">-, -, -, 264, -</column>
+<column name="Register">-, -, 169, -, -</column>
+<specialColumn name="Available">1000, 900, 343800, 171900, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1_fu_365">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1, 0, 0, 27, 61, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3, 1, 0, 71, 234, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, 0, 0, 288, 304, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, 0, 0, 203, 188, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="Tile2XY_0_U">BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_1R, 0, 4, 1, 0, 16, 2, 1, 32</column>
+<column name="Tile2XY_1_U">BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_1R, 0, 4, 1, 0, 16, 2, 1, 32</column>
+<column name="CGRA_NumTiles_shapes_values_U">CurOptPotentialPlacement_List_BypassLess_Gen_CGRA_NumTiles_shapes_values_ROM_g8j, 0, 4, 2, 0, 20, 4, 1, 80</column>
+<column name="allocated_tiles_shapes_values_U">CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_allocaeOg, 1, 0, 0, 0, 320, 4, 1, 1280</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln186_fu_552_p2">+, 0, 0, 8, 8, 1</column>
+<column name="add_ln192_fu_564_p2">+, 0, 0, 8, 8, 1</column>
+<column name="add_ln268_fu_882_p2">+, 0, 0, 8, 8, 1</column>
+<column name="sel_tmp25_cast_op_fu_796_p2">+, 0, 0, 6, 4, 2</column>
+<column name="sel_tmp42_op_fu_817_p2">+, 0, 0, 6, 4, 3</column>
+<column name="upperLimit_fu_580_p2">+, 0, 0, 8, 8, 8</column>
+<column name="sub_ln192_fu_527_p2">-, 0, 0, 6, 6, 6</column>
+<column name="and_ln149_1_fu_675_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln149_2_fu_681_p2">and, 0, 0, 2, 2, 2</column>
+<column name="and_ln149_3_fu_695_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln149_4_fu_707_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln149_fu_657_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln153_fu_669_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln205_fu_495_p2">and, 0, 0, 1, 1, 1</column>
+<column name="and_ln218_fu_508_p2">and, 0, 0, 1, 1, 1</column>
+<column name="cmp28_fu_463_p2">icmp, 0, 0, 1, 2, 2</column>
+<column name="cmp77_fu_470_p2">icmp, 0, 0, 1, 2, 2</column>
+<column name="icmp_ln153_1_fu_701_p2">icmp, 0, 0, 1, 2, 1</column>
+<column name="icmp_ln153_fu_645_p2">icmp, 0, 0, 1, 2, 1</column>
+<column name="icmp_ln169_fu_639_p2">icmp, 0, 0, 1, 2, 1</column>
+<column name="icmp_ln205_fu_483_p2">icmp, 0, 0, 1, 2, 2</column>
+<column name="icmp_ln218_fu_477_p2">icmp, 0, 0, 1, 2, 2</column>
+<column name="ap_block_state3_on_subcall_done">or, 0, 0, 1, 1, 1</column>
+<column name="empty_fu_713_p2">or, 0, 0, 1, 1, 1</column>
+<column name="dirInIdx_fu_719_p3">select, 0, 0, 3, 1, 3</column>
+<column name="sel_tmp29_op_cast_cast_fu_802_p3">select, 0, 0, 3, 1, 1</column>
+<column name="sel_tmp44_op_fu_823_p3">select, 0, 0, 4, 1, 3</column>
+<column name="sel_tmp48_op_fu_830_p3">select, 0, 0, 5, 1, 5</column>
+<column name="select_ln149_1_fu_757_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln149_2_fu_764_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln149_3_fu_771_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln149_4_fu_782_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln149_5_fu_789_p3">select, 0, 0, 4, 1, 4</column>
+<column name="select_ln149_fu_750_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln155_fu_733_p3">select, 0, 0, 4, 1, 2</column>
+<column name="select_ln169_fu_726_p3">select, 0, 0, 5, 1, 5</column>
+<column name="select_ln244_fu_740_p3">select, 0, 0, 3, 1, 3</column>
+<column name="sub173_fu_809_p3">select, 0, 0, 4, 1, 4</column>
+<column name="sub182_fu_837_p3">select, 0, 0, 4, 1, 4</column>
+<column name="sel_tmp1_fu_489_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="sel_tmp9_fu_502_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln148_fu_663_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln149_fu_651_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="IDX_pd_bypass_o">13, 3, 8, 24</column>
+<column name="IDX_pd_bypass_o_ap_vld">13, 3, 1, 3</column>
+<column name="allocated_tiles_shapes_values_address0">13, 3, 9, 27</column>
+<column name="ap_NS_fsm">49, 12, 1, 12</column>
+<column name="ap_phi_mux_retval_0_phi_fu_357_p4">9, 2, 1, 2</column>
+<column name="ap_return">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_idx_pd_load">9, 2, 4, 8</column>
+<column name="bypassOptIdx_o">9, 2, 8, 16</column>
+<column name="bypassOpt_wrAddr_o">9, 2, 8, 16</column>
+<column name="idx_pd_o">9, 2, 4, 8</column>
+<column name="placement_dynamic_bypass_address0">13, 3, 14, 42</column>
+<column name="placement_dynamic_bypass_ce0">13, 3, 1, 3</column>
+<column name="placement_dynamic_bypass_occupy_address0">17, 4, 15, 60</column>
+<column name="placement_dynamic_bypass_occupy_ce0">13, 3, 1, 3</column>
+<column name="placement_dynamic_bypass_occupy_ce1">9, 2, 1, 2</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_address0">13, 3, 7, 21</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_ce0">13, 3, 1, 3</column>
+<column name="placement_dynamic_dict_Opt2PC_values_address0">13, 3, 7, 21</column>
+<column name="xDiff_28_reg_344">9, 2, 2, 4</column>
+<column name="yDiff_210_reg_335">9, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="CGRA_NumTiles_shapes_values_load_reg_1016">4, 0, 4, 0</column>
+<column name="Tile2XY_0_load_reg_996">2, 0, 2, 0</column>
+<column name="Tile2XY_1_load_reg_1006">2, 0, 2, 0</column>
+<column name="add_ln192_reg_1052">8, 0, 8, 0</column>
+<column name="add_ln252_loc_fu_118">15, 0, 15, 0</column>
+<column name="and_ln149_1_reg_1105">1, 0, 1, 0</column>
+<column name="and_ln149_4_reg_1117">1, 0, 1, 0</column>
+<column name="and_ln149_reg_1099">1, 0, 1, 0</column>
+<column name="and_ln205_reg_1021">1, 0, 1, 0</column>
+<column name="and_ln218_reg_1026">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
+<column name="ap_return_preg">1, 0, 1, 0</column>
+<column name="bypassOptIdx_load_reg_1045">8, 0, 8, 0</column>
+<column name="bypassSrcOptIdx_loc_fu_146">7, 0, 7, 0</column>
+<column name="cmp28_reg_1001">1, 0, 1, 0</column>
+<column name="cmp77_reg_1011">1, 0, 1, 0</column>
+<column name="empty_reg_1123">1, 0, 1, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1_fu_365_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_50_loc_fu_134">4, 0, 4, 0</column>
+<column name="icmp_ln169_reg_1089">1, 0, 1, 0</column>
+<column name="p_loc_fu_122">8, 0, 8, 0</column>
+<column name="retval_0_reg_353">1, 0, 1, 0</column>
+<column name="sub173_reg_1129">4, 0, 4, 0</column>
+<column name="sub182_reg_1134">4, 0, 4, 0</column>
+<column name="sub_ln192_reg_1031">6, 0, 6, 0</column>
+<column name="targetBlock15_reg_1139">1, 0, 1, 0</column>
+<column name="targetBlock_reg_1036">1, 0, 1, 0</column>
+<column name="tileId_reg_1082">4, 0, 4, 0</column>
+<column name="tmp_37_reg_1111">1, 0, 1, 0</column>
+<column name="tmp_71_loc_fu_114">15, 0, 15, 0</column>
+<column name="tmp_71_reload_cast_reg_1146">15, 0, 64, 49</column>
+<column name="tmp_73_loc_fu_110">14, 0, 14, 0</column>
+<column name="upperLimit_reg_1060">8, 0, 8, 0</column>
+<column name="xDiff_28_reg_344">2, 0, 2, 0</column>
+<column name="xDiff_2_loc_fu_130">2, 0, 2, 0</column>
+<column name="xDiff_2_phi_loc_fu_138">2, 0, 2, 0</column>
+<column name="yDiff_210_reg_335">2, 0, 2, 0</column>
+<column name="yDiff_2_loc_fu_126">2, 0, 2, 0</column>
+<column name="yDiff_2_phi_loc_fu_142">2, 0, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record, return value</column>
+<column name="ap_return">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record, return value</column>
+<column name="bypassOptIdx_i">in, 8, ap_ovld, bypassOptIdx, pointer</column>
+<column name="bypassOptIdx_o">out, 8, ap_ovld, bypassOptIdx, pointer</column>
+<column name="bypassOptIdx_o_ap_vld">out, 1, ap_ovld, bypassOptIdx, pointer</column>
+<column name="bypassOpt">out, 8, ap_vld, bypassOpt, pointer</column>
+<column name="bypassOpt_ap_vld">out, 1, ap_vld, bypassOpt, pointer</column>
+<column name="bypassSrcOpt">in, 8, ap_none, bypassSrcOpt, pointer</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_we0">out, 1, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_d0">out, 8, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_keys_q0">in, 8, ap_memory, placement_dynamic_dict_Opt2PC_keys, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_we0">out, 1, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_d0">out, 8, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="placement_dynamic_dict_Opt2PC_values_q0">in, 8, ap_memory, placement_dynamic_dict_Opt2PC_values, array</column>
+<column name="IDX_pd_bypass_i">in, 8, ap_ovld, IDX_pd_bypass, pointer</column>
+<column name="IDX_pd_bypass_o">out, 8, ap_ovld, IDX_pd_bypass, pointer</column>
+<column name="IDX_pd_bypass_o_ap_vld">out, 1, ap_ovld, IDX_pd_bypass, pointer</column>
+<column name="DynamicPlacement_II">in, 8, ap_none, DynamicPlacement_II, pointer</column>
+<column name="bypassSrcTile">in, 5, ap_none, bypassSrcTile, pointer</column>
+<column name="bypassTgtTile">in, 4, ap_none, bypassTgtTile, pointer</column>
+<column name="shape_idx">in, 5, ap_none, shape_idx, pointer</column>
+<column name="idx_pd_i">in, 4, ap_ovld, idx_pd, pointer</column>
+<column name="idx_pd_o">out, 4, ap_ovld, idx_pd, pointer</column>
+<column name="idx_pd_o_ap_vld">out, 1, ap_ovld, idx_pd, pointer</column>
+<column name="placement_dynamic_bypass_occupy_address0">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_ce0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_we0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_d0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_q0">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address1">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_ce1">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_q1">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_address0">out, 14, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_ce0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_we0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_d0">out, 8, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_q0">in, 8, ap_memory, placement_dynamic_bypass, array</column>
+<column name="bypassOpt_wrAddr_i">in, 8, ap_ovld, bypassOpt_wrAddr, pointer</column>
+<column name="bypassOpt_wrAddr_o">out, 8, ap_ovld, bypassOpt_wrAddr, pointer</column>
+<column name="bypassOpt_wrAddr_o_ap_vld">out, 1, ap_ovld, bypassOpt_wrAddr, pointer</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_we0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_keys_d0">out, 8, ap_memory, placement_dynamic_dict_Opt2Tile_keys, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_address0">out, 7, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_ce0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_we0">out, 1, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_dynamic_dict_Opt2Tile_values_d0">out, 5, ap_memory, placement_dynamic_dict_Opt2Tile_values, array</column>
+<column name="placement_done_values_address0">out, 7, ap_memory, placement_done_values, array</column>
+<column name="placement_done_values_ce0">out, 1, ap_memory, placement_done_values, array</column>
+<column name="placement_done_values_we0">out, 1, ap_memory, placement_done_values, array</column>
+<column name="placement_done_values_d0">out, 1, ap_memory, placement_done_values, array</column>
+</table>
+</item>
+</section>
+</profile>

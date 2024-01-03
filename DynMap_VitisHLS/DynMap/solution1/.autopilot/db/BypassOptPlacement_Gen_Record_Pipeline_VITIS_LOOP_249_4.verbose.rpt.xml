@@ -1,0 +1,156 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4'" level="0">
+<item name = "Date">Wed Jan  3 23:39:00 2024
+</item>
+<item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
+<item name = "Project">DynMap</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z035-ffg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.247 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_249_4">?, ?, 14, 14, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 59, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 195, 126, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 119, -</column>
+<column name="Register">-, -, 93, -, -</column>
+<specialColumn name="Available">1000, 900, 343800, 171900, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="srem_8ns_8ns_8_12_1_U167">srem_8ns_8ns_8_12_1, 0, 0, 195, 126, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln252_fu_231_p2">+, 0, 0, 15, 15, 15</column>
+<column name="add_ln253_fu_251_p2">+, 0, 0, 13, 13, 13</column>
+<column name="add_ln280_fu_289_p2">+, 0, 0, 8, 8, 1</column>
+<column name="formerPC_fu_216_p2">+, 0, 0, 7, 7, 2</column>
+<column name="icmp_ln251_fu_195_p2">icmp, 0, 0, 4, 8, 1</column>
+<column name="icmp_ln282_fu_301_p2">icmp, 0, 0, 4, 8, 8</column>
+<column name="or_ln254_fu_279_p2">or, 0, 0, 1, 1, 1</column>
+<column name="select_ln251_fu_208_p3">select, 0, 0, 7, 1, 7</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="IDX_pd_bypass_o">9, 2, 8, 16</column>
+<column name="ap_NS_fsm">61, 15, 1, 15</column>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_phi_mux_UnifiedRetVal_phi_fu_165_p4">13, 3, 1, 3</column>
+<column name="ap_return">9, 2, 1, 2</column>
+<column name="ap_sig_allocacmp_p_load">9, 2, 8, 16</column>
+<column name="empty_fu_70">9, 2, 8, 16</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln252_reg_361">15, 0, 15, 0</column>
+<column name="ap_CS_fsm">14, 0, 14, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_return_preg">1, 0, 1, 0</column>
+<column name="empty_fu_70">8, 0, 8, 0</column>
+<column name="formerPC_reg_356">7, 0, 7, 0</column>
+<column name="idxprom174_cast_reg_345">15, 0, 15, 0</column>
+<column name="idxprom20_cast_reg_340">13, 0, 13, 0</column>
+<column name="p_load_reg_350">8, 0, 8, 0</column>
+<column name="trunc_ln253_reg_372">11, 0, 11, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, return value</column>
+<column name="ap_return">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, return value</column>
+<column name="add_ln192">in, 8, ap_none, add_ln192, scalar</column>
+<column name="DynamicPlacement_II_load">in, 8, ap_none, DynamicPlacement_II_load, scalar</column>
+<column name="tileId">in, 4, ap_none, tileId, scalar</column>
+<column name="idxprom174">in, 4, ap_none, idxprom174, scalar</column>
+<column name="idxprom20">in, 5, ap_none, idxprom20, scalar</column>
+<column name="sub182">in, 4, ap_none, sub182, scalar</column>
+<column name="upperLimit">in, 8, ap_none, upperLimit, scalar</column>
+<column name="p_out">out, 8, ap_vld, p_out, pointer</column>
+<column name="p_out_ap_vld">out, 1, ap_vld, p_out, pointer</column>
+<column name="add_ln252_out">out, 15, ap_vld, add_ln252_out, pointer</column>
+<column name="add_ln252_out_ap_vld">out, 1, ap_vld, add_ln252_out, pointer</column>
+<column name="tmp_71_out">out, 15, ap_vld, tmp_71_out, pointer</column>
+<column name="tmp_71_out_ap_vld">out, 1, ap_vld, tmp_71_out, pointer</column>
+<column name="placement_dynamic_bypass_occupy_address0">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_ce0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_q0">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address1">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_ce1">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_q1">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="IDX_pd_bypass_i">in, 8, ap_ovld, IDX_pd_bypass, pointer</column>
+<column name="IDX_pd_bypass_o">out, 8, ap_ovld, IDX_pd_bypass, pointer</column>
+<column name="IDX_pd_bypass_o_ap_vld">out, 1, ap_ovld, IDX_pd_bypass, pointer</column>
+</table>
+</item>
+</section>
+</profile>

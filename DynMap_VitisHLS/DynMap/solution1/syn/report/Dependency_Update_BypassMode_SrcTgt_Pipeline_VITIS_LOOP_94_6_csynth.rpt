@@ -1,0 +1,148 @@
+
+
+================================================================
+== Vitis HLS Report for 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6'
+================================================================
+* Date:           Wed Jan  3 23:39:01 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.383 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        5|       24|  50.000 ns|  0.240 us|    5|   24|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_94_6  |        3|       21|         2|          2|          1|  1 ~ 10|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      22|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|      52|    -|
+|Register         |        -|    -|      34|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|      34|      74|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln94_fu_114_p2    |         +|   0|  0|   6|           4|           1|
+    |add_ln95_1_fu_124_p2  |         +|   0|  0|  10|          10|          10|
+    |icmp_ln94_fu_108_p2   |      icmp|   0|  0|   2|           4|           4|
+    |icmp_ln95_fu_134_p2   |      icmp|   0|  0|   4|           8|           8|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  22|          26|          23|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                              |  25|          6|    1|          6|
+    |ap_phi_mux_UnifiedRetVal_phi_fu_88_p4  |   9|          2|    1|          2|
+    |ap_return                              |   9|          2|    1|          2|
+    |i_fu_48                                |   9|          2|    4|          8|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  |  52|         12|    7|         18|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------+----+----+-----+-----------+
+    |          Name          | FF | LUT| Bits| Const Bits|
+    +------------------------+----+----+-----+-----------+
+    |UnifiedRetVal_reg_84    |   1|   0|    1|          0|
+    |add_ln94_reg_164        |   4|   0|    4|          0|
+    |add_ln95_1_reg_169      |  10|   0|   10|          0|
+    |ap_CS_fsm               |   5|   0|    5|          0|
+    |ap_return_preg          |   1|   0|    1|          0|
+    |i_fu_48                 |   4|   0|    4|          0|
+    |icmp_ln94_reg_160       |   1|   0|    1|          0|
+    |sext_ln71_cast_reg_155  |   8|   0|    8|          0|
+    +------------------------+----+----+-----+-----------+
+    |Total                   |  34|   0|   34|          0|
+    +------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+|                RTL Ports               | Dir | Bits|  Protocol  |                         Source Object                        |    C Type    |
++----------------------------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+|ap_clk                                  |   in|    1|  ap_ctrl_hs|  Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6|  return value|
+|ap_rst                                  |   in|    1|  ap_ctrl_hs|  Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6|  return value|
+|ap_start                                |   in|    1|  ap_ctrl_hs|  Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6|  return value|
+|ap_done                                 |  out|    1|  ap_ctrl_hs|  Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6|  return value|
+|ap_idle                                 |  out|    1|  ap_ctrl_hs|  Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6|  return value|
+|ap_ready                                |  out|    1|  ap_ctrl_hs|  Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6|  return value|
+|ap_return                               |  out|    1|  ap_ctrl_hs|  Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6|  return value|
+|add_ln95                                |   in|   10|     ap_none|                                                      add_ln95|        scalar|
+|sext_ln71                               |   in|    7|     ap_none|                                                     sext_ln71|        scalar|
+|add_ln95_1_out                          |  out|   10|      ap_vld|                                                add_ln95_1_out|       pointer|
+|add_ln95_1_out_ap_vld                   |  out|    1|      ap_vld|                                                add_ln95_1_out|       pointer|
+|dependency_predecessor_values_address0  |  out|   10|   ap_memory|                                 dependency_predecessor_values|         array|
+|dependency_predecessor_values_ce0       |  out|    1|   ap_memory|                                 dependency_predecessor_values|         array|
+|dependency_predecessor_values_q0        |   in|    8|   ap_memory|                                 dependency_predecessor_values|         array|
++----------------------------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
+

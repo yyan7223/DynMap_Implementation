@@ -1,0 +1,144 @@
+
+
+================================================================
+== Vitis HLS Report for 'CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10'
+================================================================
+* Date:           Wed Jan  3 23:38:58 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.510 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        3|      129|  30.000 ns|  1.290 us|    3|  129|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                     |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name      |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_508_10  |        1|      127|         2|          1|          1|  1 ~ 127|       yes|
+        +---------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      12|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|       -|       -|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|      36|    -|
+|Register         |        -|    -|      17|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|      17|      48|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |i_31_fu_84_p2        |         +|   0|  0|   7|           7|           1|
+    |icmp_ln508_fu_78_p2  |      icmp|   0|  0|   3|           7|           7|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  12|          15|          10|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_30    |   9|          2|    7|         14|
+    |i_fu_34                  |   9|          2|    7|         14|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  36|          8|   16|         32|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |i_fu_34                  |  7|   0|    7|          0|
+    |zext_ln509_reg_115       |  7|   0|   64|         57|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    | 17|   0|   74|         57|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+-------------------------------------------------------------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |                              Source Object                              |    C Type    |
++-----------------------------------+-----+-----+------------+-------------------------------------------------------------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|  CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10|  return value|
+|inc1313173_reload                  |   in|    7|     ap_none|                                                        inc1313173_reload|        scalar|
+|intersection_address0              |  out|    4|   ap_memory|                                                             intersection|         array|
+|intersection_ce0                   |  out|    1|   ap_memory|                                                             intersection|         array|
+|intersection_q0                    |   in|    4|   ap_memory|                                                             intersection|         array|
+|curOptPotentialPlacement_address0  |  out|    4|   ap_memory|                                                 curOptPotentialPlacement|         array|
+|curOptPotentialPlacement_ce0       |  out|    1|   ap_memory|                                                 curOptPotentialPlacement|         array|
+|curOptPotentialPlacement_we0       |  out|    1|   ap_memory|                                                 curOptPotentialPlacement|         array|
+|curOptPotentialPlacement_d0        |  out|    5|   ap_memory|                                                 curOptPotentialPlacement|         array|
++-----------------------------------+-----+-----+------------+-------------------------------------------------------------------------+--------------+
+

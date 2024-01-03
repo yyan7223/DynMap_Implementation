@@ -1,0 +1,170 @@
+
+
+================================================================
+== Vitis HLS Report for 'RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4'
+================================================================
+* Date:           Wed Jan  3 23:39:02 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.923 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_354_4  |        ?|        ?|        13|         12|          1|     ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      26|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|     195|     126|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|     119|    -|
+|Register         |        -|    -|      52|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|     247|     271|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+---------------------+---------+----+-----+-----+-----+
+    |         Instance         |        Module       | BRAM_18K| DSP|  FF | LUT | URAM|
+    +--------------------------+---------------------+---------+----+-----+-----+-----+
+    |srem_8ns_8ns_7_12_1_U249  |srem_8ns_8ns_7_12_1  |        0|   0|  195|  126|    0|
+    +--------------------------+---------------------+---------+----+-----+-----+-----+
+    |Total                     |                     |        0|   0|  195|  126|    0|
+    +--------------------------+---------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |add_ln356_fu_123_p2              |         +|   0|  0|  11|          11|          11|
+    |add_ln361_fu_137_p2              |         +|   0|  0|   8|           8|           1|
+    |ap_predicate_tran14to15_state13  |       and|   0|  0|   1|           1|           1|
+    |icmp_ln363_fu_154_p2             |      icmp|   0|  0|   4|           8|           8|
+    |ap_enable_pp0                    |       xor|   0|  0|   2|           1|           2|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |Total                            |          |   0|  0|  26|          29|          23|
+    +---------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |IDX_pd_modulo_o                        |   9|          2|    7|         14|
+    |IDX_pd_o                               |   9|          2|    8|         16|
+    |ap_NS_fsm                              |  65|         16|    1|         16|
+    |ap_enable_reg_pp0_iter1                |   9|          2|    1|          2|
+    |ap_phi_mux_UnifiedRetVal_phi_fu_99_p4  |   9|          2|    1|          2|
+    |ap_return                              |   9|          2|    1|          2|
+    |ap_sig_allocacmp_IDX_pd_modulo_load    |   9|          2|    7|         14|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  | 119|         28|   26|         66|
+    +---------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------+----+----+-----+-----------+
+    |                  Name                 | FF | LUT| Bits| Const Bits|
+    +---------------------------------------+----+----+-----+-----------+
+    |IDX_pd_load_reg_198                    |   8|   0|    8|          0|
+    |UnifiedRetVal_reg_95                   |   1|   0|    1|          0|
+    |add_ln356_reg_184                      |  11|   0|   11|          0|
+    |ap_CS_fsm                              |  15|   0|   15|          0|
+    |ap_enable_reg_pp0_iter0                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                |   1|   0|    1|          0|
+    |ap_exit_tran_regpp0                    |   1|   0|    2|          1|
+    |ap_return_preg                         |   1|   0|    1|          0|
+    |icmp_ln363_reg_208                     |   1|   0|    1|          0|
+    |idxprom60_cast_reg_179                 |  11|   0|   11|          0|
+    |placement_dynamic_occupy_load_reg_194  |   1|   0|    1|          0|
+    +---------------------------------------+----+----+-----+-----------+
+    |Total                                  |  52|   0|   53|          1|
+    +---------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |                                 Source Object                                |    C Type    |
++-----------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
+|ap_clk                             |   in|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4|  return value|
+|ap_rst                             |   in|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4|  return value|
+|ap_start                           |   in|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4|  return value|
+|ap_done                            |  out|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4|  return value|
+|ap_idle                            |  out|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4|  return value|
+|ap_ready                           |  out|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4|  return value|
+|ap_return                          |  out|    1|  ap_ctrl_hs|  RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4|  return value|
+|idxprom60                          |   in|    5|     ap_none|                                                                     idxprom60|        scalar|
+|DynamicPlacement_II_load_2         |   in|    8|     ap_none|                                                    DynamicPlacement_II_load_2|        scalar|
+|upperLimit_1                       |   in|    8|     ap_none|                                                                  upperLimit_1|        scalar|
+|add_ln356_out                      |  out|   11|      ap_vld|                                                                 add_ln356_out|       pointer|
+|add_ln356_out_ap_vld               |  out|    1|      ap_vld|                                                                 add_ln356_out|       pointer|
+|IDX_pd_load_1_out                  |  out|    8|      ap_vld|                                                             IDX_pd_load_1_out|       pointer|
+|IDX_pd_load_1_out_ap_vld           |  out|    1|      ap_vld|                                                             IDX_pd_load_1_out|       pointer|
+|IDX_pd_modulo_i                    |   in|    7|     ap_ovld|                                                                 IDX_pd_modulo|       pointer|
+|IDX_pd_modulo_o                    |  out|    7|     ap_ovld|                                                                 IDX_pd_modulo|       pointer|
+|IDX_pd_modulo_o_ap_vld             |  out|    1|     ap_ovld|                                                                 IDX_pd_modulo|       pointer|
+|placement_dynamic_occupy_address0  |  out|   11|   ap_memory|                                                      placement_dynamic_occupy|         array|
+|placement_dynamic_occupy_ce0       |  out|    1|   ap_memory|                                                      placement_dynamic_occupy|         array|
+|placement_dynamic_occupy_q0        |   in|    1|   ap_memory|                                                      placement_dynamic_occupy|         array|
+|IDX_pd_i                           |   in|    8|     ap_ovld|                                                                        IDX_pd|       pointer|
+|IDX_pd_o                           |  out|    8|     ap_ovld|                                                                        IDX_pd|       pointer|
+|IDX_pd_o_ap_vld                    |  out|    1|     ap_ovld|                                                                        IDX_pd|       pointer|
++-----------------------------------+-----+-----+------------+------------------------------------------------------------------------------+--------------+
+

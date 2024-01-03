@@ -1,0 +1,217 @@
+
+
+================================================================
+== Vitis HLS Report for 'Dependency_Update_BypassMode_SrcTgt'
+================================================================
+* Date:           Wed Jan  3 23:39:01 2024
+
+* Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
+* Project:        DynMap
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z035-ffg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.383 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        9|      495|  90.000 ns|  4.950 us|    9|  495|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |                                                                          |                                                               |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+        |                                 Instance                                 |                             Module                            |   min   |   max   |    min    |    max   | min | max |   Type  |
+        +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1_fu_168   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1   |        5|      204|  50.000 ns|  2.040 us|    5|  204|       no|
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2_fu_176   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2   |        5|       44|  50.000 ns|  0.440 us|    5|   44|       no|
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3_fu_185   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3   |        5|       24|  50.000 ns|  0.240 us|    5|   24|       no|
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4_fu_193   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4   |        5|       44|  50.000 ns|  0.440 us|    5|   44|       no|
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5_fu_201   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5   |        5|       24|  50.000 ns|  0.240 us|    5|   24|       no|
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6_fu_210   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6   |        5|       24|  50.000 ns|  0.240 us|    5|   24|       no|
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7_fu_219  |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7  |        5|       44|  50.000 ns|  0.440 us|    5|   44|       no|
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8_fu_227  |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8  |        5|       24|  50.000 ns|  0.240 us|    5|   24|       no|
+        |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9_fu_235  |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9  |        5|       44|  50.000 ns|  0.440 us|    5|   44|       no|
+        +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+--------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
++-----------------+---------+-----+--------+--------+-----+
+|DSP              |        -|    -|       -|       -|    -|
+|Expression       |        -|    -|       0|      84|    -|
+|FIFO             |        -|    -|       -|       -|    -|
+|Instance         |        -|    -|     263|     661|    -|
+|Memory           |        -|    -|       -|       -|    -|
+|Multiplexer      |        -|    -|       -|     260|    -|
+|Register         |        -|    -|     208|       -|    -|
++-----------------+---------+-----+--------+--------+-----+
+|Total            |        0|    0|     471|    1005|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Available        |     1000|  900|  343800|  171900|    0|
++-----------------+---------+-----+--------+--------+-----+
+|Utilization (%)  |        0|    0|      ~0|      ~0|    0|
++-----------------+---------+-----+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+----+----+-----+
+    |                                 Instance                                 |                             Module                            | BRAM_18K| DSP| FF | LUT| URAM|
+    +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+----+----+-----+
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7_fu_219  |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7  |        0|   0|  29|  76|    0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8_fu_227  |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8  |        0|   0|  26|  74|    0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9_fu_235  |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9  |        0|   0|  29|  76|    0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1_fu_168   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1   |        0|   0|  27|  61|    0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2_fu_176   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2   |        0|   0|  37|  76|    0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3_fu_185   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3   |        0|   0|  26|  74|    0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4_fu_193   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4   |        0|   0|  29|  76|    0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5_fu_201   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5   |        0|   0|  26|  74|    0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6_fu_210   |Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6   |        0|   0|  34|  74|    0|
+    +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+----+----+-----+
+    |Total                                                                     |                                                               |        0|   0| 263| 661|    0|
+    +--------------------------------------------------------------------------+---------------------------------------------------------------+---------+----+----+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln103_fu_466_p2  |         +|   0|  0|  11|          11|          11|
+    |add_ln109_fu_491_p2  |         +|   0|  0|  10|          10|          10|
+    |add_ln117_fu_532_p2  |         +|   0|  0|  11|          11|          11|
+    |add_ln62_fu_297_p2   |         +|   0|  0|  11|          11|          11|
+    |add_ln70_fu_330_p2   |         +|   0|  0|  10|          10|          10|
+    |add_ln76_fu_355_p2   |         +|   0|  0|  11|          11|          11|
+    |add_ln84_fu_396_p2   |         +|   0|  0|  10|          10|          10|
+    |add_ln95_fu_433_p2   |         +|   0|  0|  10|          10|          10|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  84|          84|          84|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |                  Name                  | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  102|         21|    1|         21|
+    |dependency_predecessor_values_address0  |   37|          9|   10|         90|
+    |dependency_predecessor_values_ce0       |   25|          6|    1|          6|
+    |dependency_predecessor_values_d0        |   17|          4|    8|         32|
+    |dependency_successor_values_address0    |   37|          9|   11|         99|
+    |dependency_successor_values_ce0         |   25|          6|    1|          6|
+    |dependency_successor_values_d0          |   17|          4|    8|         32|
+    +----------------------------------------+-----+-----------+-----+-----------+
+    |Total                                   |  260|         59|   40|        286|
+    +----------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                          Name                                         | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln103_1_loc_fu_66                                                                  |  11|   0|   11|          0|
+    |add_ln103_reg_678                                                                      |   9|   0|   11|          2|
+    |add_ln109_1_loc_fu_62                                                                  |  10|   0|   10|          0|
+    |add_ln109_reg_687                                                                      |   9|   0|   10|          1|
+    |add_ln117_1_loc_fu_58                                                                  |  11|   0|   11|          0|
+    |add_ln117_reg_696                                                                      |   9|   0|   11|          2|
+    |add_ln62_1_loc_fu_86                                                                   |  11|   0|   11|          0|
+    |add_ln62_reg_629                                                                       |   9|   0|   11|          2|
+    |add_ln70_1_loc_fu_82                                                                   |  10|   0|   10|          0|
+    |add_ln70_reg_638                                                                       |   9|   0|   10|          1|
+    |add_ln76_1_loc_fu_78                                                                   |  11|   0|   11|          0|
+    |add_ln76_reg_647                                                                       |   9|   0|   11|          2|
+    |add_ln84_1_loc_fu_74                                                                   |  10|   0|   10|          0|
+    |add_ln84_reg_656                                                                       |   9|   0|   10|          1|
+    |add_ln95_1_loc_fu_70                                                                   |  10|   0|   10|          0|
+    |add_ln95_reg_669                                                                       |   9|   0|   10|          1|
+    |ap_CS_fsm                                                                              |  20|   0|   20|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7_fu_219_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8_fu_227_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9_fu_235_ap_start_reg  |   1|   0|    1|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1_fu_168_ap_start_reg   |   1|   0|    1|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2_fu_176_ap_start_reg   |   1|   0|    1|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3_fu_185_ap_start_reg   |   1|   0|    1|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4_fu_193_ap_start_reg   |   1|   0|    1|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5_fu_201_ap_start_reg   |   1|   0|    1|          0|
+    |grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6_fu_210_ap_start_reg   |   1|   0|    1|          0|
+    |phi_ln54_loc_fu_90                                                                     |   7|   0|    7|          0|
+    |sext_ln71_reg_617                                                                      |   8|   0|    8|          0|
+    |targetBlock10_reg_692                                                                  |   1|   0|    1|          0|
+    |targetBlock11_reg_701                                                                  |   1|   0|    1|          0|
+    |targetBlock5_reg_643                                                                   |   1|   0|    1|          0|
+    |targetBlock6_reg_652                                                                   |   1|   0|    1|          0|
+    |targetBlock7_reg_661                                                                   |   1|   0|    1|          0|
+    |targetBlock8_reg_674                                                                   |   1|   0|    1|          0|
+    |targetBlock9_reg_683                                                                   |   1|   0|    1|          0|
+    |targetBlock_reg_634                                                                    |   1|   0|    1|          0|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                  | 208|   0|  220|         12|
+    +---------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|                   RTL Ports                   | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++-----------------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                                         |   in|    1|  ap_ctrl_hs|   Dependency_Update_BypassMode_SrcTgt|  return value|
+|ap_rst                                         |   in|    1|  ap_ctrl_hs|   Dependency_Update_BypassMode_SrcTgt|  return value|
+|ap_start                                       |   in|    1|  ap_ctrl_hs|   Dependency_Update_BypassMode_SrcTgt|  return value|
+|ap_done                                        |  out|    1|  ap_ctrl_hs|   Dependency_Update_BypassMode_SrcTgt|  return value|
+|ap_idle                                        |  out|    1|  ap_ctrl_hs|   Dependency_Update_BypassMode_SrcTgt|  return value|
+|ap_ready                                       |  out|    1|  ap_ctrl_hs|   Dependency_Update_BypassMode_SrcTgt|  return value|
+|bypassOpt                                      |   in|    8|     ap_none|                             bypassOpt|       pointer|
+|placement_dynamic_dict_Opt2Tile_keys_address0  |  out|    7|   ap_memory|  placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_ce0       |  out|    1|   ap_memory|  placement_dynamic_dict_Opt2Tile_keys|         array|
+|placement_dynamic_dict_Opt2Tile_keys_q0        |   in|    8|   ap_memory|  placement_dynamic_dict_Opt2Tile_keys|         array|
+|dependency_forward                             |   in|    1|     ap_none|                    dependency_forward|       pointer|
+|bypassSrcOpt_keyIdx                            |   in|    7|     ap_none|                   bypassSrcOpt_keyIdx|       pointer|
+|bypassTgtOpt                                   |   in|    7|     ap_none|                          bypassTgtOpt|       pointer|
+|bypassSrcOpt                                   |   in|    8|     ap_none|                          bypassSrcOpt|       pointer|
+|bypassTgtOpt_keyIdx                            |   in|    7|     ap_none|                   bypassTgtOpt_keyIdx|       pointer|
+|dependency_successor_values_address0           |  out|   11|   ap_memory|           dependency_successor_values|         array|
+|dependency_successor_values_ce0                |  out|    1|   ap_memory|           dependency_successor_values|         array|
+|dependency_successor_values_we0                |  out|    1|   ap_memory|           dependency_successor_values|         array|
+|dependency_successor_values_d0                 |  out|    8|   ap_memory|           dependency_successor_values|         array|
+|dependency_successor_values_q0                 |   in|    8|   ap_memory|           dependency_successor_values|         array|
+|dependency_predecessor_values_address0         |  out|   10|   ap_memory|         dependency_predecessor_values|         array|
+|dependency_predecessor_values_ce0              |  out|    1|   ap_memory|         dependency_predecessor_values|         array|
+|dependency_predecessor_values_we0              |  out|    1|   ap_memory|         dependency_predecessor_values|         array|
+|dependency_predecessor_values_d0               |  out|    8|   ap_memory|         dependency_predecessor_values|         array|
+|dependency_predecessor_values_q0               |   in|    8|   ap_memory|         dependency_predecessor_values|         array|
+|dependency_backward                            |   in|    1|     ap_none|                   dependency_backward|       pointer|
++-----------------------------------------------+-----+-----+------------+--------------------------------------+--------------+
+
