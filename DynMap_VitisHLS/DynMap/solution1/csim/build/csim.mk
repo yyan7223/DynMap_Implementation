@@ -53,7 +53,7 @@ IFLAG += -D__SIM_DDS__
 
 IFLAG += -D__DSP48E1__
 IFLAG += -Wno-unknown-pragmas 
-IFLAG += -g
+AP_ENABLE_OPTIMIZED := 1
 IFLAG += -DNT
 LFLAG += -Wl,--enable-auto-import 
 DFLAG += -D__xilinx_ip_top= -DAESL_TB
@@ -70,12 +70,12 @@ all: $(TARGET)
 
 $(ObjDir)/main.o: ../../../main.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../main.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/main.d
 
 $(ObjDir)/DynMap_4HLS.o: ../../../DynMap_4HLS.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../DynMap_4HLS.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/DynMap_4HLS.d

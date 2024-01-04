@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../main.cpp in release mode
+   Compiling ../../../DynMap_4HLS.cpp in release mode
+   Generating csim.exe
+TestCase:[2/72], Kernel 0, Shape 1, II=4
+Test passed !
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

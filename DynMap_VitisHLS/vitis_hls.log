@@ -1,18 +1,18 @@
 INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'PC' on host 'laptop-0c06rso7' (Windows NT_amd64 version 6.2) on Mon Jan 04 10:57:41 +0800 2021
+INFO: [HLS 200-10] For user 'PC' on host 'laptop-0c06rso7' (Windows NT_amd64 version 6.2) on Thu Jan 04 11:04:12 +0800 2024
 INFO: [HLS 200-10] In directory 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS'
-Sourcing Tcl script 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/export.tcl'
+Sourcing Tcl script 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: open_project DynMap 
 INFO: [HLS 200-10] Opening project 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap'.
 INFO: [HLS 200-1510] Running: set_top runOne 
-INFO: [HLS 200-1510] Running: add_files DynMap/DynMap_4HLS.hpp 
-INFO: [HLS 200-10] Adding design file 'DynMap/DynMap_4HLS.hpp' to the project
 INFO: [HLS 200-1510] Running: add_files DynMap/DynMap_4HLS.cpp 
 INFO: [HLS 200-10] Adding design file 'DynMap/DynMap_4HLS.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files -tb DynMap/result.golden.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
-INFO: [HLS 200-10] Adding test bench file 'DynMap/result.golden.dat' to the project
+INFO: [HLS 200-1510] Running: add_files DynMap/DynMap_4HLS.hpp 
+INFO: [HLS 200-10] Adding design file 'DynMap/DynMap_4HLS.hpp' to the project
 INFO: [HLS 200-1510] Running: add_files -tb DynMap/main.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
 INFO: [HLS 200-10] Adding test bench file 'DynMap/main.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb DynMap/result.golden.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'DynMap/result.golden.dat' to the project
 INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
 INFO: [HLS 200-10] Opening solution 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -25,28 +25,15 @@ INFO: [HLS 200-1510] Running: set_part xc7z035-ffg676-2
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
 INFO: [HLS 200-1510] Running: set_directive_top -name runOne runOne 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2021.2 (64-bit)
-  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
-  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2021.2/data/ip'.
-WARNING: [IP_Flow 19-4832] The IP name 'runOne_ddiv_64ns_64ns_64_31_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOne_ddiv_64ns_64ns_64_31_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOne_ddiv_64ns_64ns_64_31_no_dsp_1_ip'...
-WARNING: [IP_Flow 19-4832] The IP name 'runOne_sitodp_32ns_64_5_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'runOne_sitodp_32ns_64_5_no_dsp_1_ip'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOne_sitodp_32ns_64_5_no_dsp_1_ip'...
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2021.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Jan  4 10:58:30 2021...
-INFO: [HLS 200-802] Generated output file DynMap/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 45.54 seconds; current allocated memory: 289.922 MB.
-INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 0 seconds. Total elapsed time: 48.866 seconds; peak allocated memory: 1.090 GB.
+INFO: [HLS 200-1510] Running: csim_design -clean -O -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../main.cpp in release mode
+   Compiling ../../../DynMap_4HLS.cpp in release mode
+   Generating csim.exe
+TestCase:[2/72], Kernel 0, Shape 1, II=4
+Test passed !
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 8.925 seconds; current allocated memory: 274.863 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 0 seconds. Total elapsed time: 9.798 seconds; peak allocated memory: 1.077 GB.
