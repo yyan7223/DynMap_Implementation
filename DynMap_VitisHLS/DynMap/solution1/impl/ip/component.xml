@@ -2547,8 +2547,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Runone</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2101041111</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-01-04T03:11:24Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2101041125</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-01-04T03:26:02Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>

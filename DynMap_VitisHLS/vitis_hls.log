@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'PC' on host 'laptop-0c06rso7' (Windows NT_amd64 version 6.2) on Mon Jan 04 11:11:11 +0800 2021
+INFO: [HLS 200-10] For user 'PC' on host 'laptop-0c06rso7' (Windows NT_amd64 version 6.2) on Mon Jan 04 11:25:50 +0800 2021
 INFO: [HLS 200-10] In directory 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS'
 Sourcing Tcl script 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/export.tcl'
 INFO: [HLS 200-1510] Running: open_project DynMap 
@@ -46,7 +46,7 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'runOne_sitodp_32n
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2021.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Mon Jan  4 11:11:24 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  4 11:26:03 2021...
 INFO: [HLS 200-802] Generated output file DynMap/solution1/impl/export.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 12.616 seconds; current allocated memory: 281.559 MB.
-INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 13.396 seconds; peak allocated memory: 1.086 GB.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 12.856 seconds; current allocated memory: 281.746 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 0 seconds. Total elapsed time: 13.636 seconds; peak allocated memory: 1.086 GB.
