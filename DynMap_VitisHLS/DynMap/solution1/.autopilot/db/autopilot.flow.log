@@ -6933,3 +6933,87 @@ Command   csim_design done; 1.382 sec.
 INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.382 seconds; current allocated memory: 272.539 MB.
 Command ap_source done; 1.911 sec.
 Execute cleanup_all 
+INFO-FLOW: Workspace D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1 opened at Thu Jan 04 11:10:09 +0800 2024
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z035-ffg676-2 
+Execute       create_platform xc7z035-ffg676-2 -board  
+DBG:HLSDevice: Trying to load device library: E:/Xilinx/Vitis_HLS/2021.2\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: E:/Xilinx/Vivado/2021.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/zynq_dsp48e1.hlp 
+INFO: [HLS 200-1611] Setting target device to 'xc7z035-ffg676-2'
+Command       create_platform done; 0.304 sec.
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z035-ffg676-2 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.396 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 0.409 sec.
+Execute   set_part xc7z035-ffg676-2 
+INFO: [HLS 200-1510] Running: set_part xc7z035-ffg676-2 
+Execute     create_platform xc7z035-ffg676-2 -board  
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.hlp 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/zynq_dsp48e1.hlp 
+Execute     source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/common/xilinx.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/plb46.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/axi4.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/maxi.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/util.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfft.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/ip/xfir.gen 
+Execute       source E:/Xilinx/Vitis_HLS/2021.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z035-ffg676-2 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+Execute   source ./DynMap/solution1/directives.tcl 
+Execute     set_directive_top -name runOne runOne 
+INFO: [HLS 200-1510] Running: set_directive_top -name runOne runOne 
+Execute   csim_design -clean -O -quiet 
+INFO: [HLS 200-1510] Running: csim_design -clean -O -quiet 
+Execute     source D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     ap_part_info -name xc7z035-ffg676-2 -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 0.328 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 1.405 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.405 seconds; current allocated memory: 272.551 MB.
+Command ap_source done; 1.925 sec.
+Execute cleanup_all 

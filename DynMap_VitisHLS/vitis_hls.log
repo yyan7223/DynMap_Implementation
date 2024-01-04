@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/win64.o/vitis_hls.exe'
-INFO: [HLS 200-10] For user 'PC' on host 'laptop-0c06rso7' (Windows NT_amd64 version 6.2) on Thu Jan 04 11:08:52 +0800 2024
+INFO: [HLS 200-10] For user 'PC' on host 'laptop-0c06rso7' (Windows NT_amd64 version 6.2) on Thu Jan 04 11:10:09 +0800 2024
 INFO: [HLS 200-10] In directory 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS'
 Sourcing Tcl script 'D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/csim.tcl'
 INFO: [HLS 200-1510] Running: open_project DynMap 
@@ -35,5 +35,5 @@ TestCase:[2/72], Kernel 0, Shape 1, II=4
 Test passed !
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.382 seconds; current allocated memory: 272.539 MB.
-INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.249 seconds; peak allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.405 seconds; current allocated memory: 272.551 MB.
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 2.217 seconds; peak allocated memory: 1.077 GB.
