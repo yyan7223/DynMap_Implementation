@@ -44,6 +44,7 @@
       "config_export -format=ip_catalog",
       "config_export -rtl=verilog"
     ],
+    "DirectiveTcl": ["set_directive_top runOne -name runOne"],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "runOne"
@@ -3239,7 +3240,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2024-01-03 23:47:39 +0800",
+    "Time": "2021-01-04 10:57:45 +0800",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.2"
   }
