@@ -1,0 +1,954 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Dec 14 15:33:30 2023
+# Process ID: 5892
+# Current directory: D:/Project/Vivado2021-Project/LevelMatch
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20568 D:\Project\Vivado2021-Project\LevelMatch\LevelMatch.xpr
+# Log file: D:/Project/Vivado2021-Project/LevelMatch/vivado.log
+# Journal file: D:/Project/Vivado2021-Project/LevelMatch\vivado.jou
+# Running On: LAPTOP-0C06RSO7, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 34071 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2021.2/data/ip'.
+open_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1583.312 ; gain = 0.000
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'LevelMatchUnit_tb'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LevelMatchUnit_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj LevelMatchUnit_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LevelMatchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sim_1/new/LevelMatchUnit_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LevelMatchUnit_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LevelMatchUnit_tb_behav xil_defaultlib.LevelMatchUnit_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LevelMatchUnit_tb_behav xil_defaultlib.LevelMatchUnit_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.LevelMatchUnit
+Compiling module xil_defaultlib.LevelMatchUnit_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LevelMatchUnit_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LevelMatchUnit_tb_behav -key {Behavioral:sim_1:Functional:LevelMatchUnit_tb} -tclbatch {LevelMatchUnit_tb.tcl} -view {D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg
+WARNING: Simulation object /LevelMatchUnit_tb/u_LevelMatchUnit/CLK was not found in the design.
+source LevelMatchUnit_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LevelMatchUnit_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1583.312 ; gain = 0.000
+current_wave_config {LevelMatchUnit_tb_behav.wcfg}
+LevelMatchUnit_tb_behav.wcfg
+add_wave {{/LevelMatchUnit_tb/u_LevelMatchUnit/sys_clk_p}} {{/LevelMatchUnit_tb/u_LevelMatchUnit/sys_clk_n}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1583.312 ; gain = 0.000
+INFO: [Common 17-344] 'run' was cancelled
+save_wave_config {D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z035ffg676-2
+Top: LevelMatchUnit
+INFO: [Device 21-403] Loading part xc7z035ffg676-2
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1916.297 ; gain = 332.984
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'LevelMatchUnit' [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:23]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:262]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [D:/Project/Vivado2021-Project/LevelMatch/.Xil/Vivado-5892-LAPTOP-0C06RSO7/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (1#1) [D:/Project/Vivado2021-Project/LevelMatch/.Xil/Vivado-5892-LAPTOP-0C06RSO7/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ohMyOldBaby'. This will prevent further optimization [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:262]
+INFO: [Synth 8-6155] done synthesizing module 'LevelMatchUnit' (2#1) [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:23]
+WARNING: [Synth 8-7129] Port sys_clk_n in module LevelMatchUnit is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1978.875 ; gain = 395.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1999.785 ; gain = 416.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1999.785 ; gain = 416.473
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'ohMyOldBaby'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2019.715 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 409 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:2]
+Finished Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/LevelMatchUnit_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2157.199 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2316.316 ; gain = 733.004
+12 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 2316.316 ; gain = 733.004
+set_property package_pin "" [get_ports [list  sys_clk_n]]
+place_ports sys_clk_n C8
+place_ports sys_clk_p C7
+save_constraints
+close_design
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'LevelMatchUnit_tb'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LevelMatchUnit_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj LevelMatchUnit_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LevelMatchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sim_1/new/LevelMatchUnit_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LevelMatchUnit_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LevelMatchUnit_tb_behav xil_defaultlib.LevelMatchUnit_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LevelMatchUnit_tb_behav xil_defaultlib.LevelMatchUnit_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUFDS
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.LevelMatchUnit
+Compiling module xil_defaultlib.LevelMatchUnit_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LevelMatchUnit_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LevelMatchUnit_tb_behav -key {Behavioral:sim_1:Functional:LevelMatchUnit_tb} -tclbatch {LevelMatchUnit_tb.tcl} -view {D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg
+source LevelMatchUnit_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LevelMatchUnit_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2320.090 ; gain = 0.000
+save_wave_config {D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'LevelMatchUnit_tb'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Runs 36-567] Checking/generating simulation output products for IPs/BDs (if any)...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LevelMatchUnit_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj LevelMatchUnit_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/sim/ila_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LevelMatchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sim_1/new/LevelMatchUnit_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LevelMatchUnit_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LevelMatchUnit_tb_behav xil_defaultlib.LevelMatchUnit_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LevelMatchUnit_tb_behav xil_defaultlib.LevelMatchUnit_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUFDS
+Compiling module xil_defaultlib.ila_0
+Compiling module xil_defaultlib.LevelMatchUnit
+Compiling module xil_defaultlib.LevelMatchUnit_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LevelMatchUnit_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LevelMatchUnit_tb_behav -key {Behavioral:sim_1:Functional:LevelMatchUnit_tb} -tclbatch {LevelMatchUnit_tb.tcl} -view {D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg
+source LevelMatchUnit_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LevelMatchUnit_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z035ffg676-2
+Top: LevelMatchUnit
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2320.090 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'LevelMatchUnit' [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [E:/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55219]
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [E:/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55219]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:273]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [D:/Project/Vivado2021-Project/LevelMatch/.Xil/Vivado-5892-LAPTOP-0C06RSO7/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (2#1) [D:/Project/Vivado2021-Project/LevelMatch/.Xil/Vivado-5892-LAPTOP-0C06RSO7/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ohMyOldBaby'. This will prevent further optimization [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:273]
+INFO: [Synth 8-6155] done synthesizing module 'LevelMatchUnit' (3#1) [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2320.090 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2320.090 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2320.090 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'ohMyOldBaby'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 2320.090 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 410 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:2]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'sys_clk_n' of a differential pair cannot be placed on a positive package pin 'C8' (IOBM). [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:9]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'sys_clk_p' of a differential pair cannot be placed on a negative package pin 'C7' (IOBS). [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:10]
+Finished Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/LevelMatchUnit_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2320.090 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2328.492 ; gain = 8.402
+13 Infos, 4 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2328.492 ; gain = 8.402
+place_ports sys_clk_p C8
+set_property IOSTANDARD DIFF_HSTL_II_18 [get_ports [list sys_clk_p]]
+set_property IOSTANDARD DIFF_SSTL15 [get_ports [list sys_clk_p]]
+save_constraints
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/utils_1/imports/synth_1/LevelMatchUnit.dcp with file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/LevelMatchUnit.dcp
+launch_runs synth_1 -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+[Thu Dec 14 15:44:56 2023] Launched synth_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z035ffg676-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'ohMyOldBaby'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2371.848 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 410 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: ohMyOldBaby UUID: cff17501-4256-5a8c-9e67-d55957ba08a7 
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'CLK'. [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the negative port (N-side) 'sys_clk_n' of a differential pair cannot be placed on a positive package pin 'C8' (IOBM). [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:9]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, the positive port (P-side) 'sys_clk_p' of a differential pair cannot be placed on a negative package pin 'C7' (IOBS). [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc:10]
+Finished Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2371.848 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z035ffg676-2
+Top: LevelMatchUnit
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2691.188 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'LevelMatchUnit' [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [E:/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55219]
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [E:/Xilinx/Vivado/2021.2/scripts/rt/data/unisim_comp.v:55219]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:273]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [D:/Project/Vivado2021-Project/LevelMatch/.Xil/Vivado-5892-LAPTOP-0C06RSO7/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (2#1) [D:/Project/Vivado2021-Project/LevelMatch/.Xil/Vivado-5892-LAPTOP-0C06RSO7/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ohMyOldBaby'. This will prevent further optimization [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:273]
+INFO: [Synth 8-6155] done synthesizing module 'LevelMatchUnit' (3#1) [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2691.188 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2691.188 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 2691.188 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'd:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'ohMyOldBaby'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 2691.188 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 410 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+Finished Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2790.738 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2833.922 ; gain = 142.734
+13 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2833.922 ; gain = 142.734
+place_ports sys_clk_p C8
+set_property IOSTANDARD DIFF_SSTL15 [get_ports [list sys_clk_p]]
+place_ports RST_n AF15
+set_property IOSTANDARD LVCMOS33 [get_ports [list RST_n]]
+place_ports VALID AB15
+set_property IOSTANDARD LVCMOS33 [get_ports [list VALID]]
+save_constraints
+close_design
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/utils_1/imports/synth_1/LevelMatchUnit.dcp with file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/LevelMatchUnit.dcp
+launch_runs synth_1 -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+[Thu Dec 14 15:48:04 2023] Launched synth_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z035ffg676-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'ohMyOldBaby'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 2878.504 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 410 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: ohMyOldBaby UUID: cff17501-4256-5a8c-9e67-d55957ba08a7 
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+Finished Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2878.504 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/utils_1/imports/synth_1/LevelMatchUnit.dcp with file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/LevelMatchUnit.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Dec 14 15:49:38 2023] Launched synth_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/runme.log
+[Thu Dec 14 15:49:38 2023] Launched impl_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/runme.log
+close_design
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.2
+  **** Build date : Oct 19 2021 at 03:13:30
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.2.0
+  ****** Build date   : Sep 28 2021-05:44:20
+    **** Build number : 2021.2.1632779060
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2878.504 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 4361.406 ; gain = 1482.902
+set_property PROGRAM.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+INFO: [Labtools 27-1435] Device xc7z035 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 4392.723 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+WARNING: [Xicom 50-38] xicom: No CseXsdb register file specified for CseXsdb slave type: 0, cse driver version: 0. Slave initialization skipped.
+INFO: [Labtools 27-1434] Device xc7z035 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'ohMyOldBaby' at location 'uuid_CFF1750142565A8C9E67D55957BA08A7' from probes file, since it cannot be found on the programmed device.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z035 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210512180081
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.2
+  **** Build date : Oct 19 2021 at 03:13:30
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.2.0
+  ****** Build date   : Sep 28 2021-05:44:20
+    **** Build number : 2021.2.1632779060
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 4858.789 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+INFO: [Labtools 27-1435] Device xc7z035 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 4873.281 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+WARNING: [Xicom 50-38] xicom: No CseXsdb register file specified for CseXsdb slave type: 0, cse driver version: 0. Slave initialization skipped.
+INFO: [Labtools 27-1434] Device xc7z035 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'ohMyOldBaby' at location 'uuid_CFF1750142565A8C9E67D55957BA08A7' from probes file, since it cannot be found on the programmed device.
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+INFO: [Labtools 27-1434] Device xc7z035 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'ohMyOldBaby' at location 'uuid_CFF1750142565A8C9E67D55957BA08A7' from probes file, since it cannot be found on the programmed device.
+close_hw_manager
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 4873.871 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 428 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.336 . Memory (MB): peak = 5084.848 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.336 . Memory (MB): peak = 5084.848 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 5084.848 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 182 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z035ffg676-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'ohMyOldBaby'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 5114.621 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 410 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: ohMyOldBaby UUID: cff17501-4256-5a8c-9e67-d55957ba08a7 
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+Finished Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 5114.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/utils_1/imports/synth_1/LevelMatchUnit.dcp with file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/LevelMatchUnit.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1
+
+launch_runs synth_1 -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+[Thu Dec 14 16:09:26 2023] Launched synth_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/runme.log
+close_design
+close_design
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1
+
+launch_runs synth_1 -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+[Thu Dec 14 16:10:24 2023] Launched synth_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z035ffg676-2
+INFO: [Project 1-454] Reading design checkpoint 'd:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_0.dcp' for cell 'ohMyOldBaby'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 5712.938 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 410 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: ohMyOldBaby UUID: cff17501-4256-5a8c-9e67-d55957ba08a7 
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Finished Parsing XDC File [d:/Project/Vivado2021-Project/LevelMatch/LevelMatch.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc] for cell 'ohMyOldBaby/inst'
+Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+Finished Parsing XDC File [D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/constrs_1/new/levelMatch.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 5712.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 176 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+
+launch_runs impl_1 -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 5712.938 ; gain = 0.000
+[Thu Dec 14 16:11:59 2023] Launched impl_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 5712.938 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 428 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.329 . Memory (MB): peak = 5712.938 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.330 . Memory (MB): peak = 5712.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 5712.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 182 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+close_design
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 5712.938 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 428 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.339 . Memory (MB): peak = 5712.938 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.339 . Memory (MB): peak = 5712.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 5712.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 182 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 176 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances
+
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'ohMyOldBaby/clk'; it is inside a Vivado debug core.
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date
+[Thu Dec 14 16:18:17 2023] Launched impl_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.2
+  **** Build date : Oct 19 2021 at 03:13:30
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.2.0
+  ****** Build date   : Sep 28 2021-05:44:20
+    **** Build number : 2021.2.1632779060
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 5712.938 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.bit} [get_hw_devices xc7z035_1]
+set_property PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+current_hw_device [get_hw_devices xc7z035_1]
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+INFO: [Labtools 27-1435] Device xc7z035 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property FULL_PROBES.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.ltx} [get_hw_devices xc7z035_1]
+set_property PROGRAM.FILE {D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/impl_1/LevelMatchUnit.bit} [get_hw_devices xc7z035_1]
+program_hw_devices [get_hw_devices xc7z035_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 5712.938 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+WARNING: [Xicom 50-38] xicom: No CseXsdb register file specified for CseXsdb slave type: 0, cse driver version: 0. Slave initialization skipped.
+INFO: [Labtools 27-1434] Device xc7z035 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'ohMyOldBaby' at location 'uuid_CFF1750142565A8C9E67D55957BA08A7' from probes file, since it cannot be found on the programmed device.
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+INFO: [Labtools 27-1434] Device xc7z035 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'ohMyOldBaby' at location 'uuid_CFF1750142565A8C9E67D55957BA08A7' from probes file, since it cannot be found on the programmed device.
+refresh_hw_device [lindex [get_hw_devices xc7z035_1] 0]
+INFO: [Labtools 27-1434] Device xc7z035 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'ohMyOldBaby' at location 'uuid_CFF1750142565A8C9E67D55957BA08A7' from probes file, since it cannot be found on the programmed device.
+close_hw_manager
+close_design
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'LevelMatchUnit_tb'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'LevelMatchUnit_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj LevelMatchUnit_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sources_1/new/LevelMatchUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LevelMatchUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/sim_1/new/LevelMatchUnit_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LevelMatchUnit_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LevelMatchUnit_tb_behav xil_defaultlib.LevelMatchUnit_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LevelMatchUnit_tb_behav xil_defaultlib.LevelMatchUnit_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUFDS
+Compiling module xil_defaultlib.LevelMatchUnit
+Compiling module xil_defaultlib.LevelMatchUnit_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot LevelMatchUnit_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "LevelMatchUnit_tb_behav -key {Behavioral:sim_1:Functional:LevelMatchUnit_tb} -tclbatch {LevelMatchUnit_tb.tcl} -view {D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/Project/Vivado2021-Project/LevelMatch/LevelMatchUnit_tb_behav.wcfg
+source LevelMatchUnit_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'LevelMatchUnit_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.srcs/utils_1/imports/synth_1/LevelMatchUnit.dcp with file D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/LevelMatchUnit.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1
+
+launch_runs synth_1 -jobs 20
+[Thu Dec 14 16:24:59 2023] Launched synth_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1
+
+launch_runs synth_1 -jobs 20
+[Thu Dec 14 16:25:51 2023] Launched synth_1...
+Run output will be captured here: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 14 16:27:49 2023...

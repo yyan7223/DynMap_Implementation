@@ -1,0 +1,7 @@
+Running: xsim.dir/LevelMatchUnit_tb_behav/xsimk.exe -simmode gui -wdb LevelMatchUnit_tb_behav.wdb -simrunnum 0 -socket 51374
+Design successfully loaded
+Design Loading Memory Usage: 7856 KB (Peak: 7856 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8484 KB (Peak: 8484 KB)
+Simulation CPU Usage: 31 ms

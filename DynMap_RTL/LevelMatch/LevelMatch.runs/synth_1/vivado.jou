@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Dec 14 17:12:06 2023
+# Process ID: 10632
+# Current directory: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1
+# Command line: vivado.exe -log LevelMatchUnit.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source LevelMatchUnit.tcl
+# Log file: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1/LevelMatchUnit.vds
+# Journal file: D:/Project/Vivado2021-Project/LevelMatch/LevelMatch.runs/synth_1\vivado.jou
+# Running On: LAPTOP-0C06RSO7, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 34071 MB
+#-----------------------------------------------------------
+source LevelMatchUnit.tcl -notrace

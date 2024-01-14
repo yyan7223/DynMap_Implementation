@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="LevelMatchUnit_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="LevelMatchUnit_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="281.756 ns"></ZoomEndTime>
+      <Cursor1Time time="5.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="379"></NameColumnWidth>
+      <ValueColumnWidth column_width="198"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/DFGNode" type="array">
+      <obj_property name="ElementShortName">DFGNode[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DFGNode[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/sys_clk_p" type="logic">
+      <obj_property name="ElementShortName">sys_clk_p</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/sys_clk_n" type="logic">
+      <obj_property name="ElementShortName">sys_clk_n</obj_property>
+      <obj_property name="ObjectShortName">sys_clk_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/sys_clk" type="logic">
+      <obj_property name="ElementShortName">sys_clk</obj_property>
+      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/RST_n" type="logic">
+      <obj_property name="ElementShortName">RST_n</obj_property>
+      <obj_property name="ObjectShortName">RST_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/READY" type="logic">
+      <obj_property name="ElementShortName">READY</obj_property>
+      <obj_property name="ObjectShortName">READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/VALID" type="logic">
+      <obj_property name="ElementShortName">VALID</obj_property>
+      <obj_property name="ObjectShortName">VALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/cur_state" type="array">
+      <obj_property name="ElementShortName">cur_state[4:0]</obj_property>
+      <obj_property name="ObjectShortName">cur_state[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/placement_static_Opt2Tile" type="array">
+      <obj_property name="ElementShortName">placement_static_Opt2Tile[255:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">placement_static_Opt2Tile[255:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/Tilelevels_static" type="array">
+      <obj_property name="ElementShortName">Tilelevels_static[15:0][1:0]</obj_property>
+      <obj_property name="ObjectShortName">Tilelevels_static[15:0][1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/levelStartEndAddr" type="array">
+      <obj_property name="ElementShortName">levelStartEndAddr[2:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">levelStartEndAddr[2:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/allocated_tiles" type="array">
+      <obj_property name="ElementShortName">allocated_tiles[15:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">allocated_tiles[15:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/NodeTile" type="array">
+      <obj_property name="ElementShortName">NodeTile[3:0]</obj_property>
+      <obj_property name="ObjectShortName">NodeTile[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/TileLevel" type="array">
+      <obj_property name="ElementShortName">TileLevel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">TileLevel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/MaxLevel" type="array">
+      <obj_property name="ElementShortName">MaxLevel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">MaxLevel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/DynLevel" type="array">
+      <obj_property name="ElementShortName">DynLevel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">DynLevel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/startEndAddr" type="array">
+      <obj_property name="ElementShortName">startEndAddr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">startEndAddr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/startAddr" type="array">
+      <obj_property name="ElementShortName">startAddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">startAddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/endAddr" type="array">
+      <obj_property name="ElementShortName">endAddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">endAddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/TileAddr" type="array">
+      <obj_property name="ElementShortName">TileAddr[3:0]</obj_property>
+      <obj_property name="ObjectShortName">TileAddr[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/Tile" type="array">
+      <obj_property name="ElementShortName">Tile[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Tile[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/RecList_wrEn" type="logic">
+      <obj_property name="ElementShortName">RecList_wrEn</obj_property>
+      <obj_property name="ObjectShortName">RecList_wrEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/RecList_wrAddr" type="array">
+      <obj_property name="ElementShortName">RecList_wrAddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RecList_wrAddr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/RecList_wrData" type="array">
+      <obj_property name="ElementShortName">RecList_wrData[3:0]</obj_property>
+      <obj_property name="ObjectShortName">RecList_wrData[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/LevelMatchUnit_tb/u_LevelMatchUnit/RecList" type="array">
+      <obj_property name="ElementShortName">RecList[15:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">RecList[15:0][3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>
