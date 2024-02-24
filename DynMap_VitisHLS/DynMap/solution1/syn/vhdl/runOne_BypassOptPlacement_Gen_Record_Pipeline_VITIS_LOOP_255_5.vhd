@@ -19,9 +19,9 @@ port (
     ap_ready : OUT STD_LOGIC;
     idxprom190 : IN STD_LOGIC_VECTOR (7 downto 0);
     tileId : IN STD_LOGIC_VECTOR (3 downto 0);
-    tmp_73_out : OUT STD_LOGIC_VECTOR (13 downto 0);
+    tmp_73_out : OUT STD_LOGIC_VECTOR (12 downto 0);
     tmp_73_out_ap_vld : OUT STD_LOGIC;
-    placement_dynamic_bypass_address0 : OUT STD_LOGIC_VECTOR (13 downto 0);
+    placement_dynamic_bypass_address0 : OUT STD_LOGIC_VECTOR (12 downto 0);
     placement_dynamic_bypass_ce0 : OUT STD_LOGIC;
     placement_dynamic_bypass_q0 : IN STD_LOGIC_VECTOR (7 downto 0) );
 end;
@@ -67,8 +67,8 @@ attribute shreg_extract : string;
     signal idxprom190_cast_reg_143 : STD_LOGIC_VECTOR (59 downto 0);
     signal phi_mul_load_reg_148 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage1_11001 : BOOLEAN;
-    signal trunc_ln257_1_fu_95_p1 : STD_LOGIC_VECTOR (9 downto 0);
-    signal trunc_ln257_1_reg_153 : STD_LOGIC_VECTOR (9 downto 0);
+    signal trunc_ln257_1_fu_95_p1 : STD_LOGIC_VECTOR (8 downto 0);
+    signal trunc_ln257_1_reg_153 : STD_LOGIC_VECTOR (8 downto 0);
     signal ap_enable_reg_pp0_iter0_reg : STD_LOGIC := '0';
     signal tmp_s_fu_99_p3 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage1 : BOOLEAN;
@@ -326,7 +326,7 @@ begin
     icmp_ln257_fu_119_p2 <= "1" when (placement_dynamic_bypass_q0 = ap_const_lv8_FF) else "0";
         idxprom190_cast_fu_74_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(idxprom190),60));
 
-    placement_dynamic_bypass_address0 <= tmp_s_fu_99_p3(14 - 1 downto 0);
+    placement_dynamic_bypass_address0 <= tmp_s_fu_99_p3(13 - 1 downto 0);
 
     placement_dynamic_bypass_ce0_assign_proc : process(ap_enable_reg_pp0_iter0, ap_CS_fsm_pp0_stage1, ap_block_pp0_stage1_11001)
     begin
@@ -349,6 +349,6 @@ begin
     end process;
 
     tmp_s_fu_99_p3 <= (add_ln257_fu_90_p2 & tileId);
-    trunc_ln257_1_fu_95_p1 <= add_ln257_fu_90_p2(10 - 1 downto 0);
+    trunc_ln257_1_fu_95_p1 <= add_ln257_fu_90_p2(9 - 1 downto 0);
     trunc_ln257_fu_86_p1 <= phi_mul_fu_38(60 - 1 downto 0);
 end behav;

@@ -69,14 +69,14 @@ input  [3:0] sub182;
 input  [7:0] upperLimit;
 output  [7:0] p_out;
 output   p_out_ap_vld;
-output  [14:0] add_ln252_out;
+output  [12:0] add_ln252_out;
 output   add_ln252_out_ap_vld;
-output  [14:0] tmp_71_out;
+output  [12:0] tmp_71_out;
 output   tmp_71_out_ap_vld;
-output  [14:0] placement_dynamic_bypass_occupy_address0;
+output  [12:0] placement_dynamic_bypass_occupy_address0;
 output   placement_dynamic_bypass_occupy_ce0;
 input  [0:0] placement_dynamic_bypass_occupy_q0;
-output  [14:0] placement_dynamic_bypass_occupy_address1;
+output  [12:0] placement_dynamic_bypass_occupy_address1;
 output   placement_dynamic_bypass_occupy_ce1;
 input  [0:0] placement_dynamic_bypass_occupy_q1;
 input  [7:0] IDX_pd_bypass_i;
@@ -104,21 +104,21 @@ reg    ap_condition_exit_pp0_iter0_stage13;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 reg    ap_block_state1_pp0_stage0_iter0;
-wire  signed [12:0] idxprom20_cast_fu_173_p1;
-reg  signed [12:0] idxprom20_cast_reg_340;
-wire  signed [14:0] idxprom174_cast_fu_177_p1;
-reg  signed [14:0] idxprom174_cast_reg_345;
+wire  signed [10:0] idxprom20_cast_fu_173_p1;
+reg  signed [10:0] idxprom20_cast_reg_340;
+wire  signed [12:0] idxprom174_cast_fu_177_p1;
+reg  signed [12:0] idxprom174_cast_reg_345;
 reg   [7:0] p_load_reg_350;
-wire   [6:0] formerPC_fu_216_p2;
-reg   [6:0] formerPC_reg_356;
+wire   [4:0] formerPC_fu_216_p2;
+reg   [4:0] formerPC_reg_356;
 wire    ap_CS_fsm_state12;
 wire    ap_block_state12_pp0_stage11_iter0;
-wire   [14:0] add_ln252_fu_231_p2;
-reg   [14:0] add_ln252_reg_361;
+wire   [12:0] add_ln252_fu_231_p2;
+reg   [12:0] add_ln252_reg_361;
 wire    ap_CS_fsm_state13;
 wire    ap_block_state13_pp0_stage12_iter0;
-wire   [10:0] trunc_ln253_fu_256_p1;
-reg   [10:0] trunc_ln253_reg_372;
+wire   [8:0] trunc_ln253_fu_256_p1;
+reg   [8:0] trunc_ln253_reg_372;
 reg   [0:0] ap_phi_mux_UnifiedRetVal_phi_fu_165_p4;
 wire   [63:0] zext_ln252_fu_236_p1;
 wire  signed [63:0] sext_ln253_fu_267_p1;
@@ -128,14 +128,14 @@ wire    ap_loop_init;
 reg   [7:0] ap_sig_allocacmp_p_load;
 wire   [7:0] grp_fu_189_p2;
 wire   [0:0] icmp_ln251_fu_195_p2;
-wire   [6:0] trunc_ln251_fu_201_p1;
-wire   [6:0] trunc_ln251_1_fu_204_p1;
-wire   [6:0] select_ln251_fu_208_p3;
-wire   [14:0] tmp_68_cast_fu_222_p4;
-wire   [10:0] tmp_s_fu_240_p3;
-wire   [12:0] zext_ln253_fu_247_p1;
-wire   [12:0] add_ln253_fu_251_p2;
-wire   [16:0] tmp_fu_260_p3;
+wire   [4:0] trunc_ln251_fu_201_p1;
+wire   [4:0] trunc_ln251_1_fu_204_p1;
+wire   [4:0] select_ln251_fu_208_p3;
+wire   [12:0] tmp_68_cast_fu_222_p4;
+wire   [8:0] tmp_s_fu_240_p3;
+wire   [10:0] zext_ln253_fu_247_p1;
+wire   [10:0] add_ln253_fu_251_p2;
+wire   [14:0] tmp_fu_260_p3;
 reg   [0:0] ap_return_preg;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -518,7 +518,7 @@ assign ap_block_state9_pp0_stage8_iter0 = ~(1'b1 == 1'b1);
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage13;
 
-assign formerPC_fu_216_p2 = ($signed(select_ln251_fu_208_p3) + $signed(7'd127));
+assign formerPC_fu_216_p2 = ($signed(select_ln251_fu_208_p3) + $signed(5'd31));
 
 assign icmp_ln251_fu_195_p2 = ((grp_fu_189_p2 == 8'd0) ? 1'b1 : 1'b0);
 
@@ -548,11 +548,11 @@ assign tmp_fu_260_p3 = {{add_ln253_fu_251_p2}, {sub182}};
 
 assign tmp_s_fu_240_p3 = {{formerPC_reg_356}, {4'd0}};
 
-assign trunc_ln251_1_fu_204_p1 = grp_fu_189_p2[6:0];
+assign trunc_ln251_1_fu_204_p1 = grp_fu_189_p2[4:0];
 
-assign trunc_ln251_fu_201_p1 = DynamicPlacement_II_load[6:0];
+assign trunc_ln251_fu_201_p1 = DynamicPlacement_II_load[4:0];
 
-assign trunc_ln253_fu_256_p1 = add_ln253_fu_251_p2[10:0];
+assign trunc_ln253_fu_256_p1 = add_ln253_fu_251_p2[8:0];
 
 assign zext_ln252_fu_236_p1 = add_ln252_reg_361;
 

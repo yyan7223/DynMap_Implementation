@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_518_12'
 ================================================================
-* Date:           Wed Jan  3 23:38:47 2024
+* Date:           Wed Jan 17 08:24:15 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -100,7 +100,7 @@ ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%intersection_addr = getelementptr 
 ST_1 : Operation 17 [2/2] (1.75ns)   --->   "%intersection_load = load i4 %intersection_addr" [DynMap/DynMap_4HLS.cpp:519]   --->   Operation 17 'load' 'intersection_load' <Predicate = (icmp_ln518)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 16> <RAM>
 
 State 2 <SV = 1> <Delay = 4.01>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln516 = specloopname void @_ssdm_op_SpecLoopName, void @empty_25" [DynMap/DynMap_4HLS.cpp:516]   --->   Operation 18 'specloopname' 'specloopname_ln516' <Predicate = (icmp_ln518)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specloopname_ln516 = specloopname void @_ssdm_op_SpecLoopName, void @empty_27" [DynMap/DynMap_4HLS.cpp:516]   --->   Operation 18 'specloopname' 'specloopname_ln516' <Predicate = (icmp_ln518)> <Delay = 0.00>
 ST_2 : Operation 19 [1/2] (1.75ns)   --->   "%intersection_load = load i4 %intersection_addr" [DynMap/DynMap_4HLS.cpp:519]   --->   Operation 19 'load' 'intersection_load' <Predicate = (icmp_ln518)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 16> <RAM>
 ST_2 : Operation 20 [1/1] (0.96ns)   --->   "%icmp_ln519 = icmp_eq  i4 %allocated_tiles_shapes_values_load_2_read, i4 %intersection_load" [DynMap/DynMap_4HLS.cpp:519]   --->   Operation 20 'icmp' 'icmp_ln519' <Predicate = (icmp_ln518)> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 21 [1/1] (1.29ns)   --->   "%br_ln519 = br i1 %icmp_ln519, void, void %.critedge104.loopexit.exitStub" [DynMap/DynMap_4HLS.cpp:519]   --->   Operation 21 'br' 'br_ln519' <Predicate = (icmp_ln518)> <Delay = 1.29>

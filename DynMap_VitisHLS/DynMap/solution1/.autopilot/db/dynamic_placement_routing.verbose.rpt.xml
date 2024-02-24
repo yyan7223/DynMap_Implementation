@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dynamic_placement_routing'" level="0">
-<item name = "Date">Wed Jan  3 23:39:03 2024
+<item name = "Date">Wed Jan 17 08:24:30 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -62,7 +62,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 145, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">6, 1, 2856, 6170, 0</column>
+<column name="Instance">6, 1, 2838, 6164, 0</column>
 <column name="Memory">3, -, 32, 11, 0</column>
 <column name="Multiplexer">-, -, -, 939, -</column>
 <column name="Register">-, -, 285, -, -</column>
@@ -75,7 +75,7 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439">CurOptPotentialPlacement_List_BypassLess_Gen, 2, 0, 539, 1557, 0</column>
-<column name="grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507">RoutingAvailability_CheckPredecessor_and_Placement, 3, 1, 2169, 4046, 0</column>
+<column name="grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507">RoutingAvailability_CheckPredecessor_and_Placement, 3, 1, 2151, 4040, 0</column>
 <column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1_fu_473">dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1, 0, 0, 24, 44, 0</column>
 <column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2_fu_482">dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2, 0, 0, 14, 68, 0</column>
 <column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493">dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3, 0, 0, 7, 65, 0</column>
@@ -120,7 +120,7 @@
 <column name="add_ln636_fu_852_p2">+, 0, 0, 10, 10, 10</column>
 <column name="add_ln643_fu_827_p2">+, 0, 0, 8, 8, 1</column>
 <column name="dynamic_level_3_fu_946_p2">+, 0, 0, 8, 8, 1</column>
-<column name="empty_83_fu_974_p2">+, 0, 0, 9, 9, 9</column>
+<column name="empty_82_fu_974_p2">+, 0, 0, 9, 9, 9</column>
 <column name="i_fu_743_p2">+, 0, 0, 6, 4, 1</column>
 <column name="placedOpts_Counter_2_fu_668_p2">+, 0, 0, 8, 8, 1</column>
 <column name="ap_block_state13_on_subcall_done">and, 0, 0, 1, 1, 1</column>
@@ -222,7 +222,7 @@
 <column name="curTileStatic_reg_1200">4, 0, 4, 0</column>
 <column name="dynamic_level_2_reg_381">8, 0, 8, 0</column>
 <column name="dynamic_level_4_reg_1272">8, 0, 8, 0</column>
-<column name="empty_83_reg_1280">9, 0, 9, 0</column>
+<column name="empty_82_reg_1280">9, 0, 9, 0</column>
 <column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507_ap_start_reg">1, 0, 1, 0</column>
 <column name="grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1_fu_473_ap_start_reg">1, 0, 1, 0</column>
@@ -377,15 +377,15 @@
 <column name="idx_pd_r_i">in, 4, ap_ovld, idx_pd_r, pointer</column>
 <column name="idx_pd_r_o">out, 4, ap_ovld, idx_pd_r, pointer</column>
 <column name="idx_pd_r_o_ap_vld">out, 1, ap_ovld, idx_pd_r, pointer</column>
-<column name="placement_dynamic_bypass_occupy_address0">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address0">out, 13, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_ce0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_we0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_d0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_q0">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
-<column name="placement_dynamic_bypass_occupy_address1">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address1">out, 13, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_ce1">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_q1">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
-<column name="placement_dynamic_bypass_address0">out, 14, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_address0">out, 13, ap_memory, placement_dynamic_bypass, array</column>
 <column name="placement_dynamic_bypass_ce0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
 <column name="placement_dynamic_bypass_we0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
 <column name="placement_dynamic_bypass_d0">out, 8, ap_memory, placement_dynamic_bypass, array</column>

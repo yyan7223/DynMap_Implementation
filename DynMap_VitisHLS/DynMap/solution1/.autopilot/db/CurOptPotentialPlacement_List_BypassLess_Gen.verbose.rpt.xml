@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'CurOptPotentialPlacement_List_BypassLess_Gen'" level="0">
-<item name = "Date">Wed Jan  3 23:38:58 2024
+<item name = "Date">Wed Jan 17 08:24:25 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -112,10 +112,10 @@
 <column name="add_ln460_fu_953_p2">+, 0, 0, 8, 8, 8</column>
 <column name="add_ln561_fu_1180_p2">+, 0, 0, 6, 4, 4</column>
 <column name="grp_fu_619_p2">+, 0, 0, 8, 8, 1</column>
-<column name="i_42_fu_688_p2">+, 0, 0, 7, 7, 1</column>
-<column name="i_43_fu_1379_p2">+, 0, 0, 6, 4, 1</column>
-<column name="i_46_fu_1318_p2">+, 0, 0, 6, 4, 1</column>
-<column name="i_47_fu_1257_p2">+, 0, 0, 6, 4, 1</column>
+<column name="i_43_fu_688_p2">+, 0, 0, 7, 7, 1</column>
+<column name="i_44_fu_1379_p2">+, 0, 0, 6, 4, 1</column>
+<column name="i_47_fu_1318_p2">+, 0, 0, 6, 4, 1</column>
+<column name="i_48_fu_1257_p2">+, 0, 0, 6, 4, 1</column>
 <column name="potentialPlacement_wrAddr_2_fu_963_p2">+, 0, 0, 8, 8, 1</column>
 <column name="predX_0_7_fu_1093_p2">+, 0, 0, 8, 8, 1</column>
 <column name="predX_0_8_fu_1104_p2">+, 0, 0, 8, 8, 2</column>
@@ -183,9 +183,9 @@
 <column name="existLen_1_reg_500">9, 2, 8, 16</column>
 <column name="existLen_reg_511">9, 2, 8, 16</column>
 <column name="i_33_fu_136">9, 2, 7, 14</column>
-<column name="i_38_fu_160">9, 2, 4, 8</column>
-<column name="i_40_fu_156">9, 2, 4, 8</column>
-<column name="i_41_fu_152">9, 2, 4, 8</column>
+<column name="i_39_fu_160">9, 2, 4, 8</column>
+<column name="i_41_fu_156">9, 2, 4, 8</column>
+<column name="i_42_fu_152">9, 2, 4, 8</column>
 <column name="inc23826_fu_148">9, 2, 8, 16</column>
 <column name="indvar_flatten_reg_432">9, 2, 4, 8</column>
 <column name="intersection_address0">17, 4, 4, 16</column>
@@ -217,9 +217,9 @@
 <column name="cmp9033_reg_1820">1, 0, 1, 0</column>
 <column name="conv115123_in_reg_481">8, 0, 8, 0</column>
 <column name="conv72119122_in_reg_491">8, 0, 8, 0</column>
-<column name="empty_218_reg_1556">2, 0, 2, 0</column>
-<column name="empty_222_reg_1637">7, 0, 7, 0</column>
-<column name="empty_224_reg_1733">7, 0, 7, 0</column>
+<column name="empty_217_reg_1556">2, 0, 2, 0</column>
+<column name="empty_221_reg_1637">7, 0, 7, 0</column>
+<column name="empty_223_reg_1733">7, 0, 7, 0</column>
 <column name="existLen_1_reg_500">8, 0, 8, 0</column>
 <column name="existLen_reg_511">8, 0, 8, 0</column>
 <column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_fu_530_ap_start_reg">1, 0, 1, 0</column>
@@ -232,13 +232,13 @@
 <column name="grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16_fu_575_ap_start_reg">1, 0, 1, 0</column>
 <column name="hasItst_loc_load_reg_1630">1, 0, 1, 0</column>
 <column name="i_33_fu_136">7, 0, 7, 0</column>
-<column name="i_38_fu_160">4, 0, 4, 0</column>
-<column name="i_40_fu_156">4, 0, 4, 0</column>
-<column name="i_41_fu_152">4, 0, 4, 0</column>
-<column name="i_42_reg_1476">7, 0, 7, 0</column>
-<column name="i_43_reg_1827">4, 0, 4, 0</column>
-<column name="i_46_reg_1790">4, 0, 4, 0</column>
-<column name="i_47_reg_1752">4, 0, 4, 0</column>
+<column name="i_39_fu_160">4, 0, 4, 0</column>
+<column name="i_41_fu_156">4, 0, 4, 0</column>
+<column name="i_42_fu_152">4, 0, 4, 0</column>
+<column name="i_43_reg_1476">7, 0, 7, 0</column>
+<column name="i_44_reg_1827">4, 0, 4, 0</column>
+<column name="i_47_reg_1790">4, 0, 4, 0</column>
+<column name="i_48_reg_1752">4, 0, 4, 0</column>
 <column name="i_reg_1490">8, 0, 8, 0</column>
 <column name="icmp_ln429_reg_1445">1, 0, 1, 0</column>
 <column name="icmp_ln438_reg_1574">1, 0, 1, 0</column>

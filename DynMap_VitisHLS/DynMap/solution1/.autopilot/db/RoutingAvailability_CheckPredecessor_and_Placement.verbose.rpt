@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'RoutingAvailability_CheckPredecessor_and_Placement'
 ================================================================
-* Date:           Wed Jan  3 23:39:02 2024
+* Date:           Wed Jan 17 08:24:29 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -70,12 +70,12 @@
 |DSP              |        -|    1|       -|       -|    -|
 |Expression       |        -|    -|       0|     153|    -|
 |FIFO             |        -|    -|       -|       -|    -|
-|Instance         |        2|    -|    1822|    2904|    -|
+|Instance         |        2|    -|    1804|    2898|    -|
 |Memory           |        1|    -|      16|       3|    0|
 |Multiplexer      |        -|    -|       -|     986|    -|
 |Register         |        -|    -|     331|       -|    -|
 +-----------------+---------+-----+--------+--------+-----+
-|Total            |        3|    1|    2169|    4046|    0|
+|Total            |        3|    1|    2151|    4040|    0|
 +-----------------+---------+-----+--------+--------+-----+
 |Available        |     1000|  900|  343800|  171900|    0|
 +-----------------+---------+-----+--------+--------+-----+
@@ -87,7 +87,7 @@
     +-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+----+-----+------+-----+
     |                                         Instance                                        |                                    Module                                    | BRAM_18K| DSP|  FF |  LUT | URAM|
     +-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+----+-----+------+-----+
-    |grp_BypassOptPlacement_Gen_Record_fu_615                                                 |BypassOptPlacement_Gen_Record                                                 |        2|   0|  770|  1185|    0|
+    |grp_BypassOptPlacement_Gen_Record_fu_615                                                 |BypassOptPlacement_Gen_Record                                                 |        2|   0|  752|  1179|    0|
     |grp_Dependency_Update_BypassMode_SrcTgt_fu_667                                           |Dependency_Update_BypassMode_SrcTgt                                           |        0|   0|  471|  1005|    0|
     |grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_127_1_fu_691  |RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_127_1  |        0|   0|   29|    92|    0|
     |grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1_fu_587   |RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1   |        0|   0|   29|    79|    0|
@@ -97,7 +97,7 @@
     |srem_8ns_8ns_7_12_seq_1_U259                                                             |srem_8ns_8ns_7_12_seq_1                                                       |        0|   0|  106|    44|    0|
     |srem_8ns_8ns_7_12_seq_1_U260                                                             |srem_8ns_8ns_7_12_seq_1                                                       |        0|   0|  106|    44|    0|
     +-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+----+-----+------+-----+
-    |Total                                                                                    |                                                                              |        2|   0| 1822|  2904|    0|
+    |Total                                                                                    |                                                                              |        2|   0| 1804|  2898|    0|
     +-----------------------------------------------------------------------------------------+------------------------------------------------------------------------------+---------+----+-----+------+-----+
 
     * DSP: 
@@ -111,7 +111,7 @@
     +-----------------------------------+------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
     |               Memory              |                                    Module                                    | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
     +-----------------------------------+------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |placement_static_kernels_values_U  |Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R  |        1|   0|   0|    0|   600|    6|     1|         3600|
+    |placement_static_kernels_values_U  |Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R  |        1|   0|   0|    0|   600|    6|     1|         3600|
     |bypassPreds_U                      |RoutingAvailability_CheckPredecessor_and_Placement_bypassPreds_RAM_AUTO_1R1W  |        0|  16|   3|    0|    20|    8|     1|          160|
     +-----------------------------------+------------------------------------------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
     |Total                              |                                                                              |        1|  16|   3|    0|   620|   14|     2|         3760|
@@ -132,10 +132,10 @@
     |k_1_fu_1044_p2                   |         +|   0|  0|   7|           7|           1|
     |upperLimit_2_fu_1380_p2          |         +|   0|  0|   8|           8|           8|
     |upperLimit_fu_763_p2             |         +|   0|  0|   8|           8|           8|
-    |empty_209_fu_922_p2              |         -|   0|  0|   4|           1|           3|
-    |empty_210_fu_943_p2              |         -|   0|  0|   4|           1|           3|
-    |empty_213_fu_1244_p2             |         -|   0|  0|   4|           1|           3|
-    |empty_214_fu_1270_p2             |         -|   0|  0|   4|           1|           3|
+    |empty_208_fu_922_p2              |         -|   0|  0|   4|           1|           3|
+    |empty_209_fu_943_p2              |         -|   0|  0|   4|           1|           3|
+    |empty_212_fu_1244_p2             |         -|   0|  0|   4|           1|           3|
+    |empty_213_fu_1270_p2             |         -|   0|  0|   4|           1|           3|
     |sub_ln137_fu_1232_p2             |         -|   0|  0|   4|           3|           3|
     |sub_ln138_fu_1258_p2             |         -|   0|  0|   4|           3|           3|
     |sub_ln20_fu_911_p2               |         -|   0|  0|   4|           3|           3|
@@ -157,10 +157,10 @@
     |icmp_ln339_fu_873_p2             |      icmp|   0|  0|   4|           8|           1|
     |icmp_ln343_fu_1354_p2            |      icmp|   0|  0|   4|           8|           8|
     |IDX_pd_bypass_MAX_2_fu_1360_p3   |    select|   0|  0|   8|           1|           8|
-    |empty_211_fu_969_p3              |    select|   0|  0|   2|           1|           2|
-    |empty_212_fu_1003_p3             |    select|   0|  0|   2|           1|           2|
-    |empty_215_fu_1296_p3             |    select|   0|  0|   2|           1|           2|
-    |empty_216_fu_1330_p3             |    select|   0|  0|   2|           1|           2|
+    |empty_210_fu_969_p3              |    select|   0|  0|   2|           1|           2|
+    |empty_211_fu_1003_p3             |    select|   0|  0|   2|           1|           2|
+    |empty_214_fu_1296_p3             |    select|   0|  0|   2|           1|           2|
+    |empty_215_fu_1330_p3             |    select|   0|  0|   2|           1|           2|
     |xor_ln46_fu_1146_p2              |       xor|   0|  0|   2|           1|           2|
     +---------------------------------+----------+----+---+----+------------+------------+
     |Total                            |          |   0|  0| 153|         157|         118|
@@ -404,15 +404,15 @@
 |idx_pd_r_i                                       |   in|    4|     ap_ovld|                                            idx_pd_r|       pointer|
 |idx_pd_r_o                                       |  out|    4|     ap_ovld|                                            idx_pd_r|       pointer|
 |idx_pd_r_o_ap_vld                                |  out|    1|     ap_ovld|                                            idx_pd_r|       pointer|
-|placement_dynamic_bypass_occupy_address0         |  out|   15|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_address0         |  out|   13|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_ce0              |  out|    1|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_we0              |  out|    1|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_d0               |  out|    1|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_q0               |   in|    1|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
-|placement_dynamic_bypass_occupy_address1         |  out|   15|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_address1         |  out|   13|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_ce1              |  out|    1|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_q1               |   in|    1|   ap_memory|                     placement_dynamic_bypass_occupy|         array|
-|placement_dynamic_bypass_address0                |  out|   14|   ap_memory|                            placement_dynamic_bypass|         array|
+|placement_dynamic_bypass_address0                |  out|   13|   ap_memory|                            placement_dynamic_bypass|         array|
 |placement_dynamic_bypass_ce0                     |  out|    1|   ap_memory|                            placement_dynamic_bypass|         array|
 |placement_dynamic_bypass_we0                     |  out|    1|   ap_memory|                            placement_dynamic_bypass|         array|
 |placement_dynamic_bypass_d0                      |  out|    8|   ap_memory|                            placement_dynamic_bypass|         array|
@@ -609,7 +609,7 @@ ST_14 : Operation 113 [1/1] (0.00ns)   --->   "%Tile2XY_1_addr = getelementptr i
 ST_14 : Operation 114 [2/2] (1.75ns)   --->   "%Tile2XY_1_load = load i4 %Tile2XY_1_addr" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 114 'load' 'Tile2XY_1_load' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 16> <ROM>
 
 State 15 <SV = 14> <Delay = 1.75>
-ST_15 : Operation 115 [1/1] (0.00ns)   --->   "%specloopname_ln317 = specloopname void @_ssdm_op_SpecLoopName, void @empty_51" [DynMap/DynMap_4HLS.cpp:317]   --->   Operation 115 'specloopname' 'specloopname_ln317' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 115 [1/1] (0.00ns)   --->   "%specloopname_ln317 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3" [DynMap/DynMap_4HLS.cpp:317]   --->   Operation 115 'specloopname' 'specloopname_ln317' <Predicate = true> <Delay = 0.00>
 ST_15 : Operation 116 [1/1] (0.00ns)   --->   "%predsNum_load = load i8 %predsNum"   --->   Operation 116 'load' 'predsNum_load' <Predicate = true> <Delay = 0.00>
 ST_15 : Operation 117 [1/2] (1.75ns)   --->   "%Tile2XY_0_load = load i4 %Tile2XY_0_addr" [DynMap/DynMap_4HLS.cpp:20]   --->   Operation 117 'load' 'Tile2XY_0_load' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 16> <ROM>
 ST_15 : Operation 118 [1/1] (0.00ns)   --->   "%zext_ln21 = zext i2 %Tile2XY_0_load" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 118 'zext' 'zext_ln21' <Predicate = true> <Delay = 0.00>
@@ -646,7 +646,7 @@ State 18 <SV = 17> <Delay = 1.29>
 ST_18 : Operation 143 [1/2] (1.29ns)   --->   "%targetBlock = call i1 @RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1, i8 %predecessors_load, i7 %trunc_ln14_cast2_loc, i8 %placement_dynamic_dict_Opt2Tile_keys" [DynMap/DynMap_4HLS.cpp:320]   --->   Operation 143 'call' 'targetBlock' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 19 <SV = 18> <Delay = 1.75>
-ST_19 : Operation 144 [1/1] (0.00ns)   --->   "%specloopname_ln320 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [DynMap/DynMap_4HLS.cpp:320]   --->   Operation 144 'specloopname' 'specloopname_ln320' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 144 [1/1] (0.00ns)   --->   "%specloopname_ln320 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [DynMap/DynMap_4HLS.cpp:320]   --->   Operation 144 'specloopname' 'specloopname_ln320' <Predicate = true> <Delay = 0.00>
 ST_19 : Operation 145 [1/1] (0.00ns)   --->   "%trunc_ln14_cast2_loc_load = load i7 %trunc_ln14_cast2_loc"   --->   Operation 145 'load' 'trunc_ln14_cast2_loc_load' <Predicate = true> <Delay = 0.00>
 ST_19 : Operation 146 [1/1] (0.00ns)   --->   "%trunc_ln14_cast2_reload_cast = zext i7 %trunc_ln14_cast2_loc_load"   --->   Operation 146 'zext' 'trunc_ln14_cast2_reload_cast' <Predicate = true> <Delay = 0.00>
 ST_19 : Operation 147 [1/1] (0.00ns)   --->   "%br_ln320 = br i1 %targetBlock, void, void %_Z28Calculate_CurToPred_Distancev.exit" [DynMap/DynMap_4HLS.cpp:320]   --->   Operation 147 'br' 'br_ln320' <Predicate = true> <Delay = 0.00>
@@ -670,20 +670,20 @@ ST_21 : Operation 160 [1/2] (1.75ns)   --->   "%Tile2XY_0_load_1 = load i4 %Tile
 ST_21 : Operation 161 [1/1] (0.00ns)   --->   "%zext_ln20_2 = zext i2 %Tile2XY_0_load_1" [DynMap/DynMap_4HLS.cpp:20]   --->   Operation 161 'zext' 'zext_ln20_2' <Predicate = true> <Delay = 0.00>
 ST_21 : Operation 162 [1/1] (0.63ns)   --->   "%sub_ln20 = sub i3 %zext_ln21, i3 %zext_ln20_2" [DynMap/DynMap_4HLS.cpp:20]   --->   Operation 162 'sub' 'sub_ln20' <Predicate = true> <Delay = 0.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_21 : Operation 163 [1/1] (0.98ns)   --->   "%abscond = icmp_sgt  i3 %sub_ln20, i3 0" [DynMap/DynMap_4HLS.cpp:20]   --->   Operation 163 'icmp' 'abscond' <Predicate = true> <Delay = 0.98> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_21 : Operation 164 [1/1] (0.76ns)   --->   "%empty_209 = sub i3 0, i3 %sub_ln20" [DynMap/DynMap_4HLS.cpp:20]   --->   Operation 164 'sub' 'empty_209' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 164 [1/1] (0.76ns)   --->   "%empty_208 = sub i3 0, i3 %sub_ln20" [DynMap/DynMap_4HLS.cpp:20]   --->   Operation 164 'sub' 'empty_208' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_21 : Operation 165 [1/2] (1.75ns)   --->   "%Tile2XY_1_load_1 = load i4 %Tile2XY_1_addr_1" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 165 'load' 'Tile2XY_1_load_1' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 16> <ROM>
 ST_21 : Operation 166 [1/1] (0.00ns)   --->   "%zext_ln21_1 = zext i2 %Tile2XY_1_load_1" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 166 'zext' 'zext_ln21_1' <Predicate = true> <Delay = 0.00>
 ST_21 : Operation 167 [1/1] (0.63ns)   --->   "%sub_ln21 = sub i3 %zext_ln319, i3 %zext_ln21_1" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 167 'sub' 'sub_ln21' <Predicate = true> <Delay = 0.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_21 : Operation 168 [1/1] (0.98ns)   --->   "%abscond55 = icmp_sgt  i3 %sub_ln21, i3 0" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 168 'icmp' 'abscond55' <Predicate = true> <Delay = 0.98> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_21 : Operation 169 [1/1] (0.76ns)   --->   "%empty_210 = sub i3 0, i3 %sub_ln21" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 169 'sub' 'empty_210' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 169 [1/1] (0.76ns)   --->   "%empty_209 = sub i3 0, i3 %sub_ln21" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 169 'sub' 'empty_209' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_21 : Operation 170 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25)   --->   "%tmp_26 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %sub_ln20, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 170 'partselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25)   --->   "%tmp_27 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %empty_209, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 171 'partselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25)   --->   "%empty_211 = select i1 %abscond, i2 %tmp_26, i2 %tmp_27" [DynMap/DynMap_4HLS.cpp:20]   --->   Operation 172 'select' 'empty_211' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_21 : Operation 173 [1/1] (0.81ns) (out node of the LUT)   --->   "%icmp_ln25 = icmp_ne  i2 %empty_211, i2 1" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 173 'icmp' 'icmp_ln25' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25)   --->   "%tmp_27 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %empty_208, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 171 'partselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25)   --->   "%empty_210 = select i1 %abscond, i2 %tmp_26, i2 %tmp_27" [DynMap/DynMap_4HLS.cpp:20]   --->   Operation 172 'select' 'empty_210' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 173 [1/1] (0.81ns) (out node of the LUT)   --->   "%icmp_ln25 = icmp_ne  i2 %empty_210, i2 1" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 173 'icmp' 'icmp_ln25' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_21 : Operation 174 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25_1)   --->   "%tmp_28 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %sub_ln21, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 174 'partselect' 'tmp_28' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 175 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25_1)   --->   "%tmp_29 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %empty_210, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 175 'partselect' 'tmp_29' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 176 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25_1)   --->   "%empty_212 = select i1 %abscond55, i2 %tmp_28, i2 %tmp_29" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 176 'select' 'empty_212' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_21 : Operation 177 [1/1] (0.81ns) (out node of the LUT)   --->   "%icmp_ln25_1 = icmp_ne  i2 %empty_212, i2 1" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 177 'icmp' 'icmp_ln25_1' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 175 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25_1)   --->   "%tmp_29 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %empty_209, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 175 'partselect' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 176 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln25_1)   --->   "%empty_211 = select i1 %abscond55, i2 %tmp_28, i2 %tmp_29" [DynMap/DynMap_4HLS.cpp:21]   --->   Operation 176 'select' 'empty_211' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 177 [1/1] (0.81ns) (out node of the LUT)   --->   "%icmp_ln25_1 = icmp_ne  i2 %empty_211, i2 1" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 177 'icmp' 'icmp_ln25_1' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_21 : Operation 178 [1/1] (0.80ns)   --->   "%and_ln25 = and i1 %icmp_ln25, i1 %icmp_ln25_1" [DynMap/DynMap_4HLS.cpp:25]   --->   Operation 178 'and' 'and_ln25' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_21 : Operation 179 [1/1] (1.29ns)   --->   "%br_ln323 = br i1 %and_ln25, void, void %_Z28Calculate_CurToPred_Distancev.exit._crit_edge" [DynMap/DynMap_4HLS.cpp:323]   --->   Operation 179 'br' 'br_ln323' <Predicate = true> <Delay = 1.29>
 ST_21 : Operation 180 [1/1] (0.00ns)   --->   "%zext_ln324 = zext i8 %bypassPreds_wrAddr" [DynMap/DynMap_4HLS.cpp:324]   --->   Operation 180 'zext' 'zext_ln324' <Predicate = (!and_ln25)> <Delay = 0.00>
@@ -733,7 +733,7 @@ ST_26 : Operation 213 [1/1] (0.00ns)   --->   "%phi_ln32_loc_load = load i7 %phi
 ST_26 : Operation 214 [1/1] (1.32ns)   --->   "%store_ln32 = store i7 %phi_ln32_loc_load, i7 %bypassSrcOpt_keyIdx" [DynMap/DynMap_4HLS.cpp:32]   --->   Operation 214 'store' 'store_ln32' <Predicate = true> <Delay = 1.32>
 
 State 27 <SV = 20> <Delay = 2.77>
-ST_27 : Operation 215 [1/1] (0.00ns)   --->   "%specloopname_ln337 = specloopname void @_ssdm_op_SpecLoopName, void @empty_1" [DynMap/DynMap_4HLS.cpp:337]   --->   Operation 215 'specloopname' 'specloopname_ln337' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 215 [1/1] (0.00ns)   --->   "%specloopname_ln337 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [DynMap/DynMap_4HLS.cpp:337]   --->   Operation 215 'specloopname' 'specloopname_ln337' <Predicate = true> <Delay = 0.00>
 ST_27 : Operation 216 [1/2] (2.77ns)   --->   "%placement_static_kernels_values_load = load i10 %placement_static_kernels_values_addr" [DynMap/DynMap_4HLS.cpp:341]   --->   Operation 216 'load' 'placement_static_kernels_values_load' <Predicate = true> <Delay = 2.77> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 6> <Depth = 600> <ROM>
 ST_27 : Operation 217 [1/1] (0.00ns)   --->   "%zext_ln286 = zext i6 %placement_static_kernels_values_load" [DynMap/DynMap_4HLS.cpp:286]   --->   Operation 217 'zext' 'zext_ln286' <Predicate = true> <Delay = 0.00>
 ST_27 : Operation 218 [1/1] (0.00ns)   --->   "%store_ln30 = store i7 %zext_ln286, i7 %bypassTgtOpt" [DynMap/DynMap_4HLS.cpp:30]   --->   Operation 218 'store' 'store_ln30' <Predicate = true> <Delay = 0.00>
@@ -799,7 +799,7 @@ State 37 <SV = 30> <Delay = 1.29>
 ST_37 : Operation 258 [1/2] (1.29ns)   --->   "%targetBlock4 = call i1 @RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_127_1, i8 %bypassOpt_load, i7 %phi_ln127_loc, i7 %trunc_ln127_2_cast_loc, i8 %placement_dynamic_dict_Opt2Tile_keys" [DynMap/DynMap_4HLS.cpp:126]   --->   Operation 258 'call' 'targetBlock4' <Predicate = true> <Delay = 1.29> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 38 <SV = 31> <Delay = 1.75>
-ST_38 : Operation 259 [1/1] (0.00ns)   --->   "%specloopname_ln291 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [DynMap/DynMap_4HLS.cpp:291]   --->   Operation 259 'specloopname' 'specloopname_ln291' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 259 [1/1] (0.00ns)   --->   "%specloopname_ln291 = specloopname void @_ssdm_op_SpecLoopName, void @empty_5" [DynMap/DynMap_4HLS.cpp:291]   --->   Operation 259 'specloopname' 'specloopname_ln291' <Predicate = true> <Delay = 0.00>
 ST_38 : Operation 260 [1/1] (1.32ns)   --->   "%store_ln127 = store i7 0, i7 %bypassSrcOpt_keyIdx" [DynMap/DynMap_4HLS.cpp:127]   --->   Operation 260 'store' 'store_ln127' <Predicate = true> <Delay = 1.32>
 ST_38 : Operation 261 [1/1] (0.00ns)   --->   "%phi_ln127_loc_load = load i7 %phi_ln127_loc"   --->   Operation 261 'load' 'phi_ln127_loc_load' <Predicate = true> <Delay = 0.00>
 ST_38 : Operation 262 [1/1] (0.00ns)   --->   "%trunc_ln127_2_cast_loc_load = load i7 %trunc_ln127_2_cast_loc"   --->   Operation 262 'load' 'trunc_ln127_2_cast_loc_load' <Predicate = true> <Delay = 0.00>
@@ -833,22 +833,22 @@ ST_40 : Operation 285 [1/2] (1.75ns)   --->   "%Tile2XY_0_load_3 = load i4 %Tile
 ST_40 : Operation 286 [1/1] (0.00ns)   --->   "%zext_ln137_3 = zext i2 %Tile2XY_0_load_3" [DynMap/DynMap_4HLS.cpp:137]   --->   Operation 286 'zext' 'zext_ln137_3' <Predicate = true> <Delay = 0.00>
 ST_40 : Operation 287 [1/1] (0.63ns)   --->   "%sub_ln137 = sub i3 %zext_ln137_1, i3 %zext_ln137_3" [DynMap/DynMap_4HLS.cpp:137]   --->   Operation 287 'sub' 'sub_ln137' <Predicate = true> <Delay = 0.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_40 : Operation 288 [1/1] (0.98ns)   --->   "%abscond58 = icmp_sgt  i3 %sub_ln137, i3 0" [DynMap/DynMap_4HLS.cpp:137]   --->   Operation 288 'icmp' 'abscond58' <Predicate = true> <Delay = 0.98> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_40 : Operation 289 [1/1] (0.76ns)   --->   "%empty_213 = sub i3 0, i3 %sub_ln137" [DynMap/DynMap_4HLS.cpp:137]   --->   Operation 289 'sub' 'empty_213' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 289 [1/1] (0.76ns)   --->   "%empty_212 = sub i3 0, i3 %sub_ln137" [DynMap/DynMap_4HLS.cpp:137]   --->   Operation 289 'sub' 'empty_212' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_40 : Operation 290 [1/2] (1.75ns)   --->   "%Tile2XY_1_load_2 = load i4 %Tile2XY_1_addr_2" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 290 'load' 'Tile2XY_1_load_2' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 16> <ROM>
 ST_40 : Operation 291 [1/1] (0.00ns)   --->   "%zext_ln138 = zext i2 %Tile2XY_1_load_2" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 291 'zext' 'zext_ln138' <Predicate = true> <Delay = 0.00>
 ST_40 : Operation 292 [1/2] (1.75ns)   --->   "%Tile2XY_1_load_3 = load i4 %Tile2XY_1_addr_3" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 292 'load' 'Tile2XY_1_load_3' <Predicate = true> <Delay = 1.75> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 2> <Depth = 16> <ROM>
 ST_40 : Operation 293 [1/1] (0.00ns)   --->   "%zext_ln138_1 = zext i2 %Tile2XY_1_load_3" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 293 'zext' 'zext_ln138_1' <Predicate = true> <Delay = 0.00>
 ST_40 : Operation 294 [1/1] (0.63ns)   --->   "%sub_ln138 = sub i3 %zext_ln138, i3 %zext_ln138_1" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 294 'sub' 'sub_ln138' <Predicate = true> <Delay = 0.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_40 : Operation 295 [1/1] (0.98ns)   --->   "%abscond61 = icmp_sgt  i3 %sub_ln138, i3 0" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 295 'icmp' 'abscond61' <Predicate = true> <Delay = 0.98> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_40 : Operation 296 [1/1] (0.76ns)   --->   "%empty_214 = sub i3 0, i3 %sub_ln138" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 296 'sub' 'empty_214' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 296 [1/1] (0.76ns)   --->   "%empty_213 = sub i3 0, i3 %sub_ln138" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 296 'sub' 'empty_213' <Predicate = true> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_40 : Operation 297 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143)   --->   "%tmp_30 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %sub_ln137, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 297 'partselect' 'tmp_30' <Predicate = true> <Delay = 0.00>
-ST_40 : Operation 298 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143)   --->   "%tmp_31 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %empty_213, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 298 'partselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
-ST_40 : Operation 299 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143)   --->   "%empty_215 = select i1 %abscond58, i2 %tmp_30, i2 %tmp_31" [DynMap/DynMap_4HLS.cpp:137]   --->   Operation 299 'select' 'empty_215' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_40 : Operation 300 [1/1] (0.81ns) (out node of the LUT)   --->   "%icmp_ln143 = icmp_ne  i2 %empty_215, i2 1" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 300 'icmp' 'icmp_ln143' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 298 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143)   --->   "%tmp_31 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %empty_212, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 298 'partselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 299 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143)   --->   "%empty_214 = select i1 %abscond58, i2 %tmp_30, i2 %tmp_31" [DynMap/DynMap_4HLS.cpp:137]   --->   Operation 299 'select' 'empty_214' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_40 : Operation 300 [1/1] (0.81ns) (out node of the LUT)   --->   "%icmp_ln143 = icmp_ne  i2 %empty_214, i2 1" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 300 'icmp' 'icmp_ln143' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_40 : Operation 301 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143_1)   --->   "%tmp_32 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %sub_ln138, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 301 'partselect' 'tmp_32' <Predicate = true> <Delay = 0.00>
-ST_40 : Operation 302 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143_1)   --->   "%tmp_33 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %empty_214, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 302 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
-ST_40 : Operation 303 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143_1)   --->   "%empty_216 = select i1 %abscond61, i2 %tmp_32, i2 %tmp_33" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 303 'select' 'empty_216' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_40 : Operation 304 [1/1] (0.81ns) (out node of the LUT)   --->   "%icmp_ln143_1 = icmp_ne  i2 %empty_216, i2 1" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 304 'icmp' 'icmp_ln143_1' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 302 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143_1)   --->   "%tmp_33 = partselect i2 @_ssdm_op_PartSelect.i2.i3.i32.i32, i3 %empty_213, i32 1, i32 2" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 302 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 303 [1/1] (0.00ns) (grouped into LUT with out node icmp_ln143_1)   --->   "%empty_215 = select i1 %abscond61, i2 %tmp_32, i2 %tmp_33" [DynMap/DynMap_4HLS.cpp:138]   --->   Operation 303 'select' 'empty_215' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_40 : Operation 304 [1/1] (0.81ns) (out node of the LUT)   --->   "%icmp_ln143_1 = icmp_ne  i2 %empty_215, i2 1" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 304 'icmp' 'icmp_ln143_1' <Predicate = true> <Delay = 0.81> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_40 : Operation 305 [1/1] (0.80ns)   --->   "%and_ln143 = and i1 %icmp_ln143, i1 %icmp_ln143_1" [DynMap/DynMap_4HLS.cpp:143]   --->   Operation 305 'and' 'and_ln143' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_40 : Operation 306 [1/1] (0.00ns)   --->   "%br_ln294 = br i1 %and_ln143, void, void %_Z26bypassOptGen_and_Placementcc.exit" [DynMap/DynMap_4HLS.cpp:294]   --->   Operation 306 'br' 'br_ln294' <Predicate = true> <Delay = 0.00>
 ST_40 : Operation 307 [1/1] (0.00ns)   --->   "%br_ln288 = br void" [DynMap/DynMap_4HLS.cpp:288]   --->   Operation 307 'br' 'br_ln288' <Predicate = (!and_ln143)> <Delay = 0.00>
@@ -1095,19 +1095,19 @@ Tile2XY_0_load_1                              (load             ) [ 000000000000
 zext_ln20_2                                   (zext             ) [ 0000000000000000000000000000000000000000000000000000000000]
 sub_ln20                                      (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
 abscond                                       (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000]
-empty_209                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
+empty_208                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
 Tile2XY_1_load_1                              (load             ) [ 0000000000000000000000000000000000000000000000000000000000]
 zext_ln21_1                                   (zext             ) [ 0000000000000000000000000000000000000000000000000000000000]
 sub_ln21                                      (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
 abscond55                                     (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000]
-empty_210                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
+empty_209                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
 tmp_26                                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000]
 tmp_27                                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000]
-empty_211                                     (select           ) [ 0000000000000000000000000000000000000000000000000000000000]
+empty_210                                     (select           ) [ 0000000000000000000000000000000000000000000000000000000000]
 icmp_ln25                                     (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000]
 tmp_28                                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000]
 tmp_29                                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000]
-empty_212                                     (select           ) [ 0000000000000000000000000000000000000000000000000000000000]
+empty_211                                     (select           ) [ 0000000000000000000000000000000000000000000000000000000000]
 icmp_ln25_1                                   (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000]
 and_ln25                                      (and              ) [ 0000000000000111111111111111111111111111111111111111111100]
 br_ln323                                      (br               ) [ 0000000000000111111111111111111111111111111111111111111100]
@@ -1202,21 +1202,21 @@ Tile2XY_0_load_3                              (load             ) [ 000000000000
 zext_ln137_3                                  (zext             ) [ 0000000000000000000000000000000000000000000000000000000000]
 sub_ln137                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
 abscond58                                     (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000]
-empty_213                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
+empty_212                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
 Tile2XY_1_load_2                              (load             ) [ 0000000000000000000000000000000000000000000000000000000000]
 zext_ln138                                    (zext             ) [ 0000000000000000000000000000000000000000000000000000000000]
 Tile2XY_1_load_3                              (load             ) [ 0000000000000000000000000000000000000000000000000000000000]
 zext_ln138_1                                  (zext             ) [ 0000000000000000000000000000000000000000000000000000000000]
 sub_ln138                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
 abscond61                                     (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000]
-empty_214                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
+empty_213                                     (sub              ) [ 0000000000000000000000000000000000000000000000000000000000]
 tmp_30                                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000]
 tmp_31                                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000]
-empty_215                                     (select           ) [ 0000000000000000000000000000000000000000000000000000000000]
+empty_214                                     (select           ) [ 0000000000000000000000000000000000000000000000000000000000]
 icmp_ln143                                    (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000]
 tmp_32                                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000]
 tmp_33                                        (partselect       ) [ 0000000000000000000000000000000000000000000000000000000000]
-empty_216                                     (select           ) [ 0000000000000000000000000000000000000000000000000000000000]
+empty_215                                     (select           ) [ 0000000000000000000000000000000000000000000000000000000000]
 icmp_ln143_1                                  (icmp             ) [ 0000000000000000000000000000000000000000000000000000000000]
 and_ln143                                     (and              ) [ 0000000000000111111111111111111111111111111111111111111100]
 br_ln294                                      (br               ) [ 0000000000000000000000000000000000000000000000000000000000]
@@ -1749,7 +1749,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 <pin id="101" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_51"/></StgValue>
+<StgValue><ssdm name="empty_3"/></StgValue>
 </bind>
 </comp>
 
@@ -1812,7 +1812,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 <pin id="115" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_6"/></StgValue>
+<StgValue><ssdm name="empty_9"/></StgValue>
 </bind>
 </comp>
 
@@ -1884,7 +1884,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 <pin id="131" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_1"/></StgValue>
+<StgValue><ssdm name="empty_4"/></StgValue>
 </bind>
 </comp>
 
@@ -1929,7 +1929,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 <pin id="141" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_2"/></StgValue>
+<StgValue><ssdm name="empty_5"/></StgValue>
 </bind>
 </comp>
 
@@ -3424,7 +3424,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </bind>
 </comp>
 
-<comp id="922" class="1004" name="empty_209_fu_922">
+<comp id="922" class="1004" name="empty_208_fu_922">
 <pin_list>
 <pin id="923" dir="0" index="0" bw="1" slack="0"/>
 <pin id="924" dir="0" index="1" bw="3" slack="0"/>
@@ -3432,7 +3432,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="empty_209/21 "/>
+<opset="empty_208/21 "/>
 </bind>
 </comp>
 
@@ -3471,7 +3471,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </bind>
 </comp>
 
-<comp id="943" class="1004" name="empty_210_fu_943">
+<comp id="943" class="1004" name="empty_209_fu_943">
 <pin_list>
 <pin id="944" dir="0" index="0" bw="1" slack="0"/>
 <pin id="945" dir="0" index="1" bw="3" slack="0"/>
@@ -3479,7 +3479,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="empty_210/21 "/>
+<opset="empty_209/21 "/>
 </bind>
 </comp>
 
@@ -3511,7 +3511,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </bind>
 </comp>
 
-<comp id="969" class="1004" name="empty_211_fu_969">
+<comp id="969" class="1004" name="empty_210_fu_969">
 <pin_list>
 <pin id="970" dir="0" index="0" bw="1" slack="0"/>
 <pin id="971" dir="0" index="1" bw="2" slack="0"/>
@@ -3520,7 +3520,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="empty_211/21 "/>
+<opset="empty_210/21 "/>
 </bind>
 </comp>
 
@@ -3564,7 +3564,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </bind>
 </comp>
 
-<comp id="1003" class="1004" name="empty_212_fu_1003">
+<comp id="1003" class="1004" name="empty_211_fu_1003">
 <pin_list>
 <pin id="1004" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1005" dir="0" index="1" bw="2" slack="0"/>
@@ -3573,7 +3573,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="empty_212/21 "/>
+<opset="empty_211/21 "/>
 </bind>
 </comp>
 
@@ -4105,7 +4105,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </bind>
 </comp>
 
-<comp id="1244" class="1004" name="empty_213_fu_1244">
+<comp id="1244" class="1004" name="empty_212_fu_1244">
 <pin_list>
 <pin id="1245" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1246" dir="0" index="1" bw="3" slack="0"/>
@@ -4113,7 +4113,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="empty_213/40 "/>
+<opset="empty_212/40 "/>
 </bind>
 </comp>
 
@@ -4163,7 +4163,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </bind>
 </comp>
 
-<comp id="1270" class="1004" name="empty_214_fu_1270">
+<comp id="1270" class="1004" name="empty_213_fu_1270">
 <pin_list>
 <pin id="1271" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1272" dir="0" index="1" bw="3" slack="0"/>
@@ -4171,7 +4171,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </pin_list>
 <bind>
 <opcode="sub(10) " fcode="sub"/>
-<opset="empty_214/40 "/>
+<opset="empty_213/40 "/>
 </bind>
 </comp>
 
@@ -4203,7 +4203,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </bind>
 </comp>
 
-<comp id="1296" class="1004" name="empty_215_fu_1296">
+<comp id="1296" class="1004" name="empty_214_fu_1296">
 <pin_list>
 <pin id="1297" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1298" dir="0" index="1" bw="2" slack="0"/>
@@ -4212,7 +4212,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="empty_215/40 "/>
+<opset="empty_214/40 "/>
 </bind>
 </comp>
 
@@ -4256,7 +4256,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </bind>
 </comp>
 
-<comp id="1330" class="1004" name="empty_216_fu_1330">
+<comp id="1330" class="1004" name="empty_215_fu_1330">
 <pin_list>
 <pin id="1331" dir="0" index="0" bw="1" slack="0"/>
 <pin id="1332" dir="0" index="1" bw="2" slack="0"/>
@@ -4265,7 +4265,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="empty_216/40 "/>
+<opset="empty_215/40 "/>
 </bind>
 </comp>
 
@@ -6261,18 +6261,18 @@ ret_ln370                                     (ret              ) [ 000000000000
 		zext_ln20_2 : 1
 		sub_ln20 : 2
 		abscond : 3
-		empty_209 : 3
+		empty_208 : 3
 		zext_ln21_1 : 1
 		sub_ln21 : 2
 		abscond55 : 3
-		empty_210 : 3
+		empty_209 : 3
 		tmp_26 : 3
 		tmp_27 : 4
-		empty_211 : 5
+		empty_210 : 5
 		icmp_ln25 : 6
 		tmp_28 : 3
 		tmp_29 : 4
-		empty_212 : 5
+		empty_211 : 5
 		icmp_ln25_1 : 6
 		and_ln25 : 7
 		br_ln323 : 7
@@ -6349,19 +6349,19 @@ ret_ln370                                     (ret              ) [ 000000000000
 		zext_ln137_3 : 1
 		sub_ln137 : 2
 		abscond58 : 3
-		empty_213 : 3
+		empty_212 : 3
 		zext_ln138 : 1
 		zext_ln138_1 : 1
 		sub_ln138 : 2
 		abscond61 : 3
-		empty_214 : 3
+		empty_213 : 3
 		tmp_30 : 3
 		tmp_31 : 4
-		empty_215 : 5
+		empty_214 : 5
 		icmp_ln143 : 6
 		tmp_32 : 3
 		tmp_33 : 4
-		empty_216 : 5
+		empty_215 : 5
 		icmp_ln143_1 : 6
 		and_ln143 : 7
 		br_ln294 : 7
@@ -6421,7 +6421,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 |          |  grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1_fu_587 |    0    |  2.596  |    38   |    32   |
 |          |  grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_32_1_fu_596 |    0    |  3.894  |    38   |    41   |
 |          |  grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2_fu_606 |    0    |  3.894  |    38   |    41   |
-|   call   |                         grp_BypassOptPlacement_Gen_Record_fu_615                        |    0    | 41.6714 |   920   |   845   |
+|   call   |                         grp_BypassOptPlacement_Gen_Record_fu_615                        |    0    | 41.6714 |   899   |   839   |
 |          |                      grp_Dependency_Update_BypassMode_SrcTgt_fu_667                     |    0    | 26.0683 |   602   |   478   |
 |          | grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_127_1_fu_691 |    0    |  3.894  |    38   |    41   |
 |          | grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4_fu_700 |    0    |  2.596  |   263   |   167   |
@@ -6454,18 +6454,18 @@ ret_ln370                                     (ret              ) [ 000000000000
 |          |                                    icmp_ln343_fu_1354                                   |    0    |    0    |    0    |    4    |
 |----------|-----------------------------------------------------------------------------------------|---------|---------|---------|---------|
 |          |                                     sub_ln20_fu_911                                     |    0    |    0    |    0    |    3    |
-|          |                                     empty_209_fu_922                                    |    0    |    0    |    0    |    4    |
+|          |                                     empty_208_fu_922                                    |    0    |    0    |    0    |    4    |
 |          |                                     sub_ln21_fu_932                                     |    0    |    0    |    0    |    3    |
-|    sub   |                                     empty_210_fu_943                                    |    0    |    0    |    0    |    4    |
+|    sub   |                                     empty_209_fu_943                                    |    0    |    0    |    0    |    4    |
 |          |                                    sub_ln137_fu_1232                                    |    0    |    0    |    0    |    3    |
-|          |                                    empty_213_fu_1244                                    |    0    |    0    |    0    |    4    |
+|          |                                    empty_212_fu_1244                                    |    0    |    0    |    0    |    4    |
 |          |                                    sub_ln138_fu_1258                                    |    0    |    0    |    0    |    3    |
-|          |                                    empty_214_fu_1270                                    |    0    |    0    |    0    |    4    |
+|          |                                    empty_213_fu_1270                                    |    0    |    0    |    0    |    4    |
 |----------|-----------------------------------------------------------------------------------------|---------|---------|---------|---------|
-|          |                                     empty_211_fu_969                                    |    0    |    0    |    0    |    2    |
-|          |                                    empty_212_fu_1003                                    |    0    |    0    |    0    |    2    |
-|  select  |                                    empty_215_fu_1296                                    |    0    |    0    |    0    |    2    |
-|          |                                    empty_216_fu_1330                                    |    0    |    0    |    0    |    2    |
+|          |                                     empty_210_fu_969                                    |    0    |    0    |    0    |    2    |
+|          |                                    empty_211_fu_1003                                    |    0    |    0    |    0    |    2    |
+|  select  |                                    empty_214_fu_1296                                    |    0    |    0    |    0    |    2    |
+|          |                                    empty_215_fu_1330                                    |    0    |    0    |    0    |    2    |
 |          |                               IDX_pd_bypass_MAX_2_fu_1360                               |    0    |    0    |    0    |    8    |
 |----------|-----------------------------------------------------------------------------------------|---------|---------|---------|---------|
 |    and   |                                     and_ln25_fu_1017                                    |    0    |    0    |    0    |    1    |
@@ -6524,7 +6524,7 @@ ret_ln370                                     (ret              ) [ 000000000000
 |----------|-----------------------------------------------------------------------------------------|---------|---------|---------|---------|
 |bitconcatenate|                                      tmp_s_fu_1421                                      |    0    |    0    |    0    |    0    |
 |----------|-----------------------------------------------------------------------------------------|---------|---------|---------|---------|
-|   Total  |                                                                                         |    1    | 84.6136 |   2149  |   1881  |
+|   Total  |                                                                                         |    1    | 84.6136 |   2128  |   1875  |
 |----------|-----------------------------------------------------------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -6647,10 +6647,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    -   |    1   |   84   |  2149  |  1881  |    -   |
+|  Function |    -   |    1   |   84   |  2128  |  1875  |    -   |
 |   Memory  |    0   |    -   |    -   |   16   |    3   |    0   |
 |Multiplexer|    -   |    -   |   34   |    -   |   305  |    -   |
 |  Register |    -   |    -   |    -   |   423  |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |    0   |    1   |   118  |  2588  |  2189  |    0   |
+|   Total   |    0   |    1   |   118  |  2567  |  2183  |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Reset'" level="0">
-<item name = "Date">Wed Jan  3 23:38:45 2024
+<item name = "Date">Wed Jan 17 08:24:14 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">25653, 25678, 0.257 ms, 0.257 ms, 25653, 25678, no</column>
+<column name="">6455, 6480, 64.550 us, 64.800 us, 6455, 6480, no</column>
 </table>
 </item>
 <item name = "Detail">

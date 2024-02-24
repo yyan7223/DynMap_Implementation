@@ -80,7 +80,7 @@ attribute shreg_extract : string;
     signal ap_ST_fsm_state5_blk : STD_LOGIC;
     signal ap_ce_reg : STD_LOGIC;
 
-    component runOne_Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R IS
+    component runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -96,7 +96,7 @@ attribute shreg_extract : string;
 
 
 begin
-    placement_static_kernels_values_U : component runOne_Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R
+    placement_static_kernels_values_U : component runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R
     generic map (
         DataWidth => 6,
         AddressRange => 600,

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'dynamic_placement_routing_Pipeline_VITIS_LOOP_611_4'" level="0">
-<item name = "Date">Wed Jan  3 23:38:57 2024
+<item name = "Date">Wed Jan 17 08:24:24 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -70,7 +70,7 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="placement_static_kernels_values_U">Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R, 1, 0, 0, 0, 600, 6, 1, 3600</column>
+<column name="placement_static_kernels_values_U">Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R, 1, 0, 0, 0, 600, 6, 1, 3600</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">

@@ -167,7 +167,7 @@ newFuncRoot:5 %br_ln0 = br void
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="10" op_0_bw="60">
+<Node id="16" bw="9" op_0_bw="60">
 <![CDATA[
 :4 %trunc_ln257_1 = trunc i60 %add_ln257
 
@@ -197,7 +197,7 @@ newFuncRoot:5 %br_ln0 = br void
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="14" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<Node id="19" bw="13" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
 :7 %placement_dynamic_bypass_addr = getelementptr i8 %placement_dynamic_bypass, i64 0, i64 %tmp_s
 
@@ -212,9 +212,9 @@ newFuncRoot:5 %br_ln0 = br void
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="8" op_0_bw="14">
+<Node id="21" bw="8" op_0_bw="13">
 <![CDATA[
-:9 %placement_dynamic_bypass_load = load i14 %placement_dynamic_bypass_addr
+:9 %placement_dynamic_bypass_load = load i13 %placement_dynamic_bypass_addr
 
 ]]></Node>
 <StgValue><ssdm name="placement_dynamic_bypass_load"/></StgValue>
@@ -245,9 +245,9 @@ newFuncRoot:5 %br_ln0 = br void
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="18" bw="14" op_0_bw="14" op_1_bw="10" op_2_bw="4">
+<Node id="18" bw="13" op_0_bw="13" op_1_bw="9" op_2_bw="4">
 <![CDATA[
-:6 %tmp_73_cast = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i10.i4, i10 %trunc_ln257_1, i4 %tileId_read
+:6 %tmp_73_cast = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i9.i4, i9 %trunc_ln257_1, i4 %tileId_read
 
 ]]></Node>
 <StgValue><ssdm name="tmp_73_cast"/></StgValue>
@@ -275,9 +275,9 @@ newFuncRoot:5 %br_ln0 = br void
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="8" op_0_bw="14">
+<Node id="21" bw="8" op_0_bw="13">
 <![CDATA[
-:9 %placement_dynamic_bypass_load = load i14 %placement_dynamic_bypass_addr
+:9 %placement_dynamic_bypass_load = load i13 %placement_dynamic_bypass_addr
 
 ]]></Node>
 <StgValue><ssdm name="placement_dynamic_bypass_load"/></StgValue>
@@ -323,7 +323,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-:0 %specloopname_ln272 = specloopname void @_ssdm_op_SpecLoopName, void @empty_56
+:0 %specloopname_ln272 = specloopname void @_ssdm_op_SpecLoopName, void @empty_60
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln272"/></StgValue>
@@ -369,9 +369,9 @@ newFuncRoot:5 %br_ln0 = br void
 </and_exp></or_exp>
 </condition>
 
-<Node id="29" bw="0" op_0_bw="0" op_1_bw="14" op_2_bw="14">
+<Node id="29" bw="0" op_0_bw="0" op_1_bw="13" op_2_bw="13">
 <![CDATA[
-.exitStub:0 %write_ln257 = write void @_ssdm_op_Write.ap_auto.i14P0A, i14 %tmp_73_out, i14 %tmp_73_cast
+.exitStub:0 %write_ln257 = write void @_ssdm_op_Write.ap_auto.i13P0A, i13 %tmp_73_out, i13 %tmp_73_cast
 
 ]]></Node>
 <StgValue><ssdm name="write_ln257"/></StgValue>

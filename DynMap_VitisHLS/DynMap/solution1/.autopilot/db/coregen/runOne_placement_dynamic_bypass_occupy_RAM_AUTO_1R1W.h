@@ -19,8 +19,8 @@ using namespace sc_dt;
 struct runOne_placement_dynamic_bypass_occupy_RAM_AUTO_1R1W_ram : public sc_core::sc_module {
 
   static const unsigned DataWidth = 1;
-  static const unsigned AddressRange = 25600;
-  static const unsigned AddressWidth = 15;
+  static const unsigned AddressRange = 5120;
+  static const unsigned AddressWidth = 13;
 
 //latency = 1
 //input_reg = 1
@@ -41,7 +41,7 @@ sc_lv<DataWidth> ram[AddressRange];
 
 
    SC_CTOR(runOne_placement_dynamic_bypass_occupy_RAM_AUTO_1R1W_ram) {
-        for (unsigned i = 0; i < 25600; i = i + 1) {
+        for (unsigned i = 0; i < 5120; i = i + 1) {
             ram[i] = 0;
         }
 
@@ -98,8 +98,8 @@ SC_MODULE(runOne_placement_dynamic_bypass_occupy_RAM_AUTO_1R1W) {
 
 
 static const unsigned DataWidth = 1;
-static const unsigned AddressRange = 25600;
-static const unsigned AddressWidth = 15;
+static const unsigned AddressRange = 5120;
+static const unsigned AddressWidth = 13;
 
 sc_core::sc_in <sc_lv<AddressWidth> > address0;
 sc_core::sc_in<sc_logic> ce0;

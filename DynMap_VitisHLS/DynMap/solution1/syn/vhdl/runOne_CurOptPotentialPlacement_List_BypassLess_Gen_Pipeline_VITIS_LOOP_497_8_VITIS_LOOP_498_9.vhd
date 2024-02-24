@@ -91,7 +91,7 @@ attribute shreg_extract : string;
     signal ap_block_pp0_stage0_01001 : BOOLEAN;
     signal j_cast_fu_176_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal icmp_ln498_fu_180_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal i_33_fu_201_p2 : STD_LOGIC_VECTOR (6 downto 0);
+    signal i_34_fu_201_p2 : STD_LOGIC_VECTOR (6 downto 0);
     signal select_ln508_fu_207_p3 : STD_LOGIC_VECTOR (6 downto 0);
     signal zext_ln499_fu_228_p1 : STD_LOGIC_VECTOR (7 downto 0);
     signal add_ln499_fu_232_p2 : STD_LOGIC_VECTOR (7 downto 0);
@@ -363,7 +363,7 @@ begin
         end if; 
     end process;
 
-    i_33_fu_201_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i_load) + unsigned(ap_const_lv7_1));
+    i_34_fu_201_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i_load) + unsigned(ap_const_lv7_1));
     icmp_ln497_fu_186_p2 <= "1" when (ap_sig_allocacmp_indvar_flatten13_load = mul_ln497) else "0";
     icmp_ln498_fu_180_p2 <= "1" when (signed(j_cast_fu_176_p1) < signed(conv115123_in)) else "0";
     icmp_ln499_fu_264_p2 <= "1" when (potentialPlacement_AllPreds_q1 = potentialPlacement_AllPreds_q0) else "0";
@@ -426,7 +426,7 @@ begin
 
     select_ln508_1_fu_215_p3 <= 
         ap_sig_allocacmp_i_load when (icmp_ln498_fu_180_p2(0) = '1') else 
-        i_33_fu_201_p2;
+        i_34_fu_201_p2;
     select_ln508_fu_207_p3 <= 
         ap_sig_allocacmp_j_8 when (icmp_ln498_fu_180_p2(0) = '1') else 
         ap_const_lv7_0;

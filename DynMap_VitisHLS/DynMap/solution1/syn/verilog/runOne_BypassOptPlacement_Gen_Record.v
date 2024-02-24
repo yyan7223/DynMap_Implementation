@@ -115,15 +115,15 @@ input  [4:0] shape_idx;
 input  [3:0] idx_pd_i;
 output  [3:0] idx_pd_o;
 output   idx_pd_o_ap_vld;
-output  [14:0] placement_dynamic_bypass_occupy_address0;
+output  [12:0] placement_dynamic_bypass_occupy_address0;
 output   placement_dynamic_bypass_occupy_ce0;
 output   placement_dynamic_bypass_occupy_we0;
 output  [0:0] placement_dynamic_bypass_occupy_d0;
 input  [0:0] placement_dynamic_bypass_occupy_q0;
-output  [14:0] placement_dynamic_bypass_occupy_address1;
+output  [12:0] placement_dynamic_bypass_occupy_address1;
 output   placement_dynamic_bypass_occupy_ce1;
 input  [0:0] placement_dynamic_bypass_occupy_q1;
-output  [13:0] placement_dynamic_bypass_address0;
+output  [12:0] placement_dynamic_bypass_address0;
 output   placement_dynamic_bypass_ce0;
 output   placement_dynamic_bypass_we0;
 output  [7:0] placement_dynamic_bypass_d0;
@@ -161,11 +161,11 @@ reg[7:0] IDX_pd_bypass_o;
 reg IDX_pd_bypass_o_ap_vld;
 reg[3:0] idx_pd_o;
 reg idx_pd_o_ap_vld;
-reg[14:0] placement_dynamic_bypass_occupy_address0;
+reg[12:0] placement_dynamic_bypass_occupy_address0;
 reg placement_dynamic_bypass_occupy_ce0;
 reg placement_dynamic_bypass_occupy_we0;
 reg placement_dynamic_bypass_occupy_ce1;
-reg[13:0] placement_dynamic_bypass_address0;
+reg[12:0] placement_dynamic_bypass_address0;
 reg placement_dynamic_bypass_ce0;
 reg placement_dynamic_bypass_we0;
 reg[7:0] bypassOpt_wrAddr_o;
@@ -274,13 +274,13 @@ wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_ap_id
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_ap_ready;
 wire   [7:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_p_out;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_p_out_ap_vld;
-wire   [14:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_add_ln252_out;
+wire   [12:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_add_ln252_out;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_add_ln252_out_ap_vld;
-wire   [14:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_tmp_71_out;
+wire   [12:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_tmp_71_out;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_tmp_71_out_ap_vld;
-wire   [14:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_placement_dynamic_bypass_occupy_address0;
+wire   [12:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_placement_dynamic_bypass_occupy_address0;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_placement_dynamic_bypass_occupy_ce0;
-wire   [14:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_placement_dynamic_bypass_occupy_address1;
+wire   [12:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_placement_dynamic_bypass_occupy_address1;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_placement_dynamic_bypass_occupy_ce1;
 wire   [7:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_IDX_pd_bypass_o;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_IDX_pd_bypass_o_ap_vld;
@@ -288,9 +288,9 @@ wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_ap_st
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_ap_done;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_ap_idle;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_ap_ready;
-wire   [13:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_tmp_73_out;
+wire   [12:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_tmp_73_out;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_tmp_73_out_ap_vld;
-wire   [13:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_placement_dynamic_bypass_address0;
+wire   [12:0] grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_placement_dynamic_bypass_address0;
 wire    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_placement_dynamic_bypass_ce0;
 reg   [1:0] yDiff_210_reg_335;
 reg   [1:0] xDiff_28_reg_344;
@@ -307,11 +307,11 @@ reg   [1:0] xDiff_2_loc_fu_130;
 reg   [1:0] yDiff_2_loc_fu_126;
 reg    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402_ap_start_reg;
 reg   [7:0] p_loc_fu_122;
-reg   [14:0] add_ln252_loc_fu_118;
-reg   [14:0] tmp_71_loc_fu_114;
+reg   [12:0] add_ln252_loc_fu_118;
+reg   [12:0] tmp_71_loc_fu_114;
 reg    grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420_ap_start_reg;
 wire    ap_CS_fsm_state10;
-reg   [13:0] tmp_73_loc_fu_110;
+reg   [12:0] tmp_73_loc_fu_110;
 wire   [63:0] idxprom20_fu_433_p1;
 wire   [63:0] idxprom24_fu_443_p1;
 wire   [63:0] zext_ln233_fu_453_p1;
@@ -706,7 +706,7 @@ end
 
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state9)) begin
-        tmp_71_reload_cast_reg_1146[14 : 0] <= tmp_71_reload_cast_fu_865_p1[14 : 0];
+        tmp_71_reload_cast_reg_1146[12 : 0] <= tmp_71_reload_cast_fu_865_p1[12 : 0];
     end
 end
 
@@ -1384,7 +1384,7 @@ assign zext_ln244_fu_747_p1 = icmp_ln169_reg_1089;
 assign zext_ln262_fu_873_p1 = bypassOpt_wrAddr_i;
 
 always @ (posedge ap_clk) begin
-    tmp_71_reload_cast_reg_1146[63:15] <= 49'b0000000000000000000000000000000000000000000000000;
+    tmp_71_reload_cast_reg_1146[63:13] <= 51'b000000000000000000000000000000000000000000000000000;
 end
 
 endmodule //runOne_BypassOptPlacement_Gen_Record

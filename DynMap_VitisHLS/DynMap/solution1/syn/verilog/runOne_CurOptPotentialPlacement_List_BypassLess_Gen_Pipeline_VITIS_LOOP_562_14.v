@@ -75,9 +75,9 @@ wire    ap_block_pp0_stage0;
 wire   [63:0] zext_ln564_fu_180_p1;
 wire   [0:0] icmp_ln563_fu_172_p2;
 reg   [3:0] i_fu_54;
-wire   [3:0] i_29_fu_148_p2;
+wire   [3:0] i_30_fu_148_p2;
 wire    ap_loop_init;
-reg   [3:0] ap_sig_allocacmp_i_28;
+reg   [3:0] ap_sig_allocacmp_i_29;
 reg   [7:0] existLen_2_fu_58;
 wire   [7:0] add_ln565_fu_185_p2;
 wire    ap_block_pp0_stage0_01001;
@@ -169,7 +169,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln562_fu_142_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_54 <= i_29_fu_148_p2;
+            i_fu_54 <= i_30_fu_148_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             i_fu_54 <= 4'd0;
         end
@@ -232,9 +232,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_28 = 4'd0;
+        ap_sig_allocacmp_i_29 = 4'd0;
     end else begin
-        ap_sig_allocacmp_i_28 = i_fu_54;
+        ap_sig_allocacmp_i_29 = i_fu_54;
     end
 end
 
@@ -303,13 +303,13 @@ assign curOptPotentialPlacement_d0 = zext_ln561_2_cast_reg_220;
 
 assign existLen_2_out = existLen_2_fu_58;
 
-assign i_29_fu_148_p2 = (ap_sig_allocacmp_i_28 + 4'd1);
+assign i_30_fu_148_p2 = (ap_sig_allocacmp_i_29 + 4'd1);
 
-assign icmp_ln562_fu_142_p2 = ((ap_sig_allocacmp_i_28 == CGRA_NumTiles_shapes_values_load_1) ? 1'b1 : 1'b0);
+assign icmp_ln562_fu_142_p2 = ((ap_sig_allocacmp_i_29 == CGRA_NumTiles_shapes_values_load_1) ? 1'b1 : 1'b0);
 
 assign icmp_ln563_fu_172_p2 = ((allocated_tiles_shapes_values_q0 == BypassTile) ? 1'b1 : 1'b0);
 
-assign tmp_s_fu_154_p3 = {{shape_idx_load}, {ap_sig_allocacmp_i_28}};
+assign tmp_s_fu_154_p3 = {{shape_idx_load}, {ap_sig_allocacmp_i_29}};
 
 assign zext_ln561_2_cast_fu_125_p1 = zext_ln561_2;
 

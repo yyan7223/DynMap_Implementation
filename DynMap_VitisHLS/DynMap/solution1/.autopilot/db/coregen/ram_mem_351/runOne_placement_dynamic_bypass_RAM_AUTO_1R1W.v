@@ -6,8 +6,8 @@
 module runOne_placement_dynamic_bypass_RAM_AUTO_1R1W (address0, ce0, d0, we0, q0,  reset,clk);
 
 parameter DataWidth = 8;
-parameter AddressWidth = 14;
-parameter AddressRange = 12800;
+parameter AddressWidth = 13;
+parameter AddressRange = 6400;
 
 input[AddressWidth-1:0] address0;
 input ce0;

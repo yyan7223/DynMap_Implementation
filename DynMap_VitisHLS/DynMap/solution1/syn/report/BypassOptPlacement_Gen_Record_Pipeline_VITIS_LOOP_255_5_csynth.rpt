@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5'
 ================================================================
-* Date:           Wed Jan  3 23:39:00 2024
+* Date:           Wed Jan 17 08:24:27 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -59,9 +59,9 @@
 |Instance         |        -|    -|       -|       -|    -|
 |Memory           |        -|    -|       -|       -|    -|
 |Multiplexer      |        -|    -|       -|      58|    -|
-|Register         |        -|    -|     203|       -|    -|
+|Register         |        -|    -|     202|       -|    -|
 +-----------------+---------+-----+--------+--------+-----+
-|Total            |        0|    0|     203|     188|    0|
+|Total            |        0|    0|     202|     188|    0|
 +-----------------+---------+-----+--------+--------+-----+
 |Available        |     1000|  900|  343800|  171900|    0|
 +-----------------+---------+-----+--------+--------+-----+
@@ -118,9 +118,9 @@
     |idxprom190_cast_reg_143      |  60|   0|   60|          0|
     |phi_mul_fu_38                |  64|   0|   64|          0|
     |phi_mul_load_reg_148         |  64|   0|   64|          0|
-    |trunc_ln257_1_reg_153        |  10|   0|   10|          0|
+    |trunc_ln257_1_reg_153        |   9|   0|    9|          0|
     +-----------------------------+----+----+-----+-----------+
-    |Total                        | 203|   0|  203|          0|
+    |Total                        | 202|   0|  202|          0|
     +-----------------------------+----+----+-----+-----------+
 
 
@@ -140,9 +140,9 @@
 |ap_ready                           |  out|    1|  ap_ctrl_hs|  BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5|  return value|
 |idxprom190                         |   in|    8|     ap_none|                                               idxprom190|        scalar|
 |tileId                             |   in|    4|     ap_none|                                                   tileId|        scalar|
-|tmp_73_out                         |  out|   14|      ap_vld|                                               tmp_73_out|       pointer|
+|tmp_73_out                         |  out|   13|      ap_vld|                                               tmp_73_out|       pointer|
 |tmp_73_out_ap_vld                  |  out|    1|      ap_vld|                                               tmp_73_out|       pointer|
-|placement_dynamic_bypass_address0  |  out|   14|   ap_memory|                                 placement_dynamic_bypass|         array|
+|placement_dynamic_bypass_address0  |  out|   13|   ap_memory|                                 placement_dynamic_bypass|         array|
 |placement_dynamic_bypass_ce0       |  out|    1|   ap_memory|                                 placement_dynamic_bypass|         array|
 |placement_dynamic_bypass_q0        |   in|    8|   ap_memory|                                 placement_dynamic_bypass|         array|
 +-----------------------------------+-----+-----+------------+---------------------------------------------------------+--------------+

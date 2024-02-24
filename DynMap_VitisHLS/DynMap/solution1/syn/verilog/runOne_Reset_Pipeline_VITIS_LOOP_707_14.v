@@ -44,8 +44,8 @@ wire   [0:0] icmp_ln707_fu_56_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] i_16_cast_fu_68_p1;
-reg   [6:0] i_16_fu_30;
+wire   [63:0] i_17_cast_fu_68_p1;
+reg   [6:0] i_17_fu_30;
 wire   [6:0] add_ln707_fu_62_p2;
 wire    ap_loop_init;
 reg   [6:0] ap_sig_allocacmp_i;
@@ -101,9 +101,9 @@ end
 always @ (posedge ap_clk) begin
     if (((ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         if ((icmp_ln707_fu_56_p2 == 1'd0)) begin
-            i_16_fu_30 <= add_ln707_fu_62_p2;
+            i_17_fu_30 <= add_ln707_fu_62_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_16_fu_30 <= 7'd0;
+            i_17_fu_30 <= 7'd0;
         end
     end
 end
@@ -152,7 +152,7 @@ always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         ap_sig_allocacmp_i = 7'd0;
     end else begin
-        ap_sig_allocacmp_i = i_16_fu_30;
+        ap_sig_allocacmp_i = i_17_fu_30;
     end
 end
 
@@ -193,11 +193,11 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign i_16_cast_fu_68_p1 = ap_sig_allocacmp_i;
+assign i_17_cast_fu_68_p1 = ap_sig_allocacmp_i;
 
 assign icmp_ln707_fu_56_p2 = ((ap_sig_allocacmp_i == 7'd100) ? 1'b1 : 1'b0);
 
-assign placement_dynamic_dict_Opt2PC_values_address0 = i_16_cast_fu_68_p1;
+assign placement_dynamic_dict_Opt2PC_values_address0 = i_17_cast_fu_68_p1;
 
 assign placement_dynamic_dict_Opt2PC_values_d0 = 8'd0;
 

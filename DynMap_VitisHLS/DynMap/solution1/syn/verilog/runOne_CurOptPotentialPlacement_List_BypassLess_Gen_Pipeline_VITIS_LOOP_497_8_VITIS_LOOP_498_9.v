@@ -99,7 +99,7 @@ reg   [0:0] hasItst_fu_76;
 wire    ap_block_pp0_stage0_01001;
 wire   [7:0] j_cast_fu_176_p1;
 wire   [0:0] icmp_ln498_fu_180_p2;
-wire   [6:0] i_33_fu_201_p2;
+wire   [6:0] i_34_fu_201_p2;
 wire   [6:0] select_ln508_fu_207_p3;
 wire   [7:0] zext_ln499_fu_228_p1;
 wire   [7:0] add_ln499_fu_232_p2;
@@ -366,7 +366,7 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign hasItst_out = hasItst_fu_76;
 
-assign i_33_fu_201_p2 = (ap_sig_allocacmp_i_load + 7'd1);
+assign i_34_fu_201_p2 = (ap_sig_allocacmp_i_load + 7'd1);
 
 assign icmp_ln497_fu_186_p2 = ((ap_sig_allocacmp_indvar_flatten13_load == mul_ln497) ? 1'b1 : 1'b0);
 
@@ -388,7 +388,7 @@ assign potentialPlacement_AllPreds_address0 = zext_ln499_1_fu_238_p1;
 
 assign potentialPlacement_AllPreds_address1 = zext_ln508_fu_223_p1;
 
-assign select_ln508_1_fu_215_p3 = ((icmp_ln498_fu_180_p2[0:0] == 1'b1) ? ap_sig_allocacmp_i_load : i_33_fu_201_p2);
+assign select_ln508_1_fu_215_p3 = ((icmp_ln498_fu_180_p2[0:0] == 1'b1) ? ap_sig_allocacmp_i_load : i_34_fu_201_p2);
 
 assign select_ln508_fu_207_p3 = ((icmp_ln498_fu_180_p2[0:0] == 1'b1) ? ap_sig_allocacmp_j_8 : 7'd0);
 

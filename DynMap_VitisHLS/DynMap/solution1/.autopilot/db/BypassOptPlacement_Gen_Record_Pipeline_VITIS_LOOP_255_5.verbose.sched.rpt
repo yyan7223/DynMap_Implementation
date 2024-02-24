@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5'
 ================================================================
-* Date:           Wed Jan  3 23:38:49 2024
+* Date:           Wed Jan 17 08:24:17 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -100,19 +100,19 @@ ST_2 : Operation 13 [1/1] (2.59ns)   --->   "%add_ln257 = add i60 %trunc_ln257, 
 ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%trunc_ln257_1 = trunc i60 %add_ln257" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 14 'trunc' 'trunc_ln257_1' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i60.i4, i60 %add_ln257, i4 %tileId_read" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 15 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_addr = getelementptr i8 %placement_dynamic_bypass, i64 0, i64 %tmp_s" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 16 'getelementptr' 'placement_dynamic_bypass_addr' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [2/2] (2.77ns)   --->   "%placement_dynamic_bypass_load = load i14 %placement_dynamic_bypass_addr" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 17 'load' 'placement_dynamic_bypass_load' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 12800> <RAM>
+ST_2 : Operation 17 [2/2] (2.77ns)   --->   "%placement_dynamic_bypass_load = load i13 %placement_dynamic_bypass_addr" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 17 'load' 'placement_dynamic_bypass_load' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 6400> <RAM>
 
 State 3 <SV = 2> <Delay = 5.38>
 ST_3 : Operation 18 [1/1] (2.69ns)   --->   "%add_ln257_1 = add i64 %phi_mul_load, i64 100" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 18 'add' 'add_ln257_1' <Predicate = true> <Delay = 2.69> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.59> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_73_cast = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i10.i4, i10 %trunc_ln257_1, i4 %tileId_read" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 19 'bitconcatenate' 'tmp_73_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_73_cast = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i9.i4, i9 %trunc_ln257_1, i4 %tileId_read" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 19 'bitconcatenate' 'tmp_73_cast' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 20 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 21 [1/2] (2.77ns)   --->   "%placement_dynamic_bypass_load = load i14 %placement_dynamic_bypass_addr" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 21 'load' 'placement_dynamic_bypass_load' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 12800> <RAM>
+ST_3 : Operation 21 [1/2] (2.77ns)   --->   "%placement_dynamic_bypass_load = load i13 %placement_dynamic_bypass_addr" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 21 'load' 'placement_dynamic_bypass_load' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 6400> <RAM>
 ST_3 : Operation 22 [1/1] (1.31ns)   --->   "%icmp_ln257 = icmp_eq  i8 %placement_dynamic_bypass_load, i8 255" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 22 'icmp' 'icmp_ln257' <Predicate = true> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln257 = br i1 %icmp_ln257, void, void %.exitStub" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 23 'br' 'br_ln257' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln272 = specloopname void @_ssdm_op_SpecLoopName, void @empty_56" [DynMap/DynMap_4HLS.cpp:272]   --->   Operation 24 'specloopname' 'specloopname_ln272' <Predicate = (!icmp_ln257)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%specloopname_ln272 = specloopname void @_ssdm_op_SpecLoopName, void @empty_60" [DynMap/DynMap_4HLS.cpp:272]   --->   Operation 24 'specloopname' 'specloopname_ln272' <Predicate = (!icmp_ln257)> <Delay = 0.00>
 ST_3 : Operation 25 [1/1] (1.29ns)   --->   "%store_ln255 = store i64 %add_ln257_1, i64 %phi_mul" [DynMap/DynMap_4HLS.cpp:255]   --->   Operation 25 'store' 'store_ln255' <Predicate = (!icmp_ln257)> <Delay = 1.29>
 ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln255 = br void" [DynMap/DynMap_4HLS.cpp:255]   --->   Operation 26 'br' 'br_ln255' <Predicate = (!icmp_ln257)> <Delay = 0.00>
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%write_ln257 = write void @_ssdm_op_Write.ap_auto.i14P0A, i14 %tmp_73_out, i14 %tmp_73_cast" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 27 'write' 'write_ln257' <Predicate = (icmp_ln257)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%write_ln257 = write void @_ssdm_op_Write.ap_auto.i13P0A, i13 %tmp_73_out, i13 %tmp_73_cast" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 27 'write' 'write_ln257' <Predicate = (icmp_ln257)> <Delay = 0.00>
 ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (icmp_ln257)> <Delay = 0.00>
 
 

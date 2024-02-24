@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9'" level="0">
-<item name = "Date">Wed Jan  3 23:38:55 2024
+<item name = "Date">Wed Jan 17 08:24:23 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -92,10 +92,10 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_sig_allocacmp_i_13_load">9, 2, 7, 14</column>
-<column name="ap_sig_allocacmp_indvar_flatten23_load">9, 2, 11, 22</column>
+<column name="ap_sig_allocacmp_indvar_flatten24_load">9, 2, 11, 22</column>
 <column name="ap_sig_allocacmp_j_load">9, 2, 5, 10</column>
 <column name="i_13_fu_50">9, 2, 7, 14</column>
-<column name="indvar_flatten23_fu_54">9, 2, 11, 22</column>
+<column name="indvar_flatten24_fu_54">9, 2, 11, 22</column>
 <column name="j_fu_46">9, 2, 5, 10</column>
 </table>
 </item>
@@ -104,7 +104,7 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="i_13_fu_50">7, 0, 7, 0</column>
-<column name="indvar_flatten23_fu_54">11, 0, 11, 0</column>
+<column name="indvar_flatten24_fu_54">11, 0, 11, 0</column>
 <column name="j_fu_46">5, 0, 5, 0</column>
 </table>
 </item>

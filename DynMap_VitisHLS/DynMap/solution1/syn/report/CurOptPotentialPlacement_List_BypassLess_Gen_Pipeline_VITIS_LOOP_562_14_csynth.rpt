@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14'
 ================================================================
-* Date:           Wed Jan  3 23:38:57 2024
+* Date:           Wed Jan 17 08:24:25 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -92,7 +92,7 @@
     |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------+----------+----+---+----+------------+------------+
     |add_ln565_fu_185_p2   |         +|   0|  0|   8|           8|           1|
-    |i_29_fu_148_p2        |         +|   0|  0|   6|           4|           1|
+    |i_30_fu_148_p2        |         +|   0|  0|   6|           4|           1|
     |icmp_ln562_fu_142_p2  |      icmp|   0|  0|   2|           4|           4|
     |icmp_ln563_fu_172_p2  |      icmp|   0|  0|   2|           4|           4|
     |ap_enable_pp0         |       xor|   0|  0|   2|           1|           2|
@@ -106,7 +106,7 @@
     +-------------------------+----+-----------+-----+-----------+
     |ap_done_int              |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i_28    |   9|          2|    4|          8|
+    |ap_sig_allocacmp_i_29    |   9|          2|    4|          8|
     |existLen_2_fu_58         |   9|          2|    8|         16|
     |i_fu_54                  |   9|          2|    4|          8|
     +-------------------------+----+-----------+-----+-----------+

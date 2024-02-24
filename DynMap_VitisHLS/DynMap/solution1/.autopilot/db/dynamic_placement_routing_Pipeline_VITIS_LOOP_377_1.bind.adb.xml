@@ -183,10 +183,10 @@ newFuncRoot:3 %br_ln0 = br void
 
 <Node id="13" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:4 %empty_82 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 16, i64 8
+:4 %empty_81 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 16, i64 8
 
 ]]></Node>
-<StgValue><ssdm name="empty_82"/></StgValue>
+<StgValue><ssdm name="empty_81"/></StgValue>
 </operation>
 
 <operation id="15" st_id="2" stage="1" lat="1">
@@ -280,7 +280,7 @@ newFuncRoot:3 %br_ln0 = br void
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split16:1 %specloopname_ln376 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41
+.split16:1 %specloopname_ln376 = specloopname void @_ssdm_op_SpecLoopName, void @empty_43
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln376"/></StgValue>
@@ -501,13 +501,13 @@ UnifiedReturnBlock:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="70" from="StgValue_69" to="tmp" fromId="69" toId="13">
 </dataflow>
-<dataflow id="72" from="_ssdm_op_SpecLoopTripCount" to="empty_82" fromId="71" toId="14">
+<dataflow id="72" from="_ssdm_op_SpecLoopTripCount" to="empty_81" fromId="71" toId="14">
 </dataflow>
-<dataflow id="74" from="StgValue_73" to="empty_82" fromId="73" toId="14">
+<dataflow id="74" from="StgValue_73" to="empty_81" fromId="73" toId="14">
 </dataflow>
-<dataflow id="76" from="StgValue_75" to="empty_82" fromId="75" toId="14">
+<dataflow id="76" from="StgValue_75" to="empty_81" fromId="75" toId="14">
 </dataflow>
-<dataflow id="78" from="StgValue_77" to="empty_82" fromId="77" toId="14">
+<dataflow id="78" from="StgValue_77" to="empty_81" fromId="77" toId="14">
 </dataflow>
 <dataflow id="79" from="tileID_1" to="tileID_2" fromId="10" toId="15">
 </dataflow>
@@ -527,7 +527,7 @@ UnifiedReturnBlock:0 %ret_ln0 = ret
 </dataflow>
 <dataflow id="90" from="_ssdm_op_SpecLoopName" to="specloopname_ln376" fromId="89" toId="20">
 </dataflow>
-<dataflow id="92" from="empty_41" to="specloopname_ln376" fromId="91" toId="20">
+<dataflow id="92" from="empty_43" to="specloopname_ln376" fromId="91" toId="20">
 </dataflow>
 <dataflow id="93" from="placement_static_Tile2Level_keys_addr" to="placement_static_Tile2Level_keys_load" fromId="18" toId="21">
 </dataflow>

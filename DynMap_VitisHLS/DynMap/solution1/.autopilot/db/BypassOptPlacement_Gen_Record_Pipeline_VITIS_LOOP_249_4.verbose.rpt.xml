@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4'" level="0">
-<item name = "Date">Wed Jan  3 23:39:00 2024
+<item name = "Date">Wed Jan 17 08:24:27 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.247 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 5.953 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 59, -</column>
+<column name="Expression">-, -, 0, 53, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, 195, 126, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 119, -</column>
-<column name="Register">-, -, 93, -, -</column>
+<column name="Register">-, -, 83, -, -</column>
 <specialColumn name="Available">1000, 900, 343800, 171900, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -79,14 +79,14 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln252_fu_231_p2">+, 0, 0, 15, 15, 15</column>
-<column name="add_ln253_fu_251_p2">+, 0, 0, 13, 13, 13</column>
+<column name="add_ln252_fu_231_p2">+, 0, 0, 13, 13, 13</column>
+<column name="add_ln253_fu_251_p2">+, 0, 0, 11, 11, 11</column>
 <column name="add_ln280_fu_289_p2">+, 0, 0, 8, 8, 1</column>
-<column name="formerPC_fu_216_p2">+, 0, 0, 7, 7, 2</column>
+<column name="formerPC_fu_216_p2">+, 0, 0, 7, 5, 2</column>
 <column name="icmp_ln251_fu_195_p2">icmp, 0, 0, 4, 8, 1</column>
 <column name="icmp_ln282_fu_301_p2">icmp, 0, 0, 4, 8, 8</column>
 <column name="or_ln254_fu_279_p2">or, 0, 0, 1, 1, 1</column>
-<column name="select_ln251_fu_208_p3">select, 0, 0, 7, 1, 7</column>
+<column name="select_ln251_fu_208_p3">select, 0, 0, 5, 1, 5</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -102,16 +102,16 @@
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln252_reg_361">15, 0, 15, 0</column>
+<column name="add_ln252_reg_361">13, 0, 13, 0</column>
 <column name="ap_CS_fsm">14, 0, 14, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_return_preg">1, 0, 1, 0</column>
 <column name="empty_fu_70">8, 0, 8, 0</column>
-<column name="formerPC_reg_356">7, 0, 7, 0</column>
-<column name="idxprom174_cast_reg_345">15, 0, 15, 0</column>
-<column name="idxprom20_cast_reg_340">13, 0, 13, 0</column>
+<column name="formerPC_reg_356">5, 0, 5, 0</column>
+<column name="idxprom174_cast_reg_345">13, 0, 13, 0</column>
+<column name="idxprom20_cast_reg_340">11, 0, 11, 0</column>
 <column name="p_load_reg_350">8, 0, 8, 0</column>
-<column name="trunc_ln253_reg_372">11, 0, 11, 0</column>
+<column name="trunc_ln253_reg_372">9, 0, 9, 0</column>
 </table>
 </item>
 </section>
@@ -137,14 +137,14 @@
 <column name="upperLimit">in, 8, ap_none, upperLimit, scalar</column>
 <column name="p_out">out, 8, ap_vld, p_out, pointer</column>
 <column name="p_out_ap_vld">out, 1, ap_vld, p_out, pointer</column>
-<column name="add_ln252_out">out, 15, ap_vld, add_ln252_out, pointer</column>
+<column name="add_ln252_out">out, 13, ap_vld, add_ln252_out, pointer</column>
 <column name="add_ln252_out_ap_vld">out, 1, ap_vld, add_ln252_out, pointer</column>
-<column name="tmp_71_out">out, 15, ap_vld, tmp_71_out, pointer</column>
+<column name="tmp_71_out">out, 13, ap_vld, tmp_71_out, pointer</column>
 <column name="tmp_71_out_ap_vld">out, 1, ap_vld, tmp_71_out, pointer</column>
-<column name="placement_dynamic_bypass_occupy_address0">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address0">out, 13, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_ce0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_q0">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
-<column name="placement_dynamic_bypass_occupy_address1">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address1">out, 13, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_ce1">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_q1">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="IDX_pd_bypass_i">in, 8, ap_ovld, IDX_pd_bypass, pointer</column>

@@ -8,7 +8,7 @@ int main(){
 															4,5,4,5,6,6,6,6,8,8,8,8,
 															4,4,4,4,5,5,5,5,6,6,6,6,
 															4,4,4,4,5,5,5,5,5,5,5,5}; // ground truth for 72 testcases
-    char testCaseIdx = 1; // manually chose test case
+    char testCaseIdx = 0; // manually chose test case
 
     // Call the function and compare the results file with the golden results
     int retval = (runOne(testCaseIdx) == DynamicPlacement_II_Results_Golden[testCaseIdx]) ? 0 : 1;

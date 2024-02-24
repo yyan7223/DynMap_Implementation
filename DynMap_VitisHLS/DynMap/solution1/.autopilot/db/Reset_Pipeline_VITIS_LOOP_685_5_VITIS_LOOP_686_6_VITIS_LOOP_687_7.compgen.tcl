@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name runOne_mac_muladd_4ns_7ns_7ns_10_4_1
+set name runOne_mac_muladd_3ns_7ns_7ns_9_4_1
 set corename simcore_mac
 set op mac
 set stage_num 4
@@ -9,7 +9,7 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 4
+set in0_width 3
 set in0_signed 0
 set in1_width 7
 set in1_signed 0
@@ -17,8 +17,8 @@ set in2_width 7
 set in2_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 10
-set arg_lists {i0 {4 0 +} i1 {7 0 +} m {10 1 +} i2 {7 0 +} p {10 0 +} c_reg {1} rnd {0} acc {0} }
+set out_width 9
+set arg_lists {i0 {3 0 +} i1 {7 0 +} m {9 1 +} i2 {7 0 +} p {9 0 +} c_reg {1} rnd {0} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {add} IMPL {dsp} LATENCY 3 ALLOW_PRAGMA 1
@@ -77,7 +77,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename placement_dynamic_bypass \
     op interface \
-    ports { placement_dynamic_bypass_address0 { O 14 vector } placement_dynamic_bypass_ce0 { O 1 bit } placement_dynamic_bypass_we0 { O 1 bit } placement_dynamic_bypass_d0 { O 8 vector } } \
+    ports { placement_dynamic_bypass_address0 { O 13 vector } placement_dynamic_bypass_ce0 { O 1 bit } placement_dynamic_bypass_we0 { O 1 bit } placement_dynamic_bypass_d0 { O 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'placement_dynamic_bypass'"

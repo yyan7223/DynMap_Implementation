@@ -52,9 +52,9 @@ reg   [4:0] ap_sig_allocacmp_j_load;
 reg   [6:0] i_13_fu_50;
 wire   [6:0] select_ln692_1_fu_128_p3;
 reg   [6:0] ap_sig_allocacmp_i_13_load;
-reg   [10:0] indvar_flatten23_fu_54;
+reg   [10:0] indvar_flatten24_fu_54;
 wire   [10:0] add_ln692_1_fu_96_p2;
-reg   [10:0] ap_sig_allocacmp_indvar_flatten23_load;
+reg   [10:0] ap_sig_allocacmp_indvar_flatten24_load;
 wire   [0:0] icmp_ln693_fu_114_p2;
 wire   [6:0] add_ln692_fu_108_p2;
 wire   [4:0] select_ln692_fu_120_p3;
@@ -123,9 +123,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start_int == 1'b1))) begin
         if ((icmp_ln692_fu_90_p2 == 1'd0)) begin
-            indvar_flatten23_fu_54 <= add_ln692_1_fu_96_p2;
+            indvar_flatten24_fu_54 <= add_ln692_1_fu_96_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            indvar_flatten23_fu_54 <= 11'd0;
+            indvar_flatten24_fu_54 <= 11'd0;
         end
     end
 end
@@ -190,9 +190,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_sig_allocacmp_indvar_flatten23_load = 11'd0;
+        ap_sig_allocacmp_indvar_flatten24_load = 11'd0;
     end else begin
-        ap_sig_allocacmp_indvar_flatten23_load = indvar_flatten23_fu_54;
+        ap_sig_allocacmp_indvar_flatten24_load = indvar_flatten24_fu_54;
     end
 end
 
@@ -231,7 +231,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln692_1_fu_96_p2 = (ap_sig_allocacmp_indvar_flatten23_load + 11'd1);
+assign add_ln692_1_fu_96_p2 = (ap_sig_allocacmp_indvar_flatten24_load + 11'd1);
 
 assign add_ln692_fu_108_p2 = (ap_sig_allocacmp_i_13_load + 7'd1);
 
@@ -247,7 +247,7 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln692_fu_90_p2 = ((ap_sig_allocacmp_indvar_flatten23_load == 11'd1600) ? 1'b1 : 1'b0);
+assign icmp_ln692_fu_90_p2 = ((ap_sig_allocacmp_indvar_flatten24_load == 11'd1600) ? 1'b1 : 1'b0);
 
 assign icmp_ln693_fu_114_p2 = ((ap_sig_allocacmp_j_load == 5'd16) ? 1'b1 : 1'b0);
 

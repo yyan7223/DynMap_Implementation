@@ -44,7 +44,10 @@
       "config_export -format=ip_catalog",
       "config_export -rtl=verilog"
     ],
-    "DirectiveTcl": ["set_directive_top runOne -name runOne"],
+    "DirectiveTcl": [
+      "set_directive_top runOne -name runOne",
+      "set_directive_top runOne -name runOne"
+    ],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "runOne"
@@ -73,6 +76,32 @@
   "Files": {
     "CSource": ["..\/DynMap_4HLS.cpp"],
     "Vhdl": [
+      "impl\/vhdl\/runOne_add_2ns_2ns_2_1_1.vhd",
+      "impl\/vhdl\/runOne_add_2s_2ns_2_1_1.vhd",
+      "impl\/vhdl\/runOne_add_3ns_3ns_3_2_1.vhd",
+      "impl\/vhdl\/runOne_add_4ns_4ns_4_2_1.vhd",
+      "impl\/vhdl\/runOne_add_4ns_4s_4_2_1.vhd",
+      "impl\/vhdl\/runOne_add_4s_4ns_4_1_1.vhd",
+      "impl\/vhdl\/runOne_add_5ns_5ns_5_2_1.vhd",
+      "impl\/vhdl\/runOne_add_5ns_5s_5_2_1.vhd",
+      "impl\/vhdl\/runOne_add_6ns_6ns_6_2_1.vhd",
+      "impl\/vhdl\/runOne_add_7ns_7ns_7_2_1.vhd",
+      "impl\/vhdl\/runOne_add_8ns_8ns_8_2_1.vhd",
+      "impl\/vhdl\/runOne_add_8ns_8s_8_2_1.vhd",
+      "impl\/vhdl\/runOne_add_9ns_9ns_9_2_1.vhd",
+      "impl\/vhdl\/runOne_add_10ns_10ns_10_2_1.vhd",
+      "impl\/vhdl\/runOne_add_10ns_10s_10_2_1.vhd",
+      "impl\/vhdl\/runOne_add_11ns_11ns_11_2_1.vhd",
+      "impl\/vhdl\/runOne_add_11ns_11s_11_2_1.vhd",
+      "impl\/vhdl\/runOne_add_12ns_12ns_12_2_1.vhd",
+      "impl\/vhdl\/runOne_add_12ns_12s_12_2_1.vhd",
+      "impl\/vhdl\/runOne_add_13ns_13ns_13_2_1.vhd",
+      "impl\/vhdl\/runOne_add_13ns_13s_13_2_1.vhd",
+      "impl\/vhdl\/runOne_add_14ns_14ns_14_2_1.vhd",
+      "impl\/vhdl\/runOne_add_15ns_15ns_15_2_1.vhd",
+      "impl\/vhdl\/runOne_add_60ns_60s_60_2_1.vhd",
+      "impl\/vhdl\/runOne_add_64ns_64ns_64_2_1.vhd",
+      "impl\/vhdl\/runOne_add_64ns_64ns_64_3_1.vhd",
       "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record.vhd",
       "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1.vhd",
       "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3.vhd",
@@ -82,11 +111,14 @@
       "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4.vhd",
       "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5.vhd",
       "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_3R.vhd",
       "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_3R.vhd",
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen.vhd",
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_CGRA_NumTiles_shapes_values_ROM_g8j.vhd",
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_CurOptPotentialPlacement_List_Byhbi.vhd",
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_intersection_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_intersection_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4.vhd",
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_allocaeOg.vhd",
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5.vhd",
@@ -98,9 +130,13 @@
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16.vhd",
       "impl\/vhdl\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_potentialPlacement_AllPreds_RAM_jbC.vhd",
       "impl\/vhdl\/runOne_curOptPotentialPlacement_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_curOptPotentialPlacement_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_ddiv_64ns_64ns_64_31_no_dsp_1.vhd",
+      "impl\/vhdl\/runOne_ddiv_64ns_64ns_64_59_no_dsp_1.vhd",
       "impl\/vhdl\/runOne_dependency_predecessor_values_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_dependency_predecessor_values_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_dependency_successor_values_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_dependency_successor_values_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_Dependency_Update_BypassMode_SrcTgt.vhd",
       "impl\/vhdl\/runOne_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1.vhd",
       "impl\/vhdl\/runOne_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2.vhd",
@@ -112,6 +148,7 @@
       "impl\/vhdl\/runOne_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8.vhd",
       "impl\/vhdl\/runOne_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9.vhd",
       "impl\/vhdl\/runOne_DFG_NodesCount_kernels_values_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/runOne_DFG_NodesCount_kernels_values_ROM_AUTO_3R.vhd",
       "impl\/vhdl\/runOne_dynamic_placement_routing.vhd",
       "impl\/vhdl\/runOne_dynamic_placement_routing_allocated_tiles_levels_dynamic_shapes_values_ROM_AUsc4.vhd",
       "impl\/vhdl\/runOne_dynamic_placement_routing_allocated_tiles_levelsValidLen_shapes_values_ROM_AUrcU.vhd",
@@ -126,52 +163,112 @@
       "impl\/vhdl\/runOne_dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5.vhd",
       "impl\/vhdl\/runOne_dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6.vhd",
       "impl\/vhdl\/runOne_dynamic_placement_routing_placement_static_Opt2Tile_kernels_values1_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/runOne_dynamic_placement_routing_placement_static_Opt2Tile_kernels_values1_ROM_AUTO_3R.vhd",
       "impl\/vhdl\/runOne_dynamic_placement_routing_placement_static_Tile2Level_values_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/runOne_dynamic_placement_routing_placement_static_Tile2Level_values_ROM_AUTO_3R.vhd",
       "impl\/vhdl\/runOne_dynamic_placement_routing_predOpt_idx_List_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_dynamic_placement_routing_predOpt_idx_List_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/runOne_lshr_113ns_32ns_113_7_1.vhd",
+      "impl\/vhdl\/runOne_mac_muladd_3ns_7ns_7ns_9_4_1.vhd",
       "impl\/vhdl\/runOne_mac_muladd_3ns_7ns_8s_10_4_1.vhd",
       "impl\/vhdl\/runOne_mac_muladd_4ns_7ns_7ns_10_4_1.vhd",
       "impl\/vhdl\/runOne_mask_table_ROM_AUTO_1R.vhd",
       "impl\/vhdl\/runOne_mul_3ns_8ns_10_1_1.vhd",
+      "impl\/vhdl\/runOne_mul_3ns_8ns_10_5_1.vhd",
       "impl\/vhdl\/runOne_mul_7ns_8ns_15_1_1.vhd",
+      "impl\/vhdl\/runOne_mul_7ns_8ns_15_5_1.vhd",
       "impl\/vhdl\/runOne_mul_8s_10ns_18_1_1.vhd",
+      "impl\/vhdl\/runOne_mul_8s_10ns_18_3_1.vhd",
+      "impl\/vhdl\/runOne_mul_8s_10ns_18_5_1.vhd",
       "impl\/vhdl\/runOne_placement_done_values_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_placement_done_values_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_placement_dynamic_bypass_occupy_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_placement_dynamic_bypass_occupy_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_placement_dynamic_bypass_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_placement_dynamic_bypass_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_placement_dynamic_dict_Opt2PC_keys_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_placement_dynamic_dict_Opt2PC_keys_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_placement_dynamic_dict_Opt2Tile_values_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_placement_dynamic_dict_Opt2Tile_values_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_placement_dynamic_occupy_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_placement_dynamic_occupy_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_predecessors_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_predecessors_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_Reset.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_704_13.vhd",
+      "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_3R.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_707_14.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_710_15.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_713_16.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_716_17.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_719_18.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20.vhd",
+      "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20_dependency_predecessors_kebkb.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20_dependency_predecessors_kebkb.vhd",
+      "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22.vhd",
+      "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22_dependency_successors_kerncud.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22.vhd",
       "impl\/vhdl\/runOne_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22_dependency_successors_kerncud.vhd",
       "impl\/vhdl\/runOne_RoutingAvailability_CheckPredecessor_and_Placement.vhd",
       "impl\/vhdl\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_bypassPreds_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_bypassPreds_RAM_AUTO_3R2W.vhd",
       "impl\/vhdl\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1.vhd",
       "impl\/vhdl\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_32_1.vhd",
       "impl\/vhdl\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2.vhd",
       "impl\/vhdl\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_127_1.vhd",
       "impl\/vhdl\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4.vhd",
+      "impl\/vhdl\/runOne_shl_113ns_32ns_113_7_1.vhd",
       "impl\/vhdl\/runOne_sitodp_32ns_64_5_no_dsp_1.vhd",
+      "impl\/vhdl\/runOne_sitodp_32ns_64_7_no_dsp_1.vhd",
       "impl\/vhdl\/runOne_srem_8ns_8ns_7_12_1.vhd",
       "impl\/vhdl\/runOne_srem_8ns_8ns_7_12_seq_1.vhd",
       "impl\/vhdl\/runOne_srem_8ns_8ns_8_12_1.vhd",
+      "impl\/vhdl\/runOne_srem_8s_5ns_8_12_1.vhd",
       "impl\/vhdl\/runOne_srem_8s_5ns_8_12_seq_1.vhd",
+      "impl\/vhdl\/runOne_sub_2ns_2ns_2_1_1.vhd",
+      "impl\/vhdl\/runOne_sub_3ns_3ns_3_1_1.vhd",
+      "impl\/vhdl\/runOne_sub_3ns_3ns_3_2_1.vhd",
+      "impl\/vhdl\/runOne_sub_5ns_5ns_5_2_1.vhd",
+      "impl\/vhdl\/runOne_sub_6ns_6ns_6_2_1.vhd",
+      "impl\/vhdl\/runOne_sub_8ns_8ns_8_2_1.vhd",
+      "impl\/vhdl\/runOne_sub_11ns_11ns_11_2_1.vhd",
+      "impl\/vhdl\/runOne_sub_17ns_17ns_17_2_1.vhd",
       "impl\/vhdl\/runOne.vhd"
     ],
     "Verilog": [
+      "impl\/verilog\/runOne_add_2ns_2ns_2_1_1.v",
+      "impl\/verilog\/runOne_add_2s_2ns_2_1_1.v",
+      "impl\/verilog\/runOne_add_3ns_3ns_3_2_1.v",
+      "impl\/verilog\/runOne_add_4ns_4ns_4_2_1.v",
+      "impl\/verilog\/runOne_add_4ns_4s_4_2_1.v",
+      "impl\/verilog\/runOne_add_4s_4ns_4_1_1.v",
+      "impl\/verilog\/runOne_add_5ns_5ns_5_2_1.v",
+      "impl\/verilog\/runOne_add_5ns_5s_5_2_1.v",
+      "impl\/verilog\/runOne_add_6ns_6ns_6_2_1.v",
+      "impl\/verilog\/runOne_add_7ns_7ns_7_2_1.v",
+      "impl\/verilog\/runOne_add_8ns_8ns_8_2_1.v",
+      "impl\/verilog\/runOne_add_8ns_8s_8_2_1.v",
+      "impl\/verilog\/runOne_add_9ns_9ns_9_2_1.v",
+      "impl\/verilog\/runOne_add_10ns_10ns_10_2_1.v",
+      "impl\/verilog\/runOne_add_10ns_10s_10_2_1.v",
+      "impl\/verilog\/runOne_add_11ns_11ns_11_2_1.v",
+      "impl\/verilog\/runOne_add_11ns_11s_11_2_1.v",
+      "impl\/verilog\/runOne_add_12ns_12ns_12_2_1.v",
+      "impl\/verilog\/runOne_add_12ns_12s_12_2_1.v",
+      "impl\/verilog\/runOne_add_13ns_13ns_13_2_1.v",
+      "impl\/verilog\/runOne_add_13ns_13s_13_2_1.v",
+      "impl\/verilog\/runOne_add_14ns_14ns_14_2_1.v",
+      "impl\/verilog\/runOne_add_15ns_15ns_15_2_1.v",
+      "impl\/verilog\/runOne_add_60ns_60s_60_2_1.v",
+      "impl\/verilog\/runOne_add_64ns_64ns_64_2_1.v",
+      "impl\/verilog\/runOne_add_64ns_64ns_64_3_1.v",
       "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record.v",
       "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1.v",
       "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3.v",
@@ -185,14 +282,19 @@
       "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5.v",
       "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_1R.dat",
       "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_1R.v",
+      "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_3R.dat",
+      "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_0_ROM_AUTO_3R.v",
       "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_1R.dat",
       "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_1R.v",
+      "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_3R.dat",
+      "impl\/verilog\/runOne_BypassOptPlacement_Gen_Record_Tile2XY_1_ROM_AUTO_3R.v",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen.v",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_CGRA_NumTiles_shapes_values_ROM_g8j.dat",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_CGRA_NumTiles_shapes_values_ROM_g8j.v",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_CurOptPotentialPlacement_List_Byhbi.dat",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_CurOptPotentialPlacement_List_Byhbi.v",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_intersection_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_intersection_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4.v",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_allocaeOg.dat",
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_allocaeOg.v",
@@ -206,11 +308,18 @@
       "impl\/verilog\/runOne_CurOptPotentialPlacement_List_BypassLess_Gen_potentialPlacement_AllPreds_RAM_jbC.v",
       "impl\/verilog\/runOne_curOptPotentialPlacement_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_curOptPotentialPlacement_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_curOptPotentialPlacement_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_curOptPotentialPlacement_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_ddiv_64ns_64ns_64_31_no_dsp_1.v",
+      "impl\/verilog\/runOne_ddiv_64ns_64ns_64_59_no_dsp_1.v",
       "impl\/verilog\/runOne_dependency_predecessor_values_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_dependency_predecessor_values_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_dependency_predecessor_values_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_dependency_predecessor_values_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_dependency_successor_values_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_dependency_successor_values_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_dependency_successor_values_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_dependency_successor_values_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_Dependency_Update_BypassMode_SrcTgt.v",
       "impl\/verilog\/runOne_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1.v",
       "impl\/verilog\/runOne_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2.v",
@@ -223,6 +332,8 @@
       "impl\/verilog\/runOne_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9.v",
       "impl\/verilog\/runOne_DFG_NodesCount_kernels_values_ROM_AUTO_1R.dat",
       "impl\/verilog\/runOne_DFG_NodesCount_kernels_values_ROM_AUTO_1R.v",
+      "impl\/verilog\/runOne_DFG_NodesCount_kernels_values_ROM_AUTO_3R.dat",
+      "impl\/verilog\/runOne_DFG_NodesCount_kernels_values_ROM_AUTO_3R.v",
       "impl\/verilog\/runOne_dynamic_placement_routing.v",
       "impl\/verilog\/runOne_dynamic_placement_routing_allocated_tiles_levels_dynamic_shapes_values_ROM_AUsc4.dat",
       "impl\/verilog\/runOne_dynamic_placement_routing_allocated_tiles_levels_dynamic_shapes_values_ROM_AUsc4.v",
@@ -242,37 +353,67 @@
       "impl\/verilog\/runOne_dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6.v",
       "impl\/verilog\/runOne_dynamic_placement_routing_placement_static_Opt2Tile_kernels_values1_ROM_AUTO_1R.dat",
       "impl\/verilog\/runOne_dynamic_placement_routing_placement_static_Opt2Tile_kernels_values1_ROM_AUTO_1R.v",
+      "impl\/verilog\/runOne_dynamic_placement_routing_placement_static_Opt2Tile_kernels_values1_ROM_AUTO_3R.dat",
+      "impl\/verilog\/runOne_dynamic_placement_routing_placement_static_Opt2Tile_kernels_values1_ROM_AUTO_3R.v",
       "impl\/verilog\/runOne_dynamic_placement_routing_placement_static_Tile2Level_values_ROM_AUTO_1R.dat",
       "impl\/verilog\/runOne_dynamic_placement_routing_placement_static_Tile2Level_values_ROM_AUTO_1R.v",
+      "impl\/verilog\/runOne_dynamic_placement_routing_placement_static_Tile2Level_values_ROM_AUTO_3R.dat",
+      "impl\/verilog\/runOne_dynamic_placement_routing_placement_static_Tile2Level_values_ROM_AUTO_3R.v",
       "impl\/verilog\/runOne_dynamic_placement_routing_predOpt_idx_List_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_dynamic_placement_routing_predOpt_idx_List_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_dynamic_placement_routing_predOpt_idx_List_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_dynamic_placement_routing_predOpt_idx_List_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/runOne_lshr_113ns_32ns_113_7_1.v",
+      "impl\/verilog\/runOne_mac_muladd_3ns_7ns_7ns_9_4_1.v",
       "impl\/verilog\/runOne_mac_muladd_3ns_7ns_8s_10_4_1.v",
       "impl\/verilog\/runOne_mac_muladd_4ns_7ns_7ns_10_4_1.v",
       "impl\/verilog\/runOne_mask_table_ROM_AUTO_1R.dat",
       "impl\/verilog\/runOne_mask_table_ROM_AUTO_1R.v",
       "impl\/verilog\/runOne_mul_3ns_8ns_10_1_1.v",
+      "impl\/verilog\/runOne_mul_3ns_8ns_10_5_1.v",
       "impl\/verilog\/runOne_mul_7ns_8ns_15_1_1.v",
+      "impl\/verilog\/runOne_mul_7ns_8ns_15_5_1.v",
       "impl\/verilog\/runOne_mul_8s_10ns_18_1_1.v",
+      "impl\/verilog\/runOne_mul_8s_10ns_18_3_1.v",
+      "impl\/verilog\/runOne_mul_8s_10ns_18_5_1.v",
       "impl\/verilog\/runOne_placement_done_values_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_placement_done_values_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_placement_done_values_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_placement_done_values_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_placement_dynamic_bypass_occupy_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_placement_dynamic_bypass_occupy_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_placement_dynamic_bypass_occupy_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_placement_dynamic_bypass_occupy_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_placement_dynamic_bypass_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_placement_dynamic_bypass_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_placement_dynamic_bypass_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_placement_dynamic_bypass_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_placement_dynamic_dict_Opt2PC_keys_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_placement_dynamic_dict_Opt2PC_keys_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_placement_dynamic_dict_Opt2PC_keys_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_placement_dynamic_dict_Opt2PC_keys_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_placement_dynamic_dict_Opt2Tile_values_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_placement_dynamic_dict_Opt2Tile_values_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_placement_dynamic_dict_Opt2Tile_values_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_placement_dynamic_dict_Opt2Tile_values_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_placement_dynamic_occupy_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_placement_dynamic_occupy_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_placement_dynamic_occupy_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_placement_dynamic_occupy_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_predecessors_RAM_AUTO_1R1W.dat",
       "impl\/verilog\/runOne_predecessors_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_predecessors_RAM_AUTO_3R2W.dat",
+      "impl\/verilog\/runOne_predecessors_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_Reset.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_704_13.v",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R.dat",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R.v",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_3R.dat",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_3R.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_707_14.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_710_15.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_713_16.v",
@@ -280,30 +421,50 @@
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_719_18.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R.dat",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R.v",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20.v",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20_dependency_predecessors_kebkb.dat",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20_dependency_predecessors_kebkb.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20_dependency_predecessors_kebkb.dat",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20_dependency_predecessors_kebkb.v",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22.v",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22_dependency_successors_kerncud.dat",
+      "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22_dependency_successors_kerncud.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22.v",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22_dependency_successors_kerncud.dat",
       "impl\/verilog\/runOne_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22_dependency_successors_kerncud.v",
       "impl\/verilog\/runOne_RoutingAvailability_CheckPredecessor_and_Placement.v",
       "impl\/verilog\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_bypassPreds_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_bypassPreds_RAM_AUTO_3R2W.v",
       "impl\/verilog\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1.v",
       "impl\/verilog\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_32_1.v",
       "impl\/verilog\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2.v",
       "impl\/verilog\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_127_1.v",
       "impl\/verilog\/runOne_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4.v",
+      "impl\/verilog\/runOne_shl_113ns_32ns_113_7_1.v",
       "impl\/verilog\/runOne_sitodp_32ns_64_5_no_dsp_1.v",
+      "impl\/verilog\/runOne_sitodp_32ns_64_7_no_dsp_1.v",
       "impl\/verilog\/runOne_srem_8ns_8ns_7_12_1.v",
       "impl\/verilog\/runOne_srem_8ns_8ns_7_12_seq_1.v",
       "impl\/verilog\/runOne_srem_8ns_8ns_8_12_1.v",
+      "impl\/verilog\/runOne_srem_8s_5ns_8_12_1.v",
       "impl\/verilog\/runOne_srem_8s_5ns_8_12_seq_1.v",
+      "impl\/verilog\/runOne_sub_2ns_2ns_2_1_1.v",
+      "impl\/verilog\/runOne_sub_3ns_3ns_3_1_1.v",
+      "impl\/verilog\/runOne_sub_3ns_3ns_3_2_1.v",
+      "impl\/verilog\/runOne_sub_5ns_5ns_5_2_1.v",
+      "impl\/verilog\/runOne_sub_6ns_6ns_6_2_1.v",
+      "impl\/verilog\/runOne_sub_8ns_8ns_8_2_1.v",
+      "impl\/verilog\/runOne_sub_11ns_11ns_11_2_1.v",
+      "impl\/verilog\/runOne_sub_17ns_17ns_17_2_1.v",
       "impl\/verilog\/runOne.v"
     ],
     "IpMisc": ["impl\/misc\/logo.png"],
     "Subcore": [
       "impl\/misc\/runOne_ddiv_64ns_64ns_64_31_no_dsp_1_ip.tcl",
-      "impl\/misc\/runOne_sitodp_32ns_64_5_no_dsp_1_ip.tcl"
+      "impl\/misc\/runOne_ddiv_64ns_64ns_64_59_no_dsp_1_ip.tcl",
+      "impl\/misc\/runOne_sitodp_32ns_64_5_no_dsp_1_ip.tcl",
+      "impl\/misc\/runOne_sitodp_32ns_64_7_no_dsp_1_ip.tcl"
     ],
     "CsynthXml": "syn\/report\/csynth.xml",
     "DebugDir": ".debug",
@@ -322,9 +483,19 @@
         "Params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 29 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name runOne_ddiv_64ns_64ns_64_31_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
       },
       {
+        "Name": "runOne_ddiv_64ns_64ns_64_59_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 57 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name runOne_ddiv_64ns_64ns_64_59_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Divide CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
+      },
+      {
         "Name": "runOne_sitodp_32ns_64_5_no_dsp_1_ip",
         "Vlnv": "xilinx.com:ip:floating_point:7.1",
         "Params": "CONFIG.a_precision_type Custom CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 32 CONFIG.c_a_fraction_width 0 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 3 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name runOne_sitodp_32ns_64_5_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Fixed_to_Float CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
+      },
+      {
+        "Name": "runOne_sitodp_32ns_64_7_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Custom CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 32 CONFIG.c_a_fraction_width 0 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 5 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name runOne_sitodp_32ns_64_7_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Fixed_to_Float CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
       }
     ]
   },
@@ -441,47 +612,43 @@
           "Instances": [
             {
               "ModuleName": "Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7_fu_191"
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7_fu_189"
             },
             {
               "ModuleName": "Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9_fu_197"
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9_fu_195"
             },
             {
               "ModuleName": "Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12_fu_203"
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12_fu_201"
             },
             {
               "ModuleName": "Reset_Pipeline_VITIS_LOOP_704_13",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_704_13_fu_209"
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_704_13_fu_207"
             },
             {
               "ModuleName": "Reset_Pipeline_VITIS_LOOP_707_14",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_707_14_fu_215"
-            },
-            {
-              "ModuleName": "Reset_Pipeline_VITIS_LOOP_710_15",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_710_15_fu_221"
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_707_14_fu_217"
             },
             {
               "ModuleName": "Reset_Pipeline_VITIS_LOOP_713_16",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_713_16_fu_227"
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_713_16_fu_223"
             },
             {
               "ModuleName": "Reset_Pipeline_VITIS_LOOP_716_17",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_716_17_fu_233"
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_716_17_fu_229"
             },
             {
-              "ModuleName": "Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20_fu_239"
+              "ModuleName": "Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20",
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20_fu_235"
             },
             {
-              "ModuleName": "Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22_fu_249"
+              "ModuleName": "Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22",
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22_fu_245"
             },
             {
-              "ModuleName": "Reset_Pipeline_VITIS_LOOP_719_18",
-              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_719_18_fu_259"
+              "ModuleName": "Reset_Pipeline_VITIS_LOOP_710_15",
+              "InstanceName": "grp_Reset_Pipeline_VITIS_LOOP_710_15_fu_255"
             }
           ]
         },
@@ -710,21 +877,14 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "Reset_Pipeline_VITIS_LOOP_719_18": {
+      "Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "1",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22": {
+      "Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
@@ -1022,22 +1182,22 @@
     "Metrics": {
       "Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7": {
         "Latency": {
-          "LatencyBest": "12804",
-          "LatencyAvg": "12804",
-          "LatencyWorst": "12804",
-          "PipelineII": "12804",
+          "LatencyBest": "6404",
+          "LatencyAvg": "6404",
+          "LatencyWorst": "6404",
+          "PipelineII": "6404",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.059"
+          "Estimate": "6.068"
         },
         "Loops": [{
             "Name": "VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7",
-            "TripCount": "12800",
-            "Latency": "12802",
+            "TripCount": "6400",
+            "Latency": "6402",
             "PipelineII": "1",
             "PipelineDepth": "4"
           }],
@@ -1045,10 +1205,10 @@
           "DSP": "1",
           "AVAIL_DSP": "900",
           "UTIL_DSP": "~0",
-          "FF": "56",
+          "FF": "54",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "205",
+          "LUT": "199",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -1100,30 +1260,30 @@
       },
       "Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12": {
         "Latency": {
-          "LatencyBest": "25602",
-          "LatencyAvg": "25602",
-          "LatencyWorst": "25602",
-          "PipelineII": "25602",
+          "LatencyBest": "5122",
+          "LatencyAvg": "5122",
+          "LatencyWorst": "5122",
+          "PipelineII": "5122",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.399"
+          "Estimate": "6.278"
         },
         "Loops": [{
             "Name": "VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12",
-            "TripCount": "25600",
-            "Latency": "25600",
+            "TripCount": "5120",
+            "Latency": "5120",
             "PipelineII": "1",
             "PipelineDepth": "2"
           }],
         "Area": {
-          "FF": "62",
+          "FF": "56",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "196",
+          "LUT": "187",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -1139,35 +1299,39 @@
       },
       "Reset_Pipeline_VITIS_LOOP_704_13": {
         "Latency": {
-          "LatencyBest": "102",
-          "LatencyAvg": "102",
-          "LatencyWorst": "102",
-          "PipelineII": "102",
+          "LatencyBest": "19",
+          "LatencyAvg": "",
+          "LatencyWorst": "44",
+          "PipelineIIMin": "19",
+          "PipelineIIMax": "44",
+          "PipelineII": "19 ~ 44",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "2.820"
+          "Estimate": "4.526"
         },
         "Loops": [{
             "Name": "VITIS_LOOP_704_13",
-            "TripCount": "100",
-            "Latency": "100",
+            "TripCount": "",
+            "LatencyMin": "17",
+            "LatencyMax": "42",
+            "Latency": "17 ~ 42",
             "PipelineII": "1",
-            "PipelineDepth": "1"
+            "PipelineDepth": "2"
           }],
         "Area": {
-          "FF": "9",
+          "BRAM_18K": "1",
+          "AVAIL_BRAM": "1000",
+          "UTIL_BRAM": "~0",
+          "FF": "15",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "37",
+          "LUT": "57",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "1000",
-          "UTIL_BRAM": "0",
           "DSP": "0",
           "AVAIL_DSP": "900",
           "UTIL_DSP": "0",
@@ -1217,35 +1381,39 @@
       },
       "Reset_Pipeline_VITIS_LOOP_710_15": {
         "Latency": {
-          "LatencyBest": "102",
-          "LatencyAvg": "102",
-          "LatencyWorst": "102",
-          "PipelineII": "102",
+          "LatencyBest": "19",
+          "LatencyAvg": "",
+          "LatencyWorst": "44",
+          "PipelineIIMin": "19",
+          "PipelineIIMax": "44",
+          "PipelineII": "19 ~ 44",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "2.820"
+          "Estimate": "4.526"
         },
         "Loops": [{
             "Name": "VITIS_LOOP_710_15",
-            "TripCount": "100",
-            "Latency": "100",
+            "TripCount": "",
+            "LatencyMin": "17",
+            "LatencyMax": "42",
+            "Latency": "17 ~ 42",
             "PipelineII": "1",
-            "PipelineDepth": "1"
+            "PipelineDepth": "2"
           }],
         "Area": {
-          "FF": "9",
+          "BRAM_18K": "1",
+          "AVAIL_BRAM": "1000",
+          "UTIL_BRAM": "~0",
+          "FF": "15",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "37",
+          "LUT": "57",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "1000",
-          "UTIL_BRAM": "0",
           "DSP": "0",
           "AVAIL_DSP": "900",
           "UTIL_DSP": "0",
@@ -1332,50 +1500,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "Reset_Pipeline_VITIS_LOOP_719_18": {
-        "Latency": {
-          "LatencyBest": "19",
-          "LatencyAvg": "",
-          "LatencyWorst": "44",
-          "PipelineIIMin": "19",
-          "PipelineIIMax": "44",
-          "PipelineII": "19 ~ 44",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "4.526"
-        },
-        "Loops": [{
-            "Name": "VITIS_LOOP_719_18",
-            "TripCount": "",
-            "LatencyMin": "17",
-            "LatencyMax": "42",
-            "Latency": "17 ~ 42",
-            "PipelineII": "1",
-            "PipelineDepth": "2"
-          }],
-        "Area": {
-          "BRAM_18K": "1",
-          "AVAIL_BRAM": "1000",
-          "UTIL_BRAM": "~0",
-          "FF": "15",
-          "AVAIL_FF": "343800",
-          "UTIL_FF": "~0",
-          "LUT": "57",
-          "AVAIL_LUT": "171900",
-          "UTIL_LUT": "~0",
-          "DSP": "0",
-          "AVAIL_DSP": "900",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "0",
-          "UTIL_URAM": "0"
-        }
-      },
-      "Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20": {
+      "Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20": {
         "Latency": {
           "LatencyBest": "174",
           "LatencyAvg": "",
@@ -1392,7 +1517,7 @@
           "Estimate": "7.292"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_724_19_VITIS_LOOP_726_20",
+            "Name": "VITIS_LOOP_722_19_VITIS_LOOP_724_20",
             "TripCount": "",
             "LatencyMin": "172",
             "LatencyMax": "422",
@@ -1418,7 +1543,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22": {
+      "Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22": {
         "Latency": {
           "LatencyBest": "344",
           "LatencyAvg": "",
@@ -1435,7 +1560,7 @@
           "Estimate": "5.902"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_736_21_VITIS_LOOP_738_22",
+            "Name": "VITIS_LOOP_734_21_VITIS_LOOP_736_22",
             "TripCount": "",
             "LatencyMin": "342",
             "LatencyMax": "842",
@@ -1463,12 +1588,12 @@
       },
       "Reset": {
         "Latency": {
-          "LatencyBest": "25653",
+          "LatencyBest": "6455",
           "LatencyAvg": "",
-          "LatencyWorst": "25678",
-          "PipelineIIMin": "25653",
-          "PipelineIIMax": "25678",
-          "PipelineII": "25653 ~ 25678",
+          "LatencyWorst": "6480",
+          "PipelineIIMin": "6455",
+          "PipelineIIMax": "6480",
+          "PipelineII": "6455 ~ 6480",
           "PipelineDepth": "",
           "PipelineType": "no"
         },
@@ -1494,16 +1619,16 @@
           }
         ],
         "Area": {
-          "BRAM_18K": "11",
+          "BRAM_18K": "12",
           "AVAIL_BRAM": "1000",
           "UTIL_BRAM": "1",
           "DSP": "1",
           "AVAIL_DSP": "900",
           "UTIL_DSP": "~0",
-          "FF": "620",
+          "FF": "608",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "1509",
+          "LUT": "1373",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "~0",
           "URAM": "0",
@@ -2472,7 +2597,7 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "6.247"
+          "Estimate": "5.953"
         },
         "Loops": [{
             "Name": "VITIS_LOOP_249_4",
@@ -2482,10 +2607,10 @@
             "PipelineDepth": "14"
           }],
         "Area": {
-          "FF": "288",
+          "FF": "278",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "304",
+          "LUT": "298",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -2521,7 +2646,7 @@
             "PipelineDepth": "2"
           }],
         "Area": {
-          "FF": "203",
+          "FF": "202",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
           "LUT": "188",
@@ -2556,10 +2681,10 @@
           "BRAM_18K": "2",
           "AVAIL_BRAM": "1000",
           "UTIL_BRAM": "~0",
-          "FF": "770",
+          "FF": "752",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "1185",
+          "LUT": "1179",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "~0",
           "DSP": "0",
@@ -3128,10 +3253,10 @@
           "DSP": "1",
           "AVAIL_DSP": "900",
           "UTIL_DSP": "~0",
-          "FF": "2169",
+          "FF": "2151",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "4046",
+          "LUT": "4040",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "2",
           "URAM": "0",
@@ -3185,10 +3310,10 @@
           "DSP": "1",
           "AVAIL_DSP": "900",
           "UTIL_DSP": "~0",
-          "FF": "3173",
+          "FF": "3155",
           "AVAIL_FF": "343800",
           "UTIL_FF": "~0",
-          "LUT": "7265",
+          "LUT": "7259",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "4",
           "URAM": "0",
@@ -3211,23 +3336,23 @@
           "Estimate": "7.292"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_783_1",
+            "Name": "VITIS_LOOP_781_1",
             "TripCount": "",
             "Latency": "",
             "PipelineII": "",
             "PipelineDepth": ""
           }],
         "Area": {
-          "BRAM_18K": "36",
+          "BRAM_18K": "32",
           "AVAIL_BRAM": "1000",
           "UTIL_BRAM": "3",
           "DSP": "2",
           "AVAIL_DSP": "900",
           "UTIL_DSP": "~0",
-          "FF": "4648",
+          "FF": "4618",
           "AVAIL_FF": "343800",
           "UTIL_FF": "1",
-          "LUT": "11454",
+          "LUT": "11312",
           "AVAIL_LUT": "171900",
           "UTIL_LUT": "6",
           "URAM": "0",
@@ -3240,7 +3365,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2021-01-04 11:25:51 +0800",
+    "Time": "2024-01-17 08:24:34 +0800",
     "ToolName": "vitis_hls",
     "ToolVersion": "2021.2"
   }

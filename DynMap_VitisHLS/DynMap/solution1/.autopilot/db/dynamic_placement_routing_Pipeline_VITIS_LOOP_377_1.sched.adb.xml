@@ -183,10 +183,10 @@ newFuncRoot:3 %br_ln0 = br void
 
 <Node id="13" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-:4 %empty_82 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 16, i64 8
+:4 %empty_81 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 16, i64 8
 
 ]]></Node>
-<StgValue><ssdm name="empty_82"/></StgValue>
+<StgValue><ssdm name="empty_81"/></StgValue>
 </operation>
 
 <operation id="15" st_id="2" stage="1" lat="1">
@@ -280,7 +280,7 @@ newFuncRoot:3 %br_ln0 = br void
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split16:1 %specloopname_ln376 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41
+.split16:1 %specloopname_ln376 = specloopname void @_ssdm_op_SpecLoopName, void @empty_43
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln376"/></StgValue>

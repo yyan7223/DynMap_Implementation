@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'runOne'
 ================================================================
 + General Information: 
-    * Date:           Wed Jan  3 23:39:05 2024
+    * Date:           Wed Jan 17 08:24:32 2024
     * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
     * Project:        DynMap
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,34 +19,32 @@
     |                                             Modules                                            | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |         |         |            |            |     |
     |                                             & Loops                                            | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|  BRAM   |   DSP   |     FF     |     LUT    | URAM|
     +------------------------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+---------+---------+------------+------------+-----+
-    |+ runOne                                                                                        |     -|  0.01|        -|          -|         -|        -|      -|        no|  36 (3%)|  2 (~0%)|   4648 (1%)|  11454 (6%)|    -|
-    | o VITIS_LOOP_783_1                                                                             |     -|  7.30|        -|          -|         -|        -|      -|        no|        -|        -|           -|           -|    -|
-    |  + Reset                                                                                       |     -|  0.01|    25678|  2.568e+05|         -|    25678|      -|        no|  11 (1%)|  1 (~0%)|   620 (~0%)|  1509 (~0%)|    -|
-    |   + Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7                          |     -|  1.24|    12804|  1.280e+05|         -|    12804|      -|        no|        -|  1 (~0%)|    56 (~0%)|   205 (~0%)|    -|
-    |    o VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7                                        |     -|  7.30|    12802|  1.280e+05|         4|        1|  12800|       yes|        -|        -|           -|           -|    -|
+    |+ runOne                                                                                        |     -|  0.01|        -|          -|         -|        -|      -|        no|  32 (3%)|  2 (~0%)|   4618 (1%)|  11312 (6%)|    -|
+    | o VITIS_LOOP_781_1                                                                             |     -|  7.30|        -|          -|         -|        -|      -|        no|        -|        -|           -|           -|    -|
+    |  + Reset                                                                                       |     -|  0.01|     6480|  6.480e+04|         -|     6480|      -|        no|  12 (1%)|  1 (~0%)|   608 (~0%)|  1373 (~0%)|    -|
+    |   + Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7                          |     -|  1.23|     6404|  6.404e+04|         -|     6404|      -|        no|        -|  1 (~0%)|    54 (~0%)|   199 (~0%)|    -|
+    |    o VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7                                        |     -|  7.30|     6402|  6.402e+04|         4|        1|   6400|       yes|        -|        -|           -|           -|    -|
     |   + Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9                                           |     -|  0.92|     1602|  1.602e+04|         -|     1602|      -|        no|        -|        -|    25 (~0%)|   119 (~0%)|    -|
     |    o VITIS_LOOP_692_8_VITIS_LOOP_693_9                                                         |     -|  7.30|     1600|  1.600e+04|         1|        1|   1600|       yes|        -|        -|           -|           -|    -|
-    |   + Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12                       |     -|  0.90|    25602|  2.560e+05|         -|    25602|      -|        no|        -|        -|    62 (~0%)|   196 (~0%)|    -|
-    |    o VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12                                     |     -|  7.30|    25600|  2.560e+05|         2|        1|  25600|       yes|        -|        -|           -|           -|    -|
-    |   + Reset_Pipeline_VITIS_LOOP_704_13                                                           |     -|  4.48|      102|  1.020e+03|         -|      102|      -|        no|        -|        -|     9 (~0%)|    37 (~0%)|    -|
-    |    o VITIS_LOOP_704_13                                                                         |     -|  7.30|      100|  1.000e+03|         1|        1|    100|       yes|        -|        -|           -|           -|    -|
+    |   + Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12                       |     -|  1.02|     5122|  5.122e+04|         -|     5122|      -|        no|        -|        -|    56 (~0%)|   187 (~0%)|    -|
+    |    o VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12                                     |     -|  7.30|     5120|  5.120e+04|         2|        1|   5120|       yes|        -|        -|           -|           -|    -|
+    |   + Reset_Pipeline_VITIS_LOOP_704_13                                                           |     -|  2.77|       44|    440.000|         -|       44|      -|        no|  1 (~0%)|        -|    15 (~0%)|    57 (~0%)|    -|
+    |    o VITIS_LOOP_704_13                                                                         |     -|  7.30|       42|    420.000|         2|        1|     42|       yes|        -|        -|           -|           -|    -|
     |   + Reset_Pipeline_VITIS_LOOP_707_14                                                           |     -|  4.48|      102|  1.020e+03|         -|      102|      -|        no|        -|        -|     9 (~0%)|    37 (~0%)|    -|
     |    o VITIS_LOOP_707_14                                                                         |     -|  7.30|      100|  1.000e+03|         1|        1|    100|       yes|        -|        -|           -|           -|    -|
-    |   + Reset_Pipeline_VITIS_LOOP_710_15                                                           |     -|  4.48|      102|  1.020e+03|         -|      102|      -|        no|        -|        -|     9 (~0%)|    37 (~0%)|    -|
-    |    o VITIS_LOOP_710_15                                                                         |     -|  7.30|      100|  1.000e+03|         1|        1|    100|       yes|        -|        -|           -|           -|    -|
     |   + Reset_Pipeline_VITIS_LOOP_713_16                                                           |     -|  4.48|      102|  1.020e+03|         -|      102|      -|        no|        -|        -|     9 (~0%)|    37 (~0%)|    -|
     |    o VITIS_LOOP_713_16                                                                         |     -|  7.30|      100|  1.000e+03|         1|        1|    100|       yes|        -|        -|           -|           -|    -|
     |   + Reset_Pipeline_VITIS_LOOP_716_17                                                           |     -|  4.48|      102|  1.020e+03|         -|      102|      -|        no|        -|        -|     9 (~0%)|    37 (~0%)|    -|
     |    o VITIS_LOOP_716_17                                                                         |     -|  7.30|      100|  1.000e+03|         1|        1|    100|       yes|        -|        -|           -|           -|    -|
-    |   + Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20                                         |     -|  0.01|      424|  4.240e+03|         -|      424|      -|        no|  3 (~0%)|        -|   171 (~0%)|   252 (~0%)|    -|
-    |    o VITIS_LOOP_724_19_VITIS_LOOP_726_20                                                       |     -|  7.30|      422|  4.220e+03|         4|        1|    420|       yes|        -|        -|           -|           -|    -|
-    |   + Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22                                         |     -|  1.40|      844|  8.440e+03|         -|      844|      -|        no|  7 (~0%)|        -|   185 (~0%)|   259 (~0%)|    -|
-    |    o VITIS_LOOP_736_21_VITIS_LOOP_738_22                                                       |     -|  7.30|      842|  8.420e+03|         4|        1|    840|       yes|        -|        -|           -|           -|    -|
-    |   + Reset_Pipeline_VITIS_LOOP_719_18                                                           |     -|  2.77|       44|    440.000|         -|       44|      -|        no|  1 (~0%)|        -|    15 (~0%)|    57 (~0%)|    -|
-    |    o VITIS_LOOP_719_18                                                                         |     -|  7.30|       42|    420.000|         2|        1|     42|       yes|        -|        -|           -|           -|    -|
+    |   + Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20                                         |     -|  0.01|      424|  4.240e+03|         -|      424|      -|        no|  3 (~0%)|        -|   171 (~0%)|   252 (~0%)|    -|
+    |    o VITIS_LOOP_722_19_VITIS_LOOP_724_20                                                       |     -|  7.30|      422|  4.220e+03|         4|        1|    420|       yes|        -|        -|           -|           -|    -|
+    |   + Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22                                         |     -|  1.40|      844|  8.440e+03|         -|      844|      -|        no|  7 (~0%)|        -|   185 (~0%)|   259 (~0%)|    -|
+    |    o VITIS_LOOP_734_21_VITIS_LOOP_736_22                                                       |     -|  7.30|      842|  8.420e+03|         4|        1|    840|       yes|        -|        -|           -|           -|    -|
+    |   + Reset_Pipeline_VITIS_LOOP_710_15                                                           |     -|  2.77|       44|    440.000|         -|       44|      -|        no|  1 (~0%)|        -|    15 (~0%)|    57 (~0%)|    -|
+    |    o VITIS_LOOP_710_15                                                                         |     -|  7.30|       42|    420.000|         2|        1|     42|       yes|        -|        -|           -|           -|    -|
     |   o VITIS_LOOP_674_1                                                                           |     -|  7.30|       10|    100.000|         1|        -|     10|        no|        -|        -|           -|           -|    -|
     |   o VITIS_LOOP_677_2                                                                           |     -|  7.30|       16|    160.000|         1|        -|     16|        no|        -|        -|           -|           -|    -|
-    |  + dynamic_placement_routing                                                                   |     -|  0.33|        -|          -|         -|        -|      -|        no|  9 (~0%)|  1 (~0%)|  3173 (~0%)|   7265 (4%)|    -|
+    |  + dynamic_placement_routing                                                                   |     -|  0.33|        -|          -|         -|        -|      -|        no|  9 (~0%)|  1 (~0%)|  3155 (~0%)|   7259 (4%)|    -|
     |   o VITIS_LOOP_596_1                                                                           |     -|  7.30|        -|          -|         -|        -|      -|        no|        -|        -|           -|           -|    -|
     |    + dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2                                       |     -|  1.92|       24|    240.000|         -|       24|      -|        no|        -|        -|    18 (~0%)|    69 (~0%)|    -|
     |     o VITIS_LOOP_601_2                                                                         |    II|  7.30|       21|    210.000|         2|        2|     10|       yes|        -|        -|           -|           -|    -|
@@ -79,7 +77,7 @@
     |     o VITIS_LOOP_388_2                                                                         |    II|  7.30|        -|          -|         2|        2|      -|       yes|        -|        -|           -|           -|    -|
     |    + dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3                                       |     -|  1.81|       12|    120.000|         -|       12|      -|        no|        -|        -|     7 (~0%)|    65 (~0%)|    -|
     |     o VITIS_LOOP_398_3                                                                         |     -|  7.30|       10|    100.000|         2|        1|     10|       yes|        -|        -|           -|           -|    -|
-    |    + RoutingAvailability_CheckPredecessor_and_Placement                                        |     -|  0.55|        -|          -|         -|        -|      -|        no|  3 (~0%)|  1 (~0%)|  2169 (~0%)|   4046 (2%)|    -|
+    |    + RoutingAvailability_CheckPredecessor_and_Placement                                        |     -|  0.55|        -|          -|         -|        -|      -|        no|  3 (~0%)|  1 (~0%)|  2151 (~0%)|   4040 (2%)|    -|
     |     o VITIS_LOOP_314_1                                                                         |     -|  7.30|        -|          -|         -|        -|      -|        no|        -|        -|           -|           -|    -|
     |      + RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4            |     -|  2.38|        -|          -|         -|        -|      -|        no|        -|        -|   247 (~0%)|   271 (~0%)|    -|
     |       o VITIS_LOOP_354_4                                                                       |    II|  7.30|        -|          -|        13|       12|      -|       yes|        -|        -|           -|           -|    -|
@@ -92,14 +90,14 @@
     |       + RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2            |     -|  2.93|      204|  2.040e+03|         -|      204|      -|        no|        -|        -|    35 (~0%)|    92 (~0%)|    -|
     |        o VITIS_LOOP_39_2                                                                       |    II|  7.30|      201|  2.010e+03|         2|        2|    100|       yes|        -|        -|           -|           -|    -|
     |       o VITIS_LOOP_288_1                                                                       |     -|  7.30|        -|          -|         -|        -|      -|        no|        -|        -|           -|           -|    -|
-    |        + BypassOptPlacement_Gen_Record                                                         |     -|  0.55|        -|          -|         -|        -|      -|        no|  2 (~0%)|        -|   770 (~0%)|  1185 (~0%)|    -|
+    |        + BypassOptPlacement_Gen_Record                                                         |     -|  0.55|        -|          -|         -|        -|      -|        no|  2 (~0%)|        -|   752 (~0%)|  1179 (~0%)|    -|
     |         + BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1                              |     -|  2.93|      204|  2.040e+03|         -|      204|      -|        no|        -|        -|    27 (~0%)|    61 (~0%)|    -|
     |          o VITIS_LOOP_188_1                                                                    |    II|  7.30|      201|  2.010e+03|         2|        2|    100|       yes|        -|        -|           -|           -|    -|
     |         + BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3             |     -|  1.51|        -|          -|         -|        -|      -|        no|  1 (~0%)|        -|    71 (~0%)|   234 (~0%)|    -|
     |          o VITIS_LOOP_199_2_VITIS_LOOP_233_3                                                   |    II|  7.30|        -|          -|         4|        4|      -|       yes|        -|        -|           -|           -|    -|
-    |         + BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4                              |     -|  1.05|        -|          -|         -|        -|      -|        no|        -|        -|   288 (~0%)|   304 (~0%)|    -|
+    |         + BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4                              |     -|  1.35|        -|          -|         -|        -|      -|        no|        -|        -|   278 (~0%)|   298 (~0%)|    -|
     |          o VITIS_LOOP_249_4                                                                    |    II|  7.30|        -|          -|        14|       14|      -|       yes|        -|        -|           -|           -|    -|
-    |         + BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5                              |     -|  1.92|        -|          -|         -|        -|      -|        no|        -|        -|   203 (~0%)|   188 (~0%)|    -|
+    |         + BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5                              |     -|  1.92|        -|          -|         -|        -|      -|        no|        -|        -|   202 (~0%)|   188 (~0%)|    -|
     |          o VITIS_LOOP_255_5                                                                    |    II|  7.30|        -|          -|         2|        2|      -|       yes|        -|        -|           -|           -|    -|
     |        + Dependency_Update_BypassMode_SrcTgt                                                   |     -|  1.92|      495|  4.950e+03|         -|      495|      -|        no|        -|        -|   471 (~0%)|  1005 (~0%)|    -|
     |         + Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1                         |     -|  2.93|      204|  2.040e+03|         -|      204|      -|        no|        -|        -|    27 (~0%)|    61 (~0%)|    -|
@@ -190,81 +188,80 @@
 | Name                                                                                         | DSP | Pragma | Variable                    | Op   | Impl   | Latency |
 +----------------------------------------------------------------------------------------------+-----+--------+-----------------------------+------+--------+---------+
 | + runOne                                                                                     | 2   |        |                             |      |        |         |
-|   mul_8s_10ns_18_1_1_U342                                                                    | -   |        | mul_ln778                   | mul  | auto   | 0       |
-|   sub_ln778_fu_570_p2                                                                        | -   |        | sub_ln778                   | sub  | fabric | 0       |
-|   sub_ln778_1_fu_612_p2                                                                      | -   |        | sub_ln778_1                 | sub  | fabric | 0       |
-|   add_ln765_fu_680_p2                                                                        | -   |        | add_ln765                   | add  | fabric | 0       |
-|   grp_fu_526_p2                                                                              | -   |        | add_ln771                   | add  | fabric | 0       |
-|   grp_fu_549_p2                                                                              | -   |        | add_ln767                   | add  | fabric | 0       |
-|   grp_fu_526_p2                                                                              | -   |        | add_ln768                   | add  | fabric | 0       |
-|   grp_fu_549_p2                                                                              | -   |        | add_ln766                   | add  | fabric | 0       |
-|   grp_fu_526_p2                                                                              | -   |        | add_ln763                   | add  | fabric | 0       |
+|   mul_8s_10ns_18_1_1_U342                                                                    | -   |        | mul_ln776                   | mul  | auto   | 0       |
+|   sub_ln776_fu_570_p2                                                                        | -   |        | sub_ln776                   | sub  | fabric | 0       |
+|   sub_ln776_1_fu_612_p2                                                                      | -   |        | sub_ln776_1                 | sub  | fabric | 0       |
+|   add_ln763_fu_680_p2                                                                        | -   |        | add_ln763                   | add  | fabric | 0       |
+|   grp_fu_526_p2                                                                              | -   |        | add_ln769                   | add  | fabric | 0       |
+|   grp_fu_549_p2                                                                              | -   |        | add_ln765                   | add  | fabric | 0       |
+|   grp_fu_526_p2                                                                              | -   |        | add_ln766                   | add  | fabric | 0       |
+|   grp_fu_549_p2                                                                              | -   |        | add_ln764                   | add  | fabric | 0       |
+|   grp_fu_526_p2                                                                              | -   |        | add_ln761                   | add  | fabric | 0       |
 |   ddiv_64ns_64ns_64_31_no_dsp_1_U339                                                         | -   |        | dc                          | ddiv | fabric | 30      |
 |   data_V_1_fu_852_p2                                                                         | -   |        | data_V_1                    | add  | fabric | 0       |
 |   add_ln513_fu_1017_p2                                                                       | -   |        | add_ln513                   | add  | fabric | 0       |
 |   sub_ln1364_fu_1031_p2                                                                      | -   |        | sub_ln1364                  | sub  | fabric | 0       |
 |   result_V_2_fu_1099_p2                                                                      | -   |        | result_V_2                  | sub  | fabric | 0       |
-|   add_ln797_fu_1192_p2                                                                       | -   |        | add_ln797                   | add  | fabric | 0       |
+|   add_ln795_fu_1192_p2                                                                       | -   |        | add_ln795                   | add  | fabric | 0       |
 |   startII_5_fu_1198_p2                                                                       | -   |        | startII_5                   | add  | fabric | 0       |
 |  + Reset                                                                                     | 1   |        |                             |      |        |         |
-|    mul_3ns_8ns_10_1_1_U24                                                                    | -   |        | mul_ln727                   | mul  | auto   | 0       |
-|    add_ln674_fu_396_p2                                                                       | -   |        | add_ln674                   | add  | fabric | 0       |
-|    add_ln677_fu_426_p2                                                                       | -   |        | add_ln677                   | add  | fabric | 0       |
-|    add_ln724_fu_459_p2                                                                       | -   |        | add_ln724                   | add  | fabric | 0       |
-|    add_ln736_fu_488_p2                                                                       | -   |        | add_ln736                   | add  | fabric | 0       |
+|    mul_3ns_8ns_10_1_1_U24                                                                    | -   |        | mul_ln725                   | mul  | auto   | 0       |
+|    add_ln674_fu_390_p2                                                                       | -   |        | add_ln674                   | add  | fabric | 0       |
+|    add_ln677_fu_420_p2                                                                       | -   |        | add_ln677                   | add  | fabric | 0       |
+|    add_ln722_fu_453_p2                                                                       | -   |        | add_ln722                   | add  | fabric | 0       |
+|    add_ln734_fu_482_p2                                                                       | -   |        | add_ln734                   | add  | fabric | 0       |
 |   + Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7                        | 1   |        |                             |      |        |         |
-|     add_ln685_1_fu_128_p2                                                                    | -   |        | add_ln685_1                 | add  | fabric | 0       |
-|     add_ln685_fu_140_p2                                                                      | -   |        | add_ln685                   | add  | fabric | 0       |
-|     mac_muladd_4ns_7ns_7ns_10_4_1_U1                                                         | 1   |        | mul_ln688                   | mul  | dsp    | 3       |
-|     add_ln686_fu_223_p2                                                                      | -   |        | add_ln686                   | add  | fabric | 0       |
-|     mac_muladd_4ns_7ns_7ns_10_4_1_U1                                                         | 1   |        | add_ln688                   | add  | dsp    | 3       |
-|     add_ln688_1_fu_280_p2                                                                    | -   |        | add_ln688_1                 | add  | fabric | 0       |
-|     add_ln687_fu_254_p2                                                                      | -   |        | add_ln687                   | add  | fabric | 0       |
-|     add_ln686_1_fu_164_p2                                                                    | -   |        | add_ln686_1                 | add  | fabric | 0       |
+|     add_ln685_1_fu_130_p2                                                                    | -   |        | add_ln685_1                 | add  | fabric | 0       |
+|     add_ln685_fu_142_p2                                                                      | -   |        | add_ln685                   | add  | fabric | 0       |
+|     mac_muladd_3ns_7ns_7ns_9_4_1_U1                                                          | 1   |        | mul_ln688                   | mul  | dsp    | 3       |
+|     add_ln686_fu_225_p2                                                                      | -   |        | add_ln686                   | add  | fabric | 0       |
+|     mac_muladd_3ns_7ns_7ns_9_4_1_U1                                                          | 1   |        | add_ln688                   | add  | dsp    | 3       |
+|     add_ln688_1_fu_282_p2                                                                    | -   |        | add_ln688_1                 | add  | fabric | 0       |
+|     add_ln687_fu_256_p2                                                                      | -   |        | add_ln687                   | add  | fabric | 0       |
+|     add_ln686_1_fu_166_p2                                                                    | -   |        | add_ln686_1                 | add  | fabric | 0       |
 |   + Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9                                         | 0   |        |                             |      |        |         |
 |     add_ln692_1_fu_96_p2                                                                     | -   |        | add_ln692_1                 | add  | fabric | 0       |
 |     add_ln692_fu_108_p2                                                                      | -   |        | add_ln692                   | add  | fabric | 0       |
 |     add_ln694_fu_148_p2                                                                      | -   |        | add_ln694                   | add  | fabric | 0       |
 |     add_ln693_fu_159_p2                                                                      | -   |        | add_ln693                   | add  | fabric | 0       |
 |   + Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12                     | 0   |        |                             |      |        |         |
-|     add_ln697_1_fu_126_p2                                                                    | -   |        | add_ln697_1                 | add  | fabric | 0       |
-|     add_ln697_fu_144_p2                                                                      | -   |        | add_ln697                   | add  | fabric | 0       |
-|     add_ln698_fu_198_p2                                                                      | -   |        | add_ln698                   | add  | fabric | 0       |
-|     add_ln700_fu_230_p2                                                                      | -   |        | add_ln700                   | add  | fabric | 0       |
-|     add_ln700_1_fu_291_p2                                                                    | -   |        | add_ln700_1                 | add  | fabric | 0       |
-|     add_ln699_fu_236_p2                                                                      | -   |        | add_ln699                   | add  | fabric | 0       |
-|     add_ln698_1_fu_242_p2                                                                    | -   |        | add_ln698_1                 | add  | fabric | 0       |
+|     add_ln697_1_fu_122_p2                                                                    | -   |        | add_ln697_1                 | add  | fabric | 0       |
+|     add_ln697_fu_140_p2                                                                      | -   |        | add_ln697                   | add  | fabric | 0       |
+|     add_ln698_fu_194_p2                                                                      | -   |        | add_ln698                   | add  | fabric | 0       |
+|     add_ln700_fu_226_p2                                                                      | -   |        | add_ln700                   | add  | fabric | 0       |
+|     add_ln700_1_fu_287_p2                                                                    | -   |        | add_ln700_1                 | add  | fabric | 0       |
+|     add_ln699_fu_232_p2                                                                      | -   |        | add_ln699                   | add  | fabric | 0       |
+|     add_ln698_1_fu_238_p2                                                                    | -   |        | add_ln698_1                 | add  | fabric | 0       |
 |   + Reset_Pipeline_VITIS_LOOP_704_13                                                         | 0   |        |                             |      |        |         |
-|     add_ln704_fu_62_p2                                                                       | -   |        | add_ln704                   | add  | fabric | 0       |
+|     i_18_fu_94_p2                                                                            | -   |        | i_18                        | add  | fabric | 0       |
+|     add_ln705_fu_104_p2                                                                      | -   |        | add_ln705                   | add  | fabric | 0       |
 |   + Reset_Pipeline_VITIS_LOOP_707_14                                                         | 0   |        |                             |      |        |         |
 |     add_ln707_fu_62_p2                                                                       | -   |        | add_ln707                   | add  | fabric | 0       |
-|   + Reset_Pipeline_VITIS_LOOP_710_15                                                         | 0   |        |                             |      |        |         |
-|     add_ln710_fu_62_p2                                                                       | -   |        | add_ln710                   | add  | fabric | 0       |
 |   + Reset_Pipeline_VITIS_LOOP_713_16                                                         | 0   |        |                             |      |        |         |
 |     add_ln713_fu_62_p2                                                                       | -   |        | add_ln713                   | add  | fabric | 0       |
 |   + Reset_Pipeline_VITIS_LOOP_716_17                                                         | 0   |        |                             |      |        |         |
 |     add_ln716_fu_62_p2                                                                       | -   |        | add_ln716                   | add  | fabric | 0       |
-|   + Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20                                       | 0   |        |                             |      |        |         |
-|     add_ln724_1_fu_136_p2                                                                    | -   |        | add_ln724_1                 | add  | fabric | 0       |
+|   + Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20                                       | 0   |        |                             |      |        |         |
+|     add_ln722_1_fu_136_p2                                                                    | -   |        | add_ln722_1                 | add  | fabric | 0       |
 |     i_13_fu_148_p2                                                                           | -   |        | i_13                        | add  | fabric | 0       |
-|     add_ln732_fu_267_p2                                                                      | -   |        | add_ln732                   | add  | tadder | 0       |
-|     add_ln727_fu_200_p2                                                                      | -   |        | add_ln727                   | add  | fabric | 0       |
-|     add_ln727_1_fu_225_p2                                                                    | -   |        | add_ln727_1                 | add  | tadder | 0       |
-|     add_ln732_1_fu_276_p2                                                                    | -   |        | add_ln732_1                 | add  | tadder | 0       |
-|     add_ln727_2_fu_234_p2                                                                    | -   |        | add_ln727_2                 | add  | tadder | 0       |
-|     add_ln726_fu_176_p2                                                                      | -   |        | add_ln726                   | add  | fabric | 0       |
-|   + Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22                                       | 0   |        |                             |      |        |         |
-|     add_ln736_1_fu_140_p2                                                                    | -   |        | add_ln736_1                 | add  | fabric | 0       |
+|     add_ln730_fu_267_p2                                                                      | -   |        | add_ln730                   | add  | tadder | 0       |
+|     add_ln725_fu_200_p2                                                                      | -   |        | add_ln725                   | add  | fabric | 0       |
+|     add_ln725_1_fu_225_p2                                                                    | -   |        | add_ln725_1                 | add  | tadder | 0       |
+|     add_ln730_1_fu_276_p2                                                                    | -   |        | add_ln730_1                 | add  | tadder | 0       |
+|     add_ln725_2_fu_234_p2                                                                    | -   |        | add_ln725_2                 | add  | tadder | 0       |
+|     add_ln724_fu_176_p2                                                                      | -   |        | add_ln724                   | add  | fabric | 0       |
+|   + Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22                                       | 0   |        |                             |      |        |         |
+|     add_ln734_1_fu_140_p2                                                                    | -   |        | add_ln734_1                 | add  | fabric | 0       |
 |     i_11_fu_152_p2                                                                           | -   |        | i_11                        | add  | fabric | 0       |
-|     add_ln744_fu_271_p2                                                                      | -   |        | add_ln744                   | add  | tadder | 0       |
-|     add_ln739_fu_184_p2                                                                      | -   |        | add_ln739                   | add  | fabric | 0       |
-|     add_ln739_1_fu_229_p2                                                                    | -   |        | add_ln739_1                 | add  | tadder | 0       |
-|     add_ln744_1_fu_280_p2                                                                    | -   |        | add_ln744_1                 | add  | tadder | 0       |
-|     add_ln739_2_fu_238_p2                                                                    | -   |        | add_ln739_2                 | add  | tadder | 0       |
-|     add_ln738_fu_190_p2                                                                      | -   |        | add_ln738                   | add  | fabric | 0       |
-|   + Reset_Pipeline_VITIS_LOOP_719_18                                                         | 0   |        |                             |      |        |         |
-|     i_15_fu_109_p2                                                                           | -   |        | i_15                        | add  | fabric | 0       |
-|     add_ln720_fu_119_p2                                                                      | -   |        | add_ln720                   | add  | fabric | 0       |
+|     add_ln742_fu_271_p2                                                                      | -   |        | add_ln742                   | add  | tadder | 0       |
+|     add_ln737_fu_184_p2                                                                      | -   |        | add_ln737                   | add  | fabric | 0       |
+|     add_ln737_1_fu_229_p2                                                                    | -   |        | add_ln737_1                 | add  | tadder | 0       |
+|     add_ln742_1_fu_280_p2                                                                    | -   |        | add_ln742_1                 | add  | tadder | 0       |
+|     add_ln737_2_fu_238_p2                                                                    | -   |        | add_ln737_2                 | add  | tadder | 0       |
+|     add_ln736_fu_190_p2                                                                      | -   |        | add_ln736                   | add  | fabric | 0       |
+|   + Reset_Pipeline_VITIS_LOOP_710_15                                                         | 0   |        |                             |      |        |         |
+|     i_17_fu_94_p2                                                                            | -   |        | i_17                        | add  | fabric | 0       |
+|     add_ln711_fu_104_p2                                                                      | -   |        | add_ln711                   | add  | fabric | 0       |
 |  + dynamic_placement_routing                                                                 | 1   |        |                             |      |        |         |
 |    mul_3ns_8ns_10_1_1_U300                                                                   | -   |        | mul_ln374                   | mul  | auto   | 0       |
 |    placedOpts_Counter_2_fu_668_p2                                                            | -   |        | placedOpts_Counter_2        | add  | fabric | 0       |
@@ -276,7 +273,7 @@
 |    add_ln636_fu_852_p2                                                                       | -   |        | add_ln636                   | add  | fabric | 0       |
 |    add_ln643_fu_827_p2                                                                       | -   |        | add_ln643                   | add  | fabric | 0       |
 |    dynamic_level_3_fu_946_p2                                                                 | -   |        | dynamic_level_3             | add  | fabric | 0       |
-|    empty_83_fu_974_p2                                                                        | -   |        | empty_83                    | add  | fabric | 0       |
+|    empty_82_fu_974_p2                                                                        | -   |        | empty_82                    | add  | fabric | 0       |
 |    add_ln415_fu_997_p2                                                                       | -   |        | add_ln415                   | add  | fabric | 0       |
 |    add_ln596_fu_1014_p2                                                                      | -   |        | add_ln596                   | add  | fabric | 0       |
 |   + dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2                                      | 0   |        |                             |      |        |         |
@@ -292,7 +289,7 @@
 |     j_2_fu_103_p2                                                                            | -   |        | j_2                         | add  | fabric | 0       |
 |     add_ln627_fu_113_p2                                                                      | -   |        | add_ln627                   | add  | fabric | 0       |
 |   + CurOptPotentialPlacement_List_BypassLess_Gen                                             | 0   |        |                             |      |        |         |
-|     i_42_fu_688_p2                                                                           | -   |        | i_42                        | add  | fabric | 0       |
+|     i_43_fu_688_p2                                                                           | -   |        | i_43                        | add  | fabric | 0       |
 |     x_fu_764_p2                                                                              | -   |        | x                           | add  | fabric | 0       |
 |     add_ln437_2_fu_791_p2                                                                    | -   |        | add_ln437_2                 | add  | fabric | 0       |
 |     add_ln437_fu_797_p2                                                                      | -   |        | add_ln437                   | add  | fabric | 0       |
@@ -309,26 +306,26 @@
 |     predY_0_7_fu_1131_p2                                                                     | -   |        | predY_0_7                   | add  | fabric | 0       |
 |     predY_0_8_fu_1142_p2                                                                     | -   |        | predY_0_8                   | add  | fabric | 0       |
 |     add_ln561_fu_1180_p2                                                                     | -   |        | add_ln561                   | add  | fabric | 0       |
-|     i_47_fu_1257_p2                                                                          | -   |        | i_47                        | add  | fabric | 0       |
+|     i_48_fu_1257_p2                                                                          | -   |        | i_48                        | add  | fabric | 0       |
 |     grp_fu_619_p2                                                                            | -   |        | add_ln585                   | add  | fabric | 0       |
-|     i_46_fu_1318_p2                                                                          | -   |        | i_46                        | add  | fabric | 0       |
+|     i_47_fu_1318_p2                                                                          | -   |        | i_47                        | add  | fabric | 0       |
 |     grp_fu_619_p2                                                                            | -   |        | add_ln526                   | add  | fabric | 0       |
-|     i_43_fu_1379_p2                                                                          | -   |        | i_43                        | add  | fabric | 0       |
+|     i_44_fu_1379_p2                                                                          | -   |        | i_44                        | add  | fabric | 0       |
 |     grp_fu_619_p2                                                                            | -   |        | add_ln488                   | add  | fabric | 0       |
 |    + CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5                  | 0   |        |                             |      |        |         |
-|      i_36_fu_84_p2                                                                           | -   |        | i_36                        | add  | fabric | 0       |
+|      i_37_fu_84_p2                                                                           | -   |        | i_37                        | add  | fabric | 0       |
 |    + CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4                  | 0   |        |                             |      |        |         |
 |      j_12_fu_99_p2                                                                           | -   |        | j_12                        | add  | fabric | 0       |
 |    + CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_497_8_VITIS_LOOP_498_9 | 0   |        |                             |      |        |         |
 |      add_ln497_fu_192_p2                                                                     | -   |        | add_ln497                   | add  | fabric | 0       |
-|      i_33_fu_201_p2                                                                          | -   |        | i_33                        | add  | fabric | 0       |
+|      i_34_fu_201_p2                                                                          | -   |        | i_34                        | add  | fabric | 0       |
 |      add_ln499_fu_232_p2                                                                     | -   |        | add_ln499                   | add  | fabric | 0       |
 |      add_ln501_fu_278_p2                                                                     | -   |        | add_ln501                   | add  | fabric | 0       |
 |      j_9_fu_243_p2                                                                           | -   |        | j_9                         | add  | fabric | 0       |
 |    + CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10                 | 0   |        |                             |      |        |         |
-|      i_31_fu_84_p2                                                                           | -   |        | i_31                        | add  | fabric | 0       |
+|      i_32_fu_84_p2                                                                           | -   |        | i_32                        | add  | fabric | 0       |
 |    + CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14                 | 0   |        |                             |      |        |         |
-|      i_29_fu_148_p2                                                                          | -   |        | i_29                        | add  | fabric | 0       |
+|      i_30_fu_148_p2                                                                          | -   |        | i_30                        | add  | fabric | 0       |
 |      add_ln565_fu_185_p2                                                                     | -   |        | add_ln565                   | add  | fabric | 0       |
 |    + CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16                 | 0   |        |                             |      |        |         |
 |      j_5_fu_93_p2                                                                            | -   |        | j_5                         | add  | fabric | 0       |
@@ -349,17 +346,17 @@
 |     i_9_fu_814_p2                                                                            | -   |        | i_9                         | add  | fabric | 0       |
 |     j_3_fu_852_p2                                                                            | -   |        | j_3                         | add  | fabric | 0       |
 |     sub_ln20_fu_911_p2                                                                       | -   |        | sub_ln20                    | sub  | fabric | 0       |
-|     empty_209_fu_922_p2                                                                      | -   |        | empty_209                   | sub  | fabric | 0       |
+|     empty_208_fu_922_p2                                                                      | -   |        | empty_208                   | sub  | fabric | 0       |
 |     sub_ln21_fu_932_p2                                                                       | -   |        | sub_ln21                    | sub  | fabric | 0       |
-|     empty_210_fu_943_p2                                                                      | -   |        | empty_210                   | sub  | fabric | 0       |
+|     empty_209_fu_943_p2                                                                      | -   |        | empty_209                   | sub  | fabric | 0       |
 |     bypassPreds_wrAddr_2_fu_1028_p2                                                          | -   |        | bypassPreds_wrAddr_2        | add  | fabric | 0       |
 |     k_1_fu_1044_p2                                                                           | -   |        | k_1                         | add  | fabric | 0       |
 |     mac_muladd_3ns_7ns_8s_10_4_1_U261                                                        | 1   |        | mul_ln341                   | mul  | dsp    | 3       |
 |     mac_muladd_3ns_7ns_8s_10_4_1_U261                                                        | 1   |        | add_ln341                   | add  | dsp    | 3       |
 |     sub_ln137_fu_1232_p2                                                                     | -   |        | sub_ln137                   | sub  | fabric | 0       |
-|     empty_213_fu_1244_p2                                                                     | -   |        | empty_213                   | sub  | fabric | 0       |
+|     empty_212_fu_1244_p2                                                                     | -   |        | empty_212                   | sub  | fabric | 0       |
 |     sub_ln138_fu_1258_p2                                                                     | -   |        | sub_ln138                   | sub  | fabric | 0       |
-|     empty_214_fu_1270_p2                                                                     | -   |        | empty_214                   | sub  | fabric | 0       |
+|     empty_213_fu_1270_p2                                                                     | -   |        | empty_213                   | sub  | fabric | 0       |
 |     upperLimit_2_fu_1380_p2                                                                  | -   |        | upperLimit_2                | add  | fabric | 0       |
 |     add_ln6_fu_1432_p2                                                                       | -   |        | add_ln6                     | add  | fabric | 0       |
 |    + RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1             | 0   |        |                             |      |        |         |
@@ -382,14 +379,14 @@
 |       x_2_fu_368_p2                                                                          | -   |        | x_2                         | sub  | fabric | 0       |
 |       empty_fu_394_p2                                                                        | -   |        | empty                       | add  | fabric | 0       |
 |       y_2_fu_402_p2                                                                          | -   |        | y_2                         | sub  | fabric | 0       |
-|       empty_226_fu_428_p2                                                                    | -   |        | empty_226                   | add  | fabric | 0       |
+|       empty_225_fu_428_p2                                                                    | -   |        | empty_225                   | add  | fabric | 0       |
 |       add_ln199_1_fu_467_p2                                                                  | -   |        | add_ln199_1                 | add  | fabric | 0       |
 |       add_ln199_fu_348_p2                                                                    | -   |        | add_ln199                   | add  | fabric | 0       |
 |       x_2_mid1_fu_476_p2                                                                     | -   |        | x_2_mid1                    | sub  | fabric | 0       |
 |       p_mid1_fu_481_p2                                                                       | -   |        | p_mid1                      | add  | fabric | 0       |
 |       y_2_mid1_fu_490_p2                                                                     | -   |        | y_2_mid1                    | sub  | fabric | 0       |
 |       p_mid112_fu_495_p2                                                                     | -   |        | p_mid112                    | add  | fabric | 0       |
-|       i_50_fu_563_p2                                                                         | -   |        | i_50                        | add  | fabric | 0       |
+|       i_51_fu_563_p2                                                                         | -   |        | i_51                        | add  | fabric | 0       |
 |     + BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4                                | 0   |        |                             |      |        |         |
 |       formerPC_fu_216_p2                                                                     | -   |        | formerPC                    | add  | fabric | 0       |
 |       add_ln252_fu_231_p2                                                                    | -   |        | add_ln252                   | add  | fabric | 0       |
@@ -450,29 +447,31 @@
 +--------------------------------------------------------------------------------+------+------+--------+-------------------------------------------------------+---------+------+---------+
 | Name                                                                           | BRAM | URAM | Pragma | Variable                                              | Storage | Impl | Latency |
 +--------------------------------------------------------------------------------+------+------+--------+-------------------------------------------------------+---------+------+---------+
-| + runOne                                                                       | 36   | 0    |        |                                                       |         |      |         |
+| + runOne                                                                       | 32   | 0    |        |                                                       |         |      |         |
 |   DFG_NodesCount_kernels_values_U                                              | -    | -    |        | DFG_NodesCount_kernels_values                         | rom_1p  | auto | 1       |
 |   CGRA_NumTiles_shapes_values_U                                                | -    | -    |        | CGRA_NumTiles_shapes_values                           | rom_1p  | auto | 1       |
 |   mask_table_U                                                                 | 2    | -    |        | mask_table                                            | rom_1p  | auto | 1       |
 |   predecessors_U                                                               | -    | -    |        | predecessors                                          | ram_1p  | auto | 1       |
-|   placement_dynamic_bypass_U                                                   | 8    | -    |        | placement_dynamic_bypass                              | ram_1p  | auto | 1       |
+|   placement_dynamic_bypass_U                                                   | 4    | -    |        | placement_dynamic_bypass                              | ram_1p  | auto | 1       |
 |   placement_dynamic_occupy_U                                                   | 1    | -    |        | placement_dynamic_occupy                              | ram_1p  | auto | 1       |
-|   placement_dynamic_bypass_occupy_U                                            | 2    | -    |        | placement_dynamic_bypass_occupy                       | ram_s2p | auto | 1       |
+|   placement_dynamic_bypass_occupy_U                                            | 1    | -    |        | placement_dynamic_bypass_occupy                       | ram_s2p | auto | 1       |
+|   placement_static_kernels_values_U                                            | 1    | -    |        | placement_static_kernels_values                       | rom_1p  | auto | 1       |
 |   placement_dynamic_dict_Opt2PC_keys_U                                         | -    | -    |        | placement_dynamic_dict_Opt2PC_keys                    | ram_1p  | auto | 1       |
 |   placement_dynamic_dict_Opt2PC_values_U                                       | -    | -    |        | placement_dynamic_dict_Opt2PC_values                  | ram_1p  | auto | 1       |
 |   placement_dynamic_dict_Opt2Tile_keys_U                                       | -    | -    |        | placement_dynamic_dict_Opt2Tile_keys                  | ram_1p  | auto | 1       |
 |   placement_dynamic_dict_Opt2Tile_values_U                                     | -    | -    |        | placement_dynamic_dict_Opt2Tile_values                | ram_s2p | auto | 1       |
 |   placement_done_values_U                                                      | -    | -    |        | placement_done_values                                 | ram_1p  | auto | 1       |
-|   placement_static_kernels_values_U                                            | 1    | -    |        | placement_static_kernels_values                       | rom_1p  | auto | 1       |
 |   dependency_predecessor_values_U                                              | 1    | -    |        | dependency_predecessor_values                         | ram_1p  | auto | 1       |
 |   dependency_successor_values_U                                                | 1    | -    |        | dependency_successor_values                           | ram_1p  | auto | 1       |
 |   curOptPotentialPlacement_U                                                   | -    | -    |        | curOptPotentialPlacement                              | ram_1p  | auto | 1       |
-|  + Reset                                                                       | 11   | 0    |        |                                                       |         |      |         |
-|   + Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20                         | 3    | 0    |        |                                                       |         |      |         |
+|  + Reset                                                                       | 12   | 0    |        |                                                       |         |      |         |
+|   + Reset_Pipeline_VITIS_LOOP_704_13                                           | 1    | 0    |        |                                                       |         |      |         |
+|     placement_static_kernels_values_U                                          | 1    | -    |        | placement_static_kernels_values                       | rom_1p  | auto | 1       |
+|   + Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20                         | 3    | 0    |        |                                                       |         |      |         |
 |     dependency_predecessors_kernels_values1_U                                  | 3    | -    |        | dependency_predecessors_kernels_values1               | rom_1p  | auto | 1       |
-|   + Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22                         | 7    | 0    |        |                                                       |         |      |         |
+|   + Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22                         | 7    | 0    |        |                                                       |         |      |         |
 |     dependency_successors_kernels_values1_U                                    | 7    | -    |        | dependency_successors_kernels_values1                 | rom_1p  | auto | 1       |
-|   + Reset_Pipeline_VITIS_LOOP_719_18                                           | 1    | 0    |        |                                                       |         |      |         |
+|   + Reset_Pipeline_VITIS_LOOP_710_15                                           | 1    | 0    |        |                                                       |         |      |         |
 |     placement_static_kernels_values_U                                          | 1    | -    |        | placement_static_kernels_values                       | rom_1p  | auto | 1       |
 |  + dynamic_placement_routing                                                   | 9    | 0    |        |                                                       |         |      |         |
 |    predOpt_idx_List_U                                                          | -    | -    |        | predOpt_idx_List                                      | ram_s2p | auto | 1       |

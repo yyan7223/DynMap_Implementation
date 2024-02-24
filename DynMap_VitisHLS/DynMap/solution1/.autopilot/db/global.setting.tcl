@@ -45,7 +45,7 @@ set TargetInfo xc7z035:-ffg676:-2
 set SourceFiles {sc {} c ../DynMap_4HLS.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile D:/Project/ISCA2024_DynMap/DynMap_VitisHLS/DynMap/solution1/solution1.directive
-set TBFiles {verilog {../result.golden.dat ../main.cpp} bc {../result.golden.dat ../main.cpp} sc {../result.golden.dat ../main.cpp} vhdl {../result.golden.dat ../main.cpp} c {} cas {../result.golden.dat ../main.cpp}}
+set TBFiles {verilog {../main.cpp ../result.golden.dat} bc {../main.cpp ../result.golden.dat} sc {../main.cpp ../result.golden.dat} vhdl {../main.cpp ../result.golden.dat} c {} cas {../main.cpp ../result.golden.dat}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -49,7 +49,7 @@ newFuncRoot:1 %store_ln0 = store i7 0, i7 %i
 
 <Node id="4" bw="0" op_0_bw="0">
 <![CDATA[
-newFuncRoot:2 %br_ln0 = br void %.preheader2
+newFuncRoot:2 %br_ln0 = br void %._crit_edge44.loopexit
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -64,10 +64,10 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="6" bw="7" op_0_bw="7" op_1_bw="0">
 <![CDATA[
-.preheader2:0 %i_17 = load i7 %i
+._crit_edge44.loopexit:0 %i_15 = load i7 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_17"/></StgValue>
+<StgValue><ssdm name="i_15"/></StgValue>
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
@@ -79,7 +79,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-.preheader2:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+._crit_edge44.loopexit:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -94,7 +94,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="8" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader2:2 %icmp_ln713 = icmp_eq  i7 %i_17, i7 100
+._crit_edge44.loopexit:2 %icmp_ln713 = icmp_eq  i7 %i_15, i7 100
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln713"/></StgValue>
@@ -109,7 +109,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="9" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader2:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 100, i64 100, i64 100
+._crit_edge44.loopexit:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 100, i64 100, i64 100
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -124,7 +124,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="10" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader2:4 %add_ln713 = add i7 %i_17, i7 1
+._crit_edge44.loopexit:4 %add_ln713 = add i7 %i_15, i7 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln713"/></StgValue>
@@ -139,7 +139,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="11" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-.preheader2:5 %br_ln713 = br i1 %icmp_ln713, void %.split15, void %.preheader.preheader.exitStub
+._crit_edge44.loopexit:5 %br_ln713 = br i1 %icmp_ln713, void %.split15, void %.preheader.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln713"/></StgValue>
@@ -155,10 +155,10 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="13" bw="64" op_0_bw="7">
 <![CDATA[
-.split15:0 %i_18_cast = zext i7 %i_17
+.split15:0 %i_20_cast = zext i7 %i_15
 
 ]]></Node>
-<StgValue><ssdm name="i_18_cast"/></StgValue>
+<StgValue><ssdm name="i_20_cast"/></StgValue>
 </operation>
 
 <operation id="14" st_id="1" stage="1" lat="1">
@@ -171,7 +171,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split15:1 %specloopname_ln713 = specloopname void @_ssdm_op_SpecLoopName, void @empty_60
+.split15:1 %specloopname_ln713 = specloopname void @_ssdm_op_SpecLoopName, void @empty_53
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln713"/></StgValue>
@@ -187,7 +187,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="15" bw="7" op_0_bw="5" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.split15:2 %placement_dynamic_dict_Opt2Tile_values_addr = getelementptr i5 %placement_dynamic_dict_Opt2Tile_values, i64 0, i64 %i_18_cast
+.split15:2 %placement_dynamic_dict_Opt2Tile_values_addr = getelementptr i5 %placement_dynamic_dict_Opt2Tile_values, i64 0, i64 %i_20_cast
 
 ]]></Node>
 <StgValue><ssdm name="placement_dynamic_dict_Opt2Tile_values_addr"/></StgValue>
@@ -235,7 +235,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 
 <Node id="18" bw="0" op_0_bw="0">
 <![CDATA[
-.split15:5 %br_ln0 = br void %.preheader2
+.split15:5 %br_ln0 = br void %._crit_edge44.loopexit
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -275,7 +275,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 </dataflow>
 <dataflow id="31" from="i" to="store_ln0" fromId="4" toId="5">
 </dataflow>
-<dataflow id="32" from="i" to="i_17" fromId="4" toId="7">
+<dataflow id="32" from="i" to="i_15" fromId="4" toId="7">
 </dataflow>
 <dataflow id="34" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="33" toId="8">
 </dataflow>
@@ -289,7 +289,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 </dataflow>
 <dataflow id="42" from="p_str" to="specpipeline_ln0" fromId="41" toId="8">
 </dataflow>
-<dataflow id="43" from="i_17" to="icmp_ln713" fromId="7" toId="9">
+<dataflow id="43" from="i_15" to="icmp_ln713" fromId="7" toId="9">
 </dataflow>
 <dataflow id="45" from="StgValue_44" to="icmp_ln713" fromId="44" toId="9">
 </dataflow>
@@ -301,23 +301,23 @@ newFuncRoot:2 %br_ln0 = br void %.preheader2
 </dataflow>
 <dataflow id="51" from="StgValue_48" to="empty" fromId="48" toId="10">
 </dataflow>
-<dataflow id="52" from="i_17" to="add_ln713" fromId="7" toId="11">
+<dataflow id="52" from="i_15" to="add_ln713" fromId="7" toId="11">
 </dataflow>
 <dataflow id="54" from="StgValue_53" to="add_ln713" fromId="53" toId="11">
 </dataflow>
 <dataflow id="55" from="icmp_ln713" to="br_ln713" fromId="9" toId="12">
 </dataflow>
-<dataflow id="56" from="i_17" to="i_18_cast" fromId="7" toId="13">
+<dataflow id="56" from="i_15" to="i_20_cast" fromId="7" toId="13">
 </dataflow>
 <dataflow id="58" from="_ssdm_op_SpecLoopName" to="specloopname_ln713" fromId="57" toId="14">
 </dataflow>
-<dataflow id="60" from="empty_60" to="specloopname_ln713" fromId="59" toId="14">
+<dataflow id="60" from="empty_53" to="specloopname_ln713" fromId="59" toId="14">
 </dataflow>
 <dataflow id="61" from="placement_dynamic_dict_Opt2Tile_values" to="placement_dynamic_dict_Opt2Tile_values_addr" fromId="26" toId="15">
 </dataflow>
 <dataflow id="63" from="StgValue_62" to="placement_dynamic_dict_Opt2Tile_values_addr" fromId="62" toId="15">
 </dataflow>
-<dataflow id="64" from="i_18_cast" to="placement_dynamic_dict_Opt2Tile_values_addr" fromId="13" toId="15">
+<dataflow id="64" from="i_20_cast" to="placement_dynamic_dict_Opt2Tile_values_addr" fromId="13" toId="15">
 </dataflow>
 <dataflow id="66" from="StgValue_65" to="store_ln714" fromId="65" toId="16">
 </dataflow>

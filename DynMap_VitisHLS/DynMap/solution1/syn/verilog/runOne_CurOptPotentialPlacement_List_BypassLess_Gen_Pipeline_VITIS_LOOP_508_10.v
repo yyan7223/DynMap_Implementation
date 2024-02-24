@@ -63,9 +63,9 @@ reg   [63:0] zext_ln509_reg_115;
 wire    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0;
 reg   [6:0] i_fu_34;
-wire   [6:0] i_31_fu_84_p2;
+wire   [6:0] i_32_fu_84_p2;
 wire    ap_loop_init;
-reg   [6:0] ap_sig_allocacmp_i_30;
+reg   [6:0] ap_sig_allocacmp_i_31;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -131,7 +131,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln508_fu_78_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_34 <= i_31_fu_84_p2;
+            i_fu_34 <= i_32_fu_84_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             i_fu_34 <= 7'd0;
         end
@@ -186,9 +186,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_30 = 7'd0;
+        ap_sig_allocacmp_i_31 = 7'd0;
     end else begin
-        ap_sig_allocacmp_i_30 = i_fu_34;
+        ap_sig_allocacmp_i_31 = i_fu_34;
     end
 end
 
@@ -249,13 +249,13 @@ assign curOptPotentialPlacement_address0 = zext_ln509_reg_115;
 
 assign curOptPotentialPlacement_d0 = intersection_q0;
 
-assign i_31_fu_84_p2 = (ap_sig_allocacmp_i_30 + 7'd1);
+assign i_32_fu_84_p2 = (ap_sig_allocacmp_i_31 + 7'd1);
 
-assign icmp_ln508_fu_78_p2 = ((ap_sig_allocacmp_i_30 == inc1313173_reload) ? 1'b1 : 1'b0);
+assign icmp_ln508_fu_78_p2 = ((ap_sig_allocacmp_i_31 == inc1313173_reload) ? 1'b1 : 1'b0);
 
 assign intersection_address0 = zext_ln509_fu_90_p1;
 
-assign zext_ln509_fu_90_p1 = ap_sig_allocacmp_i_30;
+assign zext_ln509_fu_90_p1 = ap_sig_allocacmp_i_31;
 
 always @ (posedge ap_clk) begin
     zext_ln509_reg_115[63:7] <= 57'b000000000000000000000000000000000000000000000000000000000;

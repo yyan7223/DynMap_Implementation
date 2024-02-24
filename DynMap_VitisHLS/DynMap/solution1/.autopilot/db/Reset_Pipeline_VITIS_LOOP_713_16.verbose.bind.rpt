@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Reset_Pipeline_VITIS_LOOP_713_16'
 ================================================================
-* Date:           Wed Jan  3 23:38:45 2024
+* Date:           Wed Jan 17 08:24:13 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -86,19 +86,19 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 2.82>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 4 'alloca' 'i' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 5 [1/1] (1.29ns)   --->   "%store_ln0 = store i7 0, i7 %i"   --->   Operation 5 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader2"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i_17 = load i7 %i" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 7 'load' 'i_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %._crit_edge44.loopexit"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i_15 = load i7 %i" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 7 'load' 'i_15' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 8 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (1.06ns)   --->   "%icmp_ln713 = icmp_eq  i7 %i_17, i7 100" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 9 'icmp' 'icmp_ln713' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (1.06ns)   --->   "%icmp_ln713 = icmp_eq  i7 %i_15, i7 100" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 9 'icmp' 'icmp_ln713' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 100, i64 100, i64 100"   --->   Operation 10 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (1.31ns)   --->   "%add_ln713 = add i7 %i_17, i7 1" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 11 'add' 'add_ln713' <Predicate = true> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (1.31ns)   --->   "%add_ln713 = add i7 %i_15, i7 1" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 11 'add' 'add_ln713' <Predicate = true> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln713 = br i1 %icmp_ln713, void %.split15, void %.preheader.preheader.exitStub" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 12 'br' 'br_ln713' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i_18_cast = zext i7 %i_17" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 13 'zext' 'i_18_cast' <Predicate = (!icmp_ln713)> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln713 = specloopname void @_ssdm_op_SpecLoopName, void @empty_60" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 14 'specloopname' 'specloopname_ln713' <Predicate = (!icmp_ln713)> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%placement_dynamic_dict_Opt2Tile_values_addr = getelementptr i5 %placement_dynamic_dict_Opt2Tile_values, i64 0, i64 %i_18_cast" [DynMap/DynMap_4HLS.cpp:714]   --->   Operation 15 'getelementptr' 'placement_dynamic_dict_Opt2Tile_values_addr' <Predicate = (!icmp_ln713)> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i_20_cast = zext i7 %i_15" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 13 'zext' 'i_20_cast' <Predicate = (!icmp_ln713)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln713 = specloopname void @_ssdm_op_SpecLoopName, void @empty_53" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 14 'specloopname' 'specloopname_ln713' <Predicate = (!icmp_ln713)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%placement_dynamic_dict_Opt2Tile_values_addr = getelementptr i5 %placement_dynamic_dict_Opt2Tile_values, i64 0, i64 %i_20_cast" [DynMap/DynMap_4HLS.cpp:714]   --->   Operation 15 'getelementptr' 'placement_dynamic_dict_Opt2Tile_values_addr' <Predicate = (!icmp_ln713)> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (1.75ns)   --->   "%store_ln714 = store i5 31, i7 %placement_dynamic_dict_Opt2Tile_values_addr" [DynMap/DynMap_4HLS.cpp:714]   --->   Operation 16 'store' 'store_ln714' <Predicate = (!icmp_ln713)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 100> <RAM>
 ST_1 : Operation 17 [1/1] (1.29ns)   --->   "%store_ln713 = store i7 %add_ln713, i7 %i" [DynMap/DynMap_4HLS.cpp:713]   --->   Operation 17 'store' 'store_ln713' <Predicate = (!icmp_ln713)> <Delay = 1.29>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader2"   --->   Operation 18 'br' 'br_ln0' <Predicate = (!icmp_ln713)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln0 = br void %._crit_edge44.loopexit"   --->   Operation 18 'br' 'br_ln0' <Predicate = (!icmp_ln713)> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 19 'ret' 'ret_ln0' <Predicate = (icmp_ln713)> <Delay = 0.00>
 
 
@@ -123,13 +123,13 @@ Port [ placement_dynamic_dict_Opt2Tile_values]:  wired=1; compound=1; hidden=0; 
 i                                           (alloca           ) [ 01]
 store_ln0                                   (store            ) [ 00]
 br_ln0                                      (br               ) [ 00]
-i_17                                        (load             ) [ 00]
+i_15                                        (load             ) [ 00]
 specpipeline_ln0                            (specpipeline     ) [ 00]
 icmp_ln713                                  (icmp             ) [ 01]
 empty                                       (speclooptripcount) [ 00]
 add_ln713                                   (add              ) [ 00]
 br_ln713                                    (br               ) [ 00]
-i_18_cast                                   (zext             ) [ 00]
+i_20_cast                                   (zext             ) [ 00]
 specloopname_ln713                          (specloopname     ) [ 00]
 placement_dynamic_dict_Opt2Tile_values_addr (getelementptr    ) [ 00]
 store_ln714                                 (store            ) [ 00]
@@ -255,7 +255,7 @@ ret_ln0                                     (ret              ) [ 00]
 <pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_60"/></StgValue>
+<StgValue><ssdm name="empty_53"/></StgValue>
 </bind>
 </comp>
 
@@ -326,14 +326,14 @@ ret_ln0                                     (ret              ) [ 00]
 </bind>
 </comp>
 
-<comp id="53" class="1004" name="i_17_load_fu_53">
+<comp id="53" class="1004" name="i_15_load_fu_53">
 <pin_list>
 <pin id="54" dir="0" index="0" bw="7" slack="0"/>
 <pin id="55" dir="1" index="1" bw="7" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="i_17/1 "/>
+<opset="i_15/1 "/>
 </bind>
 </comp>
 
@@ -361,14 +361,14 @@ ret_ln0                                     (ret              ) [ 00]
 </bind>
 </comp>
 
-<comp id="68" class="1004" name="i_18_cast_fu_68">
+<comp id="68" class="1004" name="i_20_cast_fu_68">
 <pin_list>
 <pin id="69" dir="0" index="0" bw="7" slack="0"/>
 <pin id="70" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="i_18_cast/1 "/>
+<opset="i_20_cast/1 "/>
 </bind>
 </comp>
 
@@ -443,11 +443,11 @@ ret_ln0                                     (ret              ) [ 00]
   - Chain level:
 	State 1
 		store_ln0 : 1
-		i_17 : 1
+		i_15 : 1
 		icmp_ln713 : 2
 		add_ln713 : 2
 		br_ln713 : 3
-		i_18_cast : 2
+		i_20_cast : 2
 		placement_dynamic_dict_Opt2Tile_values_addr : 3
 		store_ln714 : 4
 		store_ln713 : 3
@@ -465,7 +465,7 @@ ret_ln0                                     (ret              ) [ 00]
 |----------|------------------|---------|---------|
 |   icmp   | icmp_ln713_fu_56 |    0    |    3    |
 |----------|------------------|---------|---------|
-|   zext   |  i_18_cast_fu_68 |    0    |    0    |
+|   zext   |  i_20_cast_fu_68 |    0    |    0    |
 |----------|------------------|---------|---------|
 |   Total  |                  |    0    |    10   |
 |----------|------------------|---------|---------|

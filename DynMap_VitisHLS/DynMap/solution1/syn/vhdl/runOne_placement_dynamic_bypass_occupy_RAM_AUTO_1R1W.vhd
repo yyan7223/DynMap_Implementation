@@ -10,8 +10,8 @@ use ieee.std_logic_unsigned.all;
 entity runOne_placement_dynamic_bypass_occupy_RAM_AUTO_1R1W is 
     generic(
             DataWidth     : integer := 1; 
-            AddressWidth     : integer := 15; 
-            AddressRange    : integer := 25600
+            AddressWidth     : integer := 13; 
+            AddressRange    : integer := 5120
     ); 
     port (
           address0     : in std_logic_vector(AddressWidth-1 downto 0); 

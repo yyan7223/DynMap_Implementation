@@ -357,10 +357,10 @@ newFuncRoot:12 %br_ln0 = br void
 
 <Node id="31" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-._crit_edge78.loopexit:1 %i_33 = add i7 %i_load, i7 1
+._crit_edge78.loopexit:1 %i_34 = add i7 %i_load, i7 1
 
 ]]></Node>
-<StgValue><ssdm name="i_33"/></StgValue>
+<StgValue><ssdm name="i_34"/></StgValue>
 </operation>
 
 <operation id="28" st_id="1" stage="1" lat="1">
@@ -389,7 +389,7 @@ newFuncRoot:12 %br_ln0 = br void
 
 <Node id="35" bw="7" op_0_bw="1" op_1_bw="7" op_2_bw="7">
 <![CDATA[
-._crit_edge78.loopexit:5 %select_ln508_1 = select i1 %icmp_ln498, i7 %i_load, i7 %i_33
+._crit_edge78.loopexit:5 %select_ln508_1 = select i1 %icmp_ln498, i7 %i_load, i7 %i_34
 
 ]]></Node>
 <StgValue><ssdm name="select_ln508_1"/></StgValue>
@@ -755,7 +755,7 @@ newFuncRoot:12 %br_ln0 = br void
 
 <Node id="40" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-._crit_edge78.loopexit:10 %specloopname_ln498 = specloopname void @_ssdm_op_SpecLoopName, void @empty_32
+._crit_edge78.loopexit:10 %specloopname_ln498 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln498"/></StgValue>

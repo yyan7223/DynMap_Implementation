@@ -23,8 +23,8 @@ set C_modelArgList {
 	{ bypassTgtTile int 4 regular {pointer 0} {global 0}  }
 	{ shape_idx int 5 regular {pointer 0} {global 0}  }
 	{ idx_pd int 4 regular {pointer 2} {global 2}  }
-	{ placement_dynamic_bypass_occupy int 1 regular {array 25600 { 2 1 } 1 1 } {global 2}  }
-	{ placement_dynamic_bypass int 8 regular {array 12800 { 2 3 } 1 1 } {global 2}  }
+	{ placement_dynamic_bypass_occupy int 1 regular {array 5120 { 2 1 } 1 1 } {global 2}  }
+	{ placement_dynamic_bypass int 8 regular {array 6400 { 2 3 } 1 1 } {global 2}  }
 	{ bypassOpt_wrAddr int 8 regular {pointer 2} {global 2}  }
 	{ placement_dynamic_dict_Opt2Tile_keys int 8 regular {array 100 { 0 3 } 0 1 } {global 1}  }
 	{ placement_dynamic_dict_Opt2Tile_values int 5 regular {array 100 { 0 3 } 0 1 } {global 1}  }
@@ -84,15 +84,15 @@ set portList {
 	{ idx_pd_i sc_in sc_lv 4 signal 10 } 
 	{ idx_pd_o sc_out sc_lv 4 signal 10 } 
 	{ idx_pd_o_ap_vld sc_out sc_logic 1 outvld 10 } 
-	{ placement_dynamic_bypass_occupy_address0 sc_out sc_lv 15 signal 11 } 
+	{ placement_dynamic_bypass_occupy_address0 sc_out sc_lv 13 signal 11 } 
 	{ placement_dynamic_bypass_occupy_ce0 sc_out sc_logic 1 signal 11 } 
 	{ placement_dynamic_bypass_occupy_we0 sc_out sc_logic 1 signal 11 } 
 	{ placement_dynamic_bypass_occupy_d0 sc_out sc_lv 1 signal 11 } 
 	{ placement_dynamic_bypass_occupy_q0 sc_in sc_lv 1 signal 11 } 
-	{ placement_dynamic_bypass_occupy_address1 sc_out sc_lv 15 signal 11 } 
+	{ placement_dynamic_bypass_occupy_address1 sc_out sc_lv 13 signal 11 } 
 	{ placement_dynamic_bypass_occupy_ce1 sc_out sc_logic 1 signal 11 } 
 	{ placement_dynamic_bypass_occupy_q1 sc_in sc_lv 1 signal 11 } 
-	{ placement_dynamic_bypass_address0 sc_out sc_lv 14 signal 12 } 
+	{ placement_dynamic_bypass_address0 sc_out sc_lv 13 signal 12 } 
 	{ placement_dynamic_bypass_ce0 sc_out sc_logic 1 signal 12 } 
 	{ placement_dynamic_bypass_we0 sc_out sc_logic 1 signal 12 } 
 	{ placement_dynamic_bypass_d0 sc_out sc_lv 8 signal 12 } 
@@ -147,15 +147,15 @@ set NewPortList {[
  	{ "name": "idx_pd_i", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "idx_pd", "role": "i" }} , 
  	{ "name": "idx_pd_o", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "idx_pd", "role": "o" }} , 
  	{ "name": "idx_pd_o_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "idx_pd", "role": "o_ap_vld" }} , 
- 	{ "name": "placement_dynamic_bypass_occupy_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address0" }} , 
+ 	{ "name": "placement_dynamic_bypass_occupy_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "ce0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "we0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "d0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "q0" }} , 
- 	{ "name": "placement_dynamic_bypass_occupy_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address1" }} , 
+ 	{ "name": "placement_dynamic_bypass_occupy_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address1" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "ce1" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "q1" }} , 
- 	{ "name": "placement_dynamic_bypass_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "address0" }} , 
+ 	{ "name": "placement_dynamic_bypass_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "address0" }} , 
  	{ "name": "placement_dynamic_bypass_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "ce0" }} , 
  	{ "name": "placement_dynamic_bypass_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "we0" }} , 
  	{ "name": "placement_dynamic_bypass_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "d0" }} , 
@@ -444,8 +444,8 @@ set Spec2ImplPortList {
 	bypassTgtTile { ap_none {  { bypassTgtTile in_data 0 4 } } }
 	shape_idx { ap_none {  { shape_idx in_data 0 5 } } }
 	idx_pd { ap_ovld {  { idx_pd_i in_data 0 4 }  { idx_pd_o out_data 1 4 }  { idx_pd_o_ap_vld out_vld 1 1 } } }
-	placement_dynamic_bypass_occupy { ap_memory {  { placement_dynamic_bypass_occupy_address0 mem_address 1 15 }  { placement_dynamic_bypass_occupy_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_occupy_we0 mem_we 1 1 }  { placement_dynamic_bypass_occupy_d0 mem_din 1 1 }  { placement_dynamic_bypass_occupy_q0 mem_dout 0 1 }  { placement_dynamic_bypass_occupy_address1 MemPortADDR2 1 15 }  { placement_dynamic_bypass_occupy_ce1 MemPortCE2 1 1 }  { placement_dynamic_bypass_occupy_q1 MemPortDOUT2 0 1 } } }
-	placement_dynamic_bypass { ap_memory {  { placement_dynamic_bypass_address0 mem_address 1 14 }  { placement_dynamic_bypass_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_we0 mem_we 1 1 }  { placement_dynamic_bypass_d0 mem_din 1 8 }  { placement_dynamic_bypass_q0 mem_dout 0 8 } } }
+	placement_dynamic_bypass_occupy { ap_memory {  { placement_dynamic_bypass_occupy_address0 mem_address 1 13 }  { placement_dynamic_bypass_occupy_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_occupy_we0 mem_we 1 1 }  { placement_dynamic_bypass_occupy_d0 mem_din 1 1 }  { placement_dynamic_bypass_occupy_q0 mem_dout 0 1 }  { placement_dynamic_bypass_occupy_address1 MemPortADDR2 1 13 }  { placement_dynamic_bypass_occupy_ce1 MemPortCE2 1 1 }  { placement_dynamic_bypass_occupy_q1 MemPortDOUT2 0 1 } } }
+	placement_dynamic_bypass { ap_memory {  { placement_dynamic_bypass_address0 mem_address 1 13 }  { placement_dynamic_bypass_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_we0 mem_we 1 1 }  { placement_dynamic_bypass_d0 mem_din 1 8 }  { placement_dynamic_bypass_q0 mem_dout 0 8 } } }
 	bypassOpt_wrAddr { ap_ovld {  { bypassOpt_wrAddr_i in_data 0 8 }  { bypassOpt_wrAddr_o out_data 1 8 }  { bypassOpt_wrAddr_o_ap_vld out_vld 1 1 } } }
 	placement_dynamic_dict_Opt2Tile_keys { ap_memory {  { placement_dynamic_dict_Opt2Tile_keys_address0 mem_address 1 7 }  { placement_dynamic_dict_Opt2Tile_keys_ce0 mem_ce 1 1 }  { placement_dynamic_dict_Opt2Tile_keys_we0 mem_we 1 1 }  { placement_dynamic_dict_Opt2Tile_keys_d0 mem_din 1 8 } } }
 	placement_dynamic_dict_Opt2Tile_values { ap_memory {  { placement_dynamic_dict_Opt2Tile_values_address0 mem_address 1 7 }  { placement_dynamic_dict_Opt2Tile_values_ce0 mem_ce 1 1 }  { placement_dynamic_dict_Opt2Tile_values_we0 mem_we 1 1 }  { placement_dynamic_dict_Opt2Tile_values_d0 mem_din 1 5 } } }

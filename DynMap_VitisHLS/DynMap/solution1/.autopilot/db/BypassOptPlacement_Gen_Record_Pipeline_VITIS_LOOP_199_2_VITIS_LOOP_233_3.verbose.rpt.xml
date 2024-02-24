@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3'" level="0">
-<item name = "Date">Wed Jan  3 23:38:59 2024
+<item name = "Date">Wed Jan 17 08:24:27 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -84,9 +84,9 @@
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
 <column name="add_ln199_1_fu_467_p2">+, 0, 0, 6, 6, 1</column>
 <column name="add_ln199_fu_348_p2">+, 0, 0, 3, 2, 1</column>
-<column name="empty_226_fu_428_p2">+, 0, 0, 3, 2, 2</column>
+<column name="empty_225_fu_428_p2">+, 0, 0, 3, 2, 2</column>
 <column name="empty_fu_394_p2">+, 0, 0, 3, 2, 2</column>
-<column name="i_50_fu_563_p2">+, 0, 0, 6, 4, 1</column>
+<column name="i_51_fu_563_p2">+, 0, 0, 6, 4, 1</column>
 <column name="p_mid112_fu_495_p2">+, 0, 0, 3, 2, 2</column>
 <column name="p_mid1_fu_481_p2">+, 0, 0, 3, 2, 2</column>
 <column name="x_2_fu_368_p2">-, 0, 0, 3, 2, 2</column>
@@ -96,9 +96,9 @@
 <column name="icmp_ln199_fu_318_p2">icmp, 0, 0, 3, 6, 6</column>
 <column name="icmp_ln233_fu_323_p2">icmp, 0, 0, 2, 4, 4</column>
 <column name="icmp_ln234_fu_558_p2">icmp, 0, 0, 2, 4, 4</column>
-<column name="empty_227_fu_433_p3">select, 0, 0, 2, 1, 2</column>
-<column name="empty_228_fu_446_p3">select, 0, 0, 2, 1, 2</column>
-<column name="empty_229_fu_513_p3">select, 0, 0, 2, 1, 2</column>
+<column name="empty_226_fu_433_p3">select, 0, 0, 2, 1, 2</column>
+<column name="empty_227_fu_446_p3">select, 0, 0, 2, 1, 2</column>
+<column name="empty_228_fu_513_p3">select, 0, 0, 2, 1, 2</column>
 <column name="p_mid114_fu_500_p3">select, 0, 0, 2, 1, 2</column>
 <column name="select_ln197_1_fu_407_p3">select, 0, 0, 2, 1, 2</column>
 <column name="select_ln197_fu_373_p3">select, 0, 0, 2, 1, 2</column>
@@ -124,7 +124,7 @@
 <column name="ap_return">9, 2, 1, 2</column>
 <column name="bpsStride_0_address0">13, 3, 2, 6</column>
 <column name="bpsStride_1_address0">13, 3, 2, 6</column>
-<column name="i_48_fu_90">9, 2, 4, 8</column>
+<column name="i_49_fu_90">9, 2, 4, 8</column>
 <column name="i_50_out">13, 3, 4, 12</column>
 <column name="i_fu_102">9, 2, 2, 4</column>
 <column name="indvar_flatten_fu_106">9, 2, 6, 12</column>
@@ -139,9 +139,9 @@
 <column name="allocated_tiles_shapes_values_load_reg_762">4, 0, 4, 0</column>
 <column name="ap_CS_fsm">7, 0, 7, 0</column>
 <column name="ap_return_preg">1, 0, 1, 0</column>
-<column name="i_48_fu_90">4, 0, 4, 0</column>
-<column name="i_48_load_1_reg_712">4, 0, 4, 0</column>
-<column name="i_49_reg_687">2, 0, 2, 0</column>
+<column name="i_49_fu_90">4, 0, 4, 0</column>
+<column name="i_49_load_1_reg_712">4, 0, 4, 0</column>
+<column name="i_50_reg_687">2, 0, 2, 0</column>
 <column name="i_fu_102">2, 0, 2, 0</column>
 <column name="icmp_ln199_reg_708">1, 0, 1, 0</column>
 <column name="icmp_ln233_reg_717">1, 0, 1, 0</column>

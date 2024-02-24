@@ -153,10 +153,10 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="12" bw="5" op_0_bw="5" op_1_bw="0">
 <![CDATA[
-:0 %i_24 = load i5 %i
+:0 %i_25 = load i5 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_24"/></StgValue>
+<StgValue><ssdm name="i_25"/></StgValue>
 </operation>
 
 <operation id="13" st_id="2" stage="1" lat="1">
@@ -183,7 +183,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="14" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-:2 %icmp_ln61 = icmp_ult  i5 %i_24, i5 20
+:2 %icmp_ln61 = icmp_ult  i5 %i_25, i5 20
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln61"/></StgValue>
@@ -213,7 +213,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="16" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-:4 %add_ln61 = add i5 %i_24, i5 1
+:4 %add_ln61 = add i5 %i_25, i5 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln61"/></StgValue>
@@ -244,7 +244,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="19" bw="11" op_0_bw="5">
 <![CDATA[
-.split39:0 %zext_ln62 = zext i5 %i_24
+.split39:0 %zext_ln62 = zext i5 %i_25
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln62"/></StgValue>
@@ -327,7 +327,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split39:4 %specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_62
+.split39:4 %specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_56
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln60"/></StgValue>

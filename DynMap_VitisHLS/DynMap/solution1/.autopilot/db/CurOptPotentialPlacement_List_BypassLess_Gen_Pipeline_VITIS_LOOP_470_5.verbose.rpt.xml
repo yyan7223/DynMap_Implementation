@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5'" level="0">
-<item name = "Date">Wed Jan  3 23:38:58 2024
+<item name = "Date">Wed Jan 17 08:24:25 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -78,7 +78,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="i_36_fu_84_p2">+, 0, 0, 7, 7, 1</column>
+<column name="i_37_fu_84_p2">+, 0, 0, 7, 7, 1</column>
 <column name="icmp_ln470_fu_78_p2">icmp, 0, 0, 3, 7, 7</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
@@ -87,8 +87,8 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_i_35">9, 2, 7, 14</column>
-<column name="i_34_fu_34">9, 2, 7, 14</column>
+<column name="ap_sig_allocacmp_i_36">9, 2, 7, 14</column>
+<column name="i_35_fu_34">9, 2, 7, 14</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -96,7 +96,7 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="i_34_fu_34">7, 0, 7, 0</column>
+<column name="i_35_fu_34">7, 0, 7, 0</column>
 <column name="zext_ln471_reg_115">7, 0, 64, 57</column>
 </table>
 </item>

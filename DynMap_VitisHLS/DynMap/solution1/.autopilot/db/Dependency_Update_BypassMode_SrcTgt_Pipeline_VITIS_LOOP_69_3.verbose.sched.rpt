@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3'
 ================================================================
-* Date:           Wed Jan  3 23:38:50 2024
+* Date:           Wed Jan 17 08:24:18 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -94,20 +94,20 @@ ST_1 : Operation 8 [1/1] (1.29ns)   --->   "%store_ln0 = store i4 0, i4 %i"   --
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 9 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 4.18>
-ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%i_23 = load i4 %i" [DynMap/DynMap_4HLS.cpp:69]   --->   Operation 10 'load' 'i_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%i_24 = load i4 %i" [DynMap/DynMap_4HLS.cpp:69]   --->   Operation 10 'load' 'i_24' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 11 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 12 [1/1] (0.96ns)   --->   "%icmp_ln69 = icmp_ult  i4 %i_23, i4 10" [DynMap/DynMap_4HLS.cpp:69]   --->   Operation 12 'icmp' 'icmp_ln69' <Predicate = true> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (0.96ns)   --->   "%icmp_ln69 = icmp_ult  i4 %i_24, i4 10" [DynMap/DynMap_4HLS.cpp:69]   --->   Operation 12 'icmp' 'icmp_ln69' <Predicate = true> <Delay = 0.96> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 10, i64 5"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 14 [1/1] (0.99ns)   --->   "%add_ln69 = add i4 %i_23, i4 1" [DynMap/DynMap_4HLS.cpp:69]   --->   Operation 14 'add' 'add_ln69' <Predicate = true> <Delay = 0.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.99ns)   --->   "%add_ln69 = add i4 %i_24, i4 1" [DynMap/DynMap_4HLS.cpp:69]   --->   Operation 14 'add' 'add_ln69' <Predicate = true> <Delay = 0.99> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln69 = br i1 %icmp_ln69, void %.loopexit22.loopexit.exitStub, void %.split37" [DynMap/DynMap_4HLS.cpp:69]   --->   Operation 15 'br' 'br_ln69' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln70 = zext i4 %i_23" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 16 'zext' 'zext_ln70' <Predicate = (icmp_ln69)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln70 = zext i4 %i_24" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 16 'zext' 'zext_ln70' <Predicate = (icmp_ln69)> <Delay = 0.00>
 ST_2 : Operation 17 [1/1] (1.41ns)   --->   "%add_ln70_1 = add i10 %add_ln70_read, i10 %zext_ln70" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 17 'add' 'add_ln70_1' <Predicate = (icmp_ln69)> <Delay = 1.41> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln70_1 = zext i10 %add_ln70_1" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 18 'zext' 'zext_ln70_1' <Predicate = (icmp_ln69)> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%dependency_predecessor_values_addr = getelementptr i8 %dependency_predecessor_values, i64 0, i64 %zext_ln70_1" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 19 'getelementptr' 'dependency_predecessor_values_addr' <Predicate = (icmp_ln69)> <Delay = 0.00>
 ST_2 : Operation 20 [2/2] (2.77ns)   --->   "%dependency_predecessor_values_load = load i10 %dependency_predecessor_values_addr" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 20 'load' 'dependency_predecessor_values_load' <Predicate = (icmp_ln69)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
 
 State 3 <SV = 2> <Delay = 5.38>
-ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty" [DynMap/DynMap_4HLS.cpp:60]   --->   Operation 21 'specloopname' 'specloopname_ln60' <Predicate = (icmp_ln69)> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_52" [DynMap/DynMap_4HLS.cpp:60]   --->   Operation 21 'specloopname' 'specloopname_ln60' <Predicate = (icmp_ln69)> <Delay = 0.00>
 ST_3 : Operation 22 [1/2] (2.77ns)   --->   "%dependency_predecessor_values_load = load i10 %dependency_predecessor_values_addr" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 22 'load' 'dependency_predecessor_values_load' <Predicate = (icmp_ln69)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1000> <RAM>
 ST_3 : Operation 23 [1/1] (1.31ns)   --->   "%icmp_ln70 = icmp_eq  i8 %dependency_predecessor_values_load, i8 255" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 23 'icmp' 'icmp_ln70' <Predicate = (icmp_ln69)> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln70 = br i1 %icmp_ln70, void, void %.exitStub" [DynMap/DynMap_4HLS.cpp:70]   --->   Operation 24 'br' 'br_ln70' <Predicate = (icmp_ln69)> <Delay = 0.00>

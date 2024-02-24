@@ -34,9 +34,9 @@ output   ap_idle;
 output   ap_ready;
 input  [7:0] idxprom190;
 input  [3:0] tileId;
-output  [13:0] tmp_73_out;
+output  [12:0] tmp_73_out;
 output   tmp_73_out_ap_vld;
-output  [13:0] placement_dynamic_bypass_address0;
+output  [12:0] placement_dynamic_bypass_address0;
 output   placement_dynamic_bypass_ce0;
 input  [7:0] placement_dynamic_bypass_q0;
 
@@ -64,8 +64,8 @@ wire  signed [59:0] idxprom190_cast_fu_74_p1;
 reg  signed [59:0] idxprom190_cast_reg_143;
 reg   [63:0] phi_mul_load_reg_148;
 wire    ap_block_pp0_stage1_11001;
-wire   [9:0] trunc_ln257_1_fu_95_p1;
-reg   [9:0] trunc_ln257_1_reg_153;
+wire   [8:0] trunc_ln257_1_fu_95_p1;
+reg   [8:0] trunc_ln257_1_reg_153;
 reg    ap_enable_reg_pp0_iter0_reg;
 wire   [63:0] tmp_s_fu_99_p3;
 wire    ap_block_pp0_stage1;
@@ -313,7 +313,7 @@ assign tmp_73_out = {{trunc_ln257_1_reg_153}, {tileId}};
 
 assign tmp_s_fu_99_p3 = {{add_ln257_fu_90_p2}, {tileId}};
 
-assign trunc_ln257_1_fu_95_p1 = add_ln257_fu_90_p2[9:0];
+assign trunc_ln257_1_fu_95_p1 = add_ln257_fu_90_p2[8:0];
 
 assign trunc_ln257_fu_86_p1 = phi_mul_fu_38[59:0];
 

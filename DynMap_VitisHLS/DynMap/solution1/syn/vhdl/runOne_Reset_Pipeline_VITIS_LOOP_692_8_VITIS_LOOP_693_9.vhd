@@ -61,9 +61,9 @@ attribute shreg_extract : string;
     signal i_13_fu_50 : STD_LOGIC_VECTOR (6 downto 0);
     signal select_ln692_1_fu_128_p3 : STD_LOGIC_VECTOR (6 downto 0);
     signal ap_sig_allocacmp_i_13_load : STD_LOGIC_VECTOR (6 downto 0);
-    signal indvar_flatten23_fu_54 : STD_LOGIC_VECTOR (10 downto 0);
+    signal indvar_flatten24_fu_54 : STD_LOGIC_VECTOR (10 downto 0);
     signal add_ln692_1_fu_96_p2 : STD_LOGIC_VECTOR (10 downto 0);
-    signal ap_sig_allocacmp_indvar_flatten23_load : STD_LOGIC_VECTOR (10 downto 0);
+    signal ap_sig_allocacmp_indvar_flatten24_load : STD_LOGIC_VECTOR (10 downto 0);
     signal icmp_ln693_fu_114_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal add_ln692_fu_108_p2 : STD_LOGIC_VECTOR (6 downto 0);
     signal select_ln692_fu_120_p3 : STD_LOGIC_VECTOR (4 downto 0);
@@ -157,14 +157,14 @@ begin
         end if;
     end process;
 
-    indvar_flatten23_fu_54_assign_proc : process (ap_clk)
+    indvar_flatten24_fu_54_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start_int = ap_const_logic_1))) then
                 if ((icmp_ln692_fu_90_p2 = ap_const_lv1_0)) then 
-                    indvar_flatten23_fu_54 <= add_ln692_1_fu_96_p2;
+                    indvar_flatten24_fu_54 <= add_ln692_1_fu_96_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    indvar_flatten23_fu_54 <= ap_const_lv11_0;
+                    indvar_flatten24_fu_54 <= ap_const_lv11_0;
                 end if;
             end if; 
         end if;
@@ -192,7 +192,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    add_ln692_1_fu_96_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_indvar_flatten23_load) + unsigned(ap_const_lv11_1));
+    add_ln692_1_fu_96_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_indvar_flatten24_load) + unsigned(ap_const_lv11_1));
     add_ln692_fu_108_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_i_13_load) + unsigned(ap_const_lv7_1));
     add_ln693_fu_159_p2 <= std_logic_vector(unsigned(select_ln692_fu_120_p3) + unsigned(ap_const_lv5_1));
     add_ln694_fu_148_p2 <= std_logic_vector(unsigned(tmp_s_fu_136_p3) + unsigned(zext_ln694_fu_144_p1));
@@ -265,12 +265,12 @@ begin
     end process;
 
 
-    ap_sig_allocacmp_indvar_flatten23_load_assign_proc : process(ap_CS_fsm_state1, ap_loop_init, indvar_flatten23_fu_54)
+    ap_sig_allocacmp_indvar_flatten24_load_assign_proc : process(ap_CS_fsm_state1, ap_loop_init, indvar_flatten24_fu_54)
     begin
         if (((ap_loop_init = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            ap_sig_allocacmp_indvar_flatten23_load <= ap_const_lv11_0;
+            ap_sig_allocacmp_indvar_flatten24_load <= ap_const_lv11_0;
         else 
-            ap_sig_allocacmp_indvar_flatten23_load <= indvar_flatten23_fu_54;
+            ap_sig_allocacmp_indvar_flatten24_load <= indvar_flatten24_fu_54;
         end if; 
     end process;
 
@@ -284,7 +284,7 @@ begin
         end if; 
     end process;
 
-    icmp_ln692_fu_90_p2 <= "1" when (ap_sig_allocacmp_indvar_flatten23_load = ap_const_lv11_640) else "0";
+    icmp_ln692_fu_90_p2 <= "1" when (ap_sig_allocacmp_indvar_flatten24_load = ap_const_lv11_640) else "0";
     icmp_ln693_fu_114_p2 <= "1" when (ap_sig_allocacmp_j_load = ap_const_lv5_10) else "0";
     placement_dynamic_occupy_address0 <= zext_ln694_1_fu_154_p1(11 - 1 downto 0);
 

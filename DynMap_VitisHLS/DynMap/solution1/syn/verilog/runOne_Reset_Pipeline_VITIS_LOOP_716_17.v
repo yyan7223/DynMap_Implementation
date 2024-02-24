@@ -44,11 +44,11 @@ wire   [0:0] icmp_ln716_fu_56_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] i_19_cast_fu_68_p1;
+wire   [63:0] i_21_cast_fu_68_p1;
 reg   [6:0] i_fu_30;
 wire   [6:0] add_ln716_fu_62_p2;
 wire    ap_loop_init;
-reg   [6:0] ap_sig_allocacmp_i_16;
+reg   [6:0] ap_sig_allocacmp_i_14;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -150,9 +150,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_sig_allocacmp_i_16 = 7'd0;
+        ap_sig_allocacmp_i_14 = 7'd0;
     end else begin
-        ap_sig_allocacmp_i_16 = i_fu_30;
+        ap_sig_allocacmp_i_14 = i_fu_30;
     end
 end
 
@@ -183,7 +183,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln716_fu_62_p2 = (ap_sig_allocacmp_i_16 + 7'd1);
+assign add_ln716_fu_62_p2 = (ap_sig_allocacmp_i_14 + 7'd1);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -193,11 +193,11 @@ end
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign i_19_cast_fu_68_p1 = ap_sig_allocacmp_i_16;
+assign i_21_cast_fu_68_p1 = ap_sig_allocacmp_i_14;
 
-assign icmp_ln716_fu_56_p2 = ((ap_sig_allocacmp_i_16 == 7'd100) ? 1'b1 : 1'b0);
+assign icmp_ln716_fu_56_p2 = ((ap_sig_allocacmp_i_14 == 7'd100) ? 1'b1 : 1'b0);
 
-assign placement_done_values_address0 = i_19_cast_fu_68_p1;
+assign placement_done_values_address0 = i_21_cast_fu_68_p1;
 
 assign placement_done_values_d0 = 1'd0;
 

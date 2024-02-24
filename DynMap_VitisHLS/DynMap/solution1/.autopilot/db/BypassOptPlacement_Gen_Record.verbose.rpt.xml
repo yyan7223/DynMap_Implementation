@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'BypassOptPlacement_Gen_Record'" level="0">
-<item name = "Date">Wed Jan  3 23:39:00 2024
+<item name = "Date">Wed Jan 17 08:24:27 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -53,10 +53,10 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 130, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">1, -, 589, 787, -</column>
+<column name="Instance">1, -, 578, 781, -</column>
 <column name="Memory">1, -, 12, 4, -</column>
 <column name="Multiplexer">-, -, -, 264, -</column>
-<column name="Register">-, -, 169, -, -</column>
+<column name="Register">-, -, 162, -, -</column>
 <specialColumn name="Available">1000, 900, 343800, 171900, 0</specialColumn>
 <specialColumn name="Utilization (%)">~0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -67,8 +67,8 @@
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1_fu_365">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1, 0, 0, 27, 61, 0</column>
 <column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3, 1, 0, 71, 234, 0</column>
-<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, 0, 0, 288, 304, 0</column>
-<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, 0, 0, 203, 188, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, 0, 0, 278, 298, 0</column>
+<column name="grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420">BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, 0, 0, 202, 188, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -146,9 +146,9 @@
 <column name="bypassOptIdx_o">9, 2, 8, 16</column>
 <column name="bypassOpt_wrAddr_o">9, 2, 8, 16</column>
 <column name="idx_pd_o">9, 2, 4, 8</column>
-<column name="placement_dynamic_bypass_address0">13, 3, 14, 42</column>
+<column name="placement_dynamic_bypass_address0">13, 3, 13, 39</column>
 <column name="placement_dynamic_bypass_ce0">13, 3, 1, 3</column>
-<column name="placement_dynamic_bypass_occupy_address0">17, 4, 15, 60</column>
+<column name="placement_dynamic_bypass_occupy_address0">17, 4, 13, 52</column>
 <column name="placement_dynamic_bypass_occupy_ce0">13, 3, 1, 3</column>
 <column name="placement_dynamic_bypass_occupy_ce1">9, 2, 1, 2</column>
 <column name="placement_dynamic_dict_Opt2PC_keys_address0">13, 3, 7, 21</column>
@@ -164,7 +164,7 @@
 <column name="Tile2XY_0_load_reg_996">2, 0, 2, 0</column>
 <column name="Tile2XY_1_load_reg_1006">2, 0, 2, 0</column>
 <column name="add_ln192_reg_1052">8, 0, 8, 0</column>
-<column name="add_ln252_loc_fu_118">15, 0, 15, 0</column>
+<column name="add_ln252_loc_fu_118">13, 0, 13, 0</column>
 <column name="and_ln149_1_reg_1105">1, 0, 1, 0</column>
 <column name="and_ln149_4_reg_1117">1, 0, 1, 0</column>
 <column name="and_ln149_reg_1099">1, 0, 1, 0</column>
@@ -192,9 +192,9 @@
 <column name="targetBlock_reg_1036">1, 0, 1, 0</column>
 <column name="tileId_reg_1082">4, 0, 4, 0</column>
 <column name="tmp_37_reg_1111">1, 0, 1, 0</column>
-<column name="tmp_71_loc_fu_114">15, 0, 15, 0</column>
-<column name="tmp_71_reload_cast_reg_1146">15, 0, 64, 49</column>
-<column name="tmp_73_loc_fu_110">14, 0, 14, 0</column>
+<column name="tmp_71_loc_fu_114">13, 0, 13, 0</column>
+<column name="tmp_71_reload_cast_reg_1146">13, 0, 64, 51</column>
+<column name="tmp_73_loc_fu_110">13, 0, 13, 0</column>
 <column name="upperLimit_reg_1060">8, 0, 8, 0</column>
 <column name="xDiff_28_reg_344">2, 0, 2, 0</column>
 <column name="xDiff_2_loc_fu_130">2, 0, 2, 0</column>
@@ -244,15 +244,15 @@
 <column name="idx_pd_i">in, 4, ap_ovld, idx_pd, pointer</column>
 <column name="idx_pd_o">out, 4, ap_ovld, idx_pd, pointer</column>
 <column name="idx_pd_o_ap_vld">out, 1, ap_ovld, idx_pd, pointer</column>
-<column name="placement_dynamic_bypass_occupy_address0">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address0">out, 13, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_ce0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_we0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_d0">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_q0">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
-<column name="placement_dynamic_bypass_occupy_address1">out, 15, ap_memory, placement_dynamic_bypass_occupy, array</column>
+<column name="placement_dynamic_bypass_occupy_address1">out, 13, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_ce1">out, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
 <column name="placement_dynamic_bypass_occupy_q1">in, 1, ap_memory, placement_dynamic_bypass_occupy, array</column>
-<column name="placement_dynamic_bypass_address0">out, 14, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_address0">out, 13, ap_memory, placement_dynamic_bypass, array</column>
 <column name="placement_dynamic_bypass_ce0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
 <column name="placement_dynamic_bypass_we0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
 <column name="placement_dynamic_bypass_d0">out, 8, ap_memory, placement_dynamic_bypass, array</column>

@@ -1,5 +1,5 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DynMap/DynMap_4HLS.cpp:778:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="DynMap/DynMap_4HLS.cpp:776:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="runOne" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=runOne" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/include/header_files\ap_int_base.h:1128:30" msg_body="Inlining function 'ap_bit_ref&lt;64, false&gt;::ap_bit_ref(ap_int_base&lt;64, false&gt;*, int)' into 'ap_int_base&lt;64, false&gt;::operator[](int)'">
@@ -587,13 +587,13 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="r:/builds/2021.2/rdi_builds/continuous/2021_10_19_3367213/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:53:0" msg_body="Inlining function 'signed char generic_cast_IEEE754&lt;signed char, double&gt;(double, bool)' into '__hls_fptosi_double_i8'">
         <args Callee="signed char generic_cast_IEEE754&lt;signed char, double&gt;(double, bool)" Caller="__hls_fptosi_double_i8"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:750:0" msg_body="Inlining function 'ceil' into 'calculate_startII()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:748:0" msg_body="Inlining function 'ceil' into 'calculate_startII()'">
         <args Callee="ceil" Caller="calculate_startII()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:750:0" msg_body="Inlining function '__hls_fptosi_double_i8' into 'calculate_startII()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:748:0" msg_body="Inlining function '__hls_fptosi_double_i8' into 'calculate_startII()'">
         <args Callee="__hls_fptosi_double_i8" Caller="calculate_startII()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:750:0" msg_body="Inlining function 'char const&amp; std::max&lt;char&gt;(char const&amp;, char const&amp;)' into 'calculate_startII()'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:748:0" msg_body="Inlining function 'char const&amp; std::max&lt;char&gt;(char const&amp;, char const&amp;)' into 'calculate_startII()'">
         <args Callee="char const&amp; std::max&lt;char&gt;(char const&amp;, char const&amp;)" Caller="calculate_startII()"/>
     </msg>
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:184:0" msg_body="Inlining function 'Bypass_XbarIn_Direction(char, char)' into 'BypassOptPlacement_Gen_Record()'">
@@ -629,10 +629,10 @@
     <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:594:0" msg_body="Inlining function 'CurOptPotentialPlacement_List_LevelInfo_Gen()' into 'dynamic_placement_routing()'">
         <args Callee="CurOptPotentialPlacement_List_LevelInfo_Gen()" Caller="dynamic_placement_routing()"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:777:0" msg_body="Inlining function 'kernel_shape_idx_generator(char, char)' into 'runOne(char)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:775:0" msg_body="Inlining function 'kernel_shape_idx_generator(char, char)' into 'runOne(char)'">
         <args Callee="kernel_shape_idx_generator(char, char)" Caller="runOne(char)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:777:0" msg_body="Inlining function 'calculate_startII()' into 'runOne(char)'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="DynMap/DynMap_4HLS.cpp:775:0" msg_body="Inlining function 'calculate_startII()' into 'runOne(char)'">
         <args Callee="calculate_startII()" Caller="runOne(char)"/>
     </msg>
 </xilinx:hls_fe_msgs>

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12'
 ================================================================
-* Date:           Wed Jan  3 23:38:55 2024
+* Date:           Wed Jan 17 08:24:23 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -20,29 +20,29 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.399 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  6.278 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    25602|    25602|  0.256 ms|  0.256 ms|  25602|  25602|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     5122|     5122|  51.220 us|  51.220 us|  5122|  5122|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +---------------------------------------------------------+---------+---------+----------+-----------+-----------+-------+----------+
-        |                                                         |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
-        |                        Loop Name                        |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
-        +---------------------------------------------------------+---------+---------+----------+-----------+-----------+-------+----------+
-        |- VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12  |    25600|    25600|         2|          1|          1|  25600|       yes|
-        +---------------------------------------------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        +---------------------------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                                         |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |                        Loop Name                        |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12  |     5120|     5120|         2|          1|          1|  5120|       yes|
+        +---------------------------------------------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+-----+--------+--------+-----+
 |DSP              |        -|    -|       -|       -|    -|
-|Expression       |        -|    -|       0|     124|    -|
+|Expression       |        -|    -|       0|     115|    -|
 |FIFO             |        -|    -|       -|       -|    -|
 |Instance         |        -|    -|       -|       -|    -|
 |Memory           |        -|    -|       -|       -|    -|
 |Multiplexer      |        -|    -|       -|      72|    -|
-|Register         |        -|    -|      62|       -|    -|
+|Register         |        -|    -|      56|       -|    -|
 +-----------------+---------+-----+--------+--------+-----+
-|Total            |        0|    0|      62|     196|    0|
+|Total            |        0|    0|      56|     187|    0|
 +-----------------+---------+-----+--------+--------+-----+
 |Available        |     1000|  900|  343800|  171900|    0|
 +-----------------+---------+-----+--------+--------+-----+
@@ -85,27 +85,27 @@
     +--------------------------+----------+----+---+----+------------+------------+
     |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------+----------+----+---+----+------------+------------+
-    |add_ln697_1_fu_126_p2     |         +|   0|  0|  15|          15|           1|
-    |add_ln697_fu_144_p2       |         +|   0|  0|   7|           7|           1|
-    |add_ln698_1_fu_242_p2     |         +|   0|  0|  10|          10|           1|
-    |add_ln698_fu_198_p2       |         +|   0|  0|   7|           5|           1|
-    |add_ln699_fu_236_p2       |         +|   0|  0|   7|           5|           1|
-    |add_ln700_1_fu_291_p2     |         +|   0|  0|  15|          15|          15|
-    |add_ln700_fu_230_p2       |         +|   0|  0|  11|          11|          11|
-    |and_ln697_fu_192_p2       |       and|   0|  0|   1|           1|           1|
-    |icmp_ln697_fu_120_p2      |      icmp|   0|  0|   6|          15|          14|
-    |icmp_ln698_fu_150_p2      |      icmp|   0|  0|   5|          10|           9|
-    |icmp_ln699_fu_186_p2      |      icmp|   0|  0|   3|           5|           6|
-    |or_ln698_fu_204_p2        |        or|   0|  0|   1|           1|           1|
-    |select_ln697_1_fu_164_p3  |    select|   0|  0|   7|           1|           7|
-    |select_ln697_fu_156_p3    |    select|   0|  0|   5|           1|           1|
-    |select_ln698_1_fu_218_p3  |    select|   0|  0|   5|           1|           5|
-    |select_ln698_2_fu_248_p3  |    select|   0|  0|  10|           1|           1|
-    |select_ln698_fu_210_p3    |    select|   0|  0|   5|           1|           1|
+    |add_ln697_1_fu_122_p2     |         +|   0|  0|  13|          13|           1|
+    |add_ln697_fu_140_p2       |         +|   0|  0|   7|           5|           1|
+    |add_ln698_1_fu_238_p2     |         +|   0|  0|  10|          10|           1|
+    |add_ln698_fu_194_p2       |         +|   0|  0|   7|           5|           1|
+    |add_ln699_fu_232_p2       |         +|   0|  0|   7|           5|           1|
+    |add_ln700_1_fu_287_p2     |         +|   0|  0|  13|          13|          13|
+    |add_ln700_fu_226_p2       |         +|   0|  0|   9|           9|           9|
+    |and_ln697_fu_188_p2       |       and|   0|  0|   1|           1|           1|
+    |icmp_ln697_fu_116_p2      |      icmp|   0|  0|   5|          13|          13|
+    |icmp_ln698_fu_146_p2      |      icmp|   0|  0|   5|          10|           9|
+    |icmp_ln699_fu_182_p2      |      icmp|   0|  0|   3|           5|           6|
+    |or_ln698_fu_200_p2        |        or|   0|  0|   1|           1|           1|
+    |select_ln697_1_fu_160_p3  |    select|   0|  0|   5|           1|           5|
+    |select_ln697_fu_152_p3    |    select|   0|  0|   5|           1|           1|
+    |select_ln698_1_fu_214_p3  |    select|   0|  0|   5|           1|           5|
+    |select_ln698_2_fu_244_p3  |    select|   0|  0|  10|           1|           1|
+    |select_ln698_fu_206_p3    |    select|   0|  0|   5|           1|           1|
     |ap_enable_pp0             |       xor|   0|  0|   2|           1|           2|
-    |xor_ln697_fu_180_p2       |       xor|   0|  0|   2|           1|           2|
+    |xor_ln697_fu_176_p2       |       xor|   0|  0|   2|           1|           2|
     +--------------------------+----------+----+---+----+------------+------------+
-    |Total                     |          |   0|  0| 124|         107|          81|
+    |Total                     |          |   0|  0| 115|          97|          74|
     +--------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -115,32 +115,32 @@
     |ap_done_int              |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
-    |i_14_fu_70               |   9|          2|    7|         14|
-    |indvar_flatten31_fu_66   |   9|          2|   10|         20|
-    |indvar_flatten45_fu_74   |   9|          2|   15|         30|
-    |j_fu_62                  |   9|          2|    5|         10|
-    |k_fu_58                  |   9|          2|    5|         10|
+    |i_14_fu_66               |   9|          2|    5|         10|
+    |indvar_flatten32_fu_62   |   9|          2|   10|         20|
+    |indvar_flatten46_fu_70   |   9|          2|   13|         26|
+    |j_fu_58                  |   9|          2|    5|         10|
+    |k_fu_54                  |   9|          2|    5|         10|
     +-------------------------+----+-----------+-----+-----------+
-    |Total                    |  72|         16|   45|         90|
+    |Total                    |  72|         16|   41|         82|
     +-------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +-------------------------+----+----+-----+-----------+
     |           Name          | FF | LUT| Bits| Const Bits|
     +-------------------------+----+----+-----+-----------+
-    |add_ln700_reg_345        |  11|   0|   11|          0|
+    |add_ln700_reg_341        |   9|   0|    9|          0|
     |ap_CS_fsm                |   1|   0|    1|          0|
     |ap_done_reg              |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter2  |   1|   0|    1|          0|
-    |i_14_fu_70               |   7|   0|    7|          0|
-    |indvar_flatten31_fu_66   |  10|   0|   10|          0|
-    |indvar_flatten45_fu_74   |  15|   0|   15|          0|
-    |j_fu_62                  |   5|   0|    5|          0|
-    |k_fu_58                  |   5|   0|    5|          0|
-    |select_ln698_reg_340     |   5|   0|    5|          0|
+    |i_14_fu_66               |   5|   0|    5|          0|
+    |indvar_flatten32_fu_62   |  10|   0|   10|          0|
+    |indvar_flatten46_fu_70   |  13|   0|   13|          0|
+    |j_fu_58                  |   5|   0|    5|          0|
+    |k_fu_54                  |   5|   0|    5|          0|
+    |select_ln698_reg_336     |   5|   0|    5|          0|
     +-------------------------+----+----+-----+-----------+
-    |Total                    |  62|   0|   62|          0|
+    |Total                    |  56|   0|   56|          0|
     +-------------------------+----+----+-----+-----------+
 
 
@@ -158,7 +158,7 @@
 |ap_done                                   |  out|    1|  ap_ctrl_hs|  Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12|  return value|
 |ap_idle                                   |  out|    1|  ap_ctrl_hs|  Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12|  return value|
 |ap_ready                                  |  out|    1|  ap_ctrl_hs|  Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12|  return value|
-|placement_dynamic_bypass_occupy_address0  |  out|   15|   ap_memory|                                       placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_address0  |  out|   13|   ap_memory|                                       placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_ce0       |  out|    1|   ap_memory|                                       placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_we0       |  out|    1|   ap_memory|                                       placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_d0        |  out|    1|   ap_memory|                                       placement_dynamic_bypass_occupy|         array|

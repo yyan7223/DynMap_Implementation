@@ -77,7 +77,7 @@ initial begin
 #0 ap_CS_fsm = 5'd1;
 end
 
-runOne_Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R #(
+runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R #(
     .DataWidth( 6 ),
     .AddressRange( 600 ),
     .AddressWidth( 10 ))

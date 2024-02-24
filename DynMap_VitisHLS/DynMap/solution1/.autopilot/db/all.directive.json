@@ -1,6 +1,7 @@
 {"sourceFile": [{
       "name": "",
-      "directive": [{
+      "directive": [
+        {
           "functionName": "runOne",
           "label": "",
           "functionLabel": "",
@@ -11,5 +12,18 @@
                 "value": "runOne"
               }]
           }
-        }]
+        },
+        {
+          "functionName": "runOne",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "runOne"
+              }]
+          }
+        }
+      ]
     }]}

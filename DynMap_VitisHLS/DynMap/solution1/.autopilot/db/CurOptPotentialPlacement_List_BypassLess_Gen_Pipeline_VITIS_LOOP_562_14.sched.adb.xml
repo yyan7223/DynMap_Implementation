@@ -190,10 +190,10 @@ newFuncRoot:10 %br_ln0 = br void
 
 <Node id="21" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-:0 %i_28 = load i4 %i
+:0 %i_29 = load i4 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_28"/></StgValue>
+<StgValue><ssdm name="i_29"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -235,7 +235,7 @@ newFuncRoot:10 %br_ln0 = br void
 
 <Node id="24" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:3 %icmp_ln562 = icmp_eq  i4 %i_28, i4 %CGRA_NumTiles_shapes_values_load_1_read
+:3 %icmp_ln562 = icmp_eq  i4 %i_29, i4 %CGRA_NumTiles_shapes_values_load_1_read
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln562"/></StgValue>
@@ -250,10 +250,10 @@ newFuncRoot:10 %br_ln0 = br void
 
 <Node id="25" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:4 %i_29 = add i4 %i_28, i4 1
+:4 %i_30 = add i4 %i_29, i4 1
 
 ]]></Node>
-<StgValue><ssdm name="i_29"/></StgValue>
+<StgValue><ssdm name="i_30"/></StgValue>
 </operation>
 
 <operation id="21" st_id="1" stage="1" lat="1">
@@ -281,7 +281,7 @@ newFuncRoot:10 %br_ln0 = br void
 
 <Node id="29" bw="9" op_0_bw="9" op_1_bw="5" op_2_bw="4">
 <![CDATA[
-.split24:1 %tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %shape_idx_load_read, i4 %i_28
+.split24:1 %tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %shape_idx_load_read, i4 %i_29
 
 ]]></Node>
 <StgValue><ssdm name="tmp_s"/></StgValue>
@@ -345,7 +345,7 @@ newFuncRoot:10 %br_ln0 = br void
 
 <Node id="44" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-.split24._crit_edge:0 %store_ln562 = store i4 %i_29, i4 %i
+.split24._crit_edge:0 %store_ln562 = store i4 %i_30, i4 %i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln562"/></StgValue>
@@ -427,7 +427,7 @@ newFuncRoot:10 %br_ln0 = br void
 
 <Node id="28" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split24:0 %specloopname_ln562 = specloopname void @_ssdm_op_SpecLoopName, void @empty_30
+.split24:0 %specloopname_ln562 = specloopname void @_ssdm_op_SpecLoopName, void @empty_32
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln562"/></StgValue>

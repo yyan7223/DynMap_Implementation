@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_480_7'
 ================================================================
-* Date:           Wed Jan  3 23:38:58 2024
+* Date:           Wed Jan 17 08:24:25 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -202,7 +202,7 @@ ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%curOptPotentialPlacement_addr = ge
 ST_1 : Operation 18 [2/2] (1.75ns)   --->   "%curOptPotentialPlacement_load = load i4 %curOptPotentialPlacement_addr" [DynMap/DynMap_4HLS.cpp:481]   --->   Operation 18 'load' 'curOptPotentialPlacement_load' <Predicate = (icmp_ln480)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 16> <RAM>
 
 State 2 <SV = 1> <Delay = 4.03>
-ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln478 = specloopname void @_ssdm_op_SpecLoopName, void @empty_12" [DynMap/DynMap_4HLS.cpp:478]   --->   Operation 19 'specloopname' 'specloopname_ln478' <Predicate = (icmp_ln480)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specloopname_ln478 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [DynMap/DynMap_4HLS.cpp:478]   --->   Operation 19 'specloopname' 'specloopname_ln478' <Predicate = (icmp_ln480)> <Delay = 0.00>
 ST_2 : Operation 20 [1/2] (1.75ns)   --->   "%curOptPotentialPlacement_load = load i4 %curOptPotentialPlacement_addr" [DynMap/DynMap_4HLS.cpp:481]   --->   Operation 20 'load' 'curOptPotentialPlacement_load' <Predicate = (icmp_ln480)> <Delay = 1.75> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 16> <RAM>
 ST_2 : Operation 21 [1/1] (0.97ns)   --->   "%icmp_ln481 = icmp_eq  i5 %zext_ln480_cast, i5 %curOptPotentialPlacement_load" [DynMap/DynMap_4HLS.cpp:481]   --->   Operation 21 'icmp' 'icmp_ln481' <Predicate = (icmp_ln480)> <Delay = 0.97> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 22 [1/1] (1.29ns)   --->   "%br_ln481 = br i1 %icmp_ln481, void, void %.critedge.loopexit.exitStub" [DynMap/DynMap_4HLS.cpp:481]   --->   Operation 22 'br' 'br_ln481' <Predicate = (icmp_ln480)> <Delay = 1.29>
@@ -390,7 +390,7 @@ ret_ln0                       (ret          ) [ 000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_12"/></StgValue>
+<StgValue><ssdm name="empty_16"/></StgValue>
 </bind>
 </comp>
 

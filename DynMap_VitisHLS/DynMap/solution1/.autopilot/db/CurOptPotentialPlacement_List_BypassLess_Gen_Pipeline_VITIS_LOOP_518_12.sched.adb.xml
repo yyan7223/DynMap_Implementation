@@ -227,7 +227,7 @@ newFuncRoot:4 %br_ln0 = br void %.lr.ph46
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split9:0 %specloopname_ln516 = specloopname void @_ssdm_op_SpecLoopName, void @empty_25
+.split9:0 %specloopname_ln516 = specloopname void @_ssdm_op_SpecLoopName, void @empty_27
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln516"/></StgValue>

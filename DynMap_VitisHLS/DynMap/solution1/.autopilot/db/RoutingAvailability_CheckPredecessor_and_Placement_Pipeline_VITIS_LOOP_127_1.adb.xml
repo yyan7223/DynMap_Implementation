@@ -264,7 +264,7 @@ newFuncRoot:3 %br_ln0 = br void
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split16:0 %specloopname_ln128 = specloopname void @_ssdm_op_SpecLoopName, void @empty_3
+.split16:0 %specloopname_ln128 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln128"/></StgValue>
@@ -556,7 +556,7 @@ UnifiedReturnBlock:1 %ret_ln0 = ret i1 %UnifiedRetVal
 </dataflow>
 <dataflow id="90" from="_ssdm_op_SpecLoopName" to="specloopname_ln128" fromId="89" toId="19">
 </dataflow>
-<dataflow id="92" from="empty_3" to="specloopname_ln128" fromId="91" toId="19">
+<dataflow id="92" from="empty_6" to="specloopname_ln128" fromId="91" toId="19">
 </dataflow>
 <dataflow id="93" from="placement_dynamic_dict_Opt2Tile_keys_addr" to="placement_dynamic_dict_Opt2Tile_keys_load" fromId="17" toId="20">
 </dataflow>

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5'" level="0">
-<item name = "Date">Wed Jan  3 23:39:00 2024
+<item name = "Date">Wed Jan 17 08:24:27 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -53,7 +53,7 @@
 <column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 58, -</column>
-<column name="Register">-, -, 203, -, -</column>
+<column name="Register">-, -, 202, -, -</column>
 <specialColumn name="Available">1000, 900, 343800, 171900, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -103,7 +103,7 @@
 <column name="idxprom190_cast_reg_143">60, 0, 60, 0</column>
 <column name="phi_mul_fu_38">64, 0, 64, 0</column>
 <column name="phi_mul_load_reg_148">64, 0, 64, 0</column>
-<column name="trunc_ln257_1_reg_153">10, 0, 10, 0</column>
+<column name="trunc_ln257_1_reg_153">9, 0, 9, 0</column>
 </table>
 </item>
 </section>
@@ -121,9 +121,9 @@
 <column name="ap_ready">out, 1, ap_ctrl_hs, BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, return value</column>
 <column name="idxprom190">in, 8, ap_none, idxprom190, scalar</column>
 <column name="tileId">in, 4, ap_none, tileId, scalar</column>
-<column name="tmp_73_out">out, 14, ap_vld, tmp_73_out, pointer</column>
+<column name="tmp_73_out">out, 13, ap_vld, tmp_73_out, pointer</column>
 <column name="tmp_73_out_ap_vld">out, 1, ap_vld, tmp_73_out, pointer</column>
-<column name="placement_dynamic_bypass_address0">out, 14, ap_memory, placement_dynamic_bypass, array</column>
+<column name="placement_dynamic_bypass_address0">out, 13, ap_memory, placement_dynamic_bypass, array</column>
 <column name="placement_dynamic_bypass_ce0">out, 1, ap_memory, placement_dynamic_bypass, array</column>
 <column name="placement_dynamic_bypass_q0">in, 8, ap_memory, placement_dynamic_bypass, array</column>
 </table>

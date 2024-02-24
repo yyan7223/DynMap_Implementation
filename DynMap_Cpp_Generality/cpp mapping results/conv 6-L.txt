@@ -1,0 +1,19 @@
+fneg14, PC=0, Tile=1
+catchpad15, PC=1, Tile=1
+ret16, PC=2, Tile=0
+fcmp0, PC=3, Tile=0
+fmul2, PC=5, Tile=3
+fdiv3, PC=6, Tile=3
+trunc4, PC=6, Tile=2
+trunc5, PC=7, Tile=2
+store6, PC=10, Tile=1
+store9, PC=11, Tile=1
+inttoptr7, PC=12, Tile=0
+inttoptr10, PC=13, Tile=0
+alloca8, PC=15, Tile=3
+alloca11, PC=16, Tile=3
+fsub12, PC=17, Tile=2
+fneg13, PC=18, Tile=5
+fcmp1, PC=19, Tile=4
+Achieved DynamicPlacement_II is 4
+threshold is 2

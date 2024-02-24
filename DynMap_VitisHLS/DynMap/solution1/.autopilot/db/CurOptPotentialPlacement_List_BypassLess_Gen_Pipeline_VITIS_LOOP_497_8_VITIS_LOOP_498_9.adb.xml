@@ -357,10 +357,10 @@ newFuncRoot:12 %br_ln0 = br void
 
 <Node id="31" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-._crit_edge78.loopexit:1 %i_33 = add i7 %i_load, i7 1
+._crit_edge78.loopexit:1 %i_34 = add i7 %i_load, i7 1
 
 ]]></Node>
-<StgValue><ssdm name="i_33"/></StgValue>
+<StgValue><ssdm name="i_34"/></StgValue>
 </operation>
 
 <operation id="28" st_id="1" stage="1" lat="1">
@@ -389,7 +389,7 @@ newFuncRoot:12 %br_ln0 = br void
 
 <Node id="35" bw="7" op_0_bw="1" op_1_bw="7" op_2_bw="7">
 <![CDATA[
-._crit_edge78.loopexit:5 %select_ln508_1 = select i1 %icmp_ln498, i7 %i_load, i7 %i_33
+._crit_edge78.loopexit:5 %select_ln508_1 = select i1 %icmp_ln498, i7 %i_load, i7 %i_34
 
 ]]></Node>
 <StgValue><ssdm name="select_ln508_1"/></StgValue>
@@ -755,7 +755,7 @@ newFuncRoot:12 %br_ln0 = br void
 
 <Node id="40" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-._crit_edge78.loopexit:10 %specloopname_ln498 = specloopname void @_ssdm_op_SpecLoopName, void @empty_32
+._crit_edge78.loopexit:10 %specloopname_ln498 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln498"/></StgValue>
@@ -1034,9 +1034,9 @@ newFuncRoot:12 %br_ln0 = br void
 </dataflow>
 <dataflow id="126" from="i" to="i_load" fromId="6" toId="26">
 </dataflow>
-<dataflow id="127" from="i_load" to="i_33" fromId="26" toId="27">
+<dataflow id="127" from="i_load" to="i_34" fromId="26" toId="27">
 </dataflow>
-<dataflow id="129" from="StgValue_128" to="i_33" fromId="128" toId="27">
+<dataflow id="129" from="StgValue_128" to="i_34" fromId="128" toId="27">
 </dataflow>
 <dataflow id="130" from="icmp_ln498" to="select_ln508" fromId="22" toId="28">
 </dataflow>
@@ -1048,7 +1048,7 @@ newFuncRoot:12 %br_ln0 = br void
 </dataflow>
 <dataflow id="134" from="i_load" to="select_ln508_1" fromId="26" toId="29">
 </dataflow>
-<dataflow id="135" from="i_33" to="select_ln508_1" fromId="27" toId="29">
+<dataflow id="135" from="i_34" to="select_ln508_1" fromId="27" toId="29">
 </dataflow>
 <dataflow id="136" from="select_ln508_1" to="zext_ln508" fromId="29" toId="30">
 </dataflow>
@@ -1120,7 +1120,7 @@ newFuncRoot:12 %br_ln0 = br void
 </dataflow>
 <dataflow id="176" from="_ssdm_op_SpecLoopName" to="specloopname_ln498" fromId="159" toId="47">
 </dataflow>
-<dataflow id="178" from="empty_32" to="specloopname_ln498" fromId="177" toId="47">
+<dataflow id="178" from="empty_34" to="specloopname_ln498" fromId="177" toId="47">
 </dataflow>
 <dataflow id="179" from="potentialPlacement_AllPreds_addr_1" to="potentialPlacement_AllPreds_load_1" fromId="36" toId="48">
 </dataflow>

@@ -153,10 +153,10 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="12" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-:0 %i_20 = load i4 %i
+:0 %i_21 = load i4 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_20"/></StgValue>
+<StgValue><ssdm name="i_21"/></StgValue>
 </operation>
 
 <operation id="13" st_id="2" stage="1" lat="1">
@@ -183,7 +183,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="14" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:2 %icmp_ln94 = icmp_ult  i4 %i_20, i4 10
+:2 %icmp_ln94 = icmp_ult  i4 %i_21, i4 10
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln94"/></StgValue>
@@ -213,7 +213,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="16" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-:4 %add_ln94 = add i4 %i_20, i4 1
+:4 %add_ln94 = add i4 %i_21, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln94"/></StgValue>
@@ -244,7 +244,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="19" bw="10" op_0_bw="4">
 <![CDATA[
-.split31:0 %zext_ln95 = zext i4 %i_20
+.split31:0 %zext_ln95 = zext i4 %i_21
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln95"/></StgValue>
@@ -327,7 +327,7 @@ newFuncRoot:5 %br_ln0 = br void
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split31:4 %specloopname_ln93 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+.split31:4 %specloopname_ln93 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln93"/></StgValue>
@@ -535,7 +535,7 @@ UnifiedReturnBlock:1 %ret_ln0 = ret i1 %UnifiedRetVal
 </dataflow>
 <dataflow id="61" from="i" to="store_ln0" fromId="6" toId="10">
 </dataflow>
-<dataflow id="62" from="i" to="i_20" fromId="6" toId="12">
+<dataflow id="62" from="i" to="i_21" fromId="6" toId="12">
 </dataflow>
 <dataflow id="64" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="63" toId="13">
 </dataflow>
@@ -549,7 +549,7 @@ UnifiedReturnBlock:1 %ret_ln0 = ret i1 %UnifiedRetVal
 </dataflow>
 <dataflow id="72" from="p_str" to="specpipeline_ln0" fromId="71" toId="13">
 </dataflow>
-<dataflow id="73" from="i_20" to="icmp_ln94" fromId="12" toId="14">
+<dataflow id="73" from="i_21" to="icmp_ln94" fromId="12" toId="14">
 </dataflow>
 <dataflow id="75" from="StgValue_74" to="icmp_ln94" fromId="74" toId="14">
 </dataflow>
@@ -561,13 +561,13 @@ UnifiedReturnBlock:1 %ret_ln0 = ret i1 %UnifiedRetVal
 </dataflow>
 <dataflow id="83" from="StgValue_82" to="empty" fromId="82" toId="15">
 </dataflow>
-<dataflow id="84" from="i_20" to="add_ln94" fromId="12" toId="16">
+<dataflow id="84" from="i_21" to="add_ln94" fromId="12" toId="16">
 </dataflow>
 <dataflow id="86" from="StgValue_85" to="add_ln94" fromId="85" toId="16">
 </dataflow>
 <dataflow id="87" from="icmp_ln94" to="br_ln94" fromId="14" toId="17">
 </dataflow>
-<dataflow id="88" from="i_20" to="zext_ln95" fromId="12" toId="18">
+<dataflow id="88" from="i_21" to="zext_ln95" fromId="12" toId="18">
 </dataflow>
 <dataflow id="89" from="add_ln95_read" to="add_ln95_1" fromId="8" toId="19">
 </dataflow>
@@ -585,7 +585,7 @@ UnifiedReturnBlock:1 %ret_ln0 = ret i1 %UnifiedRetVal
 </dataflow>
 <dataflow id="98" from="_ssdm_op_SpecLoopName" to="specloopname_ln93" fromId="97" toId="23">
 </dataflow>
-<dataflow id="100" from="empty_16" to="specloopname_ln93" fromId="99" toId="23">
+<dataflow id="100" from="empty_19" to="specloopname_ln93" fromId="99" toId="23">
 </dataflow>
 <dataflow id="101" from="dependency_predecessor_values_addr" to="dependency_predecessor_values_load" fromId="21" toId="24">
 </dataflow>

@@ -20,9 +20,9 @@ set C_modelArgList {
 	{ sub182 int 4 regular  }
 	{ upperLimit int 8 regular  }
 	{ p_out int 8 regular {pointer 1}  }
-	{ add_ln252_out int 15 regular {pointer 1}  }
-	{ tmp_71_out int 15 regular {pointer 1}  }
-	{ placement_dynamic_bypass_occupy int 1 regular {array 25600 { 1 1 } 1 1 } {global 0}  }
+	{ add_ln252_out int 13 regular {pointer 1}  }
+	{ tmp_71_out int 13 regular {pointer 1}  }
+	{ placement_dynamic_bypass_occupy int 1 regular {array 5120 { 1 1 } 1 1 } {global 0}  }
 	{ IDX_pd_bypass int 8 regular {pointer 2} {global 2}  }
 }
 set C_modelArgMapList {[ 
@@ -34,8 +34,8 @@ set C_modelArgMapList {[
  	{ "Name" : "sub182", "interface" : "wire", "bitwidth" : 4, "direction" : "READONLY"} , 
  	{ "Name" : "upperLimit", "interface" : "wire", "bitwidth" : 8, "direction" : "READONLY"} , 
  	{ "Name" : "p_out", "interface" : "wire", "bitwidth" : 8, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "add_ln252_out", "interface" : "wire", "bitwidth" : 15, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "tmp_71_out", "interface" : "wire", "bitwidth" : 15, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "add_ln252_out", "interface" : "wire", "bitwidth" : 13, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "tmp_71_out", "interface" : "wire", "bitwidth" : 13, "direction" : "WRITEONLY"} , 
  	{ "Name" : "placement_dynamic_bypass_occupy", "interface" : "memory", "bitwidth" : 1, "direction" : "READONLY", "extern" : 0} , 
  	{ "Name" : "IDX_pd_bypass", "interface" : "wire", "bitwidth" : 8, "direction" : "READWRITE", "extern" : 0} , 
  	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 1} ]}
@@ -57,14 +57,14 @@ set portList {
 	{ upperLimit sc_in sc_lv 8 signal 6 } 
 	{ p_out sc_out sc_lv 8 signal 7 } 
 	{ p_out_ap_vld sc_out sc_logic 1 outvld 7 } 
-	{ add_ln252_out sc_out sc_lv 15 signal 8 } 
+	{ add_ln252_out sc_out sc_lv 13 signal 8 } 
 	{ add_ln252_out_ap_vld sc_out sc_logic 1 outvld 8 } 
-	{ tmp_71_out sc_out sc_lv 15 signal 9 } 
+	{ tmp_71_out sc_out sc_lv 13 signal 9 } 
 	{ tmp_71_out_ap_vld sc_out sc_logic 1 outvld 9 } 
-	{ placement_dynamic_bypass_occupy_address0 sc_out sc_lv 15 signal 10 } 
+	{ placement_dynamic_bypass_occupy_address0 sc_out sc_lv 13 signal 10 } 
 	{ placement_dynamic_bypass_occupy_ce0 sc_out sc_logic 1 signal 10 } 
 	{ placement_dynamic_bypass_occupy_q0 sc_in sc_lv 1 signal 10 } 
-	{ placement_dynamic_bypass_occupy_address1 sc_out sc_lv 15 signal 10 } 
+	{ placement_dynamic_bypass_occupy_address1 sc_out sc_lv 13 signal 10 } 
 	{ placement_dynamic_bypass_occupy_ce1 sc_out sc_logic 1 signal 10 } 
 	{ placement_dynamic_bypass_occupy_q1 sc_in sc_lv 1 signal 10 } 
 	{ IDX_pd_bypass_i sc_in sc_lv 8 signal 11 } 
@@ -88,14 +88,14 @@ set NewPortList {[
  	{ "name": "upperLimit", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "upperLimit", "role": "default" }} , 
  	{ "name": "p_out", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "p_out", "role": "default" }} , 
  	{ "name": "p_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "p_out", "role": "ap_vld" }} , 
- 	{ "name": "add_ln252_out", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "add_ln252_out", "role": "default" }} , 
+ 	{ "name": "add_ln252_out", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "add_ln252_out", "role": "default" }} , 
  	{ "name": "add_ln252_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "add_ln252_out", "role": "ap_vld" }} , 
- 	{ "name": "tmp_71_out", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "tmp_71_out", "role": "default" }} , 
+ 	{ "name": "tmp_71_out", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "tmp_71_out", "role": "default" }} , 
  	{ "name": "tmp_71_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "tmp_71_out", "role": "ap_vld" }} , 
- 	{ "name": "placement_dynamic_bypass_occupy_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address0" }} , 
+ 	{ "name": "placement_dynamic_bypass_occupy_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "ce0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "q0" }} , 
- 	{ "name": "placement_dynamic_bypass_occupy_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address1" }} , 
+ 	{ "name": "placement_dynamic_bypass_occupy_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address1" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "ce1" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "q1" }} , 
  	{ "name": "IDX_pd_bypass_i", "direction": "in", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "IDX_pd_bypass", "role": "i" }} , 
@@ -171,8 +171,8 @@ set Spec2ImplPortList {
 	sub182 { ap_none {  { sub182 in_data 0 4 } } }
 	upperLimit { ap_none {  { upperLimit in_data 0 8 } } }
 	p_out { ap_vld {  { p_out out_data 1 8 }  { p_out_ap_vld out_vld 1 1 } } }
-	add_ln252_out { ap_vld {  { add_ln252_out out_data 1 15 }  { add_ln252_out_ap_vld out_vld 1 1 } } }
-	tmp_71_out { ap_vld {  { tmp_71_out out_data 1 15 }  { tmp_71_out_ap_vld out_vld 1 1 } } }
-	placement_dynamic_bypass_occupy { ap_memory {  { placement_dynamic_bypass_occupy_address0 mem_address 1 15 }  { placement_dynamic_bypass_occupy_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_occupy_q0 in_data 0 1 }  { placement_dynamic_bypass_occupy_address1 MemPortADDR2 1 15 }  { placement_dynamic_bypass_occupy_ce1 MemPortCE2 1 1 }  { placement_dynamic_bypass_occupy_q1 in_data 0 1 } } }
+	add_ln252_out { ap_vld {  { add_ln252_out out_data 1 13 }  { add_ln252_out_ap_vld out_vld 1 1 } } }
+	tmp_71_out { ap_vld {  { tmp_71_out out_data 1 13 }  { tmp_71_out_ap_vld out_vld 1 1 } } }
+	placement_dynamic_bypass_occupy { ap_memory {  { placement_dynamic_bypass_occupy_address0 mem_address 1 13 }  { placement_dynamic_bypass_occupy_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_occupy_q0 in_data 0 1 }  { placement_dynamic_bypass_occupy_address1 MemPortADDR2 1 13 }  { placement_dynamic_bypass_occupy_ce1 MemPortCE2 1 1 }  { placement_dynamic_bypass_occupy_q1 in_data 0 1 } } }
 	IDX_pd_bypass { ap_ovld {  { IDX_pd_bypass_i in_data 0 8 }  { IDX_pd_bypass_o out_data 1 8 }  { IDX_pd_bypass_o_ap_vld out_vld 1 1 } } }
 }

@@ -19,10 +19,10 @@
 
 <Node id="2" bw="7" op_0_bw="32">
 <![CDATA[
-newFuncRoot:0 %i_16 = alloca i32 1
+newFuncRoot:0 %i_17 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="i_16"/></StgValue>
+<StgValue><ssdm name="i_17"/></StgValue>
 </operation>
 
 <operation id="5" st_id="1" stage="1" lat="1">
@@ -34,7 +34,7 @@ newFuncRoot:0 %i_16 = alloca i32 1
 
 <Node id="3" bw="0" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-newFuncRoot:1 %store_ln0 = store i7 0, i7 %i_16
+newFuncRoot:1 %store_ln0 = store i7 0, i7 %i_17
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -49,7 +49,7 @@ newFuncRoot:1 %store_ln0 = store i7 0, i7 %i_16
 
 <Node id="4" bw="0" op_0_bw="0">
 <![CDATA[
-newFuncRoot:2 %br_ln0 = br void %.preheader4
+newFuncRoot:2 %br_ln0 = br void %._crit_edge50.loopexit
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -64,7 +64,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="6" bw="7" op_0_bw="7" op_1_bw="0">
 <![CDATA[
-.preheader4:0 %i = load i7 %i_16
+._crit_edge50.loopexit:0 %i = load i7 %i_17
 
 ]]></Node>
 <StgValue><ssdm name="i"/></StgValue>
@@ -79,7 +79,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="7" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-.preheader4:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+._crit_edge50.loopexit:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -94,7 +94,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="8" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader4:2 %icmp_ln707 = icmp_eq  i7 %i, i7 100
+._crit_edge50.loopexit:2 %icmp_ln707 = icmp_eq  i7 %i, i7 100
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln707"/></StgValue>
@@ -109,7 +109,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="9" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader4:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 100, i64 100, i64 100
+._crit_edge50.loopexit:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 100, i64 100, i64 100
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -124,7 +124,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="10" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader4:4 %add_ln707 = add i7 %i, i7 1
+._crit_edge50.loopexit:4 %add_ln707 = add i7 %i, i7 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln707"/></StgValue>
@@ -139,7 +139,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="11" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-.preheader4:5 %br_ln707 = br i1 %icmp_ln707, void %.split19, void %.preheader3.preheader.exitStub
+._crit_edge50.loopexit:5 %br_ln707 = br i1 %icmp_ln707, void %.split20, void %.lr.ph43.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln707"/></StgValue>
@@ -155,10 +155,10 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="13" bw="64" op_0_bw="7">
 <![CDATA[
-.split19:0 %i_16_cast = zext i7 %i
+.split20:0 %i_17_cast = zext i7 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_16_cast"/></StgValue>
+<StgValue><ssdm name="i_17_cast"/></StgValue>
 </operation>
 
 <operation id="14" st_id="1" stage="1" lat="1">
@@ -171,7 +171,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split19:1 %specloopname_ln707 = specloopname void @_ssdm_op_SpecLoopName, void @empty_46
+.split20:1 %specloopname_ln707 = specloopname void @_ssdm_op_SpecLoopName, void @empty_26
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln707"/></StgValue>
@@ -187,7 +187,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="15" bw="7" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.split19:2 %placement_dynamic_dict_Opt2PC_values_addr = getelementptr i8 %placement_dynamic_dict_Opt2PC_values, i64 0, i64 %i_16_cast
+.split20:2 %placement_dynamic_dict_Opt2PC_values_addr = getelementptr i8 %placement_dynamic_dict_Opt2PC_values, i64 0, i64 %i_17_cast
 
 ]]></Node>
 <StgValue><ssdm name="placement_dynamic_dict_Opt2PC_values_addr"/></StgValue>
@@ -203,7 +203,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="16" bw="0" op_0_bw="8" op_1_bw="7">
 <![CDATA[
-.split19:3 %store_ln708 = store i8 0, i7 %placement_dynamic_dict_Opt2PC_values_addr
+.split20:3 %store_ln708 = store i8 0, i7 %placement_dynamic_dict_Opt2PC_values_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln708"/></StgValue>
@@ -219,7 +219,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="17" bw="0" op_0_bw="7" op_1_bw="7" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-.split19:4 %store_ln707 = store i7 %add_ln707, i7 %i_16
+.split20:4 %store_ln707 = store i7 %add_ln707, i7 %i_17
 
 ]]></Node>
 <StgValue><ssdm name="store_ln707"/></StgValue>
@@ -235,7 +235,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="18" bw="0" op_0_bw="0">
 <![CDATA[
-.split19:5 %br_ln0 = br void %.preheader4
+.split20:5 %br_ln0 = br void %._crit_edge50.loopexit
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -251,7 +251,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 <Node id="20" bw="0">
 <![CDATA[
-.preheader3.preheader.exitStub:0 %ret_ln0 = ret
+.lr.ph43.preheader.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>
@@ -269,13 +269,13 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 
 
 <dataflows>
-<dataflow id="28" from="StgValue_27" to="i_16" fromId="27" toId="4">
+<dataflow id="28" from="StgValue_27" to="i_17" fromId="27" toId="4">
 </dataflow>
 <dataflow id="30" from="StgValue_29" to="store_ln0" fromId="29" toId="5">
 </dataflow>
-<dataflow id="31" from="i_16" to="store_ln0" fromId="4" toId="5">
+<dataflow id="31" from="i_17" to="store_ln0" fromId="4" toId="5">
 </dataflow>
-<dataflow id="32" from="i_16" to="i" fromId="4" toId="7">
+<dataflow id="32" from="i_17" to="i" fromId="4" toId="7">
 </dataflow>
 <dataflow id="34" from="_ssdm_op_SpecPipeline" to="specpipeline_ln0" fromId="33" toId="8">
 </dataflow>
@@ -307,17 +307,17 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 </dataflow>
 <dataflow id="55" from="icmp_ln707" to="br_ln707" fromId="9" toId="12">
 </dataflow>
-<dataflow id="56" from="i" to="i_16_cast" fromId="7" toId="13">
+<dataflow id="56" from="i" to="i_17_cast" fromId="7" toId="13">
 </dataflow>
 <dataflow id="58" from="_ssdm_op_SpecLoopName" to="specloopname_ln707" fromId="57" toId="14">
 </dataflow>
-<dataflow id="60" from="empty_46" to="specloopname_ln707" fromId="59" toId="14">
+<dataflow id="60" from="empty_26" to="specloopname_ln707" fromId="59" toId="14">
 </dataflow>
 <dataflow id="61" from="placement_dynamic_dict_Opt2PC_values" to="placement_dynamic_dict_Opt2PC_values_addr" fromId="26" toId="15">
 </dataflow>
 <dataflow id="63" from="StgValue_62" to="placement_dynamic_dict_Opt2PC_values_addr" fromId="62" toId="15">
 </dataflow>
-<dataflow id="64" from="i_16_cast" to="placement_dynamic_dict_Opt2PC_values_addr" fromId="13" toId="15">
+<dataflow id="64" from="i_17_cast" to="placement_dynamic_dict_Opt2PC_values_addr" fromId="13" toId="15">
 </dataflow>
 <dataflow id="66" from="StgValue_65" to="store_ln708" fromId="65" toId="16">
 </dataflow>
@@ -325,7 +325,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader4
 </dataflow>
 <dataflow id="68" from="add_ln707" to="store_ln707" fromId="11" toId="17">
 </dataflow>
-<dataflow id="69" from="i_16" to="store_ln707" fromId="4" toId="17">
+<dataflow id="69" from="i_17" to="store_ln707" fromId="4" toId="17">
 </dataflow>
 <dataflow id="70" from="icmp_ln707" to="StgValue_2" fromId="9" toId="2">
 </dataflow>

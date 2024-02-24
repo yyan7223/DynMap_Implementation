@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'BypassOptPlacement_Gen_Record'
 ================================================================
-* Date:           Wed Jan  3 23:38:50 2024
+* Date:           Wed Jan 17 08:24:17 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -215,22 +215,22 @@ ST_7 : Operation 118 [1/1] (0.99ns) (out node of the LUT)   --->   "%sel_tmp42_o
 ST_7 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node sub182)   --->   "%sel_tmp44_op = select i1 %tmp_37, i4 14, i4 %sel_tmp42_op" [DynMap/DynMap_4HLS.cpp:149]   --->   Operation 119 'select' 'sel_tmp44_op' <Predicate = (!empty)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_7 : Operation 120 [1/1] (0.00ns) (grouped into LUT with out node sub182)   --->   "%sel_tmp48_op = select i1 %and_ln149_4, i4 8, i4 12" [DynMap/DynMap_4HLS.cpp:149]   --->   Operation 120 'select' 'sel_tmp48_op' <Predicate = (empty)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_7 : Operation 121 [1/1] (0.83ns) (out node of the LUT)   --->   "%sub182 = select i1 %empty, i4 %sel_tmp48_op, i4 %sel_tmp44_op" [DynMap/DynMap_4HLS.cpp:149]   --->   Operation 121 'select' 'sub182' <Predicate = true> <Delay = 0.83> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_7 : Operation 122 [2/2] (4.91ns)   --->   "%targetBlock15 = call i1 @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, i8 %add_ln192, i8 %DynamicPlacement_II_load, i4 %tileId, i4 %sub173, i5 %bypassSrcTile_load, i4 %sub182, i8 %upperLimit, i8 %p_loc, i15 %add_ln252_loc, i15 %tmp_71_loc, i1 %placement_dynamic_bypass_occupy, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 122 'call' 'targetBlock15' <Predicate = true> <Delay = 4.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 122 [2/2] (4.91ns)   --->   "%targetBlock15 = call i1 @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, i8 %add_ln192, i8 %DynamicPlacement_II_load, i4 %tileId, i4 %sub173, i5 %bypassSrcTile_load, i4 %sub182, i8 %upperLimit, i8 %p_loc, i13 %add_ln252_loc, i13 %tmp_71_loc, i1 %placement_dynamic_bypass_occupy, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 122 'call' 'targetBlock15' <Predicate = true> <Delay = 4.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 8 <SV = 7> <Delay = 3.57>
-ST_8 : Operation 123 [1/2] (3.57ns)   --->   "%targetBlock15 = call i1 @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, i8 %add_ln192, i8 %DynamicPlacement_II_load, i4 %tileId, i4 %sub173, i5 %bypassSrcTile_load, i4 %sub182, i8 %upperLimit, i8 %p_loc, i15 %add_ln252_loc, i15 %tmp_71_loc, i1 %placement_dynamic_bypass_occupy, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 123 'call' 'targetBlock15' <Predicate = true> <Delay = 3.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 123 [1/2] (3.57ns)   --->   "%targetBlock15 = call i1 @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, i8 %add_ln192, i8 %DynamicPlacement_II_load, i4 %tileId, i4 %sub173, i5 %bypassSrcTile_load, i4 %sub182, i8 %upperLimit, i8 %p_loc, i13 %add_ln252_loc, i13 %tmp_71_loc, i1 %placement_dynamic_bypass_occupy, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 123 'call' 'targetBlock15' <Predicate = true> <Delay = 3.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 2.77>
 ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln243_1 = zext i4 %tileId" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 124 'zext' 'zext_ln243_1' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 125 [1/1] (0.00ns)   --->   "%p_loc_load = load i8 %p_loc"   --->   Operation 125 'load' 'p_loc_load' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%add_ln252_loc_load = load i15 %add_ln252_loc"   --->   Operation 126 'load' 'add_ln252_loc_load' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%add_ln252_reload_cast = zext i15 %add_ln252_loc_load"   --->   Operation 127 'zext' 'add_ln252_reload_cast' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_71_loc_load = load i15 %tmp_71_loc"   --->   Operation 128 'load' 'tmp_71_loc_load' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_71_reload_cast = zext i15 %tmp_71_loc_load"   --->   Operation 129 'zext' 'tmp_71_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%add_ln252_loc_load = load i13 %add_ln252_loc"   --->   Operation 126 'load' 'add_ln252_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%add_ln252_reload_cast = zext i13 %add_ln252_loc_load"   --->   Operation 127 'zext' 'add_ln252_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_71_loc_load = load i13 %tmp_71_loc"   --->   Operation 128 'load' 'tmp_71_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_71_reload_cast = zext i13 %tmp_71_loc_load"   --->   Operation 129 'zext' 'tmp_71_reload_cast' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 130 [1/1] (1.29ns)   --->   "%br_ln192 = br i1 %targetBlock15, void %.loopexit55, void %codeRepl39" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 130 'br' 'br_ln192' <Predicate = true> <Delay = 1.29>
-ST_9 : Operation 131 [2/2] (0.00ns)   --->   "%call_ln243 = call void @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, i8 %p_loc_load, i4 %tileId, i14 %tmp_73_loc, i8 %placement_dynamic_bypass" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 131 'call' 'call_ln243' <Predicate = (targetBlock15)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 131 [2/2] (0.00ns)   --->   "%call_ln243 = call void @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, i8 %p_loc_load, i4 %tileId, i13 %tmp_73_loc, i8 %placement_dynamic_bypass" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 131 'call' 'call_ln243' <Predicate = (targetBlock15)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_9 : Operation 132 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_occupy_addr_2 = getelementptr i1 %placement_dynamic_bypass_occupy, i64 0, i64 %add_ln252_reload_cast" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 132 'getelementptr' 'placement_dynamic_bypass_occupy_addr_2' <Predicate = (targetBlock15)> <Delay = 0.00>
-ST_9 : Operation 133 [1/1] (2.77ns)   --->   "%store_ln260 = store i1 1, i15 %placement_dynamic_bypass_occupy_addr_2" [DynMap/DynMap_4HLS.cpp:260]   --->   Operation 133 'store' 'store_ln260' <Predicate = (targetBlock15)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25600> <RAM>
+ST_9 : Operation 133 [1/1] (2.77ns)   --->   "%store_ln260 = store i1 1, i13 %placement_dynamic_bypass_occupy_addr_2" [DynMap/DynMap_4HLS.cpp:260]   --->   Operation 133 'store' 'store_ln260' <Predicate = (targetBlock15)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5120> <RAM>
 ST_9 : Operation 134 [1/1] (0.00ns)   --->   "%bypassOpt_wrAddr_load = load i8 %bypassOpt_wrAddr" [DynMap/DynMap_4HLS.cpp:262]   --->   Operation 134 'load' 'bypassOpt_wrAddr_load' <Predicate = (targetBlock15)> <Delay = 0.00>
 ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%zext_ln262 = zext i8 %bypassOpt_wrAddr_load" [DynMap/DynMap_4HLS.cpp:262]   --->   Operation 135 'zext' 'zext_ln262' <Predicate = (targetBlock15)> <Delay = 0.00>
 ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%placement_dynamic_dict_Opt2Tile_keys_addr = getelementptr i8 %placement_dynamic_dict_Opt2Tile_keys, i64 0, i64 %zext_ln262" [DynMap/DynMap_4HLS.cpp:262]   --->   Operation 136 'getelementptr' 'placement_dynamic_dict_Opt2Tile_keys_addr' <Predicate = (targetBlock15)> <Delay = 0.00>
@@ -247,15 +247,15 @@ ST_9 : Operation 146 [1/1] (1.30ns)   --->   "%add_ln268 = add i8 %bypassOpt_wrA
 ST_9 : Operation 147 [1/1] (0.00ns)   --->   "%store_ln268 = store i8 %add_ln268, i8 %bypassOpt_wrAddr" [DynMap/DynMap_4HLS.cpp:268]   --->   Operation 147 'store' 'store_ln268' <Predicate = (targetBlock15)> <Delay = 0.00>
 
 State 10 <SV = 9> <Delay = 4.08>
-ST_10 : Operation 148 [1/2] (4.08ns)   --->   "%call_ln243 = call void @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, i8 %p_loc_load, i4 %tileId, i14 %tmp_73_loc, i8 %placement_dynamic_bypass" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 148 'call' 'call_ln243' <Predicate = true> <Delay = 4.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 148 [1/2] (4.08ns)   --->   "%call_ln243 = call void @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, i8 %p_loc_load, i4 %tileId, i13 %tmp_73_loc, i8 %placement_dynamic_bypass" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 148 'call' 'call_ln243' <Predicate = true> <Delay = 4.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_10 : Operation 149 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_occupy_addr = getelementptr i1 %placement_dynamic_bypass_occupy, i64 0, i64 %tmp_71_reload_cast" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 149 'getelementptr' 'placement_dynamic_bypass_occupy_addr' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 150 [1/1] (2.77ns)   --->   "%store_ln261 = store i1 1, i15 %placement_dynamic_bypass_occupy_addr" [DynMap/DynMap_4HLS.cpp:261]   --->   Operation 150 'store' 'store_ln261' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25600> <RAM>
+ST_10 : Operation 150 [1/1] (2.77ns)   --->   "%store_ln261 = store i1 1, i13 %placement_dynamic_bypass_occupy_addr" [DynMap/DynMap_4HLS.cpp:261]   --->   Operation 150 'store' 'store_ln261' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5120> <RAM>
 
 State 11 <SV = 10> <Delay = 2.77>
-ST_11 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_73_loc_load = load i14 %tmp_73_loc"   --->   Operation 151 'load' 'tmp_73_loc_load' <Predicate = (targetBlock15)> <Delay = 0.00>
-ST_11 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_73_reload_cast = zext i14 %tmp_73_loc_load"   --->   Operation 152 'zext' 'tmp_73_reload_cast' <Predicate = (targetBlock15)> <Delay = 0.00>
+ST_11 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_73_loc_load = load i13 %tmp_73_loc"   --->   Operation 151 'load' 'tmp_73_loc_load' <Predicate = (targetBlock15)> <Delay = 0.00>
+ST_11 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_73_reload_cast = zext i13 %tmp_73_loc_load"   --->   Operation 152 'zext' 'tmp_73_reload_cast' <Predicate = (targetBlock15)> <Delay = 0.00>
 ST_11 : Operation 153 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_addr = getelementptr i8 %placement_dynamic_bypass, i64 0, i64 %tmp_73_reload_cast" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 153 'getelementptr' 'placement_dynamic_bypass_addr' <Predicate = (targetBlock15)> <Delay = 0.00>
-ST_11 : Operation 154 [1/1] (2.77ns)   --->   "%store_ln259 = store i8 %bypassOptIdx_load, i14 %placement_dynamic_bypass_addr" [DynMap/DynMap_4HLS.cpp:259]   --->   Operation 154 'store' 'store_ln259' <Predicate = (targetBlock15)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 12800> <RAM>
+ST_11 : Operation 154 [1/1] (2.77ns)   --->   "%store_ln259 = store i8 %bypassOptIdx_load, i13 %placement_dynamic_bypass_addr" [DynMap/DynMap_4HLS.cpp:259]   --->   Operation 154 'store' 'store_ln259' <Predicate = (targetBlock15)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 6400> <RAM>
 ST_11 : Operation 155 [1/1] (1.29ns)   --->   "%br_ln270 = br void %.loopexit55" [DynMap/DynMap_4HLS.cpp:270]   --->   Operation 155 'br' 'br_ln270' <Predicate = (targetBlock15)> <Delay = 1.29>
 ST_11 : Operation 156 [1/1] (0.00ns)   --->   "%retval_0 = phi i1 1, void %codeRepl39, i1 0, void %.loopexit39_ifconv"   --->   Operation 156 'phi' 'retval_0' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 157 [1/1] (0.00ns)   --->   "%ret_ln284 = ret i1 %retval_0" [DynMap/DynMap_4HLS.cpp:284]   --->   Operation 157 'ret' 'ret_ln284' <Predicate = true> <Delay = 0.00>
@@ -954,7 +954,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 <comp id="110" class="1004" name="tmp_73_loc_fu_110">
 <pin_list>
 <pin id="111" dir="0" index="0" bw="1" slack="0"/>
-<pin id="112" dir="1" index="1" bw="14" slack="8"/>
+<pin id="112" dir="1" index="1" bw="13" slack="8"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -965,7 +965,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 <comp id="114" class="1004" name="tmp_71_loc_fu_114">
 <pin_list>
 <pin id="115" dir="0" index="0" bw="1" slack="0"/>
-<pin id="116" dir="1" index="1" bw="15" slack="6"/>
+<pin id="116" dir="1" index="1" bw="13" slack="6"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -976,7 +976,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 <comp id="118" class="1004" name="add_ln252_loc_fu_118">
 <pin_list>
 <pin id="119" dir="0" index="0" bw="1" slack="0"/>
-<pin id="120" dir="1" index="1" bw="15" slack="6"/>
+<pin id="120" dir="1" index="1" bw="13" slack="6"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -1229,8 +1229,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 <pin_list>
 <pin id="240" dir="0" index="0" bw="1" slack="0"/>
 <pin id="241" dir="0" index="1" bw="1" slack="0"/>
-<pin id="242" dir="0" index="2" bw="15" slack="0"/>
-<pin id="243" dir="1" index="3" bw="15" slack="0"/>
+<pin id="242" dir="0" index="2" bw="13" slack="0"/>
+<pin id="243" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -1240,7 +1240,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="246" class="1004" name="grp_access_fu_246">
 <pin_list>
-<pin id="247" dir="0" index="0" bw="15" slack="0"/>
+<pin id="247" dir="0" index="0" bw="13" slack="0"/>
 <pin id="248" dir="0" index="1" bw="1" slack="0"/>
 <pin id="249" dir="0" index="2" bw="0" slack="2147483647"/>
 <pin id="250" dir="1" index="3" bw="1" slack="2147483647"/>
@@ -1372,8 +1372,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 <pin_list>
 <pin id="315" dir="0" index="0" bw="1" slack="0"/>
 <pin id="316" dir="0" index="1" bw="1" slack="0"/>
-<pin id="317" dir="0" index="2" bw="15" slack="1"/>
-<pin id="318" dir="1" index="3" bw="15" slack="0"/>
+<pin id="317" dir="0" index="2" bw="13" slack="1"/>
+<pin id="318" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -1385,8 +1385,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 <pin_list>
 <pin id="323" dir="0" index="0" bw="8" slack="0"/>
 <pin id="324" dir="0" index="1" bw="1" slack="0"/>
-<pin id="325" dir="0" index="2" bw="14" slack="0"/>
-<pin id="326" dir="1" index="3" bw="14" slack="0"/>
+<pin id="325" dir="0" index="2" bw="13" slack="0"/>
+<pin id="326" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -1396,7 +1396,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="329" class="1004" name="store_ln259_access_fu_329">
 <pin_list>
-<pin id="330" dir="0" index="0" bw="14" slack="0"/>
+<pin id="330" dir="0" index="0" bw="13" slack="0"/>
 <pin id="331" dir="0" index="1" bw="8" slack="6"/>
 <pin id="332" dir="0" index="2" bw="0" slack="2147483647"/>
 <pin id="333" dir="1" index="3" bw="8" slack="2147483647"/>
@@ -1533,8 +1533,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 <pin id="409" dir="0" index="6" bw="4" slack="0"/>
 <pin id="410" dir="0" index="7" bw="8" slack="2"/>
 <pin id="411" dir="0" index="8" bw="8" slack="6"/>
-<pin id="412" dir="0" index="9" bw="15" slack="6"/>
-<pin id="413" dir="0" index="10" bw="15" slack="6"/>
+<pin id="412" dir="0" index="9" bw="13" slack="6"/>
+<pin id="413" dir="0" index="10" bw="13" slack="6"/>
 <pin id="414" dir="0" index="11" bw="1" slack="0"/>
 <pin id="415" dir="0" index="12" bw="8" slack="0"/>
 <pin id="416" dir="1" index="13" bw="1" slack="1"/>
@@ -1550,7 +1550,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 <pin id="421" dir="0" index="0" bw="0" slack="0"/>
 <pin id="422" dir="0" index="1" bw="8" slack="0"/>
 <pin id="423" dir="0" index="2" bw="4" slack="3"/>
-<pin id="424" dir="0" index="3" bw="14" slack="8"/>
+<pin id="424" dir="0" index="3" bw="13" slack="8"/>
 <pin id="425" dir="0" index="4" bw="8" slack="0"/>
 <pin id="426" dir="1" index="5" bw="0" slack="2147483647"/>
 </pin_list>
@@ -2435,8 +2435,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="854" class="1004" name="add_ln252_loc_load_load_fu_854">
 <pin_list>
-<pin id="855" dir="0" index="0" bw="15" slack="8"/>
-<pin id="856" dir="1" index="1" bw="15" slack="0"/>
+<pin id="855" dir="0" index="0" bw="13" slack="8"/>
+<pin id="856" dir="1" index="1" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -2446,7 +2446,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="857" class="1004" name="add_ln252_reload_cast_fu_857">
 <pin_list>
-<pin id="858" dir="0" index="0" bw="15" slack="0"/>
+<pin id="858" dir="0" index="0" bw="13" slack="0"/>
 <pin id="859" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
@@ -2457,8 +2457,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="862" class="1004" name="tmp_71_loc_load_load_fu_862">
 <pin_list>
-<pin id="863" dir="0" index="0" bw="15" slack="8"/>
-<pin id="864" dir="1" index="1" bw="15" slack="0"/>
+<pin id="863" dir="0" index="0" bw="13" slack="8"/>
+<pin id="864" dir="1" index="1" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -2468,7 +2468,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="865" class="1004" name="tmp_71_reload_cast_fu_865">
 <pin_list>
-<pin id="866" dir="0" index="0" bw="15" slack="0"/>
+<pin id="866" dir="0" index="0" bw="13" slack="0"/>
 <pin id="867" dir="1" index="1" bw="64" slack="1"/>
 </pin_list>
 <bind>
@@ -2525,8 +2525,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="894" class="1004" name="tmp_73_loc_load_load_fu_894">
 <pin_list>
-<pin id="895" dir="0" index="0" bw="14" slack="10"/>
-<pin id="896" dir="1" index="1" bw="14" slack="0"/>
+<pin id="895" dir="0" index="0" bw="13" slack="10"/>
+<pin id="896" dir="1" index="1" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -2536,7 +2536,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="897" class="1004" name="tmp_73_reload_cast_fu_897">
 <pin_list>
-<pin id="898" dir="0" index="0" bw="14" slack="0"/>
+<pin id="898" dir="0" index="0" bw="13" slack="0"/>
 <pin id="899" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
@@ -2547,8 +2547,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="902" class="1005" name="tmp_73_loc_reg_902">
 <pin_list>
-<pin id="903" dir="0" index="0" bw="14" slack="8"/>
-<pin id="904" dir="1" index="1" bw="14" slack="8"/>
+<pin id="903" dir="0" index="0" bw="13" slack="8"/>
+<pin id="904" dir="1" index="1" bw="13" slack="8"/>
 </pin_list>
 <bind>
 <opset="tmp_73_loc "/>
@@ -2557,8 +2557,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="908" class="1005" name="tmp_71_loc_reg_908">
 <pin_list>
-<pin id="909" dir="0" index="0" bw="15" slack="6"/>
-<pin id="910" dir="1" index="1" bw="15" slack="6"/>
+<pin id="909" dir="0" index="0" bw="13" slack="6"/>
+<pin id="910" dir="1" index="1" bw="13" slack="6"/>
 </pin_list>
 <bind>
 <opset="tmp_71_loc "/>
@@ -2567,8 +2567,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 
 <comp id="914" class="1005" name="add_ln252_loc_reg_914">
 <pin_list>
-<pin id="915" dir="0" index="0" bw="15" slack="6"/>
-<pin id="916" dir="1" index="1" bw="15" slack="6"/>
+<pin id="915" dir="0" index="0" bw="13" slack="6"/>
+<pin id="916" dir="1" index="1" bw="13" slack="6"/>
 </pin_list>
 <bind>
 <opset="add_ln252_loc "/>
@@ -3761,8 +3761,8 @@ ret_ln284                                   (ret           ) [ 000000000000]
 |----------|-------------------------------------------------------------------------------------|---------|---------|---------|
 |          |          grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_188_1_fu_365         |  2.596  |    37   |    32   |
 |   call   | grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373 | 9.19429 |   101   |   167   |
-|          |          grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402         |  5.192  |   327   |   219   |
-|          |          grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420         |  1.298  |   216   |   137   |
+|          |          grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402         |  5.192  |   313   |   213   |
+|          |          grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5_fu_420         |  1.298  |   214   |   137   |
 |----------|-------------------------------------------------------------------------------------|---------|---------|---------|
 |          |                                   dirInIdx_fu_719                                   |    0    |    0    |    3    |
 |          |                                 select_ln169_fu_726                                 |    0    |    0    |    4    |
@@ -3834,7 +3834,7 @@ ret_ln284                                   (ret           ) [ 000000000000]
 | bitselect|                                    tmp_36_fu_631                                    |    0    |    0    |    0    |
 |          |                                    tmp_37_fu_687                                    |    0    |    0    |    0    |
 |----------|-------------------------------------------------------------------------------------|---------|---------|---------|
-|   Total  |                                                                                     | 18.2803 |   681   |   678   |
+|   Total  |                                                                                     | 18.2803 |   665   |   672   |
 |----------|-------------------------------------------------------------------------------------|---------|---------|---------|
 
 Memories:
@@ -3853,7 +3853,7 @@ N/A
 |              Tile2XY_1_addr_reg_975              |    4   |
 |              Tile2XY_1_load_reg_1006             |    2   |
 |                add_ln192_reg_1052                |    8   |
-|               add_ln252_loc_reg_914              |   15   |
+|               add_ln252_loc_reg_914              |   13   |
 |    allocated_tiles_shapes_values_addr_reg_1077   |    9   |
 |               and_ln149_1_reg_1105               |    1   |
 |               and_ln149_4_reg_1117               |    1   |
@@ -3877,9 +3877,9 @@ N/A
 |               targetBlock_reg_1036               |    1   |
 |                  tileId_reg_1082                 |    4   |
 |                  tmp_37_reg_1111                 |    1   |
-|                tmp_71_loc_reg_908                |   15   |
+|                tmp_71_loc_reg_908                |   13   |
 |            tmp_71_reload_cast_reg_1146           |   64   |
-|                tmp_73_loc_reg_902                |   14   |
+|                tmp_73_loc_reg_902                |   13   |
 |                upperLimit_reg_1060               |    8   |
 |                 xDiff_28_reg_344                 |    2   |
 |                xDiff_2_loc_reg_932               |    2   |
@@ -3888,7 +3888,7 @@ N/A
 |                yDiff_2_loc_reg_926               |    2   |
 |              yDiff_2_phi_loc_reg_950             |    2   |
 +--------------------------------------------------+--------+
-|                       Total                      |   239  |
+|                       Total                      |   234  |
 +--------------------------------------------------+--------+
 
 * Multiplexer (MUX) list: 
@@ -3902,7 +3902,7 @@ N/A
 |                                  grp_access_fu_207                                  |  p0  |   2  |   5  |   10   ||    9    |
 |                                  grp_access_fu_220                                  |  p0  |   3  |   7  |   21   ||    13   |
 |                                  grp_access_fu_233                                  |  p0  |   2  |   9  |   18   ||    9    |
-|                                  grp_access_fu_246                                  |  p0  |   2  |  15  |   30   ||    9    |
+|                                  grp_access_fu_246                                  |  p0  |   2  |  13  |   26   ||    9    |
 | grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373 |  p1  |   2  |   2  |    4   ||    9    |
 | grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373 |  p2  |   2  |   1  |    2   ||    9    |
 | grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_199_2_VITIS_LOOP_233_3_fu_373 |  p3  |   2  |   1  |    2   ||    9    |
@@ -3914,7 +3914,7 @@ N/A
 |          grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402         |  p4  |   2  |   4  |    8   ||    9    |
 |          grp_BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4_fu_402         |  p6  |   2  |   4  |    8   ||    9    |
 |-------------------------------------------------------------------------------------|------|------|------|--------||---------||---------|
-|                                        Total                                        |      |      |      |   147  || 23.3911 ||   166   |
+|                                        Total                                        |      |      |      |   143  || 23.3911 ||   166   |
 |-------------------------------------------------------------------------------------|------|------|------|--------||---------||---------|
 
 
@@ -3923,10 +3923,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |   18   |   681  |   678  |
+|  Function |   18   |   665  |   672  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|   23   |    -   |   166  |
-|  Register |    -   |   239  |    -   |
+|  Register |    -   |   234  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |   41   |   920  |   844  |
+|   Total   |   41   |   899  |   838  |
 +-----------+--------+--------+--------+

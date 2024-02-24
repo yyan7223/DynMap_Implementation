@@ -85,10 +85,10 @@ newFuncRoot:3 %br_ln0 = br void %.lr.ph55
 
 <Node id="9" bw="7" op_0_bw="7" op_1_bw="0">
 <![CDATA[
-.lr.ph55:0 %i_30 = load i7 %i
+.lr.ph55:0 %i_31 = load i7 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_30"/></StgValue>
+<StgValue><ssdm name="i_31"/></StgValue>
 </operation>
 
 <operation id="10" st_id="1" stage="1" lat="1">
@@ -115,7 +115,7 @@ newFuncRoot:3 %br_ln0 = br void %.lr.ph55
 
 <Node id="11" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.lr.ph55:2 %icmp_ln508 = icmp_eq  i7 %i_30, i7 %inc1313173_reload_read
+.lr.ph55:2 %icmp_ln508 = icmp_eq  i7 %i_31, i7 %inc1313173_reload_read
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln508"/></StgValue>
@@ -145,10 +145,10 @@ newFuncRoot:3 %br_ln0 = br void %.lr.ph55
 
 <Node id="13" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.lr.ph55:4 %i_31 = add i7 %i_30, i7 1
+.lr.ph55:4 %i_32 = add i7 %i_31, i7 1
 
 ]]></Node>
-<StgValue><ssdm name="i_31"/></StgValue>
+<StgValue><ssdm name="i_32"/></StgValue>
 </operation>
 
 <operation id="14" st_id="1" stage="1" lat="1">
@@ -176,7 +176,7 @@ newFuncRoot:3 %br_ln0 = br void %.lr.ph55
 
 <Node id="17" bw="64" op_0_bw="7">
 <![CDATA[
-.split15:1 %zext_ln509 = zext i7 %i_30
+.split15:1 %zext_ln509 = zext i7 %i_31
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln509"/></StgValue>
@@ -224,7 +224,7 @@ newFuncRoot:3 %br_ln0 = br void %.lr.ph55
 
 <Node id="23" bw="0" op_0_bw="7" op_1_bw="7" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-.split15:7 %store_ln510 = store i7 %i_31, i7 %i
+.split15:7 %store_ln510 = store i7 %i_32, i7 %i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln510"/></StgValue>
@@ -258,7 +258,7 @@ newFuncRoot:3 %br_ln0 = br void %.lr.ph55
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split15:0 %specloopname_ln508 = specloopname void @_ssdm_op_SpecLoopName, void @empty_27
+.split15:0 %specloopname_ln508 = specloopname void @_ssdm_op_SpecLoopName, void @empty_29
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln508"/></StgValue>

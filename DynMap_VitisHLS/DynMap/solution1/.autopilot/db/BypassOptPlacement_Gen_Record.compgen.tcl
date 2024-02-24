@@ -220,7 +220,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename placement_dynamic_bypass_occupy \
     op interface \
-    ports { placement_dynamic_bypass_occupy_address0 { O 15 vector } placement_dynamic_bypass_occupy_ce0 { O 1 bit } placement_dynamic_bypass_occupy_we0 { O 1 bit } placement_dynamic_bypass_occupy_d0 { O 1 vector } placement_dynamic_bypass_occupy_q0 { I 1 vector } placement_dynamic_bypass_occupy_address1 { O 15 vector } placement_dynamic_bypass_occupy_ce1 { O 1 bit } placement_dynamic_bypass_occupy_q1 { I 1 vector } } \
+    ports { placement_dynamic_bypass_occupy_address0 { O 13 vector } placement_dynamic_bypass_occupy_ce0 { O 1 bit } placement_dynamic_bypass_occupy_we0 { O 1 bit } placement_dynamic_bypass_occupy_d0 { O 1 vector } placement_dynamic_bypass_occupy_q0 { I 1 vector } placement_dynamic_bypass_occupy_address1 { O 13 vector } placement_dynamic_bypass_occupy_ce1 { O 1 bit } placement_dynamic_bypass_occupy_q1 { I 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'placement_dynamic_bypass_occupy'"
@@ -239,7 +239,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename placement_dynamic_bypass \
     op interface \
-    ports { placement_dynamic_bypass_address0 { O 14 vector } placement_dynamic_bypass_ce0 { O 1 bit } placement_dynamic_bypass_we0 { O 1 bit } placement_dynamic_bypass_d0 { O 8 vector } placement_dynamic_bypass_q0 { I 8 vector } } \
+    ports { placement_dynamic_bypass_address0 { O 13 vector } placement_dynamic_bypass_ce0 { O 1 bit } placement_dynamic_bypass_we0 { O 1 bit } placement_dynamic_bypass_d0 { O 8 vector } placement_dynamic_bypass_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'placement_dynamic_bypass'"

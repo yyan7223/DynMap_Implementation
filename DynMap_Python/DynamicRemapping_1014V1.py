@@ -1623,7 +1623,7 @@ succNums2DynLevels_kernels = DFG_SuccNums2DynLevels_Init(kernel)
 # calculate_OnChipMemory_Consumption_DynamicCompiler()
 # calculate_OffChipMemory_Consumption_DynamicCompiler()
 
-# threshold = 1
+# threshold = 25
 # Reset(kernel, shape)
 # print("Try to finish placement at II=%d, threshold=%d, " % (DynamicPlacement_II, threshold), end="")
 # if dynamic_placement():

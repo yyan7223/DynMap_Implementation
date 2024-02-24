@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'dynamic_placement_routing'
 ================================================================
-* Date:           Wed Jan  3 23:39:02 2024
+* Date:           Wed Jan 17 08:24:29 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -72,12 +72,12 @@
 |DSP              |        -|    -|       -|       -|    -|
 |Expression       |        -|    -|       0|     145|    -|
 |FIFO             |        -|    -|       -|       -|    -|
-|Instance         |        6|    1|    2856|    6170|    0|
+|Instance         |        6|    1|    2838|    6164|    0|
 |Memory           |        3|    -|      32|      11|    0|
 |Multiplexer      |        -|    -|       -|     939|    -|
 |Register         |        -|    -|     285|       -|    -|
 +-----------------+---------+-----+--------+--------+-----+
-|Total            |        9|    1|    3173|    7265|    0|
+|Total            |        9|    1|    3155|    7259|    0|
 +-----------------+---------+-----+--------+--------+-----+
 |Available        |     1000|  900|  343800|  171900|    0|
 +-----------------+---------+-----+--------+--------+-----+
@@ -90,7 +90,7 @@
     |                            Instance                            |                        Module                       | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+------+------+-----+
     |grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439         |CurOptPotentialPlacement_List_BypassLess_Gen         |        2|   0|   539|  1557|    0|
-    |grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507   |RoutingAvailability_CheckPredecessor_and_Placement   |        3|   1|  2169|  4046|    0|
+    |grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507   |RoutingAvailability_CheckPredecessor_and_Placement   |        3|   1|  2151|  4040|    0|
     |grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1_fu_473  |dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1  |        0|   0|    24|    44|    0|
     |grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2_fu_482  |dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2  |        0|   0|    14|    68|    0|
     |grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493  |dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3  |        0|   0|     7|    65|    0|
@@ -101,7 +101,7 @@
     |grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6_fu_430  |dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6  |        0|   0|    20|    80|    0|
     |mul_3ns_8ns_10_1_1_U300                                         |mul_3ns_8ns_10_1_1                                   |        0|   0|     0|    41|    0|
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+------+------+-----+
-    |Total                                                           |                                                     |        6|   1|  2856|  6170|    0|
+    |Total                                                           |                                                     |        6|   1|  2838|  6164|    0|
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -141,7 +141,7 @@
     |add_ln636_fu_852_p2               |         +|   0|  0|  10|          10|          10|
     |add_ln643_fu_827_p2               |         +|   0|  0|   8|           8|           1|
     |dynamic_level_3_fu_946_p2         |         +|   0|  0|   8|           8|           1|
-    |empty_83_fu_974_p2                |         +|   0|  0|   9|           9|           9|
+    |empty_82_fu_974_p2                |         +|   0|  0|   9|           9|           9|
     |i_fu_743_p2                       |         +|   0|  0|   6|           4|           1|
     |placedOpts_Counter_2_fu_668_p2    |         +|   0|  0|   8|           8|           1|
     |ap_block_state13_on_subcall_done  |       and|   0|  0|   1|           1|           1|
@@ -251,7 +251,7 @@
     |curTileStatic_reg_1200                                                       |   4|   0|    4|          0|
     |dynamic_level_2_reg_381                                                      |   8|   0|    8|          0|
     |dynamic_level_4_reg_1272                                                     |   8|   0|    8|          0|
-    |empty_83_reg_1280                                                            |   9|   0|    9|          0|
+    |empty_82_reg_1280                                                            |   9|   0|    9|          0|
     |grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439_ap_start_reg         |   1|   0|    1|          0|
     |grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507_ap_start_reg   |   1|   0|    1|          0|
     |grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_377_1_fu_473_ap_start_reg  |   1|   0|    1|          0|
@@ -410,15 +410,15 @@
 |idx_pd_r_i                                       |   in|    4|     ap_ovld|                                idx_pd_r|       pointer|
 |idx_pd_r_o                                       |  out|    4|     ap_ovld|                                idx_pd_r|       pointer|
 |idx_pd_r_o_ap_vld                                |  out|    1|     ap_ovld|                                idx_pd_r|       pointer|
-|placement_dynamic_bypass_occupy_address0         |  out|   15|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_address0         |  out|   13|   ap_memory|         placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_ce0              |  out|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_we0              |  out|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_d0               |  out|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_q0               |   in|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
-|placement_dynamic_bypass_occupy_address1         |  out|   15|   ap_memory|         placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_address1         |  out|   13|   ap_memory|         placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_ce1              |  out|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_q1               |   in|    1|   ap_memory|         placement_dynamic_bypass_occupy|         array|
-|placement_dynamic_bypass_address0                |  out|   14|   ap_memory|                placement_dynamic_bypass|         array|
+|placement_dynamic_bypass_address0                |  out|   13|   ap_memory|                placement_dynamic_bypass|         array|
 |placement_dynamic_bypass_ce0                     |  out|    1|   ap_memory|                placement_dynamic_bypass|         array|
 |placement_dynamic_bypass_we0                     |  out|    1|   ap_memory|                placement_dynamic_bypass|         array|
 |placement_dynamic_bypass_d0                      |  out|    8|   ap_memory|                placement_dynamic_bypass|         array|

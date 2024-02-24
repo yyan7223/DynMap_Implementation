@@ -277,8 +277,8 @@ set MemName runOne_placement_dynamic_bypass_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 8
-set AddrRange 12800
-set AddrWd 14
+set AddrRange 6400
+set AddrWd 13
 set impl_style auto
 set TrueReset 0
 set IsROM 0
@@ -441,8 +441,8 @@ set MemName runOne_placement_dynamic_bypass_occupy_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
 set PortList { 2 1 }
 set DataWd 1
-set AddrRange 25600
-set AddrWd 15
+set AddrRange 5120
+set AddrWd 13
 set impl_style auto
 set TrueReset 0
 set IsROM 0

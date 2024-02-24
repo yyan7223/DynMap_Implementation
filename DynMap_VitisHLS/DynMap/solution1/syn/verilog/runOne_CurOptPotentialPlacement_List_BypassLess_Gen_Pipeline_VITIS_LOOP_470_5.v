@@ -62,10 +62,10 @@ wire   [63:0] zext_ln471_fu_90_p1;
 reg   [63:0] zext_ln471_reg_115;
 wire    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0;
-reg   [6:0] i_34_fu_34;
-wire   [6:0] i_36_fu_84_p2;
+reg   [6:0] i_35_fu_34;
+wire   [6:0] i_37_fu_84_p2;
 wire    ap_loop_init;
-reg   [6:0] ap_sig_allocacmp_i_35;
+reg   [6:0] ap_sig_allocacmp_i_36;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -131,9 +131,9 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if (((icmp_ln470_fu_78_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_34_fu_34 <= i_36_fu_84_p2;
+            i_35_fu_34 <= i_37_fu_84_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_34_fu_34 <= 7'd0;
+            i_35_fu_34 <= 7'd0;
         end
     end
 end
@@ -186,9 +186,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_35 = 7'd0;
+        ap_sig_allocacmp_i_36 = 7'd0;
     end else begin
-        ap_sig_allocacmp_i_35 = i_34_fu_34;
+        ap_sig_allocacmp_i_36 = i_35_fu_34;
     end
 end
 
@@ -249,13 +249,13 @@ assign curOptPotentialPlacement_address0 = zext_ln471_reg_115;
 
 assign curOptPotentialPlacement_d0 = potentialPlacement_AllPreds_q0;
 
-assign i_36_fu_84_p2 = (ap_sig_allocacmp_i_35 + 7'd1);
+assign i_37_fu_84_p2 = (ap_sig_allocacmp_i_36 + 7'd1);
 
-assign icmp_ln470_fu_78_p2 = ((ap_sig_allocacmp_i_35 == i) ? 1'b1 : 1'b0);
+assign icmp_ln470_fu_78_p2 = ((ap_sig_allocacmp_i_36 == i) ? 1'b1 : 1'b0);
 
 assign potentialPlacement_AllPreds_address0 = zext_ln471_fu_90_p1;
 
-assign zext_ln471_fu_90_p1 = ap_sig_allocacmp_i_35;
+assign zext_ln471_fu_90_p1 = ap_sig_allocacmp_i_36;
 
 always @ (posedge ap_clk) begin
     zext_ln471_reg_115[63:7] <= 57'b000000000000000000000000000000000000000000000000000000000;

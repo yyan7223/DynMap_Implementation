@@ -64,10 +64,10 @@ newFuncRoot:2 %br_ln0 = br void %.preheader
 
 <Node id="6" bw="7" op_0_bw="7" op_1_bw="0">
 <![CDATA[
-.preheader:0 %i_16 = load i7 %i
+.preheader:0 %i_14 = load i7 %i
 
 ]]></Node>
-<StgValue><ssdm name="i_16"/></StgValue>
+<StgValue><ssdm name="i_14"/></StgValue>
 </operation>
 
 <operation id="8" st_id="1" stage="1" lat="1">
@@ -94,7 +94,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader
 
 <Node id="8" bw="1" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader:2 %icmp_ln716 = icmp_eq  i7 %i_16, i7 100
+.preheader:2 %icmp_ln716 = icmp_eq  i7 %i_14, i7 100
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln716"/></StgValue>
@@ -124,7 +124,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader
 
 <Node id="10" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader:4 %add_ln716 = add i7 %i_16, i7 1
+.preheader:4 %add_ln716 = add i7 %i_14, i7 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln716"/></StgValue>
@@ -139,7 +139,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader
 
 <Node id="11" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-.preheader:5 %br_ln716 = br i1 %icmp_ln716, void %.split13, void %.lr.ph36.preheader.exitStub
+.preheader:5 %br_ln716 = br i1 %icmp_ln716, void %.split13, void %.lr.ph31.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln716"/></StgValue>
@@ -155,10 +155,10 @@ newFuncRoot:2 %br_ln0 = br void %.preheader
 
 <Node id="13" bw="64" op_0_bw="7">
 <![CDATA[
-.split13:0 %i_19_cast = zext i7 %i_16
+.split13:0 %i_21_cast = zext i7 %i_14
 
 ]]></Node>
-<StgValue><ssdm name="i_19_cast"/></StgValue>
+<StgValue><ssdm name="i_21_cast"/></StgValue>
 </operation>
 
 <operation id="14" st_id="1" stage="1" lat="1">
@@ -171,7 +171,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split13:1 %specloopname_ln716 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13
+.split13:1 %specloopname_ln716 = specloopname void @_ssdm_op_SpecLoopName, void @empty_58
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln716"/></StgValue>
@@ -187,7 +187,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader
 
 <Node id="15" bw="7" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.split13:2 %placement_done_values_addr = getelementptr i1 %placement_done_values, i64 0, i64 %i_19_cast
+.split13:2 %placement_done_values_addr = getelementptr i1 %placement_done_values, i64 0, i64 %i_21_cast
 
 ]]></Node>
 <StgValue><ssdm name="placement_done_values_addr"/></StgValue>
@@ -251,7 +251,7 @@ newFuncRoot:2 %br_ln0 = br void %.preheader
 
 <Node id="20" bw="0">
 <![CDATA[
-.lr.ph36.preheader.exitStub:0 %ret_ln0 = ret
+.lr.ph31.preheader.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>

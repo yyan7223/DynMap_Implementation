@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4'
 ================================================================
-* Date:           Wed Jan  3 23:39:00 2024
+* Date:           Wed Jan 17 08:24:27 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.247 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  5.953 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+-----+--------+--------+-----+
 |DSP              |        -|    -|       -|       -|    -|
-|Expression       |        -|    -|       0|      59|    -|
+|Expression       |        -|    -|       0|      53|    -|
 |FIFO             |        -|    -|       -|       -|    -|
 |Instance         |        -|    -|     195|     126|    -|
 |Memory           |        -|    -|       -|       -|    -|
 |Multiplexer      |        -|    -|       -|     119|    -|
-|Register         |        -|    -|      93|       -|    -|
+|Register         |        -|    -|      83|       -|    -|
 +-----------------+---------+-----+--------+--------+-----+
-|Total            |        0|    0|     288|     304|    0|
+|Total            |        0|    0|     278|     298|    0|
 +-----------------+---------+-----+--------+--------+-----+
 |Available        |     1000|  900|  343800|  171900|    0|
 +-----------------+---------+-----+--------+--------+-----+
@@ -91,16 +91,16 @@
     +------------------------+----------+----+---+----+------------+------------+
     |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +------------------------+----------+----+---+----+------------+------------+
-    |add_ln252_fu_231_p2     |         +|   0|  0|  15|          15|          15|
-    |add_ln253_fu_251_p2     |         +|   0|  0|  13|          13|          13|
+    |add_ln252_fu_231_p2     |         +|   0|  0|  13|          13|          13|
+    |add_ln253_fu_251_p2     |         +|   0|  0|  11|          11|          11|
     |add_ln280_fu_289_p2     |         +|   0|  0|   8|           8|           1|
-    |formerPC_fu_216_p2      |         +|   0|  0|   7|           7|           2|
+    |formerPC_fu_216_p2      |         +|   0|  0|   7|           5|           2|
     |icmp_ln251_fu_195_p2    |      icmp|   0|  0|   4|           8|           1|
     |icmp_ln282_fu_301_p2    |      icmp|   0|  0|   4|           8|           8|
     |or_ln254_fu_279_p2      |        or|   0|  0|   1|           1|           1|
-    |select_ln251_fu_208_p3  |    select|   0|  0|   7|           1|           7|
+    |select_ln251_fu_208_p3  |    select|   0|  0|   5|           1|           5|
     +------------------------+----------+----+---+----+------------+------------+
-    |Total                   |          |   0|  0|  59|          61|          48|
+    |Total                   |          |   0|  0|  53|          55|          42|
     +------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -122,18 +122,18 @@
     +-------------------------+----+----+-----+-----------+
     |           Name          | FF | LUT| Bits| Const Bits|
     +-------------------------+----+----+-----+-----------+
-    |add_ln252_reg_361        |  15|   0|   15|          0|
+    |add_ln252_reg_361        |  13|   0|   13|          0|
     |ap_CS_fsm                |  14|   0|   14|          0|
     |ap_done_reg              |   1|   0|    1|          0|
     |ap_return_preg           |   1|   0|    1|          0|
     |empty_fu_70              |   8|   0|    8|          0|
-    |formerPC_reg_356         |   7|   0|    7|          0|
-    |idxprom174_cast_reg_345  |  15|   0|   15|          0|
-    |idxprom20_cast_reg_340   |  13|   0|   13|          0|
+    |formerPC_reg_356         |   5|   0|    5|          0|
+    |idxprom174_cast_reg_345  |  13|   0|   13|          0|
+    |idxprom20_cast_reg_340   |  11|   0|   11|          0|
     |p_load_reg_350           |   8|   0|    8|          0|
-    |trunc_ln253_reg_372      |  11|   0|   11|          0|
+    |trunc_ln253_reg_372      |   9|   0|    9|          0|
     +-------------------------+----+----+-----+-----------+
-    |Total                    |  93|   0|   93|          0|
+    |Total                    |  83|   0|   83|          0|
     +-------------------------+----+----+-----+-----------+
 
 
@@ -161,14 +161,14 @@
 |upperLimit                                |   in|    8|     ap_none|                                               upperLimit|        scalar|
 |p_out                                     |  out|    8|      ap_vld|                                                    p_out|       pointer|
 |p_out_ap_vld                              |  out|    1|      ap_vld|                                                    p_out|       pointer|
-|add_ln252_out                             |  out|   15|      ap_vld|                                            add_ln252_out|       pointer|
+|add_ln252_out                             |  out|   13|      ap_vld|                                            add_ln252_out|       pointer|
 |add_ln252_out_ap_vld                      |  out|    1|      ap_vld|                                            add_ln252_out|       pointer|
-|tmp_71_out                                |  out|   15|      ap_vld|                                               tmp_71_out|       pointer|
+|tmp_71_out                                |  out|   13|      ap_vld|                                               tmp_71_out|       pointer|
 |tmp_71_out_ap_vld                         |  out|    1|      ap_vld|                                               tmp_71_out|       pointer|
-|placement_dynamic_bypass_occupy_address0  |  out|   15|   ap_memory|                          placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_address0  |  out|   13|   ap_memory|                          placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_ce0       |  out|    1|   ap_memory|                          placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_q0        |   in|    1|   ap_memory|                          placement_dynamic_bypass_occupy|         array|
-|placement_dynamic_bypass_occupy_address1  |  out|   15|   ap_memory|                          placement_dynamic_bypass_occupy|         array|
+|placement_dynamic_bypass_occupy_address1  |  out|   13|   ap_memory|                          placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_ce1       |  out|    1|   ap_memory|                          placement_dynamic_bypass_occupy|         array|
 |placement_dynamic_bypass_occupy_q1        |   in|    1|   ap_memory|                          placement_dynamic_bypass_occupy|         array|
 |IDX_pd_bypass_i                           |   in|    8|     ap_ovld|                                            IDX_pd_bypass|       pointer|
@@ -274,51 +274,51 @@ ST_10 : Operation 39 [3/12] (3.61ns)   --->   "%IDX_pd_bypass_modulo = srem i8 %
 State 11 <SV = 10> <Delay = 3.61>
 ST_11 : Operation 40 [2/12] (3.61ns)   --->   "%IDX_pd_bypass_modulo = srem i8 %p_load, i8 %DynamicPlacement_II_load_read" [DynMap/DynMap_4HLS.cpp:193]   --->   Operation 40 'srem' 'IDX_pd_bypass_modulo' <Predicate = true> <Delay = 3.61> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 3.61> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
-State 12 <SV = 11> <Delay = 6.24>
+State 12 <SV = 11> <Delay = 5.95>
 ST_12 : Operation 41 [1/12] (3.61ns)   --->   "%IDX_pd_bypass_modulo = srem i8 %p_load, i8 %DynamicPlacement_II_load_read" [DynMap/DynMap_4HLS.cpp:193]   --->   Operation 41 'srem' 'IDX_pd_bypass_modulo' <Predicate = true> <Delay = 3.61> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 3.61> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 ST_12 : Operation 42 [1/1] (1.31ns)   --->   "%icmp_ln251 = icmp_eq  i8 %IDX_pd_bypass_modulo, i8 0" [DynMap/DynMap_4HLS.cpp:251]   --->   Operation 42 'icmp' 'icmp_ln251' <Predicate = true> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_12 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node formerPC)   --->   "%trunc_ln251 = trunc i8 %DynamicPlacement_II_load_read" [DynMap/DynMap_4HLS.cpp:251]   --->   Operation 43 'trunc' 'trunc_ln251' <Predicate = true> <Delay = 0.00>
 ST_12 : Operation 44 [1/1] (0.00ns)   --->   "%trunc_ln251_1 = trunc i8 %IDX_pd_bypass_modulo" [DynMap/DynMap_4HLS.cpp:251]   --->   Operation 44 'trunc' 'trunc_ln251_1' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node formerPC)   --->   "%select_ln251 = select i1 %icmp_ln251, i7 %trunc_ln251, i7 %trunc_ln251_1" [DynMap/DynMap_4HLS.cpp:251]   --->   Operation 45 'select' 'select_ln251' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_12 : Operation 46 [1/1] (1.31ns) (out node of the LUT)   --->   "%formerPC = add i7 %select_ln251, i7 127" [DynMap/DynMap_4HLS.cpp:251]   --->   Operation 46 'add' 'formerPC' <Predicate = true> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_68_cast = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i7.i4.i4, i7 %trunc_ln251_1, i4 %tileId_read, i4 0" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 47 'bitconcatenate' 'tmp_68_cast' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 48 [1/1] (1.53ns)   --->   "%add_ln252 = add i15 %tmp_68_cast, i15 %idxprom174_cast" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 48 'add' 'add_ln252' <Predicate = true> <Delay = 1.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node formerPC)   --->   "%select_ln251 = select i1 %icmp_ln251, i5 %trunc_ln251, i5 %trunc_ln251_1" [DynMap/DynMap_4HLS.cpp:251]   --->   Operation 45 'select' 'select_ln251' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 46 [1/1] (1.02ns) (out node of the LUT)   --->   "%formerPC = add i5 %select_ln251, i5 31" [DynMap/DynMap_4HLS.cpp:251]   --->   Operation 46 'add' 'formerPC' <Predicate = true> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_68_cast = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i5.i4.i4, i5 %trunc_ln251_1, i4 %tileId_read, i4 0" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 47 'bitconcatenate' 'tmp_68_cast' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 48 [1/1] (1.53ns)   --->   "%add_ln252 = add i13 %tmp_68_cast, i13 %idxprom174_cast" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 48 'add' 'add_ln252' <Predicate = true> <Delay = 1.53> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
-State 13 <SV = 12> <Delay = 4.25>
-ST_13 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln252 = zext i15 %add_ln252" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 49 'zext' 'zext_ln252' <Predicate = true> <Delay = 0.00>
+State 13 <SV = 12> <Delay = 4.13>
+ST_13 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln252 = zext i13 %add_ln252" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 49 'zext' 'zext_ln252' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 50 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_occupy_addr = getelementptr i1 %placement_dynamic_bypass_occupy, i64 0, i64 %zext_ln252" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 50 'getelementptr' 'placement_dynamic_bypass_occupy_addr' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 51 [2/2] (2.77ns)   --->   "%inportConflict = load i15 %placement_dynamic_bypass_occupy_addr" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 51 'load' 'inportConflict' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25600> <RAM>
-ST_13 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i7.i4, i7 %formerPC, i4 0" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 52 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln253 = zext i11 %tmp_s" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 53 'zext' 'zext_ln253' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 54 [1/1] (1.48ns)   --->   "%add_ln253 = add i13 %zext_ln253, i13 %idxprom20_cast" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 54 'add' 'add_ln253' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln253 = trunc i13 %add_ln253" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 55 'trunc' 'trunc_ln253' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 56 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i17 @_ssdm_op_BitConcatenate.i17.i13.i4, i13 %add_ln253, i4 %sub182_read" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 56 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 57 [1/1] (0.00ns)   --->   "%sext_ln253 = sext i17 %tmp" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 57 'sext' 'sext_ln253' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 51 [2/2] (2.77ns)   --->   "%inportConflict = load i13 %placement_dynamic_bypass_occupy_addr" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 51 'load' 'inportConflict' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5120> <RAM>
+ST_13 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %formerPC, i4 0" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 52 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln253 = zext i9 %tmp_s" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 53 'zext' 'zext_ln253' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 54 [1/1] (1.36ns)   --->   "%add_ln253 = add i11 %zext_ln253, i11 %idxprom20_cast" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 54 'add' 'add_ln253' <Predicate = true> <Delay = 1.36> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln253 = trunc i11 %add_ln253" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 55 'trunc' 'trunc_ln253' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 56 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i11.i4, i11 %add_ln253, i4 %sub182_read" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 56 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 57 [1/1] (0.00ns)   --->   "%sext_ln253 = sext i15 %tmp" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 57 'sext' 'sext_ln253' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 58 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_occupy_addr_1 = getelementptr i1 %placement_dynamic_bypass_occupy, i64 0, i64 %sext_ln253" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 58 'getelementptr' 'placement_dynamic_bypass_occupy_addr_1' <Predicate = true> <Delay = 0.00>
-ST_13 : Operation 59 [2/2] (2.77ns)   --->   "%outportConflict = load i15 %placement_dynamic_bypass_occupy_addr_1" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 59 'load' 'outportConflict' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25600> <RAM>
+ST_13 : Operation 59 [2/2] (2.77ns)   --->   "%outportConflict = load i13 %placement_dynamic_bypass_occupy_addr_1" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 59 'load' 'outportConflict' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5120> <RAM>
 
 State 14 <SV = 13> <Delay = 4.86>
 ST_14 : Operation 60 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 60 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 61 [1/2] (2.77ns)   --->   "%inportConflict = load i15 %placement_dynamic_bypass_occupy_addr" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 61 'load' 'inportConflict' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25600> <RAM>
-ST_14 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_71_cast = bitconcatenate i15 @_ssdm_op_BitConcatenate.i15.i11.i4, i11 %trunc_ln253, i4 %sub182_read" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 62 'bitconcatenate' 'tmp_71_cast' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 63 [1/2] (2.77ns)   --->   "%outportConflict = load i15 %placement_dynamic_bypass_occupy_addr_1" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 63 'load' 'outportConflict' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25600> <RAM>
+ST_14 : Operation 61 [1/2] (2.77ns)   --->   "%inportConflict = load i13 %placement_dynamic_bypass_occupy_addr" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 61 'load' 'inportConflict' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5120> <RAM>
+ST_14 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_71_cast = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i9.i4, i9 %trunc_ln253, i4 %sub182_read" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 62 'bitconcatenate' 'tmp_71_cast' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 63 [1/2] (2.77ns)   --->   "%outportConflict = load i13 %placement_dynamic_bypass_occupy_addr_1" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 63 'load' 'outportConflict' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5120> <RAM>
 ST_14 : Operation 64 [1/1] (0.80ns)   --->   "%or_ln254 = or i1 %outportConflict, i1 %inportConflict" [DynMap/DynMap_4HLS.cpp:254]   --->   Operation 64 'or' 'or_ln254' <Predicate = true> <Delay = 0.80> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_14 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln254 = br i1 %or_ln254, void %.exitStub, void %.critedge53" [DynMap/DynMap_4HLS.cpp:254]   --->   Operation 65 'br' 'br_ln254' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln280 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [DynMap/DynMap_4HLS.cpp:280]   --->   Operation 66 'specloopname' 'specloopname_ln280' <Predicate = (or_ln254)> <Delay = 0.00>
+ST_14 : Operation 66 [1/1] (0.00ns)   --->   "%specloopname_ln280 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [DynMap/DynMap_4HLS.cpp:280]   --->   Operation 66 'specloopname' 'specloopname_ln280' <Predicate = (or_ln254)> <Delay = 0.00>
 ST_14 : Operation 67 [1/1] (0.00ns)   --->   "%IDX_pd_bypass_load = load i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:280]   --->   Operation 67 'load' 'IDX_pd_bypass_load' <Predicate = (or_ln254)> <Delay = 0.00>
-ST_14 : Operation 68 [1/1] (1.30ns)   --->   "%add_ln280 = add i8 %IDX_pd_bypass_load, i8 1" [DynMap/DynMap_4HLS.cpp:280]   --->   Operation 68 'add' 'add_ln280' <Predicate = (or_ln254)> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 68 [1/1] (1.30ns)   --->   "%add_ln280 = add i8 %IDX_pd_bypass_load, i8 1" [DynMap/DynMap_4HLS.cpp:280]   --->   Operation 68 'add' 'add_ln280' <Predicate = (or_ln254)> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_14 : Operation 69 [1/1] (0.00ns)   --->   "%store_ln280 = store i8 %add_ln280, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:280]   --->   Operation 69 'store' 'store_ln280' <Predicate = (or_ln254)> <Delay = 0.00>
 ST_14 : Operation 70 [1/1] (1.31ns)   --->   "%icmp_ln282 = icmp_eq  i8 %add_ln280, i8 %upperLimit_read" [DynMap/DynMap_4HLS.cpp:282]   --->   Operation 70 'icmp' 'icmp_ln282' <Predicate = (or_ln254)> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_14 : Operation 71 [1/1] (0.00ns)   --->   "%br_ln282 = br i1 %icmp_ln282, void, void %.loopexit55.loopexit.exitStub" [DynMap/DynMap_4HLS.cpp:282]   --->   Operation 71 'br' 'br_ln282' <Predicate = (or_ln254)> <Delay = 0.00>
 ST_14 : Operation 72 [1/1] (1.29ns)   --->   "%store_ln249 = store i8 %add_ln280, i8 %empty" [DynMap/DynMap_4HLS.cpp:249]   --->   Operation 72 'store' 'store_ln249' <Predicate = (or_ln254 & !icmp_ln282)> <Delay = 1.29>
 ST_14 : Operation 73 [1/1] (0.00ns)   --->   "%br_ln249 = br void" [DynMap/DynMap_4HLS.cpp:249]   --->   Operation 73 'br' 'br_ln249' <Predicate = (or_ln254 & !icmp_ln282)> <Delay = 0.00>
 ST_14 : Operation 74 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %p_out, i8 %p_load"   --->   Operation 74 'write' 'write_ln0' <Predicate = (or_ln254 & icmp_ln282)> <Delay = 0.00>
-ST_14 : Operation 75 [1/1] (0.00ns)   --->   "%write_ln252 = write void @_ssdm_op_Write.ap_auto.i15P0A, i15 %add_ln252_out, i15 %add_ln252" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 75 'write' 'write_ln252' <Predicate = (or_ln254 & icmp_ln282)> <Delay = 0.00>
-ST_14 : Operation 76 [1/1] (0.00ns)   --->   "%write_ln253 = write void @_ssdm_op_Write.ap_auto.i15P0A, i15 %tmp_71_out, i15 %tmp_71_cast" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 76 'write' 'write_ln253' <Predicate = (or_ln254 & icmp_ln282)> <Delay = 0.00>
+ST_14 : Operation 75 [1/1] (0.00ns)   --->   "%write_ln252 = write void @_ssdm_op_Write.ap_auto.i13P0A, i13 %add_ln252_out, i13 %add_ln252" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 75 'write' 'write_ln252' <Predicate = (or_ln254 & icmp_ln282)> <Delay = 0.00>
+ST_14 : Operation 76 [1/1] (0.00ns)   --->   "%write_ln253 = write void @_ssdm_op_Write.ap_auto.i13P0A, i13 %tmp_71_out, i13 %tmp_71_cast" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 76 'write' 'write_ln253' <Predicate = (or_ln254 & icmp_ln282)> <Delay = 0.00>
 ST_14 : Operation 77 [1/1] (1.29ns)   --->   "%br_ln0 = br void %UnifiedReturnBlock"   --->   Operation 77 'br' 'br_ln0' <Predicate = (or_ln254 & icmp_ln282)> <Delay = 1.29>
 ST_14 : Operation 78 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i8P0A, i8 %p_out, i8 %p_load"   --->   Operation 78 'write' 'write_ln0' <Predicate = (!or_ln254)> <Delay = 0.00>
-ST_14 : Operation 79 [1/1] (0.00ns)   --->   "%write_ln252 = write void @_ssdm_op_Write.ap_auto.i15P0A, i15 %add_ln252_out, i15 %add_ln252" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 79 'write' 'write_ln252' <Predicate = (!or_ln254)> <Delay = 0.00>
-ST_14 : Operation 80 [1/1] (0.00ns)   --->   "%write_ln253 = write void @_ssdm_op_Write.ap_auto.i15P0A, i15 %tmp_71_out, i15 %tmp_71_cast" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 80 'write' 'write_ln253' <Predicate = (!or_ln254)> <Delay = 0.00>
+ST_14 : Operation 79 [1/1] (0.00ns)   --->   "%write_ln252 = write void @_ssdm_op_Write.ap_auto.i13P0A, i13 %add_ln252_out, i13 %add_ln252" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 79 'write' 'write_ln252' <Predicate = (!or_ln254)> <Delay = 0.00>
+ST_14 : Operation 80 [1/1] (0.00ns)   --->   "%write_ln253 = write void @_ssdm_op_Write.ap_auto.i13P0A, i13 %tmp_71_out, i13 %tmp_71_cast" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 80 'write' 'write_ln253' <Predicate = (!or_ln254)> <Delay = 0.00>
 ST_14 : Operation 81 [1/1] (1.29ns)   --->   "%br_ln0 = br void %UnifiedReturnBlock"   --->   Operation 81 'br' 'br_ln0' <Predicate = (!or_ln254)> <Delay = 1.29>
 ST_14 : Operation 82 [1/1] (0.00ns)   --->   "%UnifiedRetVal = phi i1 1, void %.exitStub, i1 0, void %.loopexit55.loopexit.exitStub"   --->   Operation 82 'phi' 'UnifiedRetVal' <Predicate = (icmp_ln282) | (!or_ln254)> <Delay = 0.00>
 ST_14 : Operation 83 [1/1] (0.00ns)   --->   "%ret_ln0 = ret i1 %UnifiedRetVal"   --->   Operation 83 'ret' 'ret_ln0' <Predicate = (icmp_ln282) | (!or_ln254)> <Delay = 0.00>
@@ -580,7 +580,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <pin id="37" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_BitConcatenate.i15.i7.i4.i4"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i13.i5.i4.i4"/></StgValue>
 </bind>
 </comp>
 
@@ -607,7 +607,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <pin id="43" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_BitConcatenate.i11.i7.i4"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i9.i5.i4"/></StgValue>
 </bind>
 </comp>
 
@@ -616,7 +616,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <pin id="45" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_BitConcatenate.i17.i13.i4"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i15.i11.i4"/></StgValue>
 </bind>
 </comp>
 
@@ -661,7 +661,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <pin id="55" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_BitConcatenate.i15.i11.i4"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i13.i9.i4"/></StgValue>
 </bind>
 </comp>
 
@@ -679,7 +679,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_10"/></StgValue>
+<StgValue><ssdm name="empty_13"/></StgValue>
 </bind>
 </comp>
 
@@ -706,7 +706,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <pin id="65" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="_ssdm_op_Write.ap_auto.i15P0A"/></StgValue>
+<StgValue><ssdm name="_ssdm_op_Write.ap_auto.i13P0A"/></StgValue>
 </bind>
 </comp>
 
@@ -839,8 +839,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <comp id="123" class="1004" name="grp_write_fu_123">
 <pin_list>
 <pin id="124" dir="0" index="0" bw="0" slack="0"/>
-<pin id="125" dir="0" index="1" bw="15" slack="0"/>
-<pin id="126" dir="0" index="2" bw="15" slack="2"/>
+<pin id="125" dir="0" index="1" bw="13" slack="0"/>
+<pin id="126" dir="0" index="2" bw="13" slack="2"/>
 <pin id="127" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -852,8 +852,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <comp id="130" class="1004" name="grp_write_fu_130">
 <pin_list>
 <pin id="131" dir="0" index="0" bw="0" slack="0"/>
-<pin id="132" dir="0" index="1" bw="15" slack="0"/>
-<pin id="133" dir="0" index="2" bw="15" slack="0"/>
+<pin id="132" dir="0" index="1" bw="13" slack="0"/>
+<pin id="133" dir="0" index="2" bw="13" slack="0"/>
 <pin id="134" dir="1" index="3" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -866,8 +866,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <pin_list>
 <pin id="138" dir="0" index="0" bw="1" slack="0"/>
 <pin id="139" dir="0" index="1" bw="1" slack="0"/>
-<pin id="140" dir="0" index="2" bw="15" slack="0"/>
-<pin id="141" dir="1" index="3" bw="15" slack="0"/>
+<pin id="140" dir="0" index="2" bw="13" slack="0"/>
+<pin id="141" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -877,10 +877,10 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="144" class="1004" name="grp_access_fu_144">
 <pin_list>
-<pin id="145" dir="0" index="0" bw="15" slack="0"/>
+<pin id="145" dir="0" index="0" bw="13" slack="0"/>
 <pin id="146" dir="0" index="1" bw="1" slack="2147483647"/>
 <pin id="147" dir="0" index="2" bw="0" slack="0"/>
-<pin id="149" dir="0" index="4" bw="15" slack="2147483647"/>
+<pin id="149" dir="0" index="4" bw="13" slack="2147483647"/>
 <pin id="150" dir="0" index="5" bw="1" slack="2147483647"/>
 <pin id="151" dir="0" index="6" bw="0" slack="2147483647"/>
 <pin id="148" dir="1" index="3" bw="1" slack="0"/>
@@ -896,8 +896,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <pin_list>
 <pin id="155" dir="0" index="0" bw="1" slack="0"/>
 <pin id="156" dir="0" index="1" bw="1" slack="0"/>
-<pin id="157" dir="0" index="2" bw="17" slack="0"/>
-<pin id="158" dir="1" index="3" bw="15" slack="0"/>
+<pin id="157" dir="0" index="2" bw="15" slack="0"/>
+<pin id="158" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -932,7 +932,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <comp id="173" class="1004" name="idxprom20_cast_fu_173">
 <pin_list>
 <pin id="174" dir="0" index="0" bw="5" slack="0"/>
-<pin id="175" dir="1" index="1" bw="13" slack="12"/>
+<pin id="175" dir="1" index="1" bw="11" slack="12"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
@@ -943,7 +943,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <comp id="177" class="1004" name="idxprom174_cast_fu_177">
 <pin_list>
 <pin id="178" dir="0" index="0" bw="4" slack="0"/>
-<pin id="179" dir="1" index="1" bw="15" slack="11"/>
+<pin id="179" dir="1" index="1" bw="13" slack="11"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
@@ -1001,7 +1001,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <comp id="201" class="1004" name="trunc_ln251_fu_201">
 <pin_list>
 <pin id="202" dir="0" index="0" bw="8" slack="11"/>
-<pin id="203" dir="1" index="1" bw="7" slack="0"/>
+<pin id="203" dir="1" index="1" bw="5" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -1012,7 +1012,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <comp id="204" class="1004" name="trunc_ln251_1_fu_204">
 <pin_list>
 <pin id="205" dir="0" index="0" bw="8" slack="0"/>
-<pin id="206" dir="1" index="1" bw="7" slack="0"/>
+<pin id="206" dir="1" index="1" bw="5" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -1023,9 +1023,9 @@ ret_ln0                                (ret           ) [ 000000000000000]
 <comp id="208" class="1004" name="select_ln251_fu_208">
 <pin_list>
 <pin id="209" dir="0" index="0" bw="1" slack="0"/>
-<pin id="210" dir="0" index="1" bw="7" slack="0"/>
-<pin id="211" dir="0" index="2" bw="7" slack="0"/>
-<pin id="212" dir="1" index="3" bw="7" slack="0"/>
+<pin id="210" dir="0" index="1" bw="5" slack="0"/>
+<pin id="211" dir="0" index="2" bw="5" slack="0"/>
+<pin id="212" dir="1" index="3" bw="5" slack="0"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
@@ -1035,9 +1035,9 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="216" class="1004" name="formerPC_fu_216">
 <pin_list>
-<pin id="217" dir="0" index="0" bw="7" slack="0"/>
+<pin id="217" dir="0" index="0" bw="5" slack="0"/>
 <pin id="218" dir="0" index="1" bw="1" slack="0"/>
-<pin id="219" dir="1" index="2" bw="7" slack="1"/>
+<pin id="219" dir="1" index="2" bw="5" slack="1"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1047,11 +1047,11 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="222" class="1004" name="tmp_68_cast_fu_222">
 <pin_list>
-<pin id="223" dir="0" index="0" bw="15" slack="0"/>
-<pin id="224" dir="0" index="1" bw="7" slack="0"/>
+<pin id="223" dir="0" index="0" bw="13" slack="0"/>
+<pin id="224" dir="0" index="1" bw="5" slack="0"/>
 <pin id="225" dir="0" index="2" bw="4" slack="11"/>
 <pin id="226" dir="0" index="3" bw="1" slack="0"/>
-<pin id="227" dir="1" index="4" bw="15" slack="0"/>
+<pin id="227" dir="1" index="4" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
@@ -1061,9 +1061,9 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="231" class="1004" name="add_ln252_fu_231">
 <pin_list>
-<pin id="232" dir="0" index="0" bw="15" slack="0"/>
+<pin id="232" dir="0" index="0" bw="13" slack="0"/>
 <pin id="233" dir="0" index="1" bw="4" slack="11"/>
-<pin id="234" dir="1" index="2" bw="15" slack="1"/>
+<pin id="234" dir="1" index="2" bw="13" slack="1"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1073,7 +1073,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="236" class="1004" name="zext_ln252_fu_236">
 <pin_list>
-<pin id="237" dir="0" index="0" bw="15" slack="1"/>
+<pin id="237" dir="0" index="0" bw="13" slack="1"/>
 <pin id="238" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
@@ -1084,10 +1084,10 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="240" class="1004" name="tmp_s_fu_240">
 <pin_list>
-<pin id="241" dir="0" index="0" bw="11" slack="0"/>
-<pin id="242" dir="0" index="1" bw="7" slack="1"/>
+<pin id="241" dir="0" index="0" bw="9" slack="0"/>
+<pin id="242" dir="0" index="1" bw="5" slack="1"/>
 <pin id="243" dir="0" index="2" bw="1" slack="0"/>
-<pin id="244" dir="1" index="3" bw="11" slack="0"/>
+<pin id="244" dir="1" index="3" bw="9" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
@@ -1097,8 +1097,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="247" class="1004" name="zext_ln253_fu_247">
 <pin_list>
-<pin id="248" dir="0" index="0" bw="11" slack="0"/>
-<pin id="249" dir="1" index="1" bw="13" slack="0"/>
+<pin id="248" dir="0" index="0" bw="9" slack="0"/>
+<pin id="249" dir="1" index="1" bw="11" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
@@ -1108,9 +1108,9 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="251" class="1004" name="add_ln253_fu_251">
 <pin_list>
-<pin id="252" dir="0" index="0" bw="11" slack="0"/>
+<pin id="252" dir="0" index="0" bw="9" slack="0"/>
 <pin id="253" dir="0" index="1" bw="5" slack="12"/>
-<pin id="254" dir="1" index="2" bw="13" slack="0"/>
+<pin id="254" dir="1" index="2" bw="11" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -1120,8 +1120,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="256" class="1004" name="trunc_ln253_fu_256">
 <pin_list>
-<pin id="257" dir="0" index="0" bw="13" slack="0"/>
-<pin id="258" dir="1" index="1" bw="11" slack="1"/>
+<pin id="257" dir="0" index="0" bw="11" slack="0"/>
+<pin id="258" dir="1" index="1" bw="9" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -1131,10 +1131,10 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="260" class="1004" name="tmp_fu_260">
 <pin_list>
-<pin id="261" dir="0" index="0" bw="17" slack="0"/>
-<pin id="262" dir="0" index="1" bw="13" slack="0"/>
+<pin id="261" dir="0" index="0" bw="15" slack="0"/>
+<pin id="262" dir="0" index="1" bw="11" slack="0"/>
 <pin id="263" dir="0" index="2" bw="4" slack="12"/>
-<pin id="264" dir="1" index="3" bw="17" slack="0"/>
+<pin id="264" dir="1" index="3" bw="15" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
@@ -1144,7 +1144,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="267" class="1004" name="sext_ln253_fu_267">
 <pin_list>
-<pin id="268" dir="0" index="0" bw="17" slack="0"/>
+<pin id="268" dir="0" index="0" bw="15" slack="0"/>
 <pin id="269" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
@@ -1155,10 +1155,10 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="272" class="1004" name="tmp_71_cast_fu_272">
 <pin_list>
-<pin id="273" dir="0" index="0" bw="15" slack="0"/>
-<pin id="274" dir="0" index="1" bw="11" slack="1"/>
+<pin id="273" dir="0" index="0" bw="13" slack="0"/>
+<pin id="274" dir="0" index="1" bw="9" slack="1"/>
 <pin id="275" dir="0" index="2" bw="4" slack="13"/>
-<pin id="276" dir="1" index="3" bw="15" slack="0"/>
+<pin id="276" dir="1" index="3" bw="13" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
@@ -1289,8 +1289,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="340" class="1005" name="idxprom20_cast_reg_340">
 <pin_list>
-<pin id="341" dir="0" index="0" bw="13" slack="12"/>
-<pin id="342" dir="1" index="1" bw="13" slack="12"/>
+<pin id="341" dir="0" index="0" bw="11" slack="12"/>
+<pin id="342" dir="1" index="1" bw="11" slack="12"/>
 </pin_list>
 <bind>
 <opset="idxprom20_cast "/>
@@ -1299,8 +1299,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="345" class="1005" name="idxprom174_cast_reg_345">
 <pin_list>
-<pin id="346" dir="0" index="0" bw="15" slack="11"/>
-<pin id="347" dir="1" index="1" bw="15" slack="11"/>
+<pin id="346" dir="0" index="0" bw="13" slack="11"/>
+<pin id="347" dir="1" index="1" bw="13" slack="11"/>
 </pin_list>
 <bind>
 <opset="idxprom174_cast "/>
@@ -1319,8 +1319,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="356" class="1005" name="formerPC_reg_356">
 <pin_list>
-<pin id="357" dir="0" index="0" bw="7" slack="1"/>
-<pin id="358" dir="1" index="1" bw="7" slack="1"/>
+<pin id="357" dir="0" index="0" bw="5" slack="1"/>
+<pin id="358" dir="1" index="1" bw="5" slack="1"/>
 </pin_list>
 <bind>
 <opset="formerPC "/>
@@ -1329,8 +1329,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="361" class="1005" name="add_ln252_reg_361">
 <pin_list>
-<pin id="362" dir="0" index="0" bw="15" slack="1"/>
-<pin id="363" dir="1" index="1" bw="15" slack="1"/>
+<pin id="362" dir="0" index="0" bw="13" slack="1"/>
+<pin id="363" dir="1" index="1" bw="13" slack="1"/>
 </pin_list>
 <bind>
 <opset="add_ln252 "/>
@@ -1339,8 +1339,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="367" class="1005" name="placement_dynamic_bypass_occupy_addr_reg_367">
 <pin_list>
-<pin id="368" dir="0" index="0" bw="15" slack="1"/>
-<pin id="369" dir="1" index="1" bw="15" slack="1"/>
+<pin id="368" dir="0" index="0" bw="13" slack="1"/>
+<pin id="369" dir="1" index="1" bw="13" slack="1"/>
 </pin_list>
 <bind>
 <opset="placement_dynamic_bypass_occupy_addr "/>
@@ -1349,8 +1349,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="372" class="1005" name="trunc_ln253_reg_372">
 <pin_list>
-<pin id="373" dir="0" index="0" bw="11" slack="1"/>
-<pin id="374" dir="1" index="1" bw="11" slack="1"/>
+<pin id="373" dir="0" index="0" bw="9" slack="1"/>
+<pin id="374" dir="1" index="1" bw="9" slack="1"/>
 </pin_list>
 <bind>
 <opset="trunc_ln253 "/>
@@ -1359,8 +1359,8 @@ ret_ln0                                (ret           ) [ 000000000000000]
 
 <comp id="377" class="1005" name="placement_dynamic_bypass_occupy_addr_1_reg_377">
 <pin_list>
-<pin id="378" dir="0" index="0" bw="15" slack="1"/>
-<pin id="379" dir="1" index="1" bw="15" slack="1"/>
+<pin id="378" dir="0" index="0" bw="13" slack="1"/>
+<pin id="379" dir="1" index="1" bw="13" slack="1"/>
 </pin_list>
 <bind>
 <opset="placement_dynamic_bypass_occupy_addr_1 "/>
@@ -1646,14 +1646,14 @@ ret_ln0                                (ret           ) [ 000000000000000]
 |   srem   |                 grp_fu_189                |   195   |   126   |
 |----------|-------------------------------------------|---------|---------|
 |          |              formerPC_fu_216              |    0    |    7    |
-|    add   |              add_ln252_fu_231             |    0    |    15   |
-|          |              add_ln253_fu_251             |    0    |    11   |
+|    add   |              add_ln252_fu_231             |    0    |    13   |
+|          |              add_ln253_fu_251             |    0    |    9    |
 |          |              add_ln280_fu_289             |    0    |    8    |
 |----------|-------------------------------------------|---------|---------|
 |   icmp   |             icmp_ln251_fu_195             |    0    |    4    |
 |          |             icmp_ln282_fu_301             |    0    |    4    |
 |----------|-------------------------------------------|---------|---------|
-|  select  |            select_ln251_fu_208            |    0    |    7    |
+|  select  |            select_ln251_fu_208            |    0    |    5    |
 |----------|-------------------------------------------|---------|---------|
 |    or    |              or_ln254_fu_279              |    0    |    1    |
 |----------|-------------------------------------------|---------|---------|
@@ -1685,7 +1685,7 @@ ret_ln0                                (ret           ) [ 000000000000000]
 |   zext   |             zext_ln252_fu_236             |    0    |    0    |
 |          |             zext_ln253_fu_247             |    0    |    0    |
 |----------|-------------------------------------------|---------|---------|
-|   Total  |                                           |   195   |   183   |
+|   Total  |                                           |   195   |   177   |
 |----------|-------------------------------------------|---------|---------|
 
 Memories:
@@ -1697,32 +1697,32 @@ N/A
 +----------------------------------------------+--------+
 |     DynamicPlacement_II_load_read_reg_334    |    8   |
 |             UnifiedRetVal_reg_162            |    1   |
-|               add_ln252_reg_361              |   15   |
+|               add_ln252_reg_361              |   13   |
 |                 empty_reg_311                |    8   |
-|               formerPC_reg_356               |    7   |
-|            idxprom174_cast_reg_345           |   15   |
-|            idxprom20_cast_reg_340            |   13   |
+|               formerPC_reg_356               |    5   |
+|            idxprom174_cast_reg_345           |   13   |
+|            idxprom20_cast_reg_340            |   11   |
 |                p_load_reg_350                |    8   |
-|placement_dynamic_bypass_occupy_addr_1_reg_377|   15   |
-| placement_dynamic_bypass_occupy_addr_reg_367 |   15   |
+|placement_dynamic_bypass_occupy_addr_1_reg_377|   13   |
+| placement_dynamic_bypass_occupy_addr_reg_367 |   13   |
 |              sub182_read_reg_323             |    4   |
 |              tileId_read_reg_329             |    4   |
-|              trunc_ln253_reg_372             |   11   |
+|              trunc_ln253_reg_372             |    9   |
 |            upperLimit_read_reg_318           |    8   |
 +----------------------------------------------+--------+
-|                     Total                    |   132  |
+|                     Total                    |   118  |
 +----------------------------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |-------------------|------|------|------|--------||---------||---------|
 |        Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |-------------------|------|------|------|--------||---------||---------|
-| grp_access_fu_144 |  p0  |   2  |  15  |   30   ||    9    |
+| grp_access_fu_144 |  p0  |   2  |  13  |   26   ||    9    |
 | grp_access_fu_144 |  p2  |   2  |   0  |    0   ||    9    |
 |     grp_fu_189    |  p0  |   2  |   8  |   16   ||    9    |
 |     grp_fu_189    |  p1  |   2  |   8  |   16   ||    9    |
 |-------------------|------|------|------|--------||---------||---------|
-|       Total       |      |      |      |   62   ||  5.192  ||    36   |
+|       Total       |      |      |      |   58   ||  5.192  ||    36   |
 |-------------------|------|------|------|--------||---------||---------|
 
 
@@ -1731,10 +1731,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    -   |   195  |   183  |
+|  Function |    -   |   195  |   177  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    5   |    -   |   36   |
-|  Register |    -   |   132  |    -   |
+|  Register |    -   |   118  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    5   |   327  |   219  |
+|   Total   |    5   |   313  |   213  |
 +-----------+--------+--------+--------+

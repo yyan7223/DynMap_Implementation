@@ -162,16 +162,16 @@ set RtlHierarchyInfo {[
 			{"Name" : "xy2Tile", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "allocated_tiles_shapes_values", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "8", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_fu_530", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "11", "Inst_end_state" : "12"},
-					{"ID" : "15", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "22", "Inst_end_state" : "23"}]},
+					{"ID" : "15", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "22", "Inst_end_state" : "23"},
+					{"ID" : "8", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_fu_530", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "11", "Inst_end_state" : "12"}]},
 			{"Name" : "CurOptPotentialPlacement_List_BypassLess_Gen_YChanges", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "curOptPotentialPlacement", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "18", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16_fu_575", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "26", "Inst_end_state" : "27"},
-					{"ID" : "6", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5_fu_522", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "4", "Inst_end_state" : "34"},
-					{"ID" : "13", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10_fu_551", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "17", "Inst_end_state" : "29"},
 					{"ID" : "22", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_480_7_fu_592", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "37", "Inst_end_state" : "38"},
-					{"ID" : "15", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "22", "Inst_end_state" : "23"}]}],
+					{"ID" : "15", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "22", "Inst_end_state" : "23"},
+					{"ID" : "13", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10_fu_551", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "17", "Inst_end_state" : "29"},
+					{"ID" : "6", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5_fu_522", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "4", "Inst_end_state" : "34"},
+					{"ID" : "18", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16_fu_575", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "26", "Inst_end_state" : "27"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_437_2_VITIS_LOOP_438_3", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "39", "FirstState" : "ap_ST_fsm_state8", "LastState" : ["ap_ST_fsm_state13"], "QuitState" : ["ap_ST_fsm_state9"], "PreState" : ["ap_ST_fsm_state7"], "PostState" : ["ap_ST_fsm_state4"], "OneDepthLoop" : "0", "OneStateBlock": ""}},

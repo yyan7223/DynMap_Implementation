@@ -24,7 +24,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename placement_dynamic_bypass_occupy \
     op interface \
-    ports { placement_dynamic_bypass_occupy_address0 { O 15 vector } placement_dynamic_bypass_occupy_ce0 { O 1 bit } placement_dynamic_bypass_occupy_q0 { I 1 vector } placement_dynamic_bypass_occupy_address1 { O 15 vector } placement_dynamic_bypass_occupy_ce1 { O 1 bit } placement_dynamic_bypass_occupy_q1 { I 1 vector } } \
+    ports { placement_dynamic_bypass_occupy_address0 { O 13 vector } placement_dynamic_bypass_occupy_ce0 { O 1 bit } placement_dynamic_bypass_occupy_q0 { I 1 vector } placement_dynamic_bypass_occupy_address1 { O 13 vector } placement_dynamic_bypass_occupy_ce1 { O 1 bit } placement_dynamic_bypass_occupy_q1 { I 1 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'placement_dynamic_bypass_occupy'"
@@ -163,7 +163,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_add_ln252_out \
     op interface \
-    ports { add_ln252_out { O 15 vector } add_ln252_out_ap_vld { O 1 bit } } \
+    ports { add_ln252_out { O 13 vector } add_ln252_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -178,7 +178,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_tmp_71_out \
     op interface \
-    ports { tmp_71_out { O 15 vector } tmp_71_out_ap_vld { O 1 bit } } \
+    ports { tmp_71_out { O 13 vector } tmp_71_out_ap_vld { O 1 bit } } \
 } "
 }
 

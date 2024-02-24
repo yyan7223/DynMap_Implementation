@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'BypassOptPlacement_Gen_Record'
 ================================================================
-* Date:           Wed Jan  3 23:38:49 2024
+* Date:           Wed Jan 17 08:24:17 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -207,22 +207,22 @@ ST_7 : Operation 118 [1/1] (0.99ns) (out node of the LUT)   --->   "%sel_tmp42_o
 ST_7 : Operation 119 [1/1] (0.00ns) (grouped into LUT with out node sub182)   --->   "%sel_tmp44_op = select i1 %tmp_37, i4 14, i4 %sel_tmp42_op" [DynMap/DynMap_4HLS.cpp:149]   --->   Operation 119 'select' 'sel_tmp44_op' <Predicate = (!empty)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_7 : Operation 120 [1/1] (0.00ns) (grouped into LUT with out node sub182)   --->   "%sel_tmp48_op = select i1 %and_ln149_4, i4 8, i4 12" [DynMap/DynMap_4HLS.cpp:149]   --->   Operation 120 'select' 'sel_tmp48_op' <Predicate = (empty)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_7 : Operation 121 [1/1] (0.83ns) (out node of the LUT)   --->   "%sub182 = select i1 %empty, i4 %sel_tmp48_op, i4 %sel_tmp44_op" [DynMap/DynMap_4HLS.cpp:149]   --->   Operation 121 'select' 'sub182' <Predicate = true> <Delay = 0.83> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_7 : Operation 122 [2/2] (4.91ns)   --->   "%targetBlock15 = call i1 @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, i8 %add_ln192, i8 %DynamicPlacement_II_load, i4 %tileId, i4 %sub173, i5 %bypassSrcTile_load, i4 %sub182, i8 %upperLimit, i8 %p_loc, i15 %add_ln252_loc, i15 %tmp_71_loc, i1 %placement_dynamic_bypass_occupy, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 122 'call' 'targetBlock15' <Predicate = true> <Delay = 4.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 122 [2/2] (4.91ns)   --->   "%targetBlock15 = call i1 @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, i8 %add_ln192, i8 %DynamicPlacement_II_load, i4 %tileId, i4 %sub173, i5 %bypassSrcTile_load, i4 %sub182, i8 %upperLimit, i8 %p_loc, i13 %add_ln252_loc, i13 %tmp_71_loc, i1 %placement_dynamic_bypass_occupy, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 122 'call' 'targetBlock15' <Predicate = true> <Delay = 4.91> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 8 <SV = 7> <Delay = 3.57>
-ST_8 : Operation 123 [1/2] (3.57ns)   --->   "%targetBlock15 = call i1 @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, i8 %add_ln192, i8 %DynamicPlacement_II_load, i4 %tileId, i4 %sub173, i5 %bypassSrcTile_load, i4 %sub182, i8 %upperLimit, i8 %p_loc, i15 %add_ln252_loc, i15 %tmp_71_loc, i1 %placement_dynamic_bypass_occupy, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 123 'call' 'targetBlock15' <Predicate = true> <Delay = 3.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 123 [1/2] (3.57ns)   --->   "%targetBlock15 = call i1 @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_249_4, i8 %add_ln192, i8 %DynamicPlacement_II_load, i4 %tileId, i4 %sub173, i5 %bypassSrcTile_load, i4 %sub182, i8 %upperLimit, i8 %p_loc, i13 %add_ln252_loc, i13 %tmp_71_loc, i1 %placement_dynamic_bypass_occupy, i8 %IDX_pd_bypass" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 123 'call' 'targetBlock15' <Predicate = true> <Delay = 3.57> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 2.77>
 ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln243_1 = zext i4 %tileId" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 124 'zext' 'zext_ln243_1' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 125 [1/1] (0.00ns)   --->   "%p_loc_load = load i8 %p_loc"   --->   Operation 125 'load' 'p_loc_load' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%add_ln252_loc_load = load i15 %add_ln252_loc"   --->   Operation 126 'load' 'add_ln252_loc_load' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%add_ln252_reload_cast = zext i15 %add_ln252_loc_load"   --->   Operation 127 'zext' 'add_ln252_reload_cast' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_71_loc_load = load i15 %tmp_71_loc"   --->   Operation 128 'load' 'tmp_71_loc_load' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_71_reload_cast = zext i15 %tmp_71_loc_load"   --->   Operation 129 'zext' 'tmp_71_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%add_ln252_loc_load = load i13 %add_ln252_loc"   --->   Operation 126 'load' 'add_ln252_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%add_ln252_reload_cast = zext i13 %add_ln252_loc_load"   --->   Operation 127 'zext' 'add_ln252_reload_cast' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 128 [1/1] (0.00ns)   --->   "%tmp_71_loc_load = load i13 %tmp_71_loc"   --->   Operation 128 'load' 'tmp_71_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_71_reload_cast = zext i13 %tmp_71_loc_load"   --->   Operation 129 'zext' 'tmp_71_reload_cast' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 130 [1/1] (1.29ns)   --->   "%br_ln192 = br i1 %targetBlock15, void %.loopexit55, void %codeRepl39" [DynMap/DynMap_4HLS.cpp:192]   --->   Operation 130 'br' 'br_ln192' <Predicate = true> <Delay = 1.29>
-ST_9 : Operation 131 [2/2] (0.00ns)   --->   "%call_ln243 = call void @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, i8 %p_loc_load, i4 %tileId, i14 %tmp_73_loc, i8 %placement_dynamic_bypass" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 131 'call' 'call_ln243' <Predicate = (targetBlock15)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 131 [2/2] (0.00ns)   --->   "%call_ln243 = call void @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, i8 %p_loc_load, i4 %tileId, i13 %tmp_73_loc, i8 %placement_dynamic_bypass" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 131 'call' 'call_ln243' <Predicate = (targetBlock15)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_9 : Operation 132 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_occupy_addr_2 = getelementptr i1 %placement_dynamic_bypass_occupy, i64 0, i64 %add_ln252_reload_cast" [DynMap/DynMap_4HLS.cpp:252]   --->   Operation 132 'getelementptr' 'placement_dynamic_bypass_occupy_addr_2' <Predicate = (targetBlock15)> <Delay = 0.00>
-ST_9 : Operation 133 [1/1] (2.77ns)   --->   "%store_ln260 = store i1 1, i15 %placement_dynamic_bypass_occupy_addr_2" [DynMap/DynMap_4HLS.cpp:260]   --->   Operation 133 'store' 'store_ln260' <Predicate = (targetBlock15)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25600> <RAM>
+ST_9 : Operation 133 [1/1] (2.77ns)   --->   "%store_ln260 = store i1 1, i13 %placement_dynamic_bypass_occupy_addr_2" [DynMap/DynMap_4HLS.cpp:260]   --->   Operation 133 'store' 'store_ln260' <Predicate = (targetBlock15)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5120> <RAM>
 ST_9 : Operation 134 [1/1] (0.00ns)   --->   "%bypassOpt_wrAddr_load = load i8 %bypassOpt_wrAddr" [DynMap/DynMap_4HLS.cpp:262]   --->   Operation 134 'load' 'bypassOpt_wrAddr_load' <Predicate = (targetBlock15)> <Delay = 0.00>
 ST_9 : Operation 135 [1/1] (0.00ns)   --->   "%zext_ln262 = zext i8 %bypassOpt_wrAddr_load" [DynMap/DynMap_4HLS.cpp:262]   --->   Operation 135 'zext' 'zext_ln262' <Predicate = (targetBlock15)> <Delay = 0.00>
 ST_9 : Operation 136 [1/1] (0.00ns)   --->   "%placement_dynamic_dict_Opt2Tile_keys_addr = getelementptr i8 %placement_dynamic_dict_Opt2Tile_keys, i64 0, i64 %zext_ln262" [DynMap/DynMap_4HLS.cpp:262]   --->   Operation 136 'getelementptr' 'placement_dynamic_dict_Opt2Tile_keys_addr' <Predicate = (targetBlock15)> <Delay = 0.00>
@@ -239,15 +239,15 @@ ST_9 : Operation 146 [1/1] (1.30ns)   --->   "%add_ln268 = add i8 %bypassOpt_wrA
 ST_9 : Operation 147 [1/1] (0.00ns)   --->   "%store_ln268 = store i8 %add_ln268, i8 %bypassOpt_wrAddr" [DynMap/DynMap_4HLS.cpp:268]   --->   Operation 147 'store' 'store_ln268' <Predicate = (targetBlock15)> <Delay = 0.00>
 
 State 10 <SV = 9> <Delay = 4.08>
-ST_10 : Operation 148 [1/2] (4.08ns)   --->   "%call_ln243 = call void @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, i8 %p_loc_load, i4 %tileId, i14 %tmp_73_loc, i8 %placement_dynamic_bypass" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 148 'call' 'call_ln243' <Predicate = true> <Delay = 4.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 148 [1/2] (4.08ns)   --->   "%call_ln243 = call void @BypassOptPlacement_Gen_Record_Pipeline_VITIS_LOOP_255_5, i8 %p_loc_load, i4 %tileId, i13 %tmp_73_loc, i8 %placement_dynamic_bypass" [DynMap/DynMap_4HLS.cpp:243]   --->   Operation 148 'call' 'call_ln243' <Predicate = true> <Delay = 4.08> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_10 : Operation 149 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_occupy_addr = getelementptr i1 %placement_dynamic_bypass_occupy, i64 0, i64 %tmp_71_reload_cast" [DynMap/DynMap_4HLS.cpp:253]   --->   Operation 149 'getelementptr' 'placement_dynamic_bypass_occupy_addr' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 150 [1/1] (2.77ns)   --->   "%store_ln261 = store i1 1, i15 %placement_dynamic_bypass_occupy_addr" [DynMap/DynMap_4HLS.cpp:261]   --->   Operation 150 'store' 'store_ln261' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 25600> <RAM>
+ST_10 : Operation 150 [1/1] (2.77ns)   --->   "%store_ln261 = store i1 1, i13 %placement_dynamic_bypass_occupy_addr" [DynMap/DynMap_4HLS.cpp:261]   --->   Operation 150 'store' 'store_ln261' <Predicate = true> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 5120> <RAM>
 
 State 11 <SV = 10> <Delay = 2.77>
-ST_11 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_73_loc_load = load i14 %tmp_73_loc"   --->   Operation 151 'load' 'tmp_73_loc_load' <Predicate = (targetBlock15)> <Delay = 0.00>
-ST_11 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_73_reload_cast = zext i14 %tmp_73_loc_load"   --->   Operation 152 'zext' 'tmp_73_reload_cast' <Predicate = (targetBlock15)> <Delay = 0.00>
+ST_11 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_73_loc_load = load i13 %tmp_73_loc"   --->   Operation 151 'load' 'tmp_73_loc_load' <Predicate = (targetBlock15)> <Delay = 0.00>
+ST_11 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_73_reload_cast = zext i13 %tmp_73_loc_load"   --->   Operation 152 'zext' 'tmp_73_reload_cast' <Predicate = (targetBlock15)> <Delay = 0.00>
 ST_11 : Operation 153 [1/1] (0.00ns)   --->   "%placement_dynamic_bypass_addr = getelementptr i8 %placement_dynamic_bypass, i64 0, i64 %tmp_73_reload_cast" [DynMap/DynMap_4HLS.cpp:257]   --->   Operation 153 'getelementptr' 'placement_dynamic_bypass_addr' <Predicate = (targetBlock15)> <Delay = 0.00>
-ST_11 : Operation 154 [1/1] (2.77ns)   --->   "%store_ln259 = store i8 %bypassOptIdx_load, i14 %placement_dynamic_bypass_addr" [DynMap/DynMap_4HLS.cpp:259]   --->   Operation 154 'store' 'store_ln259' <Predicate = (targetBlock15)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 12800> <RAM>
+ST_11 : Operation 154 [1/1] (2.77ns)   --->   "%store_ln259 = store i8 %bypassOptIdx_load, i13 %placement_dynamic_bypass_addr" [DynMap/DynMap_4HLS.cpp:259]   --->   Operation 154 'store' 'store_ln259' <Predicate = (targetBlock15)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 6400> <RAM>
 ST_11 : Operation 155 [1/1] (1.29ns)   --->   "%br_ln270 = br void %.loopexit55" [DynMap/DynMap_4HLS.cpp:270]   --->   Operation 155 'br' 'br_ln270' <Predicate = (targetBlock15)> <Delay = 1.29>
 ST_11 : Operation 156 [1/1] (0.00ns)   --->   "%retval_0 = phi i1 1, void %codeRepl39, i1 0, void %.loopexit39_ifconv"   --->   Operation 156 'phi' 'retval_0' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 157 [1/1] (0.00ns)   --->   "%ret_ln284 = ret i1 %retval_0" [DynMap/DynMap_4HLS.cpp:284]   --->   Operation 157 'ret' 'ret_ln284' <Predicate = true> <Delay = 0.00>
@@ -267,8 +267,7 @@ The critical path consists of the following:
  <State 2>: 3.06ns
 The critical path consists of the following:
 	'load' operation ('Tile2XY_0_load') on array 'Tile2XY_0' [60]  (1.75 ns)
-	'icmp' operation ('cmp28') [62]  (0.508 ns)
-	'xor' operation ('sel_tmp1') [69]  (0 ns)
+	'icmp' operation ('icmp_ln205', DynMap/DynMap_4HLS.cpp:205) [68]  (0.508 ns)
 	'and' operation ('and_ln205', DynMap/DynMap_4HLS.cpp:205) [70]  (0.8 ns)
 
  <State 3>: 1.3ns

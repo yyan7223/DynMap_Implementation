@@ -43240,12 +43240,13 @@ using namespace chrono;
 
 static const char cgra_size = 4;
 static const char maxPCs = 100;
+static const char maxBpsPCs = 20;
 static const char maxNodes = 100;
 static const char maxPredsNum = 10;
 static const char maxSuccsNum = 20;
 static const char maxBpsNum1Time = 20;
 static const char maxLevelNum = 4;
-static const char bypassMaxPages = 8;
+static const char bypassMaxPages = 4;
 static const char kernelNum = 6;
 static const char shapeNumPKernel = 12;
 static const char shapeTypesNum = 20;
@@ -43295,7 +43296,7 @@ static char placement_static[maxNodes];
 static char placement_dynamic[maxPCs][cgra_size*cgra_size];
 static char placement_dynamic_bypass[bypassMaxPages][maxPCs][cgra_size*cgra_size];
 static char placement_dynamic_occupy[maxPCs][cgra_size*cgra_size];
-static char placement_dynamic_bypass_occupy[maxPCs][cgra_size*cgra_size][topology*topology];
+static char placement_dynamic_bypass_occupy[maxBpsPCs][cgra_size*cgra_size][topology*topology];
 void PlacementDynamic_Record(char);
 void Calculate_CurToPred_Distance();
 bool CurToPred_Distance_Satisfy_Topology();
@@ -45747,21 +45748,21 @@ void Reset(){
             placement_dynamic_occupy[i][j] = 0;
         }
     }
-    VITIS_LOOP_697_10: for(char i = 0; i < maxPCs; i++){
+    VITIS_LOOP_697_10: for(char i = 0; i < maxBpsPCs; i++){
         VITIS_LOOP_698_11: for(char j = 0; j < cgra_size*cgra_size; j++){
             VITIS_LOOP_699_12: for(char k = 0; k < topology * topology; k++){
             placement_dynamic_bypass_occupy[i][j][k] = 0;
             }
         }
     }
-    VITIS_LOOP_704_13: for(char i = 0; i < maxPCs; i++){
-        placement_dynamic_dict_Opt2PC_keys[i] = 0;
+    VITIS_LOOP_704_13: for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
+        placement_dynamic_dict_Opt2PC_keys[i] = placement_static_kernels_values[kernel_idx][i];
     }
     VITIS_LOOP_707_14: for(char i = 0; i < maxPCs; i++){
         placement_dynamic_dict_Opt2PC_values[i] = 0;
     }
-    VITIS_LOOP_710_15: for(char i = 0; i < maxPCs; i++){
-        placement_dynamic_dict_Opt2Tile_keys[i] = 0;
+    VITIS_LOOP_710_15: for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
+        placement_dynamic_dict_Opt2Tile_keys[i] = placement_static_kernels_values[kernel_idx][i];
     }
     VITIS_LOOP_713_16: for(char i = 0; i < maxPCs; i++){
         placement_dynamic_dict_Opt2Tile_values[i] = -1;
@@ -45770,13 +45771,11 @@ void Reset(){
         placement_done_values[i] = 0;
     }
     VITIS_LOOP_719_18: for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
-        placement_dynamic_dict_Opt2PC_keys[i] = placement_static_kernels_values[kernel_idx][i];
-        placement_dynamic_dict_Opt2Tile_keys[i] = placement_static_kernels_values[kernel_idx][i];
         placement_done_keys[i] = placement_static_kernels_values[kernel_idx][i];
     }
-    VITIS_LOOP_724_19: for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
+    VITIS_LOOP_722_19: for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
         dependency_predecessor_keys[i] = placement_static_kernels_values[kernel_idx][i];
-        VITIS_LOOP_726_20: for(char j = 0; j < maxPredsNum; j++){
+        VITIS_LOOP_724_20: for(char j = 0; j < maxPredsNum; j++){
             if((j == 0) || (dependency_predecessors_kernels_values1[kernel_idx][i][j] != 0))
             {
                 dependency_predecessor_values[i][j] = dependency_predecessors_kernels_values1[kernel_idx][i][j];
@@ -45786,9 +45785,9 @@ void Reset(){
             }
         }
     }
-    VITIS_LOOP_736_21: for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
+    VITIS_LOOP_734_21: for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
         dependency_successor_keys[i] = placement_static_kernels_values[kernel_idx][i];
-        VITIS_LOOP_738_22: for(char j = 0; j < maxSuccsNum; j++){
+        VITIS_LOOP_736_22: for(char j = 0; j < maxSuccsNum; j++){
             if((j == 0) || (dependency_successors_kernels_values1[kernel_idx][i][j] != 0))
             {
                 dependency_successor_values[i][j] = dependency_successors_kernels_values1[kernel_idx][i][j];
@@ -45829,14 +45828,14 @@ void kernel_shape_idx_generator(char i, char j){
 
 __attribute__((sdx_kernel("runOne", 0))) char runOne(char testCaseIdx){
 #pragma HLSDIRECTIVE TOP name=runOne
-# 777 "DynMap/DynMap_4HLS.cpp"
+# 775 "DynMap/DynMap_4HLS.cpp"
 
  int i = testCaseIdx / shapeNumPKernel;
  int j = testCaseIdx % shapeNumPKernel;
  kernel_shape_idx_generator(i, j);
  char startII = calculate_startII();
  threshold = 1;
- VITIS_LOOP_783_1: while (true)
+ VITIS_LOOP_781_1: while (true)
  {
   DynamicPlacement_II = startII;
   Reset();
@@ -45865,12 +45864,12 @@ void runAll(char DynamicPlacement_II_Results[testCasesNum]){
     char test_case = 0;
     typedef high_resolution_clock Clock;
     kernel_idx = 0;
-    VITIS_LOOP_812_1: for(char i = 0; i < kernelNum; i++){
-        VITIS_LOOP_813_2: for(char j = 0; j < shapeNumPKernel; j++){
+    VITIS_LOOP_810_1: for(char i = 0; i < kernelNum; i++){
+        VITIS_LOOP_811_2: for(char j = 0; j < shapeNumPKernel; j++){
             kernel_shape_idx_generator(i, j);
             char startII = calculate_startII();
             threshold = 1;
-            VITIS_LOOP_817_3: while (true)
+            VITIS_LOOP_815_3: while (true)
             {
                 DynamicPlacement_II = startII;
                 Reset();

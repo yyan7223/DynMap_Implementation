@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_354_4'
 ================================================================
-* Date:           Wed Jan  3 23:39:02 2024
+* Date:           Wed Jan 17 08:24:29 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -280,7 +280,7 @@ State 13 <SV = 12> <Delay = 3.61>
 ST_13 : Operation 47 [2/12] (3.61ns)   --->   "%srem_ln362 = srem i8 %add_ln361, i8 %DynamicPlacement_II_load_2_read" [DynMap/DynMap_4HLS.cpp:362]   --->   Operation 47 'srem' 'srem_ln362' <Predicate = (placement_dynamic_occupy_load)> <Delay = 3.61> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 3.61> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 
 State 14 <SV = 13> <Delay = 3.61>
-ST_14 : Operation 48 [1/1] (0.00ns)   --->   "%specloopname_ln361 = specloopname void @_ssdm_op_SpecLoopName, void @empty_0" [DynMap/DynMap_4HLS.cpp:361]   --->   Operation 48 'specloopname' 'specloopname_ln361' <Predicate = (placement_dynamic_occupy_load)> <Delay = 0.00>
+ST_14 : Operation 48 [1/1] (0.00ns)   --->   "%specloopname_ln361 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [DynMap/DynMap_4HLS.cpp:361]   --->   Operation 48 'specloopname' 'specloopname_ln361' <Predicate = (placement_dynamic_occupy_load)> <Delay = 0.00>
 ST_14 : Operation 49 [1/12] (3.61ns)   --->   "%srem_ln362 = srem i8 %add_ln361, i8 %DynamicPlacement_II_load_2_read" [DynMap/DynMap_4HLS.cpp:362]   --->   Operation 49 'srem' 'srem_ln362' <Predicate = (placement_dynamic_occupy_load)> <Delay = 3.61> <CoreInst = "Divider">   --->   Core 6 'Divider' <Latency = 11> <II = 1> <Delay = 3.61> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
 ST_14 : Operation 50 [1/1] (0.00ns)   --->   "%trunc_ln362 = trunc i7 %srem_ln362" [DynMap/DynMap_4HLS.cpp:362]   --->   Operation 50 'trunc' 'trunc_ln362' <Predicate = (placement_dynamic_occupy_load)> <Delay = 0.00>
 ST_14 : Operation 51 [1/1] (0.00ns)   --->   "%store_ln362 = store i7 %trunc_ln362, i7 %IDX_pd_modulo" [DynMap/DynMap_4HLS.cpp:362]   --->   Operation 51 'store' 'store_ln362' <Predicate = (placement_dynamic_occupy_load)> <Delay = 0.00>
@@ -545,7 +545,7 @@ br_ln0                          (br            ) [ 00000000000000011]
 <pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_0"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </bind>
 </comp>
 

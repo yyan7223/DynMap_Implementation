@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9'
 ================================================================
-* Date:           Wed Jan  3 23:38:44 2024
+* Date:           Wed Jan 17 08:24:13 2024
 
 * Version:        2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)
 * Project:        DynMap
@@ -86,16 +86,16 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 6.37>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 4 'alloca' 'j' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i_13 = alloca i32 1"   --->   Operation 5 'alloca' 'i_13' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%indvar_flatten23 = alloca i32 1"   --->   Operation 6 'alloca' 'indvar_flatten23' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 7 [1/1] (1.29ns)   --->   "%store_ln0 = store i11 0, i11 %indvar_flatten23"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%indvar_flatten24 = alloca i32 1"   --->   Operation 6 'alloca' 'indvar_flatten24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.29ns)   --->   "%store_ln0 = store i11 0, i11 %indvar_flatten24"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
 ST_1 : Operation 8 [1/1] (1.29ns)   --->   "%store_ln0 = store i7 0, i7 %i_13"   --->   Operation 8 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
 ST_1 : Operation 9 [1/1] (1.29ns)   --->   "%store_ln0 = store i5 0, i5 %j"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader7.preheader"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%indvar_flatten23_load = load i11 %indvar_flatten23" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 11 'load' 'indvar_flatten23_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader3.preheader"   --->   Operation 10 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%indvar_flatten24_load = load i11 %indvar_flatten24" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 11 'load' 'indvar_flatten24_load' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 12 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (1.88ns)   --->   "%icmp_ln692 = icmp_eq  i11 %indvar_flatten23_load, i11 1600" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 13 'icmp' 'icmp_ln692' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 14 [1/1] (1.48ns)   --->   "%add_ln692_1 = add i11 %indvar_flatten23_load, i11 1" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 14 'add' 'add_ln692_1' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln692 = br i1 %icmp_ln692, void %.preheader7, void %.preheader6.preheader.preheader.exitStub" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 15 'br' 'br_ln692' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.88ns)   --->   "%icmp_ln692 = icmp_eq  i11 %indvar_flatten24_load, i11 1600" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 13 'icmp' 'icmp_ln692' <Predicate = true> <Delay = 1.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (1.48ns)   --->   "%add_ln692_1 = add i11 %indvar_flatten24_load, i11 1" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 14 'add' 'add_ln692_1' <Predicate = true> <Delay = 1.48> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln692 = br i1 %icmp_ln692, void %.preheader3, void %.preheader2.preheader.preheader.exitStub" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 15 'br' 'br_ln692' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%j_load = load i5 %j" [DynMap/DynMap_4HLS.cpp:693]   --->   Operation 16 'load' 'j_load' <Predicate = (!icmp_ln692)> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%i_13_load = load i7 %i_13" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 17 'load' 'i_13_load' <Predicate = (!icmp_ln692)> <Delay = 0.00>
 ST_1 : Operation 18 [1/1] (1.31ns)   --->   "%add_ln692 = add i7 %i_13_load, i7 1" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 18 'add' 'add_ln692' <Predicate = (!icmp_ln692)> <Delay = 1.31> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -113,10 +113,10 @@ ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%placement_dynamic_occupy_addr = ge
 ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specloopname_ln693 = specloopname void @_ssdm_op_SpecLoopName, void @empty_57" [DynMap/DynMap_4HLS.cpp:693]   --->   Operation 30 'specloopname' 'specloopname_ln693' <Predicate = (!icmp_ln692)> <Delay = 0.00>
 ST_1 : Operation 31 [1/1] (2.77ns)   --->   "%store_ln694 = store i1 0, i11 %placement_dynamic_occupy_addr" [DynMap/DynMap_4HLS.cpp:694]   --->   Operation 31 'store' 'store_ln694' <Predicate = (!icmp_ln692)> <Delay = 2.77> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 1> <Depth = 1600> <RAM>
 ST_1 : Operation 32 [1/1] (1.02ns)   --->   "%add_ln693 = add i5 %select_ln692, i5 1" [DynMap/DynMap_4HLS.cpp:693]   --->   Operation 32 'add' 'add_ln693' <Predicate = (!icmp_ln692)> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 33 [1/1] (1.29ns)   --->   "%store_ln692 = store i11 %add_ln692_1, i11 %indvar_flatten23" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 33 'store' 'store_ln692' <Predicate = (!icmp_ln692)> <Delay = 1.29>
+ST_1 : Operation 33 [1/1] (1.29ns)   --->   "%store_ln692 = store i11 %add_ln692_1, i11 %indvar_flatten24" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 33 'store' 'store_ln692' <Predicate = (!icmp_ln692)> <Delay = 1.29>
 ST_1 : Operation 34 [1/1] (1.29ns)   --->   "%store_ln692 = store i7 %select_ln692_1, i7 %i_13" [DynMap/DynMap_4HLS.cpp:692]   --->   Operation 34 'store' 'store_ln692' <Predicate = (!icmp_ln692)> <Delay = 1.29>
 ST_1 : Operation 35 [1/1] (1.29ns)   --->   "%store_ln693 = store i5 %add_ln693, i5 %j" [DynMap/DynMap_4HLS.cpp:693]   --->   Operation 35 'store' 'store_ln693' <Predicate = (!icmp_ln692)> <Delay = 1.29>
-ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader7.preheader"   --->   Operation 36 'br' 'br_ln0' <Predicate = (!icmp_ln692)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln0 = br void %.preheader3.preheader"   --->   Operation 36 'br' 'br_ln0' <Predicate = (!icmp_ln692)> <Delay = 0.00>
 ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 37 'ret' 'ret_ln0' <Predicate = (icmp_ln692)> <Delay = 0.00>
 
 

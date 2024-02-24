@@ -40,8 +40,8 @@ set C_modelArgList {
 	{ placement_dynamic_dict_Opt2PC_keys int 8 regular {array 100 { 2 3 } 1 1 } {global 2}  }
 	{ IDX_pd_bypass int 8 regular {pointer 2} {global 2}  }
 	{ idx_pd_r int 4 regular {pointer 2} {global 2}  }
-	{ placement_dynamic_bypass_occupy int 1 regular {array 25600 { 2 1 } 1 1 } {global 2}  }
-	{ placement_dynamic_bypass int 8 regular {array 12800 { 2 3 } 1 1 } {global 2}  }
+	{ placement_dynamic_bypass_occupy int 1 regular {array 5120 { 2 1 } 1 1 } {global 2}  }
+	{ placement_dynamic_bypass int 8 regular {array 6400 { 2 3 } 1 1 } {global 2}  }
 	{ bypassOpt_wrAddr int 8 regular {pointer 2} {global 2}  }
 	{ dependency_successor_values int 8 regular {array 2000 { 2 3 } 1 1 } {global 2}  }
 }
@@ -185,15 +185,15 @@ set portList {
 	{ idx_pd_r_i sc_in sc_lv 4 signal 27 } 
 	{ idx_pd_r_o sc_out sc_lv 4 signal 27 } 
 	{ idx_pd_r_o_ap_vld sc_out sc_logic 1 outvld 27 } 
-	{ placement_dynamic_bypass_occupy_address0 sc_out sc_lv 15 signal 28 } 
+	{ placement_dynamic_bypass_occupy_address0 sc_out sc_lv 13 signal 28 } 
 	{ placement_dynamic_bypass_occupy_ce0 sc_out sc_logic 1 signal 28 } 
 	{ placement_dynamic_bypass_occupy_we0 sc_out sc_logic 1 signal 28 } 
 	{ placement_dynamic_bypass_occupy_d0 sc_out sc_lv 1 signal 28 } 
 	{ placement_dynamic_bypass_occupy_q0 sc_in sc_lv 1 signal 28 } 
-	{ placement_dynamic_bypass_occupy_address1 sc_out sc_lv 15 signal 28 } 
+	{ placement_dynamic_bypass_occupy_address1 sc_out sc_lv 13 signal 28 } 
 	{ placement_dynamic_bypass_occupy_ce1 sc_out sc_logic 1 signal 28 } 
 	{ placement_dynamic_bypass_occupy_q1 sc_in sc_lv 1 signal 28 } 
-	{ placement_dynamic_bypass_address0 sc_out sc_lv 14 signal 29 } 
+	{ placement_dynamic_bypass_address0 sc_out sc_lv 13 signal 29 } 
 	{ placement_dynamic_bypass_ce0 sc_out sc_logic 1 signal 29 } 
 	{ placement_dynamic_bypass_we0 sc_out sc_logic 1 signal 29 } 
 	{ placement_dynamic_bypass_d0 sc_out sc_lv 8 signal 29 } 
@@ -312,15 +312,15 @@ set NewPortList {[
  	{ "name": "idx_pd_r_i", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "idx_pd_r", "role": "i" }} , 
  	{ "name": "idx_pd_r_o", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "idx_pd_r", "role": "o" }} , 
  	{ "name": "idx_pd_r_o_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "idx_pd_r", "role": "o_ap_vld" }} , 
- 	{ "name": "placement_dynamic_bypass_occupy_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address0" }} , 
+ 	{ "name": "placement_dynamic_bypass_occupy_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "ce0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "we0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "d0" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "q0" }} , 
- 	{ "name": "placement_dynamic_bypass_occupy_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":15, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address1" }} , 
+ 	{ "name": "placement_dynamic_bypass_occupy_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "address1" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "ce1" }} , 
  	{ "name": "placement_dynamic_bypass_occupy_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass_occupy", "role": "q1" }} , 
- 	{ "name": "placement_dynamic_bypass_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":14, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "address0" }} , 
+ 	{ "name": "placement_dynamic_bypass_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":13, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "address0" }} , 
  	{ "name": "placement_dynamic_bypass_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "ce0" }} , 
  	{ "name": "placement_dynamic_bypass_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "we0" }} , 
  	{ "name": "placement_dynamic_bypass_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":8, "type": "signal", "bundle":{"name": "placement_dynamic_bypass", "role": "d0" }} , 
@@ -363,10 +363,10 @@ set RtlHierarchyInfo {[
 					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "IDX_pd", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "dependency_predecessor_values", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "dependency_predecessor_values", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "11", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2_fu_403", "Port" : "dependency_predecessor_values", "Inst_start_state" : "3", "Inst_end_state" : "4"},
 					{"ID" : "15", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_624_6_fu_430", "Port" : "dependency_predecessor_values", "Inst_start_state" : "12", "Inst_end_state" : "13"},
-					{"ID" : "14", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5_fu_422", "Port" : "dependency_predecessor_values", "Inst_start_state" : "10", "Inst_end_state" : "11"}]},
+					{"ID" : "11", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_601_2_fu_403", "Port" : "dependency_predecessor_values", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "14", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_618_5_fu_422", "Port" : "dependency_predecessor_values", "Inst_start_state" : "10", "Inst_end_state" : "11"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "dependency_predecessor_values", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "predecessors_wrAddr", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "predecessors_wrAddr", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
@@ -388,8 +388,8 @@ set RtlHierarchyInfo {[
 					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "placement_dynamic_dict_Opt2PC_values", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "predsNum", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "predsNum", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "predsNum", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "predsNum", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "predsNum", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "threshold", "Type" : "None", "Direction" : "I"},
 			{"Name" : "placement_static_Opt2Tile_kernels_values1", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "placement_static_Tile2Level_keys", "Type" : "Memory", "Direction" : "I",
@@ -398,30 +398,30 @@ set RtlHierarchyInfo {[
 			{"Name" : "placement_static_Tile2Level_values", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "shape_idx", "Type" : "None", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "shape_idx", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "shape_idx", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "shape_idx", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "shape_idx", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "allocated_tiles_Maxlevels_dynamic_shapes_values", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "curOptPotentialPlacement_wrAddr", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "curOptPotentialPlacement_wrAddr", "Inst_start_state" : "26", "Inst_end_state" : "29"},
 					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "curOptPotentialPlacement_wrAddr", "Inst_start_state" : "16", "Inst_end_state" : "17"},
-					{"ID" : "46", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493", "Port" : "curOptPotentialPlacement_wrAddr", "Inst_start_state" : "24", "Inst_end_state" : "25"}]},
+					{"ID" : "46", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493", "Port" : "curOptPotentialPlacement_wrAddr", "Inst_start_state" : "24", "Inst_end_state" : "25"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "curOptPotentialPlacement_wrAddr", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "allocated_tiles_levelsValidLen_shapes_values", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "allocated_tiles_levels_dynamic_shapes_values", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "46", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493", "Port" : "allocated_tiles_levels_dynamic_shapes_values", "Inst_start_state" : "24", "Inst_end_state" : "25"},
+					{"ID" : "86", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5_fu_597", "Port" : "allocated_tiles_levels_dynamic_shapes_values", "Inst_start_state" : "27", "Inst_end_state" : "28"},
 					{"ID" : "44", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_388_2_fu_482", "Port" : "allocated_tiles_levels_dynamic_shapes_values", "Inst_start_state" : "22", "Inst_end_state" : "23"},
-					{"ID" : "86", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5_fu_597", "Port" : "allocated_tiles_levels_dynamic_shapes_values", "Inst_start_state" : "27", "Inst_end_state" : "28"}]},
+					{"ID" : "46", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493", "Port" : "allocated_tiles_levels_dynamic_shapes_values", "Inst_start_state" : "24", "Inst_end_state" : "25"}]},
 			{"Name" : "curOptPotentialPlacement", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "26", "Inst_end_state" : "29"},
+					{"ID" : "86", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5_fu_597", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "27", "Inst_end_state" : "28"},
 					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "16", "Inst_end_state" : "17"},
 					{"ID" : "46", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_398_3_fu_493", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "24", "Inst_end_state" : "25"},
-					{"ID" : "86", "SubInstance" : "grp_dynamic_placement_routing_Pipeline_VITIS_LOOP_415_5_fu_597", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "27", "Inst_end_state" : "28"}]},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "CGRA_NumTiles_shapes_values", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "CGRA_NumTiles_shapes_values", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "CGRA_NumTiles_shapes_values", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "CGRA_NumTiles_shapes_values", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "CGRA_NumTiles_shapes_values", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "potentialPlacement_wrAddr_List_0", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "potentialPlacement_wrAddr_List_0", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
@@ -430,27 +430,27 @@ set RtlHierarchyInfo {[
 					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "potentialPlacement_wrAddr_List_1", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
 			{"Name" : "placement_dynamic_dict_Opt2Tile_values", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "placement_dynamic_dict_Opt2Tile_values", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "placement_dynamic_dict_Opt2Tile_values", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "placement_dynamic_dict_Opt2Tile_values", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "placement_dynamic_dict_Opt2Tile_values", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "Tile2XY_0", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "Tile2XY_0", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "Tile2XY_0", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "Tile2XY_0", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "Tile2XY_0", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "Tile2XY_1", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "Tile2XY_1", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "Tile2XY_1", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "Tile2XY_1", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "Tile2XY_1", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "CurOptPotentialPlacement_List_BypassLess_Gen_XChanges", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "CurOptPotentialPlacement_List_BypassLess_Gen_XChanges", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
 			{"Name" : "xy2Tile", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "xy2Tile", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "xy2Tile", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "xy2Tile", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "xy2Tile", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "allocated_tiles_shapes_values", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "26", "Inst_end_state" : "29"},
-					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
+					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "48", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "26", "Inst_end_state" : "29"}]},
 			{"Name" : "CurOptPotentialPlacement_List_BypassLess_Gen_YChanges", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "17", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_fu_439", "Port" : "CurOptPotentialPlacement_List_BypassLess_Gen_YChanges", "Inst_start_state" : "16", "Inst_end_state" : "17"}]},
@@ -660,16 +660,16 @@ set RtlHierarchyInfo {[
 			{"Name" : "xy2Tile", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "allocated_tiles_shapes_values", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "25", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_fu_530", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "11", "Inst_end_state" : "12"},
-					{"ID" : "32", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "22", "Inst_end_state" : "23"}]},
+					{"ID" : "32", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "22", "Inst_end_state" : "23"},
+					{"ID" : "25", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_453_4_fu_530", "Port" : "allocated_tiles_shapes_values", "Inst_start_state" : "11", "Inst_end_state" : "12"}]},
 			{"Name" : "CurOptPotentialPlacement_List_BypassLess_Gen_YChanges", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "curOptPotentialPlacement", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "35", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16_fu_575", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "26", "Inst_end_state" : "27"},
-					{"ID" : "23", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5_fu_522", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "4", "Inst_end_state" : "34"},
-					{"ID" : "30", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10_fu_551", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "17", "Inst_end_state" : "29"},
 					{"ID" : "39", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_480_7_fu_592", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "37", "Inst_end_state" : "38"},
-					{"ID" : "32", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "22", "Inst_end_state" : "23"}]}],
+					{"ID" : "32", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_562_14_fu_559", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "22", "Inst_end_state" : "23"},
+					{"ID" : "30", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_508_10_fu_551", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "17", "Inst_end_state" : "29"},
+					{"ID" : "23", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_470_5_fu_522", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "4", "Inst_end_state" : "34"},
+					{"ID" : "35", "SubInstance" : "grp_CurOptPotentialPlacement_List_BypassLess_Gen_Pipeline_VITIS_LOOP_577_16_fu_575", "Port" : "curOptPotentialPlacement", "Inst_start_state" : "26", "Inst_end_state" : "27"}]}],
 		"Loop" : [
 			{"Name" : "VITIS_LOOP_437_2_VITIS_LOOP_438_3", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "39", "FirstState" : "ap_ST_fsm_state8", "LastState" : ["ap_ST_fsm_state13"], "QuitState" : ["ap_ST_fsm_state9"], "PreState" : ["ap_ST_fsm_state7"], "PostState" : ["ap_ST_fsm_state4"], "OneDepthLoop" : "0", "OneStateBlock": ""}},
@@ -993,19 +993,19 @@ set RtlHierarchyInfo {[
 			{"Name" : "predecessors", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "placement_dynamic_dict_Opt2Tile_keys", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "51", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1_fu_587", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "17", "Inst_end_state" : "18"},
-					{"ID" : "52", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_32_1_fu_596", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "24", "Inst_end_state" : "25"},
-					{"ID" : "54", "SubInstance" : "grp_BypassOptPlacement_Gen_Record_fu_615", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "32", "Inst_end_state" : "33"},
 					{"ID" : "70", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_fu_667", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "34", "Inst_end_state" : "35"},
+					{"ID" : "52", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_32_1_fu_596", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "24", "Inst_end_state" : "25"},
 					{"ID" : "80", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_127_1_fu_691", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "36", "Inst_end_state" : "37"},
+					{"ID" : "51", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_14_1_fu_587", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "17", "Inst_end_state" : "18"},
+					{"ID" : "54", "SubInstance" : "grp_BypassOptPlacement_Gen_Record_fu_615", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "32", "Inst_end_state" : "33"},
 					{"ID" : "53", "SubInstance" : "grp_RoutingAvailability_CheckPredecessor_and_Placement_Pipeline_VITIS_LOOP_39_2_fu_606", "Port" : "placement_dynamic_dict_Opt2Tile_keys", "Inst_start_state" : "28", "Inst_end_state" : "29"}]},
 			{"Name" : "predTile1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "kernel_idx", "Type" : "None", "Direction" : "I"},
 			{"Name" : "placement_static_kernels_values", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "bypassSrcOpt", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "54", "SubInstance" : "grp_BypassOptPlacement_Gen_Record_fu_615", "Port" : "bypassSrcOpt", "Inst_start_state" : "32", "Inst_end_state" : "33"},
-					{"ID" : "70", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_fu_667", "Port" : "bypassSrcOpt", "Inst_start_state" : "34", "Inst_end_state" : "35"}]},
+					{"ID" : "70", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_fu_667", "Port" : "bypassSrcOpt", "Inst_start_state" : "34", "Inst_end_state" : "35"},
+					{"ID" : "54", "SubInstance" : "grp_BypassOptPlacement_Gen_Record_fu_615", "Port" : "bypassSrcOpt", "Inst_start_state" : "32", "Inst_end_state" : "33"}]},
 			{"Name" : "bypassTgtOpt", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "70", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_fu_667", "Port" : "bypassTgtOpt", "Inst_start_state" : "34", "Inst_end_state" : "35"}]},
@@ -1032,8 +1032,8 @@ set RtlHierarchyInfo {[
 					{"ID" : "54", "SubInstance" : "grp_BypassOptPlacement_Gen_Record_fu_615", "Port" : "bypassOptIdx", "Inst_start_state" : "32", "Inst_end_state" : "33"}]},
 			{"Name" : "bypassOpt", "Type" : "OVld", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "54", "SubInstance" : "grp_BypassOptPlacement_Gen_Record_fu_615", "Port" : "bypassOpt", "Inst_start_state" : "32", "Inst_end_state" : "33"},
-					{"ID" : "70", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_fu_667", "Port" : "bypassOpt", "Inst_start_state" : "34", "Inst_end_state" : "35"}]},
+					{"ID" : "70", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_fu_667", "Port" : "bypassOpt", "Inst_start_state" : "34", "Inst_end_state" : "35"},
+					{"ID" : "54", "SubInstance" : "grp_BypassOptPlacement_Gen_Record_fu_615", "Port" : "bypassOpt", "Inst_start_state" : "32", "Inst_end_state" : "33"}]},
 			{"Name" : "placement_dynamic_dict_Opt2PC_keys", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "54", "SubInstance" : "grp_BypassOptPlacement_Gen_Record_fu_615", "Port" : "placement_dynamic_dict_Opt2PC_keys", "Inst_start_state" : "32", "Inst_end_state" : "33"}]},
@@ -1352,16 +1352,16 @@ set RtlHierarchyInfo {[
 			{"Name" : "bypassTgtOpt_keyIdx", "Type" : "None", "Direction" : "I"},
 			{"Name" : "dependency_successor_values", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "72", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2_fu_176", "Port" : "dependency_successor_values", "Inst_start_state" : "3", "Inst_end_state" : "4"},
-					{"ID" : "79", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9_fu_235", "Port" : "dependency_successor_values", "Inst_start_state" : "18", "Inst_end_state" : "19"},
 					{"ID" : "74", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_75_4_fu_193", "Port" : "dependency_successor_values", "Inst_start_state" : "7", "Inst_end_state" : "8"},
-					{"ID" : "77", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7_fu_219", "Port" : "dependency_successor_values", "Inst_start_state" : "14", "Inst_end_state" : "15"}]},
+					{"ID" : "72", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_61_2_fu_176", "Port" : "dependency_successor_values", "Inst_start_state" : "3", "Inst_end_state" : "4"},
+					{"ID" : "77", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_102_7_fu_219", "Port" : "dependency_successor_values", "Inst_start_state" : "14", "Inst_end_state" : "15"},
+					{"ID" : "79", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_116_9_fu_235", "Port" : "dependency_successor_values", "Inst_start_state" : "18", "Inst_end_state" : "19"}]},
 			{"Name" : "dependency_predecessor_values", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "76", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6_fu_210", "Port" : "dependency_predecessor_values", "Inst_start_state" : "12", "Inst_end_state" : "13"},
-					{"ID" : "78", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8_fu_227", "Port" : "dependency_predecessor_values", "Inst_start_state" : "16", "Inst_end_state" : "17"},
 					{"ID" : "73", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_69_3_fu_185", "Port" : "dependency_predecessor_values", "Inst_start_state" : "5", "Inst_end_state" : "6"},
-					{"ID" : "75", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5_fu_201", "Port" : "dependency_predecessor_values", "Inst_start_state" : "9", "Inst_end_state" : "10"}]},
+					{"ID" : "78", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_108_8_fu_227", "Port" : "dependency_predecessor_values", "Inst_start_state" : "16", "Inst_end_state" : "17"},
+					{"ID" : "75", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_83_5_fu_201", "Port" : "dependency_predecessor_values", "Inst_start_state" : "9", "Inst_end_state" : "10"},
+					{"ID" : "76", "SubInstance" : "grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_94_6_fu_210", "Port" : "dependency_predecessor_values", "Inst_start_state" : "12", "Inst_end_state" : "13"}]},
 			{"Name" : "dependency_backward", "Type" : "None", "Direction" : "I"}]},
 	{"ID" : "71", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_RoutingAvailability_CheckPredecessor_and_Placement_fu_507.grp_Dependency_Update_BypassMode_SrcTgt_fu_667.grp_Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1_fu_168", "Parent" : "70",
 		"CDFG" : "Dependency_Update_BypassMode_SrcTgt_Pipeline_VITIS_LOOP_53_1",
@@ -2022,8 +2022,8 @@ set Spec2ImplPortList {
 	placement_dynamic_dict_Opt2PC_keys { ap_memory {  { placement_dynamic_dict_Opt2PC_keys_address0 mem_address 1 7 }  { placement_dynamic_dict_Opt2PC_keys_ce0 mem_ce 1 1 }  { placement_dynamic_dict_Opt2PC_keys_we0 mem_we 1 1 }  { placement_dynamic_dict_Opt2PC_keys_d0 mem_din 1 8 }  { placement_dynamic_dict_Opt2PC_keys_q0 mem_dout 0 8 } } }
 	IDX_pd_bypass { ap_ovld {  { IDX_pd_bypass_i in_data 0 8 }  { IDX_pd_bypass_o out_data 1 8 }  { IDX_pd_bypass_o_ap_vld out_vld 1 1 } } }
 	idx_pd_r { ap_ovld {  { idx_pd_r_i in_data 0 4 }  { idx_pd_r_o out_data 1 4 }  { idx_pd_r_o_ap_vld out_vld 1 1 } } }
-	placement_dynamic_bypass_occupy { ap_memory {  { placement_dynamic_bypass_occupy_address0 mem_address 1 15 }  { placement_dynamic_bypass_occupy_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_occupy_we0 mem_we 1 1 }  { placement_dynamic_bypass_occupy_d0 mem_din 1 1 }  { placement_dynamic_bypass_occupy_q0 mem_dout 0 1 }  { placement_dynamic_bypass_occupy_address1 MemPortADDR2 1 15 }  { placement_dynamic_bypass_occupy_ce1 MemPortCE2 1 1 }  { placement_dynamic_bypass_occupy_q1 MemPortDOUT2 0 1 } } }
-	placement_dynamic_bypass { ap_memory {  { placement_dynamic_bypass_address0 mem_address 1 14 }  { placement_dynamic_bypass_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_we0 mem_we 1 1 }  { placement_dynamic_bypass_d0 mem_din 1 8 }  { placement_dynamic_bypass_q0 mem_dout 0 8 } } }
+	placement_dynamic_bypass_occupy { ap_memory {  { placement_dynamic_bypass_occupy_address0 mem_address 1 13 }  { placement_dynamic_bypass_occupy_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_occupy_we0 mem_we 1 1 }  { placement_dynamic_bypass_occupy_d0 mem_din 1 1 }  { placement_dynamic_bypass_occupy_q0 mem_dout 0 1 }  { placement_dynamic_bypass_occupy_address1 MemPortADDR2 1 13 }  { placement_dynamic_bypass_occupy_ce1 MemPortCE2 1 1 }  { placement_dynamic_bypass_occupy_q1 MemPortDOUT2 0 1 } } }
+	placement_dynamic_bypass { ap_memory {  { placement_dynamic_bypass_address0 mem_address 1 13 }  { placement_dynamic_bypass_ce0 mem_ce 1 1 }  { placement_dynamic_bypass_we0 mem_we 1 1 }  { placement_dynamic_bypass_d0 mem_din 1 8 }  { placement_dynamic_bypass_q0 mem_dout 0 8 } } }
 	bypassOpt_wrAddr { ap_ovld {  { bypassOpt_wrAddr_i in_data 0 8 }  { bypassOpt_wrAddr_o out_data 1 8 }  { bypassOpt_wrAddr_o_ap_vld out_vld 1 1 } } }
 	dependency_successor_values { ap_memory {  { dependency_successor_values_address0 mem_address 1 11 }  { dependency_successor_values_ce0 mem_ce 1 1 }  { dependency_successor_values_we0 mem_we 1 1 }  { dependency_successor_values_d0 mem_din 1 8 }  { dependency_successor_values_q0 mem_dout 0 8 } } }
 }

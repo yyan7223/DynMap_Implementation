@@ -289,7 +289,7 @@ newFuncRoot:6 %br_ln0 = br void %.lr.ph28
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.split10:0 %specloopname_ln624 = specloopname void @_ssdm_op_SpecLoopName, void @empty_39
+.split10:0 %specloopname_ln624 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln624"/></StgValue>
@@ -494,7 +494,7 @@ newFuncRoot:6 %br_ln0 = br void %.lr.ph28
 </dataflow>
 <dataflow id="86" from="_ssdm_op_SpecLoopName" to="specloopname_ln624" fromId="85" toId="22">
 </dataflow>
-<dataflow id="88" from="empty_39" to="specloopname_ln624" fromId="87" toId="22">
+<dataflow id="88" from="empty_41" to="specloopname_ln624" fromId="87" toId="22">
 </dataflow>
 <dataflow id="89" from="dependency_predecessor_values_addr" to="dependency_predecessor_values_load" fromId="20" toId="23">
 </dataflow>

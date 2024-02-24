@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Reset'" level="0">
-<item name = "Date">Wed Jan  3 23:38:45 2024
+<item name = "Date">Wed Jan 17 08:24:14 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -24,24 +24,23 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">25653, 25678, 0.257 ms, 0.257 ms, 25653, 25678, no</column>
+<column name="">6455, 6480, 64.550 us, 64.800 us, 6455, 6480, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7_fu_191">Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7, 12804, 12804, 0.128 ms, 0.128 ms, 12804, 12804, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9_fu_197">Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9, 1602, 1602, 16.020 us, 16.020 us, 1602, 1602, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12_fu_203">Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12, 25602, 25602, 0.256 ms, 0.256 ms, 25602, 25602, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_704_13_fu_209">Reset_Pipeline_VITIS_LOOP_704_13, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_707_14_fu_215">Reset_Pipeline_VITIS_LOOP_707_14, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_710_15_fu_221">Reset_Pipeline_VITIS_LOOP_710_15, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_713_16_fu_227">Reset_Pipeline_VITIS_LOOP_713_16, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_716_17_fu_233">Reset_Pipeline_VITIS_LOOP_716_17, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20_fu_239">Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20, 174, 424, 1.740 us, 4.240 us, 174, 424, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22_fu_249">Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22, 344, 844, 3.440 us, 8.440 us, 344, 844, no</column>
-<column name="grp_Reset_Pipeline_VITIS_LOOP_719_18_fu_259">Reset_Pipeline_VITIS_LOOP_719_18, 19, 44, 0.190 us, 0.440 us, 19, 44, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7_fu_189">Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7, 6404, 6404, 64.040 us, 64.040 us, 6404, 6404, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9_fu_195">Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9, 1602, 1602, 16.020 us, 16.020 us, 1602, 1602, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12_fu_201">Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12, 5122, 5122, 51.220 us, 51.220 us, 5122, 5122, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_704_13_fu_207">Reset_Pipeline_VITIS_LOOP_704_13, 19, 44, 0.190 us, 0.440 us, 19, 44, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_707_14_fu_217">Reset_Pipeline_VITIS_LOOP_707_14, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_713_16_fu_223">Reset_Pipeline_VITIS_LOOP_713_16, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_716_17_fu_229">Reset_Pipeline_VITIS_LOOP_716_17, 102, 102, 1.020 us, 1.020 us, 102, 102, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20_fu_235">Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20, 174, 424, 1.740 us, 4.240 us, 174, 424, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22_fu_245">Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22, 344, 844, 3.440 us, 8.440 us, 344, 844, no</column>
+<column name="grp_Reset_Pipeline_VITIS_LOOP_710_15_fu_255">Reset_Pipeline_VITIS_LOOP_710_15, 19, 44, 0.190 us, 0.440 us, 19, 44, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">

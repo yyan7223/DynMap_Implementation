@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7'" level="0">
-<item name = "Date">Wed Jan  3 23:38:44 2024
+<item name = "Date">Wed Jan 17 08:24:13 2024
 </item>
 <item name = "Version">2021.2 (Build 3367213 on Tue Oct 19 02:48:09 MDT 2021)</item>
 <item name = "Project">DynMap</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.059 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.068 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">12804, 12804, 0.128 ms, 0.128 ms, 12804, 12804, no</column>
+<column name="">6404, 6404, 64.040 us, 64.040 us, 6404, 6404, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7">12802, 12802, 4, 1, 1, 12800, yes</column>
+<column name="- VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7">6402, 6402, 4, 1, 1, 6400, yes</column>
 </table>
 </item>
 </section>

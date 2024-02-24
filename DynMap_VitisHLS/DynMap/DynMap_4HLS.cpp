@@ -694,21 +694,21 @@ void Reset(){
             placement_dynamic_occupy[i][j] = 0;
         }
     }
-    for(char i = 0; i < maxPCs; i++){
+    for(char i = 0; i < maxBpsPCs; i++){
         for(char j = 0; j < cgra_size*cgra_size; j++){
             for(char k = 0; k < topology * topology; k++){
             placement_dynamic_bypass_occupy[i][j][k] = 0;
             }
         }
     }
-    for(char i = 0; i < maxPCs; i++){
-        placement_dynamic_dict_Opt2PC_keys[i] = 0;
+    for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
+        placement_dynamic_dict_Opt2PC_keys[i] = placement_static_kernels_values[kernel_idx][i];
     }
     for(char i = 0; i < maxPCs; i++){
         placement_dynamic_dict_Opt2PC_values[i] = 0;
     }
-    for(char i = 0; i < maxPCs; i++){
-        placement_dynamic_dict_Opt2Tile_keys[i] = 0;
+    for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
+        placement_dynamic_dict_Opt2Tile_keys[i] = placement_static_kernels_values[kernel_idx][i];
     }
     for(char i = 0; i < maxPCs; i++){
         placement_dynamic_dict_Opt2Tile_values[i] = -1;
@@ -717,8 +717,6 @@ void Reset(){
         placement_done_values[i] = 0;
     }
     for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){
-        placement_dynamic_dict_Opt2PC_keys[i] = placement_static_kernels_values[kernel_idx][i];
-        placement_dynamic_dict_Opt2Tile_keys[i] = placement_static_kernels_values[kernel_idx][i];
         placement_done_keys[i] = placement_static_kernels_values[kernel_idx][i];
     }
     for(char i = 0; i < DFG_NodesCount_kernels_values[kernel_idx]; i++){

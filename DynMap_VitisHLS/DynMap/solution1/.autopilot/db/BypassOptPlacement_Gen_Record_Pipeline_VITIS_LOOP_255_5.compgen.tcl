@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename placement_dynamic_bypass \
     op interface \
-    ports { placement_dynamic_bypass_address0 { O 14 vector } placement_dynamic_bypass_ce0 { O 1 bit } placement_dynamic_bypass_q0 { I 8 vector } } \
+    ports { placement_dynamic_bypass_address0 { O 13 vector } placement_dynamic_bypass_ce0 { O 1 bit } placement_dynamic_bypass_q0 { I 8 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'placement_dynamic_bypass'"
@@ -67,7 +67,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_tmp_73_out \
     op interface \
-    ports { tmp_73_out { O 14 vector } tmp_73_out_ap_vld { O 1 bit } } \
+    ports { tmp_73_out { O 13 vector } tmp_73_out_ap_vld { O 1 bit } } \
 } "
 }
 

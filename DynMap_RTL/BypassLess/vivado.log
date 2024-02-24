@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Jan 14 16:39:22 2024
-# Process ID: 20620
+# Start of session at: Sun Jan 14 18:43:00 2024
+# Process ID: 17364
 # Current directory: D:/Project/ISCA2024_DynMap/DynMap_RTL/BypassLess
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21216 D:\Project\ISCA2024_DynMap\DynMap_RTL\BypassLess\BypassLess.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4820 D:\Project\ISCA2024_DynMap\DynMap_RTL\BypassLess\BypassLess.xpr
 # Log file: D:/Project/ISCA2024_DynMap/DynMap_RTL/BypassLess/vivado.log
 # Journal file: D:/Project/ISCA2024_DynMap/DynMap_RTL/BypassLess\vivado.jou
 # Running On: LAPTOP-0C06RSO7, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 34071 MB
@@ -69,7 +69,7 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1235.770 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1243.301 ; gain = 0.000
 update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 14 16:41:34 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 14 18:48:03 2024...

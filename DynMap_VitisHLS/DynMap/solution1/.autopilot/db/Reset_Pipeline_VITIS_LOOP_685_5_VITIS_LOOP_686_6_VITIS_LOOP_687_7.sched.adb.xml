@@ -80,7 +80,7 @@ newFuncRoot:2 %indvar_flatten = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="5" bw="4" op_0_bw="32">
+<Node id="5" bw="3" op_0_bw="32">
 <![CDATA[
 newFuncRoot:3 %i_12 = alloca i32 1
 
@@ -95,12 +95,12 @@ newFuncRoot:3 %i_12 = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="6" bw="14" op_0_bw="32">
+<Node id="6" bw="13" op_0_bw="32">
 <![CDATA[
-newFuncRoot:4 %indvar_flatten15 = alloca i32 1
+newFuncRoot:4 %indvar_flatten16 = alloca i32 1
 
 ]]></Node>
-<StgValue><ssdm name="indvar_flatten15"/></StgValue>
+<StgValue><ssdm name="indvar_flatten16"/></StgValue>
 </operation>
 
 <operation id="12" st_id="1" stage="1" lat="1">
@@ -110,9 +110,9 @@ newFuncRoot:4 %indvar_flatten15 = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="0" op_0_bw="14" op_1_bw="14">
+<Node id="7" bw="0" op_0_bw="13" op_1_bw="13">
 <![CDATA[
-newFuncRoot:5 %store_ln0 = store i14 0, i14 %indvar_flatten15
+newFuncRoot:5 %store_ln0 = store i13 0, i13 %indvar_flatten16
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -125,9 +125,9 @@ newFuncRoot:5 %store_ln0 = store i14 0, i14 %indvar_flatten15
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="8" bw="0" op_0_bw="4" op_1_bw="4">
+<Node id="8" bw="0" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-newFuncRoot:6 %store_ln0 = store i4 0, i4 %i_12
+newFuncRoot:6 %store_ln0 = store i3 0, i3 %i_12
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -187,7 +187,7 @@ newFuncRoot:9 %store_ln0 = store i5 0, i5 %k
 
 <Node id="12" bw="0" op_0_bw="0">
 <![CDATA[
-newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
+newFuncRoot:10 %br_ln0 = br void %.preheader4.preheader
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -200,12 +200,12 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="14" bw="14" op_0_bw="14" op_1_bw="0">
+<Node id="14" bw="13" op_0_bw="13" op_1_bw="0">
 <![CDATA[
-.preheader8.preheader:0 %indvar_flatten15_load = load i14 %indvar_flatten15
+.preheader4.preheader:0 %indvar_flatten16_load = load i13 %indvar_flatten16
 
 ]]></Node>
-<StgValue><ssdm name="indvar_flatten15_load"/></StgValue>
+<StgValue><ssdm name="indvar_flatten16_load"/></StgValue>
 </operation>
 
 <operation id="19" st_id="1" stage="1" lat="1">
@@ -217,7 +217,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-.preheader8.preheader:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+.preheader4.preheader:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -230,9 +230,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="1" op_0_bw="14" op_1_bw="14">
+<Node id="16" bw="1" op_0_bw="13" op_1_bw="13">
 <![CDATA[
-.preheader8.preheader:2 %icmp_ln685 = icmp_eq  i14 %indvar_flatten15_load, i14 12800
+.preheader4.preheader:2 %icmp_ln685 = icmp_eq  i13 %indvar_flatten16_load, i13 6400
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln685"/></StgValue>
@@ -245,9 +245,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="14" op_0_bw="14" op_1_bw="14">
+<Node id="17" bw="13" op_0_bw="13" op_1_bw="13">
 <![CDATA[
-.preheader8.preheader:3 %add_ln685_1 = add i14 %indvar_flatten15_load, i14 1
+.preheader4.preheader:3 %add_ln685_1 = add i13 %indvar_flatten16_load, i13 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln685_1"/></StgValue>
@@ -262,7 +262,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="18" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-.preheader8.preheader:4 %br_ln685 = br i1 %icmp_ln685, void %.preheader8, void %.preheader7.preheader.preheader.exitStub
+.preheader4.preheader:4 %br_ln685 = br i1 %icmp_ln685, void %.preheader4, void %.preheader3.preheader.preheader.exitStub
 
 ]]></Node>
 <StgValue><ssdm name="br_ln685"/></StgValue>
@@ -278,7 +278,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="22" bw="12" op_0_bw="12" op_1_bw="0">
 <![CDATA[
-.preheader8:2 %indvar_flatten_load = load i12 %indvar_flatten
+.preheader4:2 %indvar_flatten_load = load i12 %indvar_flatten
 
 ]]></Node>
 <StgValue><ssdm name="indvar_flatten_load"/></StgValue>
@@ -292,9 +292,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 </and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="4" op_0_bw="4" op_1_bw="0">
+<Node id="23" bw="3" op_0_bw="3" op_1_bw="0">
 <![CDATA[
-.preheader8:3 %i_12_load = load i4 %i_12
+.preheader4:3 %i_12_load = load i3 %i_12
 
 ]]></Node>
 <StgValue><ssdm name="i_12_load"/></StgValue>
@@ -308,9 +308,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 </and_exp></or_exp>
 </condition>
 
-<Node id="24" bw="4" op_0_bw="4" op_1_bw="4">
+<Node id="24" bw="3" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-.preheader8:4 %add_ln685 = add i4 %i_12_load, i4 1
+.preheader4:4 %add_ln685 = add i3 %i_12_load, i3 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln685"/></StgValue>
@@ -326,7 +326,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="27" bw="1" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-.preheader8:7 %icmp_ln686 = icmp_eq  i12 %indvar_flatten_load, i12 1600
+.preheader4:7 %icmp_ln686 = icmp_eq  i12 %indvar_flatten_load, i12 1600
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln686"/></StgValue>
@@ -340,9 +340,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 </and_exp></or_exp>
 </condition>
 
-<Node id="29" bw="4" op_0_bw="1" op_1_bw="4" op_2_bw="4">
+<Node id="29" bw="3" op_0_bw="1" op_1_bw="3" op_2_bw="3">
 <![CDATA[
-.preheader8:9 %select_ln685_1 = select i1 %icmp_ln686, i4 %add_ln685, i4 %i_12_load
+.preheader4:9 %select_ln685_1 = select i1 %icmp_ln686, i3 %add_ln685, i3 %i_12_load
 
 ]]></Node>
 <StgValue><ssdm name="select_ln685_1"/></StgValue>
@@ -356,9 +356,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 </and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="10" op_0_bw="4">
+<Node id="30" bw="9" op_0_bw="3">
 <![CDATA[
-.preheader8:10 %zext_ln688 = zext i4 %select_ln685_1
+.preheader4:10 %zext_ln688 = zext i3 %select_ln685_1
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln688"/></StgValue>
@@ -372,9 +372,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 </and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="10" op_0_bw="10" op_1_bw="10">
+<Node id="31" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-.preheader8:11 %mul_ln688 = mul i10 %zext_ln688, i10 100
+.preheader4:11 %mul_ln688 = mul i9 %zext_ln688, i9 100
 
 ]]></Node>
 <StgValue><ssdm name="mul_ln688"/></StgValue>
@@ -390,7 +390,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="52" bw="12" op_0_bw="12" op_1_bw="12">
 <![CDATA[
-.preheader8:32 %add_ln686_1 = add i12 %indvar_flatten_load, i12 1
+.preheader4:32 %add_ln686_1 = add i12 %indvar_flatten_load, i12 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln686_1"/></StgValue>
@@ -406,7 +406,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="53" bw="12" op_0_bw="1" op_1_bw="12" op_2_bw="12">
 <![CDATA[
-.preheader8:33 %select_ln686_2 = select i1 %icmp_ln686, i12 1, i12 %add_ln686_1
+.preheader4:33 %select_ln686_2 = select i1 %icmp_ln686, i12 1, i12 %add_ln686_1
 
 ]]></Node>
 <StgValue><ssdm name="select_ln686_2"/></StgValue>
@@ -420,9 +420,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 </and_exp></or_exp>
 </condition>
 
-<Node id="54" bw="0" op_0_bw="14" op_1_bw="14" op_2_bw="0" op_3_bw="0">
+<Node id="54" bw="0" op_0_bw="13" op_1_bw="13" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-.preheader8:34 %store_ln685 = store i14 %add_ln685_1, i14 %indvar_flatten15
+.preheader4:34 %store_ln685 = store i13 %add_ln685_1, i13 %indvar_flatten16
 
 ]]></Node>
 <StgValue><ssdm name="store_ln685"/></StgValue>
@@ -436,9 +436,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 </and_exp></or_exp>
 </condition>
 
-<Node id="55" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
+<Node id="55" bw="0" op_0_bw="3" op_1_bw="3" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-.preheader8:35 %store_ln685 = store i4 %select_ln685_1, i4 %i_12
+.preheader4:35 %store_ln685 = store i3 %select_ln685_1, i3 %i_12
 
 ]]></Node>
 <StgValue><ssdm name="store_ln685"/></StgValue>
@@ -454,7 +454,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="56" bw="0" op_0_bw="12" op_1_bw="12" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-.preheader8:36 %store_ln686 = store i12 %select_ln686_2, i12 %indvar_flatten
+.preheader4:36 %store_ln686 = store i12 %select_ln686_2, i12 %indvar_flatten
 
 ]]></Node>
 <StgValue><ssdm name="store_ln686"/></StgValue>
@@ -470,9 +470,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="10" op_0_bw="10" op_1_bw="10">
+<Node id="31" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-.preheader8:11 %mul_ln688 = mul i10 %zext_ln688, i10 100
+.preheader4:11 %mul_ln688 = mul i9 %zext_ln688, i9 100
 
 ]]></Node>
 <StgValue><ssdm name="mul_ln688"/></StgValue>
@@ -490,7 +490,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="20" bw="5" op_0_bw="5" op_1_bw="0">
 <![CDATA[
-.preheader8:0 %k_load = load i5 %k
+.preheader4:0 %k_load = load i5 %k
 
 ]]></Node>
 <StgValue><ssdm name="k_load"/></StgValue>
@@ -506,7 +506,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="21" bw="7" op_0_bw="7" op_1_bw="0">
 <![CDATA[
-.preheader8:1 %j_load = load i7 %j
+.preheader4:1 %j_load = load i7 %j
 
 ]]></Node>
 <StgValue><ssdm name="j_load"/></StgValue>
@@ -521,7 +521,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="28" bw="7" op_0_bw="1" op_1_bw="7" op_2_bw="7">
 <![CDATA[
-.preheader8:8 %select_ln685 = select i1 %icmp_ln686, i7 0, i7 %j_load
+.preheader4:8 %select_ln685 = select i1 %icmp_ln686, i7 0, i7 %j_load
 
 ]]></Node>
 <StgValue><ssdm name="select_ln685"/></StgValue>
@@ -534,9 +534,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="10" op_0_bw="10" op_1_bw="10">
+<Node id="31" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-.preheader8:11 %mul_ln688 = mul i10 %zext_ln688, i10 100
+.preheader4:11 %mul_ln688 = mul i9 %zext_ln688, i9 100
 
 ]]></Node>
 <StgValue><ssdm name="mul_ln688"/></StgValue>
@@ -551,7 +551,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="33" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.preheader8:13 %xor_ln685 = xor i1 %icmp_ln686, i1 1
+.preheader4:13 %xor_ln685 = xor i1 %icmp_ln686, i1 1
 
 ]]></Node>
 <StgValue><ssdm name="xor_ln685"/></StgValue>
@@ -566,7 +566,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="34" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-.preheader8:14 %icmp_ln687 = icmp_eq  i5 %k_load, i5 16
+.preheader4:14 %icmp_ln687 = icmp_eq  i5 %k_load, i5 16
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln687"/></StgValue>
@@ -581,7 +581,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="35" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.preheader8:15 %and_ln685 = and i1 %icmp_ln687, i1 %xor_ln685
+.preheader4:15 %and_ln685 = and i1 %icmp_ln687, i1 %xor_ln685
 
 ]]></Node>
 <StgValue><ssdm name="and_ln685"/></StgValue>
@@ -596,7 +596,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="36" bw="7" op_0_bw="7" op_1_bw="7">
 <![CDATA[
-.preheader8:16 %add_ln686 = add i7 %select_ln685, i7 1
+.preheader4:16 %add_ln686 = add i7 %select_ln685, i7 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln686"/></StgValue>
@@ -611,7 +611,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="38" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-.preheader8:18 %or_ln686 = or i1 %and_ln685, i1 %icmp_ln686
+.preheader4:18 %or_ln686 = or i1 %and_ln685, i1 %icmp_ln686
 
 ]]></Node>
 <StgValue><ssdm name="or_ln686"/></StgValue>
@@ -626,7 +626,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="39" bw="5" op_0_bw="1" op_1_bw="5" op_2_bw="5">
 <![CDATA[
-.preheader8:19 %select_ln686 = select i1 %or_ln686, i5 0, i5 %k_load
+.preheader4:19 %select_ln686 = select i1 %or_ln686, i5 0, i5 %k_load
 
 ]]></Node>
 <StgValue><ssdm name="select_ln686"/></StgValue>
@@ -641,7 +641,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="40" bw="7" op_0_bw="1" op_1_bw="7" op_2_bw="7">
 <![CDATA[
-.preheader8:20 %select_ln686_1 = select i1 %and_ln685, i7 %add_ln686, i7 %select_ln685
+.preheader4:20 %select_ln686_1 = select i1 %and_ln685, i7 %add_ln686, i7 %select_ln685
 
 ]]></Node>
 <StgValue><ssdm name="select_ln686_1"/></StgValue>
@@ -654,9 +654,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="41" bw="10" op_0_bw="7">
+<Node id="41" bw="9" op_0_bw="7">
 <![CDATA[
-.preheader8:21 %zext_ln688_1 = zext i7 %select_ln686_1
+.preheader4:21 %zext_ln688_1 = zext i7 %select_ln686_1
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln688_1"/></StgValue>
@@ -669,9 +669,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="10" op_0_bw="10" op_1_bw="10">
+<Node id="42" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-.preheader8:22 %add_ln688 = add i10 %mul_ln688, i10 %zext_ln688_1
+.preheader4:22 %add_ln688 = add i9 %mul_ln688, i9 %zext_ln688_1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln688"/></StgValue>
@@ -686,7 +686,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="51" bw="5" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-.preheader8:31 %add_ln687 = add i5 %select_ln686, i5 1
+.preheader4:31 %add_ln687 = add i5 %select_ln686, i5 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln687"/></StgValue>
@@ -701,7 +701,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="57" bw="0" op_0_bw="7" op_1_bw="7" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-.preheader8:37 %store_ln686 = store i7 %select_ln686_1, i7 %j
+.preheader4:37 %store_ln686 = store i7 %select_ln686_1, i7 %j
 
 ]]></Node>
 <StgValue><ssdm name="store_ln686"/></StgValue>
@@ -716,7 +716,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="58" bw="0" op_0_bw="5" op_1_bw="5" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-.preheader8:38 %store_ln687 = store i5 %add_ln687, i5 %k
+.preheader4:38 %store_ln687 = store i5 %add_ln687, i5 %k
 
 ]]></Node>
 <StgValue><ssdm name="store_ln687"/></StgValue>
@@ -732,7 +732,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="61" bw="0">
 <![CDATA[
-.preheader7.preheader.preheader.exitStub:0 %ret_ln0 = ret
+.preheader3.preheader.preheader.exitStub:0 %ret_ln0 = ret
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln0"/></StgValue>
@@ -750,7 +750,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.preheader8:5 %specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7_str
+.preheader4:5 %specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7_str
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln0"/></StgValue>
@@ -765,7 +765,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="26" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-.preheader8:6 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 12800, i64 12800, i64 12800
+.preheader4:6 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 6400, i64 6400, i64 6400
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -780,7 +780,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="32" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-.preheader8:12 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+.preheader4:12 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -795,7 +795,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="37" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.preheader8:17 %specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_686_6_VITIS_LOOP_687_7_str
+.preheader4:17 %specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_686_6_VITIS_LOOP_687_7_str
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln0"/></StgValue>
@@ -808,9 +808,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="10" op_0_bw="10" op_1_bw="10">
+<Node id="42" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-.preheader8:22 %add_ln688 = add i10 %mul_ln688, i10 %zext_ln688_1
+.preheader4:22 %add_ln688 = add i9 %mul_ln688, i9 %zext_ln688_1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln688"/></StgValue>
@@ -823,9 +823,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="43" bw="14" op_0_bw="14" op_1_bw="10" op_2_bw="4">
+<Node id="43" bw="13" op_0_bw="13" op_1_bw="9" op_2_bw="4">
 <![CDATA[
-.preheader8:23 %tmp_24_cast = bitconcatenate i14 @_ssdm_op_BitConcatenate.i14.i10.i4, i10 %add_ln688, i4 0
+.preheader4:23 %tmp_24_cast = bitconcatenate i13 @_ssdm_op_BitConcatenate.i13.i9.i4, i9 %add_ln688, i4 0
 
 ]]></Node>
 <StgValue><ssdm name="tmp_24_cast"/></StgValue>
@@ -840,7 +840,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="44" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="0">
 <![CDATA[
-.preheader8:24 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
+.preheader4:24 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str
 
 ]]></Node>
 <StgValue><ssdm name="specpipeline_ln0"/></StgValue>
@@ -853,9 +853,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="45" bw="14" op_0_bw="5">
+<Node id="45" bw="13" op_0_bw="5">
 <![CDATA[
-.preheader8:25 %zext_ln688_2 = zext i5 %select_ln686
+.preheader4:25 %zext_ln688_2 = zext i5 %select_ln686
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln688_2"/></StgValue>
@@ -868,9 +868,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="14" op_0_bw="14" op_1_bw="14">
+<Node id="46" bw="13" op_0_bw="13" op_1_bw="13">
 <![CDATA[
-.preheader8:26 %add_ln688_1 = add i14 %tmp_24_cast, i14 %zext_ln688_2
+.preheader4:26 %add_ln688_1 = add i13 %tmp_24_cast, i13 %zext_ln688_2
 
 ]]></Node>
 <StgValue><ssdm name="add_ln688_1"/></StgValue>
@@ -883,9 +883,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="47" bw="64" op_0_bw="14">
+<Node id="47" bw="64" op_0_bw="13">
 <![CDATA[
-.preheader8:27 %zext_ln688_3 = zext i14 %add_ln688_1
+.preheader4:27 %zext_ln688_3 = zext i13 %add_ln688_1
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln688_3"/></StgValue>
@@ -898,9 +898,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="14" op_0_bw="8" op_1_bw="64" op_2_bw="64">
+<Node id="48" bw="13" op_0_bw="8" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-.preheader8:28 %placement_dynamic_bypass_addr = getelementptr i8 %placement_dynamic_bypass, i64 0, i64 %zext_ln688_3
+.preheader4:28 %placement_dynamic_bypass_addr = getelementptr i8 %placement_dynamic_bypass, i64 0, i64 %zext_ln688_3
 
 ]]></Node>
 <StgValue><ssdm name="placement_dynamic_bypass_addr"/></StgValue>
@@ -915,7 +915,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="49" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-.preheader8:29 %specloopname_ln687 = specloopname void @_ssdm_op_SpecLoopName, void @empty_58
+.preheader4:29 %specloopname_ln687 = specloopname void @_ssdm_op_SpecLoopName, void @empty_55
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln687"/></StgValue>
@@ -928,9 +928,9 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="50" bw="0" op_0_bw="8" op_1_bw="14">
+<Node id="50" bw="0" op_0_bw="8" op_1_bw="13">
 <![CDATA[
-.preheader8:30 %store_ln688 = store i8 255, i14 %placement_dynamic_bypass_addr
+.preheader4:30 %store_ln688 = store i8 255, i13 %placement_dynamic_bypass_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln688"/></StgValue>
@@ -945,7 +945,7 @@ newFuncRoot:10 %br_ln0 = br void %.preheader8.preheader
 
 <Node id="59" bw="0" op_0_bw="0">
 <![CDATA[
-.preheader8:39 %br_ln0 = br void %.preheader8.preheader
+.preheader4:39 %br_ln0 = br void %.preheader4.preheader
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>

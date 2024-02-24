@@ -1,30 +1,29 @@
 set SynModuleInfo {
   {SRCNAME Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7 MODELNAME Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_685_5_VITIS_LOOP_686_6_VITIS_LOOP_687_7
     SUBMODULES {
-      {MODELNAME runOne_mac_muladd_4ns_7ns_7ns_10_4_1 RTLNAME runOne_mac_muladd_4ns_7ns_7ns_10_4_1 BINDTYPE op TYPE add IMPL dsp LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME runOne_mac_muladd_3ns_7ns_7ns_9_4_1 RTLNAME runOne_mac_muladd_3ns_7ns_7ns_9_4_1 BINDTYPE op TYPE add IMPL dsp LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME runOne_flow_control_loop_pipe_sequential_init RTLNAME runOne_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME runOne_flow_control_loop_pipe_sequential_init_U}
     }
   }
   {SRCNAME Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9 MODELNAME Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_692_8_VITIS_LOOP_693_9}
   {SRCNAME Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12 MODELNAME Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_697_10_VITIS_LOOP_698_11_VITIS_LOOP_699_12}
-  {SRCNAME Reset_Pipeline_VITIS_LOOP_704_13 MODELNAME Reset_Pipeline_VITIS_LOOP_704_13 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_704_13}
+  {SRCNAME Reset_Pipeline_VITIS_LOOP_704_13 MODELNAME Reset_Pipeline_VITIS_LOOP_704_13 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_704_13
+    SUBMODULES {
+      {MODELNAME runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_704_13_placement_static_kernels_values_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+    }
+  }
   {SRCNAME Reset_Pipeline_VITIS_LOOP_707_14 MODELNAME Reset_Pipeline_VITIS_LOOP_707_14 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_707_14}
   {SRCNAME Reset_Pipeline_VITIS_LOOP_710_15 MODELNAME Reset_Pipeline_VITIS_LOOP_710_15 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_710_15}
   {SRCNAME Reset_Pipeline_VITIS_LOOP_713_16 MODELNAME Reset_Pipeline_VITIS_LOOP_713_16 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_713_16}
   {SRCNAME Reset_Pipeline_VITIS_LOOP_716_17 MODELNAME Reset_Pipeline_VITIS_LOOP_716_17 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_716_17}
-  {SRCNAME Reset_Pipeline_VITIS_LOOP_719_18 MODELNAME Reset_Pipeline_VITIS_LOOP_719_18 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_719_18
+  {SRCNAME Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20 MODELNAME Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20
     SUBMODULES {
-      {MODELNAME runOne_Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_719_18_placement_static_kernels_values_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME runOne_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20_dependency_predecessors_kebkb RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_722_19_VITIS_LOOP_724_20_dependency_predecessors_kebkb BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20 MODELNAME Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20
+  {SRCNAME Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22 MODELNAME Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22
     SUBMODULES {
-      {MODELNAME runOne_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20_dependency_predecessors_kebkb RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_724_19_VITIS_LOOP_726_20_dependency_predecessors_kebkb BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-    }
-  }
-  {SRCNAME Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22 MODELNAME Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22 RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22
-    SUBMODULES {
-      {MODELNAME runOne_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22_dependency_successors_kerncud RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_736_21_VITIS_LOOP_738_22_dependency_successors_kerncud BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
+      {MODELNAME runOne_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22_dependency_successors_kerncud RTLNAME runOne_Reset_Pipeline_VITIS_LOOP_734_21_VITIS_LOOP_736_22_dependency_successors_kerncud BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
   {SRCNAME Reset MODELNAME Reset RTLNAME runOne_Reset
