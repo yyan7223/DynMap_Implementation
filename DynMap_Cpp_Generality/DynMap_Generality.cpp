@@ -316,31 +316,19 @@ bool RoutingAvailability_CheckPredecessor_and_Placement(){
     return false;
 } 
 
-void CurOptPotentialPlacement_List_LevelInfo_Gen(){
-    // find the level of curOpt in static mapping results under 4x4 CGRA, and take it as the initial level of dynamic placement
+void CurOptPotentialPlacement_List_PartialInherit_Gen(){
+    // find the level of curOpt in the only one static mapping result under 4x4 CGRA, and take it as the initial level of dynamic placement
     Tile curTileStatic = placement_static_Opt2Tile[curOpt];
-    int static_level = placement_static_Tile2Level[curTileStatic.ID];
+    int static_level = placement_static_Tile2Level_OpenCGRA[curTileStatic.ID];
     int dynamic_level = static_level;
     int max_dynamic_level = allocated_tiles_levels_dynamic.size() - 1;
-    if (dynamic_level > max_dynamic_level) dynamic_level = max_dynamic_level; // calibration
     
     curOptPotentialPlacement.clear();
-    
-    // first priority, the same Tile in same level
+
     for (auto Tile : allocated_tiles_levels_dynamic[dynamic_level]){ // same level
-        if(Tile.ID == curTileStatic.ID){ // same tile
-            curOptPotentialPlacement.push_back(Tile);
-            break;
-        }
+        curOptPotentialPlacement.push_back(Tile);
     }
-    
-    // second priority, other Tiles in the same level
-    for (auto Tile : allocated_tiles_levels_dynamic[dynamic_level]){ // same level
-        if(Tile.ID != curTileStatic.ID){ // other tiles
-            curOptPotentialPlacement.push_back(Tile);
-        }
-    }
-    
+
     // third priority, other Tiles in the rest levels
     int initial_dynamic_level = dynamic_level;
     while(true){
@@ -357,112 +345,58 @@ void CurOptPotentialPlacement_List_LevelInfo_Gen(){
     }
 }
 
-void CurOptPotentialPlacement_List_BypassLess_Gen(){
+void CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen(){
+    // find the level of curOpt in the only one static mapping result under 4x4 CGRA, and take it as the initial level of dynamic placement
+    Tile curTileStatic = placement_static_Opt2Tile[curOpt];
+    int static_level = placement_static_Tile2Level_OpenCGRA[curTileStatic.ID];
+    int dynamic_level = static_level;
+    int max_dynamic_level = allocated_tiles_levels_dynamic.size() - 1;
+    
     curOptPotentialPlacement.clear();
-    vector<vector<Tile>> potentialPlacement_AllPreds;
+
+    // same level, highest priority
+    map<int, Tile> bypassNums_Tile; 
+    int xdiff, ydiff;
     Tile predTile;
-    for(auto pred : predecessors){ // get surrounding Tiles
-        vector<Tile> potentialPlacement;    
-        predTile = placement_dynamic_dict_Opt2Tile[pred];
-        int initialX = predTile.X;
-        int initialY = predTile.Y;
-        vector<int> XChanges = {-1,0,1};
-        vector<int> YChanges = {-1,0,1};
-        for(auto xc : XChanges){
-            for(auto yc : YChanges){
-                int x = initialX + xc;
-                int y = initialY + yc;
-
-                // python and C++ behave difference on illegal array index
-                // python accepts negative index, but C++ doesn't
-                // python doesn't accept index that is larger than array_size-1, but C++ does
-                // so perform calibration to x and y to keep pace with python behavior
-                if((x > cgra_size - 1) || (y > cgra_size - 1)) continue;
-                x = (x < 0) ? (cgra_size + x) : x; 
-                y = (y < 0) ? (cgra_size + y) : y;
-
-                Tile surrTile = xy2Tile[x][y];
-                if (find(allocated_tiles.begin(), allocated_tiles.end(), surrTile) != allocated_tiles.end()){
-                    potentialPlacement.push_back(surrTile); // save surrTile if it's in allocated_tiles
-                }
-            }
+    for (auto tile : allocated_tiles_levels_dynamic[dynamic_level]){ 
+        int numBypass = 0;
+        for(auto pred : predecessors){
+            predTile = placement_dynamic_dict_Opt2Tile[pred];
+            xdiff = abs(tile.X - predTile.X);
+            ydiff = abs(tile.Y - predTile.Y);
+            numBypass += (max(xdiff, ydiff) - 1);
         }
-        potentialPlacement_AllPreds.push_back(potentialPlacement);
+        bypassNums_Tile[numBypass] = tile;
     }
-        
-    if(predecessors.size() == 1){ // only one predecessor
-        for(auto Tile : potentialPlacement_AllPreds[0]){
-            curOptPotentialPlacement.push_back(Tile);
-        }
-        for(auto Tile : allocated_tiles){ // supplement the rest of allocated_tiles that is not in curOptPotentialPlacement
-            if (find(curOptPotentialPlacement.begin(), curOptPotentialPlacement.end(), Tile) == curOptPotentialPlacement.end()){ 
-                curOptPotentialPlacement.push_back(Tile); // supplement the rest of allocated_tiles that is not in curOptPotentialPlacement
-            }
-        }
+    for (auto iter : bypassNums_Tile){ // map is sorted by key from smallest to largest by default, and tile with fewer bypass nodes has higher priority 
+        curOptPotentialPlacement.push_back(iter.second);
     }
-    else{ // two or more predecessors
-        // find the intersection between potentialPlacement_AllPreds of two predecessors
-        vector<Tile> intersection;
-        for(auto Tile : potentialPlacement_AllPreds[0]){
-            if (find(potentialPlacement_AllPreds[1].begin(), potentialPlacement_AllPreds[1].end(), Tile) != potentialPlacement_AllPreds[1].end()){ 
-                intersection.push_back(Tile); // save Tile that is in both potentialPlacement_AllPreds[0] and potentialPlacement_AllPreds[1]
-            }
+
+    // third priority, other Tiles in the rest levels
+    int initial_dynamic_level = dynamic_level;
+    while(true){
+        dynamic_level += 1;
+        if(dynamic_level > max_dynamic_level){
+            dynamic_level = 0; // go back to the highest level
         }
-
-        if(intersection.size() > 0){ // has intersection
-            for(auto Tile : intersection){ // intersection first
-                curOptPotentialPlacement.push_back(Tile);
+        if(dynamic_level == initial_dynamic_level) break;
+        else{
+            map<int, Tile> bypassNums_Tile; 
+            int xdiff, ydiff;
+            Tile predTile;
+            for (auto tile : allocated_tiles_levels_dynamic[dynamic_level]){ 
+                int numBypass = 0;
+                for(auto pred : predecessors){
+                    predTile = placement_dynamic_dict_Opt2Tile[pred];
+                    xdiff = abs(tile.X - predTile.X);
+                    ydiff = abs(tile.Y - predTile.Y);
+                    numBypass += (max(xdiff, ydiff) - 1);
+                }
+                bypassNums_Tile[numBypass] = tile;
             }
-            for(auto Tile : allocated_tiles){ // supplement the rest of allocated_tiles that is not in curOptPotentialPlacement
-                if (find(curOptPotentialPlacement.begin(), curOptPotentialPlacement.end(), Tile) == curOptPotentialPlacement.end()){ 
-                    curOptPotentialPlacement.push_back(Tile); 
-                }
-            }   
-        }
-        else{ // no itersection
-            int predX_0 = placement_dynamic_dict_Opt2Tile[predecessors[0]].X;
-            int predY_0 = placement_dynamic_dict_Opt2Tile[predecessors[0]].Y;
-            int predX_1 = placement_dynamic_dict_Opt2Tile[predecessors[1]].X;
-            int predY_1 = placement_dynamic_dict_Opt2Tile[predecessors[1]].Y;
-            while (true)
-            {
-                // generate x and y coordinates of BypassTile
-                if(predX_0 < predX_1){
-                    predX_0 += 1;
-                }
-                else if(predX_0 == predX_1)
-                {
-                    predX_0 = predX_0; 
-                }
-                else{
-                    predX_0 -= 1;
-                }
-
-                if(predY_0 < predY_1){
-                    predY_0 += 1;
-                }
-                else if(predY_0 == predY_1)
-                {
-                    predY_0 = predY_0; 
-                }
-                else{
-                    predY_0 -= 1;
-                }
-                
-                Tile BypassTile = xy2Tile[predX_0][predY_0];
-                if (find(allocated_tiles.begin(), allocated_tiles.end(), BypassTile) != allocated_tiles.end()){
-                    curOptPotentialPlacement.push_back(BypassTile); // save BypassTile if it's in allocated_tiles
-                }
-
-                if(predX_0 == predX_1 and predY_0 == predY_1) break; // no more BypassTiles
+            for (auto iter : bypassNums_Tile){ // map is sorted by key from smallest to largest by default, and tile with fewer bypass nodes has higher priority 
+                curOptPotentialPlacement.push_back(iter.second);
             }
-
-            for(auto Tile : allocated_tiles){ // supplement the rest of allocated_tiles that is not in curOptPotentialPlacement
-                if (find(curOptPotentialPlacement.begin(), curOptPotentialPlacement.end(), Tile) == curOptPotentialPlacement.end()){ 
-                    curOptPotentialPlacement.push_back(Tile); 
-                }
-            }   
-            
         }
     }
 }
@@ -492,8 +426,8 @@ bool dynamic_placement_routing(){
         }
 
         // placement recommendation
-        if(placedOpts_Counter < threshold) CurOptPotentialPlacement_List_LevelInfo_Gen();
-        else CurOptPotentialPlacement_List_BypassLess_Gen();
+        if(placedOpts_Counter < threshold) CurOptPotentialPlacement_List_PartialInherit_Gen();
+        else CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen();
 
         // placement&routing
         if(RoutingAvailability_CheckPredecessor_and_Placement()){
@@ -730,7 +664,7 @@ void Reset(string kernel, string shape){
     placement_static_Opt2Tile = placement_static_Opt2Tile_kernels[kernel];
     dependency_predecessor = dependency_predecessors_kernels[kernel];
     dependency_successor = dependency_successors_kernels[kernel];
-    allocated_tiles_levels_dynamic = allocated_tiles_levels_dynamic_shapes[shape];
+    allocated_tiles_levels_dynamic = generate_allocated_tiles_levels_dynamic(allocated_tiles_shapes[shape], Architecture_OpenCGRA, levels_usedNumTiles_static_kernels[kernel]);
     allocated_tiles = allocated_tiles_shapes[shape];
     IDX_pd = 0; idx_pd = 0; IDX_pd_modulo = 0; IDX_pd_bypass = 0; bypassOptIdx = 0; 
     xDiff_CurToPred1 = 0; yDiff_CurToPred1 = 0; xDiff_BypassSrcToTgt = 0; yDiff_BypassSrcToTgt = 0;
@@ -786,6 +720,74 @@ void compare_mappingResults_withPython(){
     }
 }
 
+vector<vector<Tile>> generate_allocated_tiles_levels_dynamic(vector<Tile> shape_tiles, map<int, vector<Tile>> architecture_topology, vector<float> levels_usedNumTiles_static){
+    map<int, vector<Tile>> connected_tiles;
+    vector<int> num_Links;
+    vector<Tile> sorted_Tiles_withLinks;
+
+    // retrieve the tile in the dynamic allocated shape
+    for(auto tile : shape_tiles){
+        vector<Tile> topology_tiles = architecture_topology[tile.ID]; // under 4x4 CGRA and current topology, find the tiles that are connected to current tile
+        for (auto tp_tile : topology_tiles){ // only keep the topology tiles that contains in the allocated shape tiles
+            if (find(shape_tiles.begin(), shape_tiles.end(), tp_tile) != shape_tiles.end()){
+                connected_tiles[tile.ID].push_back(tp_tile);
+            }
+        }
+        // if current tile has the number of Link that has never appeared before, save it as a new value
+        if (find(num_Links.begin(), num_Links.end(), connected_tiles[tile.ID].size()) == num_Links.end()){ 
+            num_Links.push_back(connected_tiles[tile.ID].size());
+        }
+    }
+    sort(num_Links.rbegin(), num_Links.rend()); // sort Links from big to small
+    for(auto Links : num_Links){ // sort Tiles according to the Links they have
+        for(auto tile : shape_tiles){
+            if(Links == connected_tiles[tile.ID].size()){
+                sorted_Tiles_withLinks.push_back(tile); continue;
+            } 
+        }
+    }
+
+    vector<vector<Tile>> alloc_tiles_levels_dynamic(static_max_levels); // dynamic better has the same number of levels as the static
+    // and the number of tiles in each level should be consistent with that of in the static mapping result under 4x4 CGRA
+    // for example, mvt use 4 Tiles belong to level0 in the static mapping result under 4x4 CGRA, then the dynamic's level0 must also have 4 Tiles
+    int level0_numTiles = round(shape_tiles.size() * (levels_usedNumTiles_static[0] / levels_usedNumTiles_static[3]));
+    int level1_numTiles = round(shape_tiles.size() * (levels_usedNumTiles_static[1] / levels_usedNumTiles_static[3]));
+    int level2_numTiles = shape_tiles.size() - level0_numTiles - level1_numTiles;
+    for(int i = 0; i < shape_tiles.size(); i++){
+        if(i < level0_numTiles) alloc_tiles_levels_dynamic[0].push_back(sorted_Tiles_withLinks[i]);
+        else if(i >= level0_numTiles && i < level0_numTiles + level1_numTiles) alloc_tiles_levels_dynamic[1].push_back(sorted_Tiles_withLinks[i]);
+        else alloc_tiles_levels_dynamic[2].push_back(sorted_Tiles_withLinks[i]);
+    }
+
+    return alloc_tiles_levels_dynamic;
+}
+
+void analyze_static_levels_distribution(string kernel){
+    placement_static = placement_static_kernels[kernel];
+    placement_static_Opt2Tile = placement_static_Opt2Tile_kernels[kernel];
+    map<int, int> TilesUsedTimes;
+    for(int i = 0; i < cgra_size*cgra_size; i++){
+        TilesUsedTimes[i] = 0;
+    }
+    for(auto staticOpt : placement_static){
+        Tile curTileStatic = placement_static_Opt2Tile[staticOpt];
+        TilesUsedTimes[curTileStatic.ID] += 1;
+    }
+    
+    int numUsedTiles_level_0 = 0;
+    int numUsedTiles_level_1 = 0;
+    int numUsedTiles_level_2 = 0;
+    for(int i = 0; i < cgra_size*cgra_size; i++){
+        if(TilesUsedTimes[i] != 0){
+            int static_level = placement_static_Tile2Level_OpenCGRA[i];
+            if(static_level == 0) numUsedTiles_level_0 += 1;
+            else if(static_level == 1) numUsedTiles_level_1 += 1;
+            else numUsedTiles_level_2 += 1;
+        }
+    }
+    cout<<"In static mapping result of kernel "<<kernel<<" under 4x4 CGRA, Level_0 Tiles used ["<<numUsedTiles_level_0<<"/4], Level_1 Tiles used ["<<numUsedTiles_level_1<<"/8], Level_2 Tiles used ["<<numUsedTiles_level_2<<"/4]"<<endl;
+}
+
 int main(){
 
     // manual test
@@ -801,7 +803,7 @@ int main(){
     // placement_static_Opt2Tile = placement_static_Opt2Tile_kernels[kernel];
     // dependency_predecessor = dependency_predecessors_kernels[kernel];
     // dependency_successor = dependency_successors_kernels[kernel];
-    // allocated_tiles_levels_dynamic = allocated_tiles_levels_dynamic_shapes[shape];
+    // allocated_tiles_levels_dynamic = allocated_tiles_levels_dynamic_shapes_OpenCGRA[shape];
     // allocated_tiles = allocated_tiles_shapes[shape];
     // dynamic_placement_routing();
     // for(auto staticOpt : placement_static){ // print mapping results
@@ -812,6 +814,7 @@ int main(){
     int test_case = 1;
     typedef high_resolution_clock Clock;
     for(auto kernel : test_kernels){
+        analyze_static_levels_distribution(kernel);
         for(auto shape : test_shapes[kernel]){
             int tSum_10times = 0;
             int IISum_10times = 0;
@@ -848,13 +851,10 @@ int main(){
             // record mapping results
             record_mappingResults(kernel, shape);
 
-            cout<<"TestCase:["<<test_case<<"/72] "<<kernel<<" "<<shape<<" mapping complete, average time consumption is "<<tSum_10times/10.0/1000.0<<"ms, II="<<IISum_10times/10.0<<endl;
+            cout<<"TestCase:["<<test_case<<"/72] "<<kernel<<" "<<shape<<" mapping complete, average time consumption is "<<tSum_10times/10.0/1000.0<<"ms, threshold is "<<threshold<<", II="<<IISum_10times/10.0<<endl;
             test_case += 1;
         }
     }
-
-    // after all test cases finished, compare mapping results with python
-    compare_mappingResults_withPython();
 
     return 0;
 }

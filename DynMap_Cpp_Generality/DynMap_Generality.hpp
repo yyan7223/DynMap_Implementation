@@ -95,14 +95,15 @@ int Bypass_XbarOut_Direction(int, int);
 bool BypassOptPlacement_Gen_Record();
 bool bypassOptGen_and_Placement(string, string);
 bool RoutingAvailability_CheckPredecessor_and_Placement();
-void CurOptPotentialPlacement_List_LevelInfo_Gen();
-void CurOptPotentialPlacement_List_BypassLess_Gen();
+void CurOptPotentialPlacement_List_PartialInherit_Gen();
+void CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen();
 bool dynamic_placement_routing();
 void Reset(string, string);
 int calculate_startII(string, string);
 void record_mappingResults(string, string);
 void compare_mappingResults_withPython();
-
+vector<vector<Tile>> generate_allocated_tiles_levels_dynamic(vector<Tile>, map<int, vector<Tile>>, vector<float>);
+void analyze_static_levels_distribution(string);
 
 ////////////////////// cofiguration generation module related variables and functions ///////////////////////
 static const int LocalRegNum = 16;
@@ -151,6 +152,15 @@ static map<string, vector<string>> test_shapes = {
     {"blowfish", {"8-IA","8-S","8-IB","8-L","6-S","6-IA","6-IB","6-L","4-S","4-IB","4-IA","4-L"}},
     {"spmv", {"6-S","6-IA","6-IB","6-L","5-S","5-IB","5-IA","5-L","4-S","4-IB","4-IA","4-L"}},
     {"conv", {"6-S","6-IA","6-IB","6-L","5-S","5-IB","5-IA","5-L","4-S","4-IB","4-IA","4-L"}},
+};
+
+static map<string, vector<float>> levels_usedNumTiles_static_kernels = {
+    {"mvt", {4.0f, 6.0f, 2.0f, 12.0f}}, // {kernel, {Level0, Level1, Level2，total} used Tiles in static mapping results under 4x4 CGRA}
+    {"fft", {4.0f, 6.0f, 2.0f, 12.0f}},
+    {"dtw", {4.0f, 3.0f, 1.0f, 8.0f}},
+    {"blowfish", {4.0f, 3.0f, 1.0f, 8.0f}},
+    {"spmv", {2.0f, 3.0f, 1.0f, 6.0f}},
+    {"conv", {2.0f, 3.0f, 1.0f, 6.0f}},
 };
 
 static map<string, int> DFG_NodesCount_kernels = {
@@ -218,7 +228,8 @@ static map<string, int> CGRA_NumTiles = {
     {"4-IB", 4},
 };
 
-static map<int, int> placement_static_Tile2Level = { // 4x4 CGRA
+static int static_max_levels = 3; // total levels of 4x4 CGRA in given topology, OpenCGRA is 3, HReA is 3, MorphoSys is 1, HyCube is 1
+static map<int, int> placement_static_Tile2Level_OpenCGRA = { // 4x4 CGRA
     {5, 0}, // Tile 5,6,9,10, level 0
     {6, 0},
     {9, 0},
@@ -292,6 +303,98 @@ static map<int, int> placement_static_Tile2Level_HyCube = { // 4x4 CGRA
     {3, 0},
     {12, 0},
     {15, 0},
+};
+
+static map<int, vector<Tile>> Architecture_OpenCGRA = { // {Tile.ID, {List of Tiles connected to this Tile under current topology}}
+    {0, {cgra.Tiles[1], cgra.Tiles[4], cgra.Tiles[5]}},
+    {1, {cgra.Tiles[0], cgra.Tiles[2], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6]}},
+    {2, {cgra.Tiles[1], cgra.Tiles[3], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7]}},
+    {3, {cgra.Tiles[2], cgra.Tiles[6], cgra.Tiles[7]}},
+    {4, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[5], cgra.Tiles[8], cgra.Tiles[9]}},
+    {5, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[4], cgra.Tiles[6], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10]}},
+    {6, {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[5], cgra.Tiles[7], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11]}},
+    {7, {cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[6], cgra.Tiles[10], cgra.Tiles[11]}},
+    {8, {cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[9], cgra.Tiles[12], cgra.Tiles[13]}},
+    {9, {cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[8], cgra.Tiles[10], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14]}},
+    {10, {cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[9], cgra.Tiles[11], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {11, {cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[10], cgra.Tiles[14], cgra.Tiles[15]}},
+    {12, {cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[13]}},
+    {13, {cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[12], cgra.Tiles[14]}},
+    {14, {cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[13], cgra.Tiles[15]}},
+    {15, {cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[14]}},
+};
+
+static map<int, vector<Tile>> Architecture_MorphoSys = { // {Tile.ID, {List of Tiles connected to this Tile under current topology}}
+    {0, {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[8], cgra.Tiles[12]}},
+    {1, {cgra.Tiles[0], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[5], cgra.Tiles[9], cgra.Tiles[13]}},
+    {2, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[3], cgra.Tiles[6], cgra.Tiles[10], cgra.Tiles[14]}},
+    {3, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[7], cgra.Tiles[11], cgra.Tiles[15]}},
+    {4, {cgra.Tiles[0], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[8], cgra.Tiles[12]}},
+    {5, {cgra.Tiles[1], cgra.Tiles[4], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[9], cgra.Tiles[13]}},
+    {6, {cgra.Tiles[2], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[7], cgra.Tiles[10], cgra.Tiles[14]}},
+    {7, {cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[11], cgra.Tiles[15]}},
+    {8, {cgra.Tiles[0], cgra.Tiles[4], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12]}},
+    {9, {cgra.Tiles[1], cgra.Tiles[5], cgra.Tiles[8], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[13]}},
+    {10, {cgra.Tiles[2], cgra.Tiles[6], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[11], cgra.Tiles[14]}},
+    {11, {cgra.Tiles[3], cgra.Tiles[7], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[15]}},
+    {12, {cgra.Tiles[0], cgra.Tiles[4], cgra.Tiles[8], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {13, {cgra.Tiles[1], cgra.Tiles[5], cgra.Tiles[9], cgra.Tiles[12], cgra.Tiles[14], cgra.Tiles[15]}},
+    {14, {cgra.Tiles[2], cgra.Tiles[6], cgra.Tiles[10], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[15]}},
+    {15, {cgra.Tiles[3], cgra.Tiles[7], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14]}},
+};
+
+static map<int, vector<Tile>> Architecture_HReA = { // {Tile.ID, {List of Tiles connected to this Tile under current topology}}
+    {0, {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[8], cgra.Tiles[12]}},
+    {1, {cgra.Tiles[0], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[9], cgra.Tiles[13]}},
+    {2, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[3], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[10], cgra.Tiles[14]}},
+    {3, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[11], cgra.Tiles[15]}},
+    {4, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[12]}},
+    {5, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[4], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[13]}},
+    {6, {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[7], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[14]}},
+    {7, {cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[15]}},
+    {8, {cgra.Tiles[0], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13]}},
+    {9, {cgra.Tiles[1], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[8], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14]}},
+    {10, {cgra.Tiles[2], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[11], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {11, {cgra.Tiles[3], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[14], cgra.Tiles[15]}},
+    {12, {cgra.Tiles[0], cgra.Tiles[4], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {13, {cgra.Tiles[1], cgra.Tiles[5], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[12], cgra.Tiles[14], cgra.Tiles[15]}},
+    {14, {cgra.Tiles[2], cgra.Tiles[6], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[15]}},
+    {15, {cgra.Tiles[3], cgra.Tiles[7], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14]}},
+};
+
+static map<int, vector<Tile>> Architecture_HyCube = { // {Tile.ID, {List of Tiles connected to this Tile under current topology}}
+    {0, {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {1, {cgra.Tiles[0], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {2, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {3, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {4, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {5, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {6, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {7, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6],
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {8, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {9, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+          cgra.Tiles[8], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {10, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {11, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {12, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[13], cgra.Tiles[14], cgra.Tiles[15]}},
+    {13, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[14], cgra.Tiles[15]}},
+    {14, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13],  cgra.Tiles[15]}},
+    {15, {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], 
+         cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[13], cgra.Tiles[14]}},
 };
 
 static map<string, vector<string>> placement_static_kernels = {
@@ -594,135 +697,6 @@ static map<string, vector<Tile>> allocated_tiles_shapes = {
     {"4-L", 
     {cgra.Tiles[1], cgra.Tiles[2],  
      cgra.Tiles[0], cgra.Tiles[3]}},
-};
-
-static map<string, vector<vector<Tile>>> allocated_tiles_levels_dynamic_shapes = {    
-    {"12-S", 
-    {
-     {cgra.Tiles[5], cgra.Tiles[9]},
-     {cgra.Tiles[1], cgra.Tiles[4], cgra.Tiles[6], cgra.Tiles[8], cgra.Tiles[10], cgra.Tiles[13]},
-     {cgra.Tiles[0], cgra.Tiles[2], cgra.Tiles[12], cgra.Tiles[14]},    
-    }},
-    
-    {"12-IA", 
-    {
-     {cgra.Tiles[6], cgra.Tiles[10]},
-     {cgra.Tiles[5], cgra.Tiles[9], cgra.Tiles[7], cgra.Tiles[11]},  
-     {cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[8], cgra.Tiles[14], cgra.Tiles[15]},
-    }},
-    
-    {"12-IB", 
-    {
-     {cgra.Tiles[9]},
-     {cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[8], cgra.Tiles[10], cgra.Tiles[13], cgra.Tiles[14]},  
-     {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[11], cgra.Tiles[12], cgra.Tiles[15]},
-    }},
-    
-    {"12-L", 
-    {
-     {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6], cgra.Tiles[7], cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[10]},  
-     {cgra.Tiles[0], cgra.Tiles[11]},
-    }},
-    
-    {"8-IA", 
-    {
-     {cgra.Tiles[9]},
-     {cgra.Tiles[5], cgra.Tiles[8]},  
-     {cgra.Tiles[4], cgra.Tiles[6], cgra.Tiles[10], cgra.Tiles[12], cgra.Tiles[13]},
-    }},
-    
-    {"8-S", 
-    {
-     {cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[8], cgra.Tiles[9]}, 
-     {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[12], cgra.Tiles[13]}, 
-    }},
-    
-    {"8-IB", 
-    {
-     {cgra.Tiles[5], cgra.Tiles[9]},
-     {cgra.Tiles[0], cgra.Tiles[1], cgra.Tiles[4], cgra.Tiles[10], cgra.Tiles[13], cgra.Tiles[14]},  
-    }},
-    
-    {"8-L", 
-    {
-     {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4], cgra.Tiles[5], cgra.Tiles[6]},  
-     {cgra.Tiles[0], cgra.Tiles[7]},
-    }},
-    
-    {"6-S", 
-    {
-     {cgra.Tiles[9], cgra.Tiles[13]}, 
-     {cgra.Tiles[8], cgra.Tiles[10], cgra.Tiles[12], cgra.Tiles[14]}, 
-    }},
-    
-    {"6-IA", 
-    {
-     {cgra.Tiles[8], cgra.Tiles[13]}, 
-     {cgra.Tiles[9], cgra.Tiles[12]}, 
-     {cgra.Tiles[4], cgra.Tiles[14]}, 
-    }},
-    
-    {"6-IB", 
-    {
-     {cgra.Tiles[9], cgra.Tiles[14]}, 
-     {cgra.Tiles[10], cgra.Tiles[13]}, 
-     {cgra.Tiles[8], cgra.Tiles[15]}, 
-    }},
-    
-    {"6-L", 
-    {
-     {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3], cgra.Tiles[4]},  
-     {cgra.Tiles[0], cgra.Tiles[5]},
-    }},
-    
-    {"5-S", 
-    {
-     {cgra.Tiles[13]}, 
-     {cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[12]}, 
-     {cgra.Tiles[14]}, 
-    }},
-    
-    {"5-IB", 
-    {
-     {cgra.Tiles[13]}, 
-     {cgra.Tiles[9]}, 
-     {cgra.Tiles[5], cgra.Tiles[12], cgra.Tiles[14]}, 
-    }},
-    
-    {"5-IA", 
-    {
-     {cgra.Tiles[8], cgra.Tiles[12], cgra.Tiles[13]},  
-     {cgra.Tiles[4], cgra.Tiles[14]},
-    }},
-    
-    {"5-L", 
-    {
-     {cgra.Tiles[1], cgra.Tiles[2], cgra.Tiles[3]},  
-     {cgra.Tiles[0], cgra.Tiles[4]},
-    }},
-    
-    {"4-S", 
-    {
-     {cgra.Tiles[8], cgra.Tiles[9], cgra.Tiles[12], cgra.Tiles[13]}, 
-    }},
-    
-    {"4-IB", 
-    {
-     {cgra.Tiles[12], cgra.Tiles[13]},  
-     {cgra.Tiles[8], cgra.Tiles[14]},
-    }},
-    
-    {"4-IA", 
-    {
-     {cgra.Tiles[9], cgra.Tiles[13]},  
-     {cgra.Tiles[8], cgra.Tiles[14]},
-    }},
-    
-    {"4-L", 
-    {
-     {cgra.Tiles[1], cgra.Tiles[2]},  
-     {cgra.Tiles[0], cgra.Tiles[3]},
-    }},
 };
 
 static map<string, map<string, Tile>> placement_static_Opt2Tile_kernels = {
