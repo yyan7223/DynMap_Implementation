@@ -858,7 +858,7 @@ void analyze_static_levels_distribution(string kernel){
 
 int main(){
     architecture = "OpenCGRA"; // MorphoSys, HReA, HyCube
-    cout<<"Architecture is "<<architecture<<endl;
+    cout<<"Architecture is "<<architecture<<endl; 
 
     // manual test
     // string kernel = "mvt";
