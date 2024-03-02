@@ -17,7 +17,40 @@ void Calculate_CurToPred_Distance(){
 }
 
 bool CurToPred_Distance_Satisfy_Topology(){
-    return (xDiff_CurToPred1 <= xDiff_Limit) && (yDiff_CurToPred1 <= yDiff_Limit);
+    if(architecture == "OpenCGRA"){
+        return (xDiff_CurToPred1 <= xDiff_Limit) && (yDiff_CurToPred1 <= yDiff_Limit);
+    }
+    else if(architecture == "MorphoSys"){
+        if(xDiff_CurToPred1 == 0){
+            return (abs(yDiff_CurToPred1) <= 2) || (abs(yDiff_CurToPred1) == cgra_size - 1);
+        }
+        else if(yDiff_CurToPred1 == 0){
+            return (abs(xDiff_CurToPred1) <= 2) || (abs(xDiff_CurToPred1) == cgra_size - 1);
+        }
+        else{
+            return false;
+        }
+    }
+    else if(architecture == "HReA"){
+        if(xDiff_CurToPred1 == 0){
+            return (abs(yDiff_CurToPred1) <= 2) || (abs(yDiff_CurToPred1) == cgra_size - 1);
+        }
+        else if(yDiff_CurToPred1 == 0){
+            return (abs(xDiff_CurToPred1) <= 2) || (abs(xDiff_CurToPred1) == cgra_size - 1);
+        }
+        else if((abs(xDiff_CurToPred1) <= 1) && (abs(yDiff_CurToPred1) <= 1)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else if(architecture == "HyCube"){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 void DynamicPlacement_SrcTgtInit_BypassMode(string srcOpt, string tgtOpt){
@@ -105,7 +138,40 @@ void Caculate_SrcToTgt_Distance_BypassMode(){
 
 bool SrcToTgt_Distance_Satisfy_Topology_BypassMode(){
     // check whether the placement of bypassSrcOpt and bypassTgtOpt satisfy the topology
-    return (xDiff_BypassSrcToTgt <= xDiff_Limit) && (yDiff_BypassSrcToTgt <= yDiff_Limit);
+    if(architecture == "OpenCGRA"){
+        return (xDiff_BypassSrcToTgt <= xDiff_Limit) && (yDiff_BypassSrcToTgt <= yDiff_Limit);
+    }
+    else if(architecture == "MorphoSys"){
+        if(xDiff_BypassSrcToTgt == 0){
+            return (abs(yDiff_BypassSrcToTgt) <= 2) || (abs(yDiff_BypassSrcToTgt) == cgra_size - 1);
+        }
+        else if(yDiff_BypassSrcToTgt == 0){
+            return (abs(xDiff_BypassSrcToTgt) <= 2) || (abs(xDiff_BypassSrcToTgt) == cgra_size - 1);
+        }
+        else{
+            return false;
+        }
+    }
+    else if(architecture == "HReA"){
+        if(xDiff_BypassSrcToTgt == 0){
+            return (abs(yDiff_BypassSrcToTgt) <= 2) || (abs(yDiff_BypassSrcToTgt) == cgra_size - 1);
+        }
+        else if(yDiff_BypassSrcToTgt == 0){
+            return (abs(xDiff_BypassSrcToTgt) <= 2) || (abs(xDiff_BypassSrcToTgt) == cgra_size - 1);
+        }
+        else if((abs(xDiff_BypassSrcToTgt) <= 1) && (abs(yDiff_BypassSrcToTgt) <= 1)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    else if(architecture == "HyCube"){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
 
 int Bypass_XbarIn_Direction(int xDiff, int yDiff){
@@ -155,7 +221,7 @@ bool BypassOptPlacement_Gen_Record(){ // record the dynamic placement of bypass 
 
     //////////////////////////////////////// decide the Tile of bypassOpt //////////////////////////////
     int x, y, xDiff, yDiff;
-    for(auto stride : bpsStride){
+    for(auto stride : bpsStride_architecture[architecture]){
         // decide Tile x coordinate
         if(bypassSrcTile.X < bypassTgtTile.X){
             x = bypassSrcTile.X + stride[0];
@@ -319,7 +385,7 @@ bool RoutingAvailability_CheckPredecessor_and_Placement(){
 void CurOptPotentialPlacement_List_PartialInherit_Gen(){
     // find the level of curOpt in the only one static mapping result under 4x4 CGRA, and take it as the initial level of dynamic placement
     Tile curTileStatic = placement_static_Opt2Tile[curOpt];
-    int static_level = placement_static_Tile2Level_OpenCGRA[curTileStatic.ID];
+    int static_level = placement_static_Tile2Level_architecture[architecture][curTileStatic.ID];
     int dynamic_level = static_level;
     int max_dynamic_level = allocated_tiles_levels_dynamic.size() - 1;
     
@@ -348,7 +414,7 @@ void CurOptPotentialPlacement_List_PartialInherit_Gen(){
 void CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen(){
     // find the level of curOpt in the only one static mapping result under 4x4 CGRA, and take it as the initial level of dynamic placement
     Tile curTileStatic = placement_static_Opt2Tile[curOpt];
-    int static_level = placement_static_Tile2Level_OpenCGRA[curTileStatic.ID];
+    int static_level = placement_static_Tile2Level_architecture[architecture][curTileStatic.ID];
     int dynamic_level = static_level;
     int max_dynamic_level = allocated_tiles_levels_dynamic.size() - 1;
     
@@ -661,10 +727,12 @@ void configuration_generation(){
 void Reset(string kernel, string shape){
     placement_done = placement_done_kernels[kernel];
     placement_static = placement_static_kernels[kernel];
-    placement_static_Opt2Tile = placement_static_Opt2Tile_kernels[kernel];
+    placement_static_Opt2Tile = placement_static_Opt2Tile_kernels_architecture[architecture][kernel];
     dependency_predecessor = dependency_predecessors_kernels[kernel];
     dependency_successor = dependency_successors_kernels[kernel];
-    allocated_tiles_levels_dynamic = generate_allocated_tiles_levels_dynamic(allocated_tiles_shapes[shape], Architecture_OpenCGRA, levels_usedNumTiles_static_kernels[kernel]);
+    allocated_tiles_levels_dynamic = generate_allocated_tiles_levels_dynamic(allocated_tiles_shapes[shape], 
+                                                                            topology_architecture[architecture], 
+                                                                            eachLevelUsedNumTiles_static_kernels_architecture[architecture][kernel]);
     allocated_tiles = allocated_tiles_shapes[shape];
     IDX_pd = 0; idx_pd = 0; IDX_pd_modulo = 0; IDX_pd_bypass = 0; bypassOptIdx = 0; 
     xDiff_CurToPred1 = 0; yDiff_CurToPred1 = 0; xDiff_BypassSrcToTgt = 0; yDiff_BypassSrcToTgt = 0;
@@ -747,7 +815,7 @@ vector<vector<Tile>> generate_allocated_tiles_levels_dynamic(vector<Tile> shape_
         }
     }
 
-    vector<vector<Tile>> alloc_tiles_levels_dynamic(static_max_levels); // dynamic better has the same number of levels as the static
+    vector<vector<Tile>> alloc_tiles_levels_dynamic(static_max_levels_architecture[architecture]); // dynamic better has the same number of levels as the static
     // and the number of tiles in each level should be consistent with that of in the static mapping result under 4x4 CGRA
     // for example, mvt use 4 Tiles belong to level0 in the static mapping result under 4x4 CGRA, then the dynamic's level0 must also have 4 Tiles
     int level0_numTiles = round(shape_tiles.size() * (levels_usedNumTiles_static[0] / levels_usedNumTiles_static[3]));
@@ -764,7 +832,7 @@ vector<vector<Tile>> generate_allocated_tiles_levels_dynamic(vector<Tile> shape_
 
 void analyze_static_levels_distribution(string kernel){
     placement_static = placement_static_kernels[kernel];
-    placement_static_Opt2Tile = placement_static_Opt2Tile_kernels[kernel];
+    placement_static_Opt2Tile = placement_static_Opt2Tile_kernels_architecture[architecture][kernel];
     map<int, int> TilesUsedTimes;
     for(int i = 0; i < cgra_size*cgra_size; i++){
         TilesUsedTimes[i] = 0;
@@ -779,7 +847,7 @@ void analyze_static_levels_distribution(string kernel){
     int numUsedTiles_level_2 = 0;
     for(int i = 0; i < cgra_size*cgra_size; i++){
         if(TilesUsedTimes[i] != 0){
-            int static_level = placement_static_Tile2Level_OpenCGRA[i];
+            int static_level = placement_static_Tile2Level_architecture[architecture][i];
             if(static_level == 0) numUsedTiles_level_0 += 1;
             else if(static_level == 1) numUsedTiles_level_1 += 1;
             else numUsedTiles_level_2 += 1;
@@ -789,6 +857,8 @@ void analyze_static_levels_distribution(string kernel){
 }
 
 int main(){
+    architecture = "OpenCGRA"; // MorphoSys, HReA, HyCube
+    cout<<"Architecture is "<<architecture<<endl;
 
     // manual test
     // string kernel = "mvt";
