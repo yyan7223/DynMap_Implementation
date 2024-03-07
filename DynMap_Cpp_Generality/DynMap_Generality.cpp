@@ -250,9 +250,9 @@ bool BypassOptPlacement_Gen_Record(){ // record the dynamic placement of bypass 
         }
 
         // calibration to illegal x and y
-        if((x > cgra_size - 1) || (y > cgra_size - 1)) continue;
-        x = (x < 0) ? (cgra_size + x) : x; 
-        y = (y < 0) ? (cgra_size + y) : y;
+        // if((x > cgra_size - 1) || (y > cgra_size - 1)) continue;
+        // x = (x < 0) ? (cgra_size + x) : x; 
+        // y = (y < 0) ? (cgra_size + y) : y;
 
         // check whether Tile is legal
         if (find(allocated_tiles.begin(), allocated_tiles.end(), xy2Tile[x][y]) != allocated_tiles.end()) break;
@@ -285,7 +285,7 @@ bool BypassOptPlacement_Gen_Record(){ // record the dynamic placement of bypass 
                     return true;
                 }
                 page += 1;
-                if(page >= bypassMaxPages){
+                if(page >= bypassOverlapPages){
                     // cout<<"Warning! bypass page is larger than the maximum available value"<<endl;
                 }
             }
@@ -470,6 +470,9 @@ void CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen(){
 // modulo scheduling + placement + routing (implicit)
 bool dynamic_placement_routing(){
     int placedOpts_Counter = 0;
+    typedef high_resolution_clock Clock;
+    float Stage1TotalTimeCsmpt = 0;
+    float Stage2TotalTimeCsmpt = 0;
     for(auto staticOpt : placement_static){
         curOpt = staticOpt;
         predecessors.clear();
@@ -492,17 +495,24 @@ bool dynamic_placement_routing(){
         }
 
         // placement recommendation
+        auto t1 = Clock::now();
         if(placedOpts_Counter < threshold) CurOptPotentialPlacement_List_PartialInherit_Gen();
         else CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen();
+        auto t2 = Clock::now();
 
         // placement&routing
+        auto t3 = Clock::now();
         if(RoutingAvailability_CheckPredecessor_and_Placement()){
+            auto t4 = Clock::now();
+            Stage1TotalTimeCsmpt += duration_cast<nanoseconds>(t2 - t1).count() / 1000.0;
+            Stage2TotalTimeCsmpt += duration_cast<nanoseconds>(t4 - t3).count() / 1000.0;
             // cout<<"curOpt is: "<<curOpt<<", PC "<<placement_dynamic_dict_Opt2PC[curOpt]<<", Tile "<<placement_dynamic_dict_Opt2Tile[curOpt].ID<<endl;
             placedOpts_Counter += 1;
             continue; // if current DFGNode mapping success, go to next DFGNode
         } 
         else return false;
     }
+    Stage1TotalTimeCsmptPercent = Stage1TotalTimeCsmpt / (Stage1TotalTimeCsmpt + Stage2TotalTimeCsmpt);
     return true;
 }
 
@@ -767,6 +777,19 @@ void record_mappingResults(string kernel, string shape){
     dataFile.close();
 }
 
+void record_TimeConsumptionRatio(string kernel, string shape){
+    ofstream dataFile;
+    string fileName = "cpp mapping ratio//" + kernel + " " + shape + ".txt";
+    dataFile.open(fileName, ofstream::out | ofstream::trunc);
+    int idx = 0;
+    for(auto ratio : TimeRatio){ // print mapping results
+        // dataFile<<"DFGNode "<<idx<<", Stage1/Stage2 Time consumption is "<<ratio<<endl;
+        // idx++;
+        dataFile<<ratio<<endl;
+    }
+    dataFile.close();
+}
+
 void compare_mappingResults_withPython(){
     ifstream op;
     for(auto kernel : test_kernels){
@@ -884,15 +907,17 @@ int main(){
     int test_case = 1;
     typedef high_resolution_clock Clock;
     for(auto kernel : test_kernels){
+        float kernelStage1TotalTimeCsmptPercent = 0;
         analyze_static_levels_distribution(kernel);
         for(auto shape : test_shapes[kernel]){
-            int tSum_10times = 0;
-            int IISum_10times = 0;
+            float tSum_10times = 0;
+            float IISum_10times = 0;
+            float Stage1TotalTimeCsmptPercent_10times = 0;
             for(int i = 0; i < 10; i++){ // run for 10 times
                 DynamicPlacement_II = calculate_startII(kernel, shape); 
                 threshold = 1;
-                int tSum_1time = 0;
-                int IISum_1time = 0;
+                float tSum_1time = 0;
+                float IISum_1time = 0;
                 while (true)
                 {
                     auto t1 = Clock::now();
@@ -916,14 +941,22 @@ int main(){
 
                 tSum_10times += tSum_1time; // record time consumption and II for current execution
                 IISum_10times += DynamicPlacement_II; 
+                Stage1TotalTimeCsmptPercent_10times += Stage1TotalTimeCsmptPercent;
             }
 
             // record mapping results
             record_mappingResults(kernel, shape);
 
-            cout<<"TestCase:["<<test_case<<"/72] "<<kernel<<" "<<shape<<" mapping complete, average time consumption is "<<tSum_10times/10.0/1000.0<<"ms, threshold is "<<threshold<<", II="<<IISum_10times/10.0<<endl;
+            // cout<<"TestCase:["<<test_case<<"/72] "<<kernel<<" "<<shape<<" mapping done, avgTimeConsump is "<<tSum_10times/10.0/1000.0;
+            // cout<<"ms, threshold is "<<threshold<<", timeConsump [Stage1/Total] = ["<<Stage1TotalTimeCsmptPercent_10times/10.0*100.0;
+            // cout<<"%/100%], achieved II="<<IISum_10times/10.0<<endl;
+            cout<<"TestCase:["<<test_case<<"/72] "<<kernel<<" "<<shape<<" mapping done, avgTimeConsump is "<<tSum_10times/10.0/1000.0;
+            cout<<"ms, threshold is "<<threshold<<", achieved II="<<IISum_10times/10.0<<endl;
+            kernelStage1TotalTimeCsmptPercent += Stage1TotalTimeCsmptPercent_10times/10.0;
+            
             test_case += 1;
         }
+        cout<<"kernel "<<kernel<<" mapping stage 1 occupies "<<kernelStage1TotalTimeCsmptPercent/12.0*100.0<<"% of mapping totalTimeConsump (avgVal under 12 test shapes)"<<endl;
     }
 
     return 0;

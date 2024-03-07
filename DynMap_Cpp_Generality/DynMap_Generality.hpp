@@ -53,7 +53,7 @@ class CGRA{
 /////////// placement recommendation and placement&routing module related variables and functions ///////////
 static const int cgra_size = 4; // square
 static const int maxPCs = 100;
-static const int bypassMaxPages = 8;
+static const int bypassOverlapPages = 8;
 static string architecture;
 static int totalNodes, numTiles, RecMII, ResMII;
 static CGRA cgra(cgra_size);
@@ -81,9 +81,11 @@ static vector<vector<Tile>> allocated_tiles_levels_dynamic;
 static vector<Tile> allocated_tiles;
 static vector<string> placement_static;
 static string placement_dynamic[maxPCs][cgra_size*cgra_size]; 
-static string placement_dynamic_bypass[bypassMaxPages][maxPCs][cgra_size*cgra_size]; 
+static string placement_dynamic_bypass[bypassOverlapPages][maxPCs][cgra_size*cgra_size]; // The placement of bypassOpt can be overlapped with DFGNode
 static int placement_dynamic_occupy[maxPCs][cgra_size*cgra_size];
 static int placement_dynamic_bypass_occupy[maxPCs][cgra_size*cgra_size][16];
+static vector<float> TimeRatio;
+static float Stage1TotalTimeCsmptPercent = 0;
 void PlacementDynamic_Record(Tile);
 void Calculate_CurToPred_Distance();
 bool CurToPred_Distance_Satisfy_Topology();
@@ -102,6 +104,7 @@ bool dynamic_placement_routing();
 void Reset(string, string);
 int calculate_startII(string, string);
 void record_mappingResults(string, string);
+void record_TimeConsumptionRatio(string, string);
 void compare_mappingResults_withPython();
 vector<vector<Tile>> generate_allocated_tiles_levels_dynamic(vector<Tile>, map<int, vector<Tile>>, vector<float>);
 void analyze_static_levels_distribution(string);
