@@ -925,7 +925,7 @@ int main(){
                     auto t2 = Clock::now();
                     bool success = dynamic_placement_routing();
                     auto t3 = Clock::now();
-                    tSum_1time += duration_cast<nanoseconds>(t3 - t2).count() / 1000.0; 
+                    tSum_1time += duration_cast<nanoseconds>(t3 - t2).count() / 1000000.0; 
 
                     if(success){
                         break;
@@ -947,10 +947,10 @@ int main(){
             // record mapping results
             record_mappingResults(kernel, shape);
 
-            // cout<<"TestCase:["<<test_case<<"/72] "<<kernel<<" "<<shape<<" mapping done, avgTimeConsump is "<<tSum_10times/10.0/1000.0;
+            // cout<<"TestCase:["<<test_case<<"/72] "<<kernel<<" "<<shape<<" mapping done, avgTimeConsump is "<<tSum_10times/10.0;
             // cout<<"ms, threshold is "<<threshold<<", timeConsump [Stage1/Total] = ["<<Stage1TotalTimeCsmptPercent_10times/10.0*100.0;
             // cout<<"%/100%], achieved II="<<IISum_10times/10.0<<endl;
-            cout<<"TestCase:["<<test_case<<"/72] "<<kernel<<" "<<shape<<" mapping done, avgTimeConsump is "<<tSum_10times/10.0/1000.0;
+            cout<<"TestCase:["<<test_case<<"/288] "<<kernel<<" "<<shape<<" mapping done, avgTimeConsump is "<<tSum_10times/10.0;
             cout<<"ms, threshold is "<<threshold<<", achieved II="<<IISum_10times/10.0<<endl;
             kernelStage1TotalTimeCsmptPercent += Stage1TotalTimeCsmptPercent_10times/10.0;
             
