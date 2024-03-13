@@ -1,0 +1,9 @@
+add4, PC=0, Tile=1
+icmp5, PC=1, Tile=0
+br6, PC=2, Tile=1
+phi0, PC=3, Tile=1
+getelementptr1, PC=4, Tile=0
+trunc2, PC=6, Tile=0
+store3, PC=7, Tile=0
+Achieved DynamicPlacement_II is 4
+threshold is 1

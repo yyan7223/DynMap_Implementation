@@ -1,22 +1,22 @@
 icmp7, PC=0, Tile=13
-br8, PC=1, Tile=13
-load9, PC=2, Tile=8
-br12, PC=2, Tile=13
-add14, PC=3, Tile=13
+br8, PC=1, Tile=8
+load9, PC=2, Tile=9
+br12, PC=2, Tile=8
+add14, PC=3, Tile=8
 sub16, PC=3, Tile=9
 icmp15, PC=4, Tile=9
 and17, PC=5, Tile=9
-icmp18, PC=7, Tile=8
-br19, PC=6, Tile=9
-phi0, PC=8, Tile=8
-getelementptr2, PC=9, Tile=8
-load3, PC=10, Tile=12
-getelementptr4, PC=11, Tile=12
-load5, PC=12, Tile=12
-fmul6, PC=13, Tile=12
+icmp18, PC=6, Tile=9
+br19, PC=5, Tile=14
+phi0, PC=6, Tile=14
+getelementptr2, PC=7, Tile=9
+load3, PC=8, Tile=9
+getelementptr4, PC=9, Tile=13
+load5, PC=10, Tile=13
+fmul6, PC=11, Tile=14
 fneg10, PC=14, Tile=14
 select11, PC=15, Tile=14
 phi13, PC=16, Tile=14
 phi1, PC=17, Tile=14
-Achieved DynamicPlacement_II is 4
-threshold is 11
+Achieved DynamicPlacement_II is 7
+threshold is 2

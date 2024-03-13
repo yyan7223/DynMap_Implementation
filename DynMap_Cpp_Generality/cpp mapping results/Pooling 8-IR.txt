@@ -1,0 +1,18 @@
+add13, PC=0, Tile=3
+icmp14, PC=1, Tile=6
+br15, PC=2, Tile=7
+phi0, PC=3, Tile=7
+sdiv1, PC=4, Tile=6
+srem2, PC=6, Tile=6
+sext3, PC=7, Tile=6
+zext6, PC=8, Tile=7
+getelementptr4, PC=8, Tile=5
+getelementptr9, PC=9, Tile=7
+load5, PC=9, Tile=5
+load10, PC=10, Tile=5
+getelementptr7, PC=10, Tile=1
+load8, PC=11, Tile=1
+fadd11, PC=15, Tile=5
+store12, PC=16, Tile=1
+Achieved DynamicPlacement_II is 4
+threshold is 1
