@@ -1,0 +1,23 @@
+fcmp1, PC=0, Tile=8
+fneg18, PC=1, Tile=8
+catchpad19, PC=2, Tile=8
+ret20, PC=3, Tile=8
+fcmp0, PC=4, Tile=12
+store2, PC=5, Tile=12
+store4, PC=5, Tile=13
+store10, PC=6, Tile=12
+fneg17, PC=7, Tile=12
+alloca3, PC=8, Tile=12
+alloca5, PC=6, Tile=14
+alloca11, PC=7, Tile=13
+zext6, PC=7, Tile=14
+zext12, PC=8, Tile=13
+store7, PC=8, Tile=14
+store13, PC=9, Tile=14
+alloca8, PC=9, Tile=13
+alloca14, PC=11, Tile=13
+fsub9, PC=10, Tile=14
+fneg15, PC=14, Tile=8
+load16, PC=11, Tile=4
+Achieved DynamicPlacement_II is 5
+threshold is 5
