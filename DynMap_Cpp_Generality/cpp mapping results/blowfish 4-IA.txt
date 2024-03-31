@@ -21,13 +21,13 @@ and11, PC=21, Tile=13
 and17, PC=22, Tile=13
 store23, PC=21, Tile=8
 store12, PC=23, Tile=13
-store18, PC=23, Tile=14
-alloca24, PC=22, Tile=8
+store18, PC=30, Tile=8
+alloca24, PC=22, Tile=14
 alloca13, PC=24, Tile=14
-alloca19, PC=25, Tile=14
-fneg14, PC=26, Tile=14
-or20, PC=27, Tile=14
-fneg25, PC=28, Tile=14
-ashr26, PC=29, Tile=14
+alloca19, PC=31, Tile=14
+fneg14, PC=25, Tile=14
+or20, PC=34, Tile=14
+fneg25, PC=35, Tile=14
+ashr26, PC=36, Tile=14
 Achieved DynamicPlacement_II is 8
-threshold is 22
+threshold is 1

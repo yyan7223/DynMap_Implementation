@@ -30,4 +30,4 @@ fsub28, PC=28, Tile=2
 store15, PC=29, Tile=2
 store29, PC=30, Tile=2
 Achieved DynamicPlacement_II is 11
-threshold is 6
+threshold is 1

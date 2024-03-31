@@ -255,7 +255,10 @@ bool BypassOptPlacement_Gen_Record(){ // record the dynamic placement of bypass 
         // y = (y < 0) ? (cgra_size + y) : y;
 
         // check whether Tile is legal
-        if (find(allocated_tiles.begin(), allocated_tiles.end(), xy2Tile[x][y]) != allocated_tiles.end()) break;
+        if((xDiff != 0) || (yDiff != 0)){ // actually move
+            // check whether Tile is legal
+            if (find(allocated_tiles.begin(), allocated_tiles.end(), xy2Tile[x][y]) != allocated_tiles.end()) break;
+        }
     }
 
     idx_pd = find(allocated_tiles.begin(), allocated_tiles.end(), xy2Tile[x][y]) - allocated_tiles.begin();
@@ -421,49 +424,37 @@ void CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen(){
     curOptPotentialPlacement.clear();
 
     // same level, highest priority
-    map<int, Tile> bypassNums_Tile; 
-    int xdiff, ydiff;
-    Tile predTile;
-    for (auto tile : allocated_tiles_levels_dynamic[dynamic_level]){ 
-        int numBypass = 0;
-        for(auto pred : predecessors){
-            predTile = placement_dynamic_dict_Opt2Tile[pred];
-            xdiff = abs(tile.X - predTile.X);
-            ydiff = abs(tile.Y - predTile.Y);
-            numBypass += (max(xdiff, ydiff) - 1);
-        }
-        bypassNums_Tile[numBypass] = tile;
-    }
-    for (auto iter : bypassNums_Tile){ // map is sorted by key from smallest to largest by default, and tile with fewer bypass nodes has higher priority 
-        curOptPotentialPlacement.push_back(iter.second);
-    }
-
-    // third priority, other Tiles in the rest levels
     int initial_dynamic_level = dynamic_level;
     while(true){
+        map<int, vector<Tile>> bypassNums_Tile; 
+        int xdiff, ydiff;
+        Tile predTile;
+        for (auto tile : allocated_tiles_levels_dynamic[dynamic_level]){ 
+            int numBypass = 0;
+            for(auto pred : predecessors){
+                predTile = placement_dynamic_dict_Opt2Tile[pred];
+                xdiff = abs(tile.X - predTile.X);
+                ydiff = abs(tile.Y - predTile.Y);
+                if(architecture == "OpenCGRA") numBypass += (max(xdiff, ydiff) - 1);
+                else if (architecture == "Orthogonal") numBypass += (xdiff + ydiff - 1);
+                else{
+                    cout << "unkown architecture, please check...";
+                    numBypass += (max(xdiff, ydiff) - 1);
+                } 
+            }
+            bypassNums_Tile[numBypass].push_back(tile);
+        }
+        for (auto iter : bypassNums_Tile){ // map is sorted by key from smallest to largest by default, and tile with fewer bypass nodes has higher priority 
+            for(auto tile : iter.second){
+                curOptPotentialPlacement.push_back(tile);
+            }
+        }
+
         dynamic_level += 1;
         if(dynamic_level > max_dynamic_level){
             dynamic_level = 0; // go back to the highest level
         }
         if(dynamic_level == initial_dynamic_level) break;
-        else{
-            map<int, Tile> bypassNums_Tile; 
-            int xdiff, ydiff;
-            Tile predTile;
-            for (auto tile : allocated_tiles_levels_dynamic[dynamic_level]){ 
-                int numBypass = 0;
-                for(auto pred : predecessors){
-                    predTile = placement_dynamic_dict_Opt2Tile[pred];
-                    xdiff = abs(tile.X - predTile.X);
-                    ydiff = abs(tile.Y - predTile.Y);
-                    numBypass += (max(xdiff, ydiff) - 1);
-                }
-                bypassNums_Tile[numBypass] = tile;
-            }
-            for (auto iter : bypassNums_Tile){ // map is sorted by key from smallest to largest by default, and tile with fewer bypass nodes has higher priority 
-                curOptPotentialPlacement.push_back(iter.second);
-            }
-        }
     }
 }
 

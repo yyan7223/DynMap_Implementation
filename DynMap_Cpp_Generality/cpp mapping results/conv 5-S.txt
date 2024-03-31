@@ -8,12 +8,12 @@ trunc4, PC=5, Tile=8
 trunc5, PC=10, Tile=8
 store6, PC=11, Tile=9
 store9, PC=11, Tile=12
-inttoptr7, PC=12, Tile=14
+inttoptr7, PC=12, Tile=12
 inttoptr10, PC=12, Tile=9
 alloca8, PC=13, Tile=9
-alloca11, PC=13, Tile=14
+alloca11, PC=13, Tile=12
 fsub12, PC=14, Tile=9
-fneg13, PC=15, Tile=14
-fcmp1, PC=18, Tile=14
+fneg13, PC=18, Tile=12
+fcmp1, PC=19, Tile=14
 Achieved DynamicPlacement_II is 4
-threshold is 8
+threshold is 1

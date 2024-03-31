@@ -17,36 +17,19 @@ void Calculate_CurToPred_Distance(){
 }
 
 bool CurToPred_Distance_Satisfy_Topology(){
-    if(architecture == "OpenCGRA"){
+    if(architecture == "Diagonal"){
         return (xDiff_CurToPred1 <= xDiff_Limit) && (yDiff_CurToPred1 <= yDiff_Limit);
     }
-    else if(architecture == "MorphoSys"){
+    else if(architecture == "Orthogonal"){
         if(xDiff_CurToPred1 == 0){
-            return (abs(yDiff_CurToPred1) <= 2) || (abs(yDiff_CurToPred1) == cgra_size - 1);
+            return abs(yDiff_CurToPred1) <= yDiff_Limit;
         }
         else if(yDiff_CurToPred1 == 0){
-            return (abs(xDiff_CurToPred1) <= 2) || (abs(xDiff_CurToPred1) == cgra_size - 1);
+            return abs(xDiff_CurToPred1) <= xDiff_Limit;
         }
         else{
             return false;
         }
-    }
-    else if(architecture == "HReA"){
-        if(xDiff_CurToPred1 == 0){
-            return (abs(yDiff_CurToPred1) <= 2) || (abs(yDiff_CurToPred1) == cgra_size - 1);
-        }
-        else if(yDiff_CurToPred1 == 0){
-            return (abs(xDiff_CurToPred1) <= 2) || (abs(xDiff_CurToPred1) == cgra_size - 1);
-        }
-        else if((abs(xDiff_CurToPred1) <= 1) && (abs(yDiff_CurToPred1) <= 1)){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    else if(architecture == "HyCube"){
-        return true;
     }
     else{
         return false;
@@ -138,36 +121,19 @@ void Caculate_SrcToTgt_Distance_BypassMode(){
 
 bool SrcToTgt_Distance_Satisfy_Topology_BypassMode(){
     // check whether the placement of bypassSrcOpt and bypassTgtOpt satisfy the topology
-    if(architecture == "OpenCGRA"){
+    if(architecture == "Diagonal"){
         return (xDiff_BypassSrcToTgt <= xDiff_Limit) && (yDiff_BypassSrcToTgt <= yDiff_Limit);
     }
-    else if(architecture == "MorphoSys"){
+    else if(architecture == "Orthogonal"){
         if(xDiff_BypassSrcToTgt == 0){
-            return (abs(yDiff_BypassSrcToTgt) <= 2) || (abs(yDiff_BypassSrcToTgt) == cgra_size - 1);
+            return abs(yDiff_BypassSrcToTgt) <= yDiff_Limit;
         }
         else if(yDiff_BypassSrcToTgt == 0){
-            return (abs(xDiff_BypassSrcToTgt) <= 2) || (abs(xDiff_BypassSrcToTgt) == cgra_size - 1);
+            return abs(xDiff_BypassSrcToTgt) <= xDiff_Limit;
         }
         else{
             return false;
         }
-    }
-    else if(architecture == "HReA"){
-        if(xDiff_BypassSrcToTgt == 0){
-            return (abs(yDiff_BypassSrcToTgt) <= 2) || (abs(yDiff_BypassSrcToTgt) == cgra_size - 1);
-        }
-        else if(yDiff_BypassSrcToTgt == 0){
-            return (abs(xDiff_BypassSrcToTgt) <= 2) || (abs(xDiff_BypassSrcToTgt) == cgra_size - 1);
-        }
-        else if((abs(xDiff_BypassSrcToTgt) <= 1) && (abs(yDiff_BypassSrcToTgt) <= 1)){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    else if(architecture == "HyCube"){
-        return true;
     }
     else{
         return false;
@@ -254,8 +220,10 @@ bool BypassOptPlacement_Gen_Record(){ // record the dynamic placement of bypass 
         // x = (x < 0) ? (cgra_size + x) : x; 
         // y = (y < 0) ? (cgra_size + y) : y;
 
-        // check whether Tile is legal
-        if (find(allocated_tiles.begin(), allocated_tiles.end(), xy2Tile[x][y]) != allocated_tiles.end()) break;
+        if((xDiff != 0) || (yDiff != 0)){ // actually move
+            // check whether Tile is legal
+            if (find(allocated_tiles.begin(), allocated_tiles.end(), xy2Tile[x][y]) != allocated_tiles.end()) break;
+        }
     }
 
     idx_pd = find(allocated_tiles.begin(), allocated_tiles.end(), xy2Tile[x][y]) - allocated_tiles.begin();
@@ -326,6 +294,10 @@ bool RoutingAvailability_CheckPredecessor_and_Placement(){
 
     // for other DFGNodes, try to map to the Tile with the order in curOptPotentialPlacement
     for(auto tile : curOptPotentialPlacement){
+        if(heterogenous && (curOpt.find("load") != string::npos)){ // In heterogenous CGRA,  the load operation must be mapped to Tile that supports memory access
+            if(find(noMemAccess_Tiles.begin(), noMemAccess_Tiles.end(), tile) != noMemAccess_Tiles.end())
+                continue; // move to next Tile in curOptPotentialPlacement if current Tile cannot access memory
+        }
         /////////////////////////////////////////////////////////////////////////////////////////
         // for each tile, check whether needs to enter bypass mode
         bool bypassMode = false;
@@ -421,49 +393,37 @@ void CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen(){
     curOptPotentialPlacement.clear();
 
     // same level, highest priority
-    map<int, Tile> bypassNums_Tile; 
-    int xdiff, ydiff;
-    Tile predTile;
-    for (auto tile : allocated_tiles_levels_dynamic[dynamic_level]){ 
-        int numBypass = 0;
-        for(auto pred : predecessors){
-            predTile = placement_dynamic_dict_Opt2Tile[pred];
-            xdiff = abs(tile.X - predTile.X);
-            ydiff = abs(tile.Y - predTile.Y);
-            numBypass += (max(xdiff, ydiff) - 1);
-        }
-        bypassNums_Tile[numBypass] = tile;
-    }
-    for (auto iter : bypassNums_Tile){ // map is sorted by key from smallest to largest by default, and tile with fewer bypass nodes has higher priority 
-        curOptPotentialPlacement.push_back(iter.second);
-    }
-
-    // third priority, other Tiles in the rest levels
     int initial_dynamic_level = dynamic_level;
     while(true){
+        map<int, vector<Tile>> bypassNums_Tile; 
+        int xdiff, ydiff;
+        Tile predTile;
+        for (auto tile : allocated_tiles_levels_dynamic[dynamic_level]){ 
+            int numBypass = 0;
+            for(auto pred : predecessors){
+                predTile = placement_dynamic_dict_Opt2Tile[pred];
+                xdiff = abs(tile.X - predTile.X);
+                ydiff = abs(tile.Y - predTile.Y);
+                if(architecture == "Diagonal") numBypass += (max(xdiff, ydiff) - 1);
+                else if (architecture == "Orthogonal") numBypass += (xdiff + ydiff - 1);
+                else{
+                    cout << "unkown architecture, please check...";
+                    numBypass += (max(xdiff, ydiff) - 1);
+                } 
+            }
+            bypassNums_Tile[numBypass].push_back(tile);
+        }
+        for (auto iter : bypassNums_Tile){ // map is sorted by key from smallest to largest by default, and tile with fewer bypass nodes has higher priority 
+            for(auto tile : iter.second){
+                curOptPotentialPlacement.push_back(tile);
+            }
+        }
+
         dynamic_level += 1;
         if(dynamic_level > max_dynamic_level){
             dynamic_level = 0; // go back to the highest level
         }
         if(dynamic_level == initial_dynamic_level) break;
-        else{
-            map<int, Tile> bypassNums_Tile; 
-            int xdiff, ydiff;
-            Tile predTile;
-            for (auto tile : allocated_tiles_levels_dynamic[dynamic_level]){ 
-                int numBypass = 0;
-                for(auto pred : predecessors){
-                    predTile = placement_dynamic_dict_Opt2Tile[pred];
-                    xdiff = abs(tile.X - predTile.X);
-                    ydiff = abs(tile.Y - predTile.Y);
-                    numBypass += (max(xdiff, ydiff) - 1);
-                }
-                bypassNums_Tile[numBypass] = tile;
-            }
-            for (auto iter : bypassNums_Tile){ // map is sorted by key from smallest to largest by default, and tile with fewer bypass nodes has higher priority 
-                curOptPotentialPlacement.push_back(iter.second);
-            }
-        }
     }
 }
 
@@ -495,17 +455,18 @@ bool dynamic_placement_routing(){
         }
 
         // placement recommendation
-        auto t1 = Clock::now();
+        // auto t1 = Clock::now();
         if(placedOpts_Counter < threshold) CurOptPotentialPlacement_List_PartialInherit_Gen();
         else CurOptPotentialPlacement_List_PartialInherit_BypassLess_Gen();
-        auto t2 = Clock::now();
+        // auto t2 = Clock::now();
+        if(curOptPotentialPlacement.size() != cgra_size * cgra_size) cout<<"Incorrect recommendationlist length = "<<curOptPotentialPlacement.size()<<endl;
 
         // placement&routing
-        auto t3 = Clock::now();
+        // auto t3 = Clock::now();
         if(RoutingAvailability_CheckPredecessor_and_Placement()){
-            auto t4 = Clock::now();
-            Stage1TotalTimeCsmpt += duration_cast<nanoseconds>(t2 - t1).count() / 1000.0;
-            Stage2TotalTimeCsmpt += duration_cast<nanoseconds>(t4 - t3).count() / 1000.0;
+            // auto t4 = Clock::now();
+            // Stage1TotalTimeCsmpt += duration_cast<nanoseconds>(t2 - t1).count() / 1000.0;
+            // Stage2TotalTimeCsmpt += duration_cast<nanoseconds>(t4 - t3).count() / 1000.0;
             // cout<<"curOpt is: "<<curOpt<<", PC "<<placement_dynamic_dict_Opt2PC[curOpt]<<", Tile "<<placement_dynamic_dict_Opt2Tile[curOpt].ID<<endl;
             placedOpts_Counter += 1;
             continue; // if current DFGNode mapping success, go to next DFGNode
@@ -520,7 +481,7 @@ void opcode_generation(int TileID){
     // opcode should be a integer in actual deployment, string here is just for demonstration purpose
     if(curOpt.find("bypass") != string::npos) opcode = "bypass";
     else opcode = curOpt;
-    cout<<"PC = "<<placement_dynamic_dict_Opt2PC[curOpt]<<", Tile "<<TileID<<", opcode = "<<curOpt<<endl;
+    // cout<<"PC = "<<placement_dynamic_dict_Opt2PC[curOpt]<<", Tile "<<TileID<<", opcode = "<<curOpt<<endl;
 }
 
 int CrossbarInIdx_Generation_FromWhichLocalReg(int idxIn){
@@ -529,23 +490,12 @@ int CrossbarInIdx_Generation_FromWhichLocalReg(int idxIn){
 }
 
 int CrossbarOutIdx_Generation_ToWhichLocalReg(int PC, int TileID){
-    if (local_register_status[PC][TileID][0] == 0) return 11; // LocalReg 0
-    else if (local_register_status[PC][TileID][1] == 0) return 12;// LocalReg 1
-    else if (local_register_status[PC][TileID][2] == 0) return 13;// LocalReg 2
-    else if (local_register_status[PC][TileID][3] == 0) return 14;// LocalReg 3
-    else if (local_register_status[PC][TileID][4] == 0) return 15;// LocalReg 4
-    else if (local_register_status[PC][TileID][5] == 0) return 16;// LocalReg 5
-    else if (local_register_status[PC][TileID][6] == 0) return 17;// LocalReg 6
-    else if (local_register_status[PC][TileID][7] == 0) return 18;// LocalReg 7
-    else if (local_register_status[PC][TileID][8] == 0) return 19;// LocalReg 8
-    else if (local_register_status[PC][TileID][9] == 0) return 20;// LocalReg 9
-    else if (local_register_status[PC][TileID][10] == 0) return 21; // LocalReg 10
-    else if (local_register_status[PC][TileID][11] == 0) return 22; // LocalReg 11
-    else if (local_register_status[PC][TileID][12] == 0) return 23; // LocalReg 12
-    else if (local_register_status[PC][TileID][13] == 0) return 24; // LocalReg 13
-    else if (local_register_status[PC][TileID][14] == 0) return 25; // LocalReg 14
-    else if (local_register_status[PC][TileID][15] == 0) return 26; // LocalReg 15
-    else return 0; // illegal
+    for(int i = 0; i < LocalRegNum; i++){
+        if(local_register_status[PC][TileID][i] == 0) return i+11;
+    }
+    cout << "insufficient local registers" <<endl;
+    insufficientLocalReg = true;
+    return 0; // illegal
 }
 
 int CrossbarInIdx_Generation_FromWhichFuncUnitOutput(){
@@ -605,7 +555,7 @@ int CrossBar_Type1_ControlSignal_Generation(int PC, int TileID){ // generate typ
     int high4bits = CrossbarInIdx_Generation_FromWhichFuncUnitOutput();
     int low4bits = CrossbarOutIdx_Generation_ToWhichLocalReg(PC, TileID);
     local_register_status[PC][TileID][low4bits-11] = 1; // current LocalReg has been occupied
-    cout<<"Successors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = FU_output "<<high4bits-9<<" -> "<<"LocalReg "<<low4bits-11<<endl;    
+    // cout<<"Successors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = FU_output "<<high4bits-9<<" -> "<<"LocalReg "<<low4bits-11<<endl;    
     return low4bits;
 } 
     
@@ -613,20 +563,20 @@ void CrossBar_Type2_ControlSignal_Generation(int PC, int TileID){ // generate ty
     int high4bits = CrossbarInIdx_Generation_FromWhichFuncUnitOutput();
     int low4bits = CrossbarOutIdx_Generation_ToWhichFuncUnitInput(PC, TileID);
     compute_register_status[PC][TileID][low4bits-9] = 1; // current ComputeReg has been occupied
-    cout<<"Successors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = FU_output "<<high4bits-9<<" -> "<<"ComputeReg "<<low4bits-9<<endl;    
+    // cout<<"Successors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = FU_output "<<high4bits-9<<" -> "<<"ComputeReg "<<low4bits-9<<endl;    
 } 
 
 void CrossBar_Type3_ControlSignal_Generation(int PC, int TileID){ // generate type 3 crossbar control signal
     int high4bits = CrossbarInIdx_Generation_FromWhichFuncUnitOutput();
     int low4bits = CrossbarOutIdx_Generation_ToWhichRouteReg();
-    cout<<"Successors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = FU_output "<<high4bits-9<<" -> "<<"RouteReg "<<low4bits-1<<" (TileDir "<<low4bits<<")"<<endl;    
+    // cout<<"Successors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = FU_output "<<high4bits-9<<" -> "<<"RouteReg "<<low4bits-1<<" (TileDir "<<low4bits<<")"<<endl;    
 } 
 
 void CrossBar_Type4_ControlSignal_Generation(int LocalRegIdx, int i, int PC, int TileID){ // generate type 4 crossbar control signal
     int high4bits = CrossbarInIdx_Generation_FromWhichLocalReg(LocalRegIdx);
     int low4bits = high4bits;
     local_register_status[PC+i+1][TileID][LocalRegIdx-11] = 1; // current LocalReg has been occupied
-    cout<<"Successors: PC = "<<PC+i+1<<", Tile "<<TileID<<", CrossbarCtrlSig = LocalReg "<<high4bits-11<<" -> "<<"LocalReg "<<low4bits-11<<endl;    
+    // cout<<"Successors: PC = "<<PC+i+1<<", Tile "<<TileID<<", CrossbarCtrlSig = LocalReg "<<high4bits-11<<" -> "<<"LocalReg "<<low4bits-11<<endl;    
 } 
 
 void CrossBar_Type5_ControlSignal_Generation(int LocalRegIdx, int PCvar, int PC, int TileID){ // generate type 5 crossbar control signal
@@ -634,27 +584,27 @@ void CrossBar_Type5_ControlSignal_Generation(int LocalRegIdx, int PCvar, int PC,
     int low4bits = CrossbarOutIdx_Generation_ToWhichFuncUnitInput(PC+PCvar, TileID);
     compute_register_status[PC+PCvar][TileID][low4bits-9] = 1; // current ComputeReg has been occupied
     local_register_status[PC+PCvar][TileID][high4bits-11] = 1; // current LocalReg has been occupied
-    cout<<"Successors: PC = "<<PC+PCvar<<", Tile "<<TileID<<", CrossbarCtrlSig = LocalReg "<<high4bits-11<<" -> "<<"ComputeReg "<<low4bits-9<<endl;    
+    // cout<<"Successors: PC = "<<PC+PCvar<<", Tile "<<TileID<<", CrossbarCtrlSig = LocalReg "<<high4bits-11<<" -> "<<"ComputeReg "<<low4bits-9<<endl;    
 } 
 
 void CrossBar_Type6_ControlSignal_Generation(int LocalRegIdx, int PCvar, int PC, int TileID){ // generate type 6 crossbar control signal
     int high4bits = CrossbarInIdx_Generation_FromWhichLocalReg(LocalRegIdx);
     int low4bits = CrossbarOutIdx_Generation_ToWhichRouteReg();
     local_register_status[PC+PCvar][TileID][LocalRegIdx-11] = 1;
-    cout<<"Successors: PC = "<<PC+PCvar<<", Tile "<<TileID<<", CrossbarCtrlSig = LocalReg "<<high4bits-11<<" -> "<<"RouteReg "<<low4bits-1<<" (TileDir "<<low4bits<<")"<<endl; 
+    // cout<<"Successors: PC = "<<PC+PCvar<<", Tile "<<TileID<<", CrossbarCtrlSig = LocalReg "<<high4bits-11<<" -> "<<"RouteReg "<<low4bits-1<<" (TileDir "<<low4bits<<")"<<endl; 
 } 
 
 void CrossBar_Type8_ControlSignal_Generation(int PC, int TileID){ // generate type 8 crossbar control signal
     int high4bits = CrossbarInIdx_Generation_FromWhichDirectionTile();
     int low4bits = CrossbarOutIdx_Generation_ToWhichFuncUnitInput(PC, TileID);
     compute_register_status[PC][TileID][low4bits-9] = 1; // current ComputeReg has been occupied
-    cout<<"Predecessors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = TileDir "<<high4bits<<" -> "<<"ComputeReg "<<low4bits-9<<endl;
+    // cout<<"Predecessors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = TileDir "<<high4bits<<" -> "<<"ComputeReg "<<low4bits-9<<endl;
 } 
 
 void CrossBar_Type9_ControlSignal_Generation(int PC, int TileID){ // generate type 9 crossbar control signal
     int high4bits = CrossbarInIdx_Generation_FromWhichDirectionTile();
     int low4bits = CrossbarOutIdx_Generation_ToWhichRouteReg();
-    cout<<"Predecessors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = TileDir "<<high4bits<<" -> "<<"RouteReg "<<low4bits-9<<endl;
+    // cout<<"Predecessors: PC = "<<PC<<", Tile "<<TileID<<", CrossbarCtrlSig = TileDir "<<high4bits<<" -> "<<"RouteReg "<<low4bits-9<<endl;
 }
 
 void crossbar_8bitsControlSignal_predecessors_generation(int TileID){
@@ -730,7 +680,7 @@ void configuration_generation(){
         // step 3: generate CrossBar onfiguration related to successors
         crossbar_8bitsControlSignal_successors_generation(curTile.ID);
 
-        cout<<"----------------------------------------------------------"<<endl;
+        // cout<<"----------------------------------------------------------"<<endl;
     }
 }
 
@@ -748,13 +698,15 @@ void Reset(string kernel, string shape){
     xDiff_CurToPred1 = 0; yDiff_CurToPred1 = 0; xDiff_BypassSrcToTgt = 0; yDiff_BypassSrcToTgt = 0;
     curOpt = ""; predOpt1 = ""; bypassOpt = ""; bypassSrcOpt = ""; bypassTgtOpt = "";
     curTile = Tile(); predTile1 = Tile(); bypassSrcTile = Tile(); bypassTgtTile = Tile();
-    dependency_forward = false; dependency_backward = false;
+    dependency_forward = false; dependency_backward = false; insufficientLocalReg = false;
     predecessors.clear(); curOptPotentialPlacement.clear(); 
     placement_dynamic_dict_Opt2PC.clear(); placement_dynamic_dict_Opt2Tile.clear();
     memset(placement_dynamic, 0, sizeof(placement_dynamic));
     memset(placement_dynamic_bypass, 0, sizeof(placement_dynamic_bypass));
     memset(placement_dynamic_occupy, 0, sizeof(placement_dynamic_occupy));
     memset(placement_dynamic_bypass_occupy, 0, sizeof(placement_dynamic_bypass_occupy));
+    memset(local_register_status, 0, sizeof(local_register_status));
+    memset(compute_register_status, 0, sizeof(compute_register_status));
 }
 
 int calculate_startII(string kernel, string shape){
@@ -880,8 +832,10 @@ void analyze_static_levels_distribution(string kernel){
 }
 
 int main(){
-    architecture = "OpenCGRA"; // MorphoSys, HReA, HyCube
-    cout<<"Architecture is "<<architecture<<endl; 
+    architecture = "Diagonal"; // Diagonal, Orthogonal
+    heterogenous = true; // true, false
+    if(heterogenous) cout<<"Experiment results for Hetero-"<<architecture<<endl;
+    else cout<<"Experiment results for Homo-"<<architecture<<endl;
 
     // manual test
     // string kernel = "mvt";
@@ -896,7 +850,6 @@ int main(){
     // placement_static_Opt2Tile = placement_static_Opt2Tile_kernels[kernel];
     // dependency_predecessor = dependency_predecessors_kernels[kernel];
     // dependency_successor = dependency_successors_kernels[kernel];
-    // allocated_tiles_levels_dynamic = allocated_tiles_levels_dynamic_shapes_OpenCGRA[shape];
     // allocated_tiles = allocated_tiles_shapes[shape];
     // dynamic_placement_routing();
     // for(auto staticOpt : placement_static){ // print mapping results
@@ -935,7 +888,7 @@ int main(){
                             DynamicPlacement_II++;
                             threshold = 1;
                         }
-                        else threshold += 1; // stride = 1, best quality. stride = 8, best speed
+                        else threshold += 1; // stride = 1, best quality.
                     }
                 }
 
@@ -951,6 +904,8 @@ int main(){
             cout<<"TestCase:["<<test_case<<"/18] "<<kernel<<" "<<shape<<" mapping done, avgTimeConsump is "<<tSum_10times/10.0;
             cout<<"ms, threshold is "<<threshold<<", achieved II="<<IISum_10times/10.0<<endl;
             kernelStage1TotalTimeCsmptPercent += Stage1TotalTimeCsmptPercent_10times/10.0;
+            
+            configuration_generation(); // check whether has insufficient local register 
             
             test_case += 1;
         }

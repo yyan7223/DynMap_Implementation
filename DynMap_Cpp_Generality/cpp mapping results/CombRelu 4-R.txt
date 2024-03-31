@@ -29,4 +29,4 @@ and24, PC=20, Tile=5
 select25, PC=21, Tile=5
 store26, PC=22, Tile=5
 Achieved DynamicPlacement_II is 8
-threshold is 19
+threshold is 1

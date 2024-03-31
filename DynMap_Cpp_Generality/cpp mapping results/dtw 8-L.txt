@@ -18,17 +18,17 @@ inttoptr15, PC=8, Tile=6
 zext25, PC=11, Tile=7
 alloca4, PC=9, Tile=5
 alloca9, PC=10, Tile=5
-alloca12, PC=9, Tile=6
-alloca16, PC=10, Tile=6
-store26, PC=13, Tile=0
+alloca12, PC=8, Tile=5
+alloca16, PC=9, Tile=6
+store26, PC=14, Tile=4
 fadd5, PC=11, Tile=5
 catchpad17, PC=11, Tile=6
-inttoptr27, PC=14, Tile=0
-phi6, PC=12, Tile=5
+inttoptr27, PC=15, Tile=4
+phi6, PC=14, Tile=6
 call18, PC=12, Tile=0
-catchpad19, PC=15, Tile=0
-call20, PC=18, Tile=4
-fneg21, PC=19, Tile=4
-load28, PC=16, Tile=7
+catchpad19, PC=13, Tile=0
+call20, PC=14, Tile=0
+fneg21, PC=19, Tile=0
+load28, PC=20, Tile=7
 Achieved DynamicPlacement_II is 4
-threshold is 15
+threshold is 1

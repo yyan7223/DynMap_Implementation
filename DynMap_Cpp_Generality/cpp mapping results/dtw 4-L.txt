@@ -20,15 +20,15 @@ alloca4, PC=10, Tile=2
 alloca9, PC=11, Tile=2
 alloca12, PC=12, Tile=2
 alloca16, PC=13, Tile=2
-store26, PC=10, Tile=3
-fadd5, PC=11, Tile=3
+store26, PC=11, Tile=0
+fadd5, PC=12, Tile=0
 catchpad17, PC=13, Tile=3
-inttoptr27, PC=12, Tile=3
-phi6, PC=14, Tile=3
-call18, PC=15, Tile=3
-catchpad19, PC=16, Tile=3
-call20, PC=17, Tile=3
-fneg21, PC=19, Tile=0
-load28, PC=20, Tile=0
+inttoptr27, PC=14, Tile=3
+phi6, PC=15, Tile=3
+call18, PC=16, Tile=3
+catchpad19, PC=17, Tile=3
+call20, PC=18, Tile=3
+fneg21, PC=19, Tile=3
+load28, PC=20, Tile=3
 Achieved DynamicPlacement_II is 8
 threshold is 1

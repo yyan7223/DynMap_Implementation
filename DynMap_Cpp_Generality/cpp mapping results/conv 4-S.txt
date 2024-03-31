@@ -5,15 +5,15 @@ fcmp0, PC=3, Tile=9
 fmul2, PC=4, Tile=9
 fdiv3, PC=4, Tile=13
 trunc4, PC=5, Tile=9
-trunc5, PC=5, Tile=12
+trunc5, PC=6, Tile=9
 store6, PC=8, Tile=8
-store9, PC=6, Tile=12
+store9, PC=7, Tile=9
 inttoptr7, PC=9, Tile=12
-inttoptr10, PC=7, Tile=13
+inttoptr10, PC=8, Tile=13
 alloca8, PC=14, Tile=8
-alloca11, PC=8, Tile=12
-fsub12, PC=17, Tile=12
-fneg13, PC=21, Tile=9
-fcmp1, PC=22, Tile=9
+alloca11, PC=10, Tile=12
+fsub12, PC=16, Tile=12
+fneg13, PC=17, Tile=12
+fcmp1, PC=18, Tile=12
 Achieved DynamicPlacement_II is 5
-threshold is 4
+threshold is 1
