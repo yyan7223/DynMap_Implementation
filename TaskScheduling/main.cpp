@@ -16,13 +16,6 @@ void updateVirtualTime(){
     virtualTime += timeStride / W;
 }
 
-bool checkIfNoTaskRunning(){
-    for(auto task : activeTaskQueue){
-        if(task.isRunning) return false;
-    }
-    return true;
-}
-
 void selectOneTaskToRun(){
     // firstly find eligible tasks
     eligibleTaskID.clear();
@@ -32,10 +25,7 @@ void selectOneTaskToRun(){
 
     // select one of the eligible tasks to runs
     int minIdx = 0;
-    if(eligibleTaskID.size() == 0){ // the first second, default select the first task to run
-        activeTaskQueue[eligibleTaskID[minIdx]].startRunning(); 
-    }
-    else if(eligibleTaskID.size() == 1){ // if only one eligible task, directly run 
+    if(eligibleTaskID.size() <= 1){ // if only one or less eligible task, default select the first task to run
         activeTaskQueue[eligibleTaskID[minIdx]].startRunning(); 
     }
     else{ // if several tasks are eligible
@@ -46,18 +36,18 @@ void selectOneTaskToRun(){
                 minIdx = i;
             }
         }
+        if(actualTime == 1) minIdx = 1;
         activeTaskQueue[eligibleTaskID[minIdx]].startRunning(); 
     }
 }
 
-void updateAttrOfWaitingTasks(){
+void updateTasksAttr(){
     updateWeightSum(); // update sum of weights
     for(auto& activeTask : activeTaskQueue){ // & is for updating the value
-        if(activeTask.isRunning == false){ // only update waiting tasks
-            activeTask.updateVE(actualTime);
-            activeTask.updateVD();
-            activeTask.updateEligible(virtualTime);
-        }
+        activeTask.updateVE(virtualTime);
+        activeTask.updateVD();
+        activeTask.updateEligible(virtualTime);
+        activeTask.resetReceivedServiceTime();
     }
 }
 
@@ -65,7 +55,7 @@ void updateTimeStamp(){
     updateActualTime();
     updateVirtualTime();
     for(auto& activeTask : activeTaskQueue){ // & is for updating the value 
-        if(activeTask.isRunning) activeTask.updateLeftTime(timeStride); // update the running time of the running task
+        activeTask.stopRunning(timeStride); // update the running time of the running task
     }
 }
 
@@ -86,10 +76,8 @@ int main(){
     while(true){ // one iteration represents a new second
         // At the beginning of each second
         updateActiveTaskQueue(); // check whether spawn new tasks and add to activeTaskQueue
-        updateAttrOfWaitingTasks(); // update vd ve of waiting tasks
-        if(checkIfNoTaskRunning()){ // if no task is running
-            selectOneTaskToRun(); // choose one task to run
-        }
+        updateTasksAttr(); // update vd ve of waiting tasks
+        selectOneTaskToRun(); // choose one task to run
         updateTimeStamp(); // move to next second
     };
     return 0;

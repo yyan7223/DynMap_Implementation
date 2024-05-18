@@ -12,10 +12,12 @@ class Task{
         float vd; // variable from paper, task virtual deadline time
         float w; // variable from paper, task weight
         float r; // variable from paper, task request length
+        float u; // variable from paper, task received service time
         bool eligible; // variable from paper, task is eligible
         float st; // task spawn time
         float leftTime; // the left request time
         bool isRunning; // indicate whether the task is running
+        bool isFirstReq; // indicate whether is the first request
         Task(){};
         Task(int id, float weight, float requestLength, float spawnTime){
             ID = id;
@@ -23,15 +25,23 @@ class Task{
             vd = 0.0f;
             w = weight;
             r = requestLength;
+            u = 0.0f;
             eligible = false;
             st = spawnTime;
             leftTime = 0.0f;
             isRunning = false;
+            isFirstReq = true;
         };
     public:
-        void updateVE(int u){
-            ve = ve + u / w;
-        };
+        void updateVE(float virtualTime){
+            if(isFirstReq){
+                ve = virtualTime;
+                isFirstReq = false;
+            }
+            else{
+                ve = ve + u / w;
+            }
+        }
         void updateVD(){
             vd = ve + r / w;
         }
@@ -40,12 +50,14 @@ class Task{
             else eligible = false;
         }
         void startRunning(){
-            leftTime = r;
             isRunning = true;
         }
-        void updateLeftTime(int stride){
-            leftTime -= stride;
-            if(leftTime == 0) isRunning = false;
+        void resetReceivedServiceTime(){
+            u = 0.0f; // reset u to 0 after updating VE
+        }
+        void stopRunning(float stride){
+            if(isRunning) u += stride; // only update the received service time when the task actually run in this time stride
+            isRunning = false;
         }
 };
 
@@ -55,7 +67,5 @@ float timeStride = 1.0f; // 1 second
 vector<Task> taskQueue;
 vector<Task> activeTaskQueue;
 vector<int> eligibleTaskID;
-Task runningTask;
 float W = 0.0f; // weightSum
-int runningTaskID = 0;
 
