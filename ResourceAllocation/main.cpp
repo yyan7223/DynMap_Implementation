@@ -90,7 +90,7 @@ int main(){
     for(auto kernelsNodesNum : tasksKernelsNodesNum){
         for(auto kernelNodesNum : kernelsNodesNum){
             allocatedTilesNum = decideTilesNum(kernelNodesNum, totalNodesNum, cgraSize);
-            // cout<<"kernel allocated tiles number is: "<<allocatedTilesNum<<endl;
+            cout<<"kernel allocated tiles number is: "<<allocatedTilesNum<<endl;
             decideKernelHeightWidthLimit(allocatedTilesNum);
 
             if(cgraSize - curCoordX < kernelWidthLimit) setCurCoord(0);
@@ -103,14 +103,14 @@ int main(){
                 moveUp(); // prepare for the next occupy
             };
 
-            // printCurrentAllocation();
-            // cout<<"One kernel resource allocation done"<<endl;
+            printCurrentAllocation();
+            cout<<"One kernel resource allocation done"<<endl;
         }
     }
     auto t2 = Clock::now();
     float timeMS = duration_cast<nanoseconds>(t2 - t1).count() / 1000000.0; 
     cout<<"Resource allocation done, elapsed time is "<<timeMS<<" ms"<<endl;
 
-    delete []startCoordY;
+    // delete []startCoordY;
     return 0;
 }
