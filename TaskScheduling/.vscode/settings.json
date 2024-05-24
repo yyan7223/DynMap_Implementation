@@ -4,6 +4,14 @@
         "ostream": "cpp",
         "vector": "cpp",
         "cmath": "cpp",
-        "new": "cpp"
+        "new": "cpp",
+        "tuple": "cpp",
+        "ratio": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "string_view": "cpp",
+        "algorithm": "cpp",
+        "format": "cpp"
     }
 }
