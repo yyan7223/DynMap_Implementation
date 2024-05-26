@@ -12,6 +12,10 @@
         "unordered_map": "cpp",
         "string_view": "cpp",
         "algorithm": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "chrono": "cpp",
+        "array": "cpp",
+        "initializer_list": "cpp",
+        "span": "cpp"
     }
 }
