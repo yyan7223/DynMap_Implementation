@@ -47,8 +47,8 @@ void updateActiveTaskQueue(){
 void updateTasksAttr(){
     updateWeightSum(); // update sum of weights
     for(auto& activeTask : activeTaskQueue){ // & is for updating the value
-        activeTask.updateVE(virtualTime);
-        activeTask.updateVD();
+        activeTask.updateVE(virtualTime, tasksNum);
+        activeTask.updateVD(tasksNum);
     }
     updateTaskDestroyStatus(); // update vt and ve if there are tasks destoryed, 
     for(auto& activeTask : activeTaskQueue){ // & is for updating the value
@@ -94,7 +94,7 @@ void stopRunningTasks(){
 
 void generateNewTaskSets(int tasksNum){
     eligibleTaskQueueIdx.clear();
-    vector<int> ineligibleTaskQueueIdx; 
+    ineligibleTaskQueueIdx.clear();
     for(int i = 0; i < activeTaskQueue.size(); i++){ // firstly select eligible tasks
         if(activeTaskQueue[i].eligible) eligibleTaskQueueIdx.push_back(i);
         else ineligibleTaskQueueIdx.push_back(i);
@@ -215,16 +215,17 @@ int main(){
     // Task task1(1, 2.0f, 2.0f, 0.0f, 999.0f); taskQueue.push_back(task1);
     // Task task2(2, 2.0f, 1.0f, 1.0f, 999.0f); taskQueue.push_back(task2);
 
-    Task task1(1, 2.0f, 2.56f, 0.0f, 999.0f, 26, 1300); taskQueue.push_back(task1);
-    Task task2(2, 2.0f, 1.38f, 0.0f, 999.0f, 37, 1500); taskQueue.push_back(task2);
-    Task task3(3, 2.0f, 3.66f, 0.0f, 999.0f, 18, 1100); taskQueue.push_back(task3);
-    Task task4(4, 2.0f, 4.87f, 0.0f, 999.0f, 33, 2500); taskQueue.push_back(task4);
-    Task task5(5, 2.0f, 5.23f, 0.0f, 999.0f, 46, 1000); taskQueue.push_back(task5);
-    Task task6(6, 2.0f, 3.39f, 0.0f, 999.0f, 27, 1100); taskQueue.push_back(task6);
-    Task task7(7, 2.0f, 0.88f, 0.0f, 999.0f, 31, 2200); taskQueue.push_back(task7);
-    Task task8(8, 2.0f, 9.23f, 0.0f, 999.0f, 35, 1700); taskQueue.push_back(task8);
+    Task task1(0, 2.0f, 2.56f, 0.0f, 999.0f, 26, 1300); taskQueue.push_back(task1);
+    Task task2(1, 2.0f, 1.38f, 0.0f, 999.0f, 37, 1500); taskQueue.push_back(task2);
+    Task task3(2, 2.0f, 3.66f, 0.0f, 999.0f, 18, 1100); taskQueue.push_back(task3);
+    Task task4(3, 2.0f, 4.87f, 0.0f, 999.0f, 33, 2500); taskQueue.push_back(task4);
+    Task task5(4, 2.0f, 5.23f, 0.0f, 999.0f, 46, 1000); taskQueue.push_back(task5);
+    Task task6(5, 2.0f, 3.39f, 0.0f, 999.0f, 27, 1100); taskQueue.push_back(task6);
+    Task task7(6, 2.0f, 0.88f, 0.0f, 999.0f, 31, 2200); taskQueue.push_back(task7);
+    Task task8(7, 2.0f, 9.23f, 0.0f, 999.0f, 35, 1700); taskQueue.push_back(task8);
 
-    while(true){ // one iteration represents a new second
+    int count = 500;
+    while(count > 0){ // one iteration represents a new second
         // At the beginning of each second
         updateActiveTaskQueue(); // check whether spawn new tasks and add to activeTaskQueue
         updateTasksAttr(); // update vd ve of waiting tasks
@@ -234,6 +235,13 @@ int main(){
 
         // at the end of each second
         updateTimeStamp(); // move to next second
+
+        cout<<"eligible status: ";
+        for(int i = 0; i < activeTaskQueue.size(); i++){ // firstly select eligible tasks
+            cout<<activeTaskQueue[i].eligible<<"";
+        }
+        cout<<endl;
+        count--;
     };
     return 0;
 }

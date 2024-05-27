@@ -17,7 +17,7 @@ class Task{
         bool eligible; // variable from paper, task is eligible
         float st; // task spawn time
         float dt; // task destroy time
-        float leftTime; // the left request time
+        // float leftTime; // the left request time
         bool isRunning; // indicate whether the task is running
         bool isFirstReq; // indicate whether is the first request
         int dfgNodesNum; // task DFG nodes total number
@@ -40,7 +40,7 @@ class Task{
             eligible = false;
             st = spawnTime;
             dt = destroyTime;
-            leftTime = 0.0f;
+            // leftTime = 0.0f;
             isRunning = false;
             isFirstReq = true;
             dfgNodesNum = DFGNodesNum;
@@ -51,26 +51,28 @@ class Task{
             allInputsDone = false;
         };
     public:
-        void updateVE(float vt){
+        void updateVE(float vt, float taskNumber){
+            if(isFirstReq){ // the first value of ve equals to vt according to the paper
+                ve = vt;
+            }
             // VE updating is only allowed when finish executing the request length or processing all inputs
-            if(leftTime <= 0.0f || leftInputs <= 0){ 
-                if(isFirstReq){
-                    ve = vt;
-                    isFirstReq = false;
-                }
-                else{
-                    ve = ve + u / w;
-                    u = 0.0f; // reset u to 0 after updating VE
-                }
+            // if(leftTime <= 0.0f || leftInputs <= 0){ 
+            if(leftInputs <= 0){ 
+                ve = ve + u / (w * taskNumber);
+                r = u; // request service time should be equal to actual service time after a request is over
+                u = 0.0f; // reset u to 0 after updating VE
             }
         }
         void balanceVE(float lag, float W){
             ve = ve + (1 - w) * lag / W;
         }
-        void updateVD(){
+        void updateVD(float taskNumber){
             // VD updating is only allowed when finish executing the request length or processing all inputs
-            if(leftTime <= 0.0f || leftInputs <= 0){ 
-                vd = ve + r / w;
+            // if(leftTime <= 0.0f || leftInputs <= 0){ 
+            if(leftInputs <= 0 || isFirstReq){ 
+                vd = ve + r / (w * taskNumber);
+                isFirstReq = false;
+                leftInputs = inputNum; // simulate a new request is issued after updating ve vd
             }
         }
         void updateEligible(float vt){
@@ -78,13 +80,8 @@ class Task{
             else eligible = false;
         }
         void startRunning(float quantum, int freq){
-            isRunning = true;
-            if(leftTime <= 0.0f || leftInputs <= 0){ // simulate a new request is issued
-                leftTime = r;
-                leftInputs = inputNum;
-            }
-            leftTime -= quantum;
             // calculate actually processed input before updating leftInputs
+            isRunning = true;
             int totalCycles = floor(quantum * freq);
             procInputs = (totalCycles - oneIterCycles) / II + 1;
             leftInputs -= procInputs;
@@ -116,6 +113,7 @@ vector<Task> taskQueue; // all possible tasks luanched by users
 vector<Task> activeTaskQueue; // user actually launched tasks
 vector<float> lags; // the lag of each deconstructed tasks
 vector<int> eligibleTaskQueueIdx; 
+vector<int> ineligibleTaskQueueIdx; 
 vector<int> numTilesPerTask;
 vector<int> numDataPerTask;
 vector<float> execTimePerTask;
