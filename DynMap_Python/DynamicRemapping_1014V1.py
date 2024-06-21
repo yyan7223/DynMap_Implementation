@@ -1507,8 +1507,8 @@ def Reset(kernel, shape):
 
 
 ########################################## main() ###############################################
-kernel = "mvt"
-shape = "12-S" # allocated tiles   
+kernel = "spmv"
+shape = "4Tiles_Shape1" # allocated tiles  4Tiles_Shape1 8Tiles_Shape1
 totalNodes = DFG_NodesCount_kernels[kernel]
 numTiles = CGRA_NumTiles[shape]
 RecMII = DFG_Theoretical_RecMII_kernels[kernel]
@@ -1596,95 +1596,95 @@ succNums2DynLevels_kernels = DFG_SuccNums2DynLevels_Init(kernel)
 
 
 #################################### Manual Test ####################################
-# while True:
-#     threshold_to_bypassOptsNum = dict()
-#     for threshold in range(1, totalNodes+1):
-#     # for threshold in range(1, 2):
-#         Reset(kernel, shape)
-#         print("Try to finish placement at II=%d, threshold=%d, " % (DynamicPlacement_II, threshold))
-#         if dynamic_placement():
-#             print("Placement at II=%d, threshold=%d success" % (DynamicPlacement_II, threshold))
-#             with HiddenPrints(): 
-#                 DynamicPlacement_CorrectnessCheck(kernel)
-#             testCasePassCnt = 8
-#             if testCasePassCnt == 8: # 8 testcases all passed
-#                 threshold_to_bypassOptsNum[threshold] = bypassOptIdx
-#             else:
-#                 print("dynamic placement finished but testcases not passed...")
-#     if len(threshold_to_bypassOptsNum) == 0: # no successful placement under current II and all possible thresholds
-#         DynamicPlacement_II += 1
-#     else:
-#         threshold_to_bypassOptsNum_sorted = sorted(threshold_to_bypassOptsNum.items(), key = lambda kv:(kv[1], kv[0]))
-#         first_element = threshold_to_bypassOptsNum_sorted[0]
-#         print("Dynamic Placement II is %d, the optimal threshold is %d, and the corresponding bypassOpts minimum number is %d"
-#               % (DynamicPlacement_II, first_element[0], first_element[1]))   
-#         break
+while True:
+    threshold_to_bypassOptsNum = dict()
+    for threshold in range(1, totalNodes+1):
+    # for threshold in range(1, 2):
+        Reset(kernel, shape)
+        print("Try to finish placement at II=%d, threshold=%d, " % (DynamicPlacement_II, threshold))
+        if dynamic_placement():
+            print("Placement at II=%d, threshold=%d success" % (DynamicPlacement_II, threshold))
+            with HiddenPrints(): 
+                DynamicPlacement_CorrectnessCheck(kernel)
+            testCasePassCnt = 8
+            if testCasePassCnt == 8: # 8 testcases all passed
+                threshold_to_bypassOptsNum[threshold] = bypassOptIdx
+            else:
+                print("dynamic placement finished but testcases not passed...")
+    if len(threshold_to_bypassOptsNum) == 0: # no successful placement under current II and all possible thresholds
+        DynamicPlacement_II += 1
+    else:
+        threshold_to_bypassOptsNum_sorted = sorted(threshold_to_bypassOptsNum.items(), key = lambda kv:(kv[1], kv[0]))
+        first_element = threshold_to_bypassOptsNum_sorted[0]
+        print("Dynamic Placement II is %d, the optimal threshold is %d, and the corresponding bypassOpts minimum number is %d"
+              % (DynamicPlacement_II, first_element[0], first_element[1]))   
+        break
 
-# calculate_OnChipMemory_Consumption_DynamicCompiler()
-# calculate_OffChipMemory_Consumption_DynamicCompiler()
+calculate_OnChipMemory_Consumption_DynamicCompiler()
+calculate_OffChipMemory_Consumption_DynamicCompiler()
 
-# threshold = 25
-# Reset(kernel, shape)
-# print("Try to finish placement at II=%d, threshold=%d, " % (DynamicPlacement_II, threshold), end="")
-# if dynamic_placement():
-#     print("Placement success")
-# # DynamicPlacement_CorrectnessCheck(kernel)
-# dynamic_routing()
-# for IDX_ps in range( len(placement_static) ): # print mapping reults
-#     for idx_ps in range( len(placement_static[IDX_ps]) ):
-#         curOpt = placement_static[IDX_ps][idx_ps]
-#         print("%s, PC=%i, Tile=%i" % (curOpt, placement_dynamic_dict_Opt2PC[curOpt], placement_dynamic_dict_Opt2Tile[curOpt].ID))
+threshold = 25
+Reset(kernel, shape)
+print("Try to finish placement at II=%d, threshold=%d, " % (DynamicPlacement_II, threshold), end="")
+if dynamic_placement():
+    print("Placement success")
+# DynamicPlacement_CorrectnessCheck(kernel)
+dynamic_routing()
+for IDX_ps in range( len(placement_static) ): # print mapping reults
+    for idx_ps in range( len(placement_static[IDX_ps]) ):
+        curOpt = placement_static[IDX_ps][idx_ps]
+        print("%s, PC=%i, Tile=%i" % (curOpt, placement_dynamic_dict_Opt2PC[curOpt], placement_dynamic_dict_Opt2Tile[curOpt].ID))
 
 
 #################################### Auto Test ####################################
-test_kernels = ["mvt", "fft", "dtw", "blowfish", "spmv", "conv"]
-test_shapes = dict()
-test_shapes["mvt"] = ["12-S","12-IA","12-IB","12-L","8-IA","8-S","8-IB","8-L","4-S","4-IB","4-IA","4-L"]
-test_shapes["fft"] = ["12-S","12-IA","12-IB","12-L","8-IA","8-S","8-IB","8-L","4-S","4-IB","4-IA","4-L"]
-test_shapes["dtw"] = ["8-IA","8-S","8-IB","8-L","6-S","6-IA","6-IB","6-L","4-S","4-IB","4-IA","4-L"]
-test_shapes["blowfish"] = ["8-IA","8-S","8-IB","8-L","6-S","6-IA","6-IB","6-L","4-S","4-IB","4-IA","4-L"]
-test_shapes["spmv"] = ["6-S","6-IA","6-IB","6-L","5-S","5-IB","5-IA","5-L","4-S","4-IB","4-IA","4-L"]
-test_shapes["conv"] = ["6-S","6-IA","6-IB","6-L","5-S","5-IB","5-IA","5-L","4-S","4-IB","4-IA","4-L"]
+# test_kernels = ["mvt", "fft", "dtw", "blowfish", "spmv", "conv"]
+# test_shapes = dict()
+# test_shapes["mvt"] = ["12-S","12-IA","12-IB","12-L","8-IA","8-S","8-IB","8-L","4-S","4-IB","4-IA","4-L"]
+# test_shapes["fft"] = ["12-S","12-IA","12-IB","12-L","8-IA","8-S","8-IB","8-L","4-S","4-IB","4-IA","4-L"]
+# test_shapes["dtw"] = ["8-IA","8-S","8-IB","8-L","6-S","6-IA","6-IB","6-L","4-S","4-IB","4-IA","4-L"]
+# test_shapes["blowfish"] = ["8-IA","8-S","8-IB","8-L","6-S","6-IA","6-IB","6-L","4-S","4-IB","4-IA","4-L"]
+# test_shapes["spmv"] = ["6-S","6-IA","6-IB","6-L","5-S","5-IB","5-IA","5-L","4-S","4-IB","4-IA","4-L"]
+# test_shapes["conv"] = ["6-S","6-IA","6-IB","6-L","5-S","5-IB","5-IA","5-L","4-S","4-IB","4-IA","4-L"]
 
-test_case = 1
-compilation_time = []
-for kernel in test_kernels:
-    for shape in test_shapes[kernel]:
-        start = time.perf_counter_ns()
-        for i in range(10):
-            totalNodes = DFG_NodesCount_kernels[kernel]
-            numTiles = CGRA_NumTiles[shape]
-            RecMII = DFG_Theoretical_RecMII_kernels[kernel]
-            ResMII = math.ceil(totalNodes / numTiles)
-            DynamicPlacement_II = max(ResMII, RecMII) # theoretical optimal II
-            while True:
-                threshold_to_bypassOptsNum = dict()
-                for threshold in range(1, totalNodes+1, 1): # stride=1,best quality. stride=8,best speed
-                    Reset(kernel, shape)
-                    # print("Try to finish placement at II=%d, threshold=%d, " % (DynamicPlacement_II, threshold), end="")
-                    if dynamic_placement():
-                        # print("Placement success")
-                        threshold_to_bypassOptsNum[threshold] = bypassOptIdx
-                        # dynamic_routing()
-                        break 
-                if len(threshold_to_bypassOptsNum) == 0: # no successful placement under current II and all possible thresholds
-                    DynamicPlacement_II += 1
-                else:  
-                    break
+# test_case = 1
+# compilation_time = []
+# for kernel in test_kernels:
+#     for shape in test_shapes[kernel]:
+#         start = time.perf_counter_ns()
+#         for i in range(10):
+#             totalNodes = DFG_NodesCount_kernels[kernel]
+#             numTiles = CGRA_NumTiles[shape]
+#             RecMII = DFG_Theoretical_RecMII_kernels[kernel]
+#             ResMII = math.ceil(totalNodes / numTiles)
+#             DynamicPlacement_II = max(ResMII, RecMII) # theoretical optimal II
+#             while True:
+#                 threshold_to_bypassOptsNum = dict()
+#                 for threshold in range(1, totalNodes+1, 1): # stride=1,best quality. stride=8,best speed
+#                     Reset(kernel, shape)
+#                     #print("Try to finish placement at II=%d, threshold=%d, " % (DynamicPlacement_II, threshold), end="")
+#                     if dynamic_placement():
+#                         # print("Placement success")
+#                         threshold_to_bypassOptsNum[threshold] = bypassOptIdx
+#                         # dynamic_routing()
+#                         break 
+#                 if len(threshold_to_bypassOptsNum) == 0: # no successful placement under current II and all possible thresholds
+#                     DynamicPlacement_II += 1
+#                 else:  
+#                     break
         
-        end = time.perf_counter_ns()
-        avgTimeCons_ms = (end - start)/ 1000000 / 10
-        compilation_time.append(format(avgTimeCons_ms, '.3f'))
-        print("TestCase:[%d/72] %s %s compilation done, time consumption is %.3f ms, II=%d" % (test_case, kernel, shape, avgTimeCons_ms, DynamicPlacement_II))
+#         end = time.perf_counter_ns()
+#         avgTimeCons_ms = (end - start)/ 1000000 / 10
+#         compilation_time.append(format(avgTimeCons_ms, '.3f'))
+#         print("TestCase:[%d/72] %s %s compilation done, time consumption is %.3f ms, II=%d" % (test_case, kernel, shape, avgTimeCons_ms, DynamicPlacement_II))
          
-        recordMappingResults(kernel, shape)
-        test_case += 1
+#         recordMappingResults(kernel, shape)
+#         test_case += 1
 
-with open("profile.txt",'a') as f:
-    f.seek(0)
-    f.truncate()
-    for item in compilation_time:
-        f.write(str(item)+"\n")
+# with open("profile.txt",'a') as f:
+#     f.seek(0)
+#     f.truncate()
+#     for item in compilation_time:
+#         f.write(str(item)+"\n")
         
 # start = time.perf_counter_ns()
 # print("This is to measure the performance difference between C++ and python, executing 0.1 billion loop...")
