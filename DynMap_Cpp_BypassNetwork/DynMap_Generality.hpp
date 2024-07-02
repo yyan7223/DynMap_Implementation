@@ -46,6 +46,15 @@ class CGRA{
         }
 };
 
+class memoryMapper_Message{
+    public:
+        int tileID; // 6bits, Tile0~63
+        string opt; // 2bits, load/store/nah
+        int xbar_dirIn; // 4bits, 8directions, 8 reserve
+        int xbar_dirOut; // 4bits, 8directions, 8 reserve
+        int cycle; // 4bits, enough for normal cycles and reservation cycles
+};
+
 // the variable decorated by "static" will be automatically initialized to 0, 
 // which avoids unnecessary initialization operation after converting to RTL by HLS.
 // if decorated by "const", the variable can be synthesised to ROM by HLS.
@@ -76,6 +85,9 @@ static int threshold;
 static map<string, int> placement_done;
 static map<string, int> placement_dynamic_dict_Opt2PC;
 static map<string, Tile> placement_dynamic_dict_Opt2Tile;
+static map<string, map<string, int>> shape_MemAccess_Opt2PC;
+static map<string, map<string, Tile>> shape_MemAccess_Opt2Tile;
+static map<string, int> shape_II;
 static map<string, Tile> placement_static_Opt2Tile;
 static vector<vector<Tile>> allocated_tiles_levels_dynamic;
 static vector<Tile> allocated_tiles;

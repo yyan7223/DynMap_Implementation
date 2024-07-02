@@ -261,6 +261,44 @@ int XbarOut_Direction(int xDiff, int yDiff){
     }
 }
 
+int Mem_XbarOut_Direction(int xDiff, int yDiff){
+    // N:1 S:2 E:3 W:4 NE:5 SE:6 NW:7 SW:8
+    if(xDiff < 0){
+        if(yDiff < 0) return 8;
+        else if(yDiff > 0) return 7;
+        else return 4; // yDiff == 0
+    }
+    else if(xDiff > 0){
+        if(yDiff < 0) return 6;
+        else if(yDiff > 0) return 5;
+        else return 3; // yDiff == 0
+    }
+    else{ // xDiff == 0
+        if(yDiff < 0) return 2;
+        else if(yDiff > 0) return 1;
+        else return 0; // yDiff == 0, illegal
+    }
+}
+
+int Mem_XbarIn_Direction(int xDiff, int yDiff){
+    // N:1 S:2 E:3 W:4 NE:5 SE:6 NW:7 SW:8
+    if(xDiff < 0){
+        if(yDiff < 0) return 5;
+        else if(yDiff > 0) return 6;
+        else return 3; // yDiff == 0
+    }
+    else if(xDiff > 0){
+        if(yDiff < 0) return 7;
+        else if(yDiff > 0) return 8;
+        else return 4; // yDiff == 0
+    }
+    else{ // xDiff == 0
+        if(yDiff < 0) return 1;
+        else if(yDiff > 0) return 2;
+        else return 0; // yDiff == 0, illegal
+    }
+}
+
 bool BypassOptPlacement_Gen_Record(){ // record the dynamic placement of bypass operation
     bypassOpt = "bypass" + to_string(bypassOptIdx);
     bypassOptIdx += 1;
@@ -959,6 +997,145 @@ void analyze_static_levels_distribution(string kernel){
     cout<<"In static mapping result of kernel "<<kernel<<" under 4x4 CGRA, Level_0 Tiles used ["<<numUsedTiles_level_0<<"/4], Level_1 Tiles used ["<<numUsedTiles_level_1<<"/8], Level_2 Tiles used ["<<numUsedTiles_level_2<<"/4]"<<endl;
 }
 
+void save_memAccessOpt_Mapping_Results(string kernel, string shape){
+    for(auto opt : placement_static_kernels[kernel]){
+        if(opt.find("load") != string::npos || opt.find("store") != string::npos){
+            shape_MemAccess_Opt2PC[shape][opt] = placement_dynamic_dict_Opt2PC[opt] % DynamicPlacement_II; // modulo cycles
+            shape_MemAccess_Opt2Tile[shape][opt] = placement_dynamic_dict_Opt2Tile[opt];
+            shape_II[shape] = DynamicPlacement_II;
+        }
+    }
+}
+
+void clear_memAccessOpt_Mapping_Results(){
+    shape_MemAccess_Opt2PC.clear();
+    shape_MemAccess_Opt2Tile.clear();
+    shape_II.clear();
+}
+
+vector<int> decide_moveStride(int xDiff, int yDiff){
+    vector<int> stride;
+
+    // Stride X
+    if(xDiff < 0) stride.push_back(-1); 
+    else if(xDiff > 0) stride.push_back(1);
+    else stride.push_back(0);
+
+    // Stride Y
+    if(yDiff < 0) stride.push_back(-1);
+    else if(yDiff > 0) stride.push_back(1);
+    else stride.push_back(0);
+
+    return stride;
+}
+
+void lightWeight_memoryMapper_noConflictCheck(string beforeShape, string afterShape){
+    for(auto item : shape_MemAccess_Opt2Tile[beforeShape]){
+        string memAccess_opt = item.first;
+        Tile beforeTile = shape_MemAccess_Opt2Tile[beforeShape][memAccess_opt];
+        Tile afterTile = shape_MemAccess_Opt2Tile[afterShape][memAccess_opt];
+        int II = shape_II[afterShape];
+        if(beforeTile.ID != afterTile.ID){ // if mapped tile changed
+            if(memAccess_opt.find("load") != string::npos){ // load operation
+                int srcX = beforeTile.X;
+                int srcY = beforeTile.Y;
+                int xDiff = afterTile.X - beforeTile.X; // load operation performs on beforeTile (srcTile), and pass the value to afterTile for consuming (tgtTile)
+                int yDiff = afterTile.Y - beforeTile.Y;
+                int distance = max(abs(xDiff), abs(yDiff));
+                int tgtCycles = shape_MemAccess_Opt2PC[afterShape][memAccess_opt];
+                int srcCycles = tgtCycles - distance;
+                srcCycles = (srcCycles < 0) ? (II + srcCycles) : srcCycles; // calibration if < 0
+
+                memoryMapper_Message Config;
+                vector<int> stride;
+                int distCnt = 0;           
+                while(distCnt <= distance){
+                    if(distCnt == 0){
+                        Config.opt = "load";
+                        Config.cycle = srcCycles;
+                        Config.tileID = xy2Tile[srcX][srcY].ID;
+                        Config.xbar_dirIn = 12; // read data from memory
+                        stride = decide_moveStride(xDiff, yDiff);
+                        Config.xbar_dirOut = Mem_XbarOut_Direction(stride[0], stride[1]);
+                    }
+                    else if(distCnt > 0 && distCnt < distance){
+                        Config.opt = "nah";
+                        Config.cycle = srcCycles;
+                        Config.tileID = xy2Tile[srcX][srcY].ID;
+                        Config.xbar_dirIn = Mem_XbarIn_Direction(stride[0], stride[1]);
+                        stride = decide_moveStride(xDiff, yDiff);
+                        Config.xbar_dirOut = Mem_XbarOut_Direction(stride[0], stride[1]);
+                    }
+                    else{
+                        Config.opt = "nah";
+                        Config.cycle = srcCycles;
+                        Config.tileID = xy2Tile[srcX][srcY].ID;
+                        Config.xbar_dirIn = Mem_XbarIn_Direction(stride[0], stride[1]);
+                        Config.xbar_dirOut = 9; // send to compute register    
+                    }
+
+                    cout<<"Config: opt="<<Config.opt<<", cycle="<<Config.cycle<<", tileID="<<Config.tileID<<", xbar_dirIn="<<Config.xbar_dirIn<<", xbar_dirOut="<<Config.xbar_dirOut<<endl;
+                    xDiff -= stride[0];
+                    yDiff -= stride[1];
+                    srcX += stride[0];
+                    srcY += stride[1];
+                    srcCycles++;
+                    srcCycles = (srcCycles >= II) ? (srcCycles -= II) : srcCycles; // calibration if >= II
+                    distCnt++;
+                }
+            }
+            else{ // store operation
+                int srcX = afterTile.X;
+                int srcY = afterTile.Y;
+                int xDiff = beforeTile.X - afterTile.X; // initiated by afterTile (srcTile), and passed the value to beforeTile (tgtTile) to perform store operation
+                int yDiff = beforeTile.Y - afterTile.Y;
+                int distance = max(abs(xDiff), abs(yDiff));
+                int srcCycles = shape_MemAccess_Opt2PC[afterShape][memAccess_opt];
+                int tgtCycles = srcCycles + distance;
+                tgtCycles = (tgtCycles > II) ? (tgtCycles - II) : tgtCycles; // calibration if > II
+
+                memoryMapper_Message Config;
+                vector<int> stride;
+                int distCnt = 0;           
+                while(distCnt <= distance){
+                    if(distCnt == 0){
+                        Config.opt = "nah";
+                        Config.cycle = srcCycles;
+                        Config.tileID = xy2Tile[srcX][srcY].ID;
+                        Config.xbar_dirIn = 11; // fu output
+                        stride = decide_moveStride(xDiff, yDiff);
+                        Config.xbar_dirOut = Mem_XbarOut_Direction(stride[0], stride[1]);
+                    }
+                    else if(distCnt > 0 && distCnt < distance){
+                        Config.opt = "nah";
+                        Config.cycle = srcCycles;
+                        Config.tileID = xy2Tile[srcX][srcY].ID;
+                        Config.xbar_dirIn = Mem_XbarIn_Direction(stride[0], stride[1]);
+                        stride = decide_moveStride(xDiff, yDiff);
+                        Config.xbar_dirOut = Mem_XbarOut_Direction(stride[0], stride[1]);
+                    }
+                    else{
+                        Config.opt = "store";
+                        Config.cycle = srcCycles;
+                        Config.tileID = xy2Tile[srcX][srcY].ID;
+                        Config.xbar_dirIn = Mem_XbarIn_Direction(stride[0], stride[1]);
+                        Config.xbar_dirOut = 10; // send to data memory   
+                    }
+
+                    cout<<"Config: opt="<<Config.opt<<", cycle="<<Config.cycle<<", tileID="<<Config.tileID<<", xbar_dirIn="<<Config.xbar_dirIn<<", xbar_dirOut="<<Config.xbar_dirOut<<endl;
+                    xDiff -= stride[0];
+                    yDiff -= stride[1];
+                    srcX += stride[0];
+                    srcY += stride[1];
+                    srcCycles++;
+                    srcCycles = (srcCycles >= II) ? (srcCycles -= II) : srcCycles; // calibration if >= II
+                    distCnt++;
+                }
+            }
+        }
+    }
+}
+
 int main(){
     architecture = "Diagonal"; // MorphoSys, HReA, HyCube
     cout<<"Architecture is Homogenous-"<<architecture<<endl; 
@@ -1024,6 +1201,7 @@ int main(){
             }
 
             // record mapping results
+            save_memAccessOpt_Mapping_Results(kernel, shape);
             record_mappingResults(kernel, shape);
             
             // cout<<"TestCase:["<<test_case<<"/180]                    "<<tSum_10times/10.0<<"                    "<<IISum_10times/10.0<<endl;
@@ -1033,6 +1211,7 @@ int main(){
             
             test_case += 1;
         }
+        lightWeight_memoryMapper_noConflictCheck("13-R", "14-IR");
         // cout<<"kernel "<<kernel<<" mapping stage 1 occupies "<<kernelStage1TotalTimeCsmptPercent/12.0*100.0<<"% of mapping totalTimeConsump (avgVal under 12 test shapes)"<<endl;
     }
 
